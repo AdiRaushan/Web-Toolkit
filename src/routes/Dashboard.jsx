@@ -275,7 +275,7 @@ const Dashboard = () => {
               <img
                 src={heroImg}
                 alt="WebToolkit Dashboard"
-                className="w-full h-[280px] sm:h-[360px] lg:h-[440px] object-cover rounded-3xl shadow-2xl shadow-blue-900/20"
+                className="w-full h-[280px] sm:h-[30px] lg:h-[470px] object-cover rounded-3xl shadow-2xl shadow-blue-900/20"
               />
 
               {/* Transparent Grid Overlay */}
@@ -449,11 +449,10 @@ const Dashboard = () => {
                   hrs
                 </span>
               </span>
-              <span className="text-[8px] text-slate-400 block text-center">
-                per agency / month
-              </span>
-            {/* ── Trust Indicator Row (Bottom Right Corner of Image) ── */}
-            <div className="absolute bottom-6 right-6 z-20 flex flex-col items-end text-right bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-lg hidden sm:flex">
+            </div>
+
+            {/* ── Trust Indicator Row (Bottom Center of Image) ── */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center text-center bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20 shadow-lg px-4">
               <div className="flex items-center gap-2 mb-1">
                 <div className="flex -space-x-1.5">
                   {[
@@ -462,28 +461,30 @@ const Dashboard = () => {
                     "from-amber-400 to-orange-500",
                     "from-emerald-400 to-teal-500",
                   ].map((g, i) => (
-                    <div key={i} className={`w-6 h-6 rounded-full bg-gradient-to-br ${g} border-2 border-white shadow-sm`} />
+                    <div
+                      key={i}
+                      className={`w-6 h-6 rounded-full bg-gradient-to-br ${g} border-2 border-white shadow-sm`}
+                    />
                   ))}
                 </div>
               </div>
-              <div className="flex items-center gap-1 justify-end">
+              <div className="flex items-center gap-1 justify-center">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={10} className="text-amber-400 fill-amber-400" />
+                  <Star
+                    key={i}
+                    size={10}
+                    className="text-amber-400 fill-amber-400"
+                  />
                 ))}
               </div>
-              <span className="text-[10px] font-bold text-white mt-0.5">Trusted by 500+ agencies</span>
+              <span className="text-[10px] font-bold text-white mt-0.5">
+                Trusted by 500+ agencies
+              </span>
             </div>
           </div>
         </div>
 
         {/* Pagination dots (Moved below image container but kept minimal) */}
-        <div className="relative z-20 flex justify-center mt-4 pb-2">
-           <div className="flex gap-1.5">
-            {[0, 1, 2, 3, 4].map((i) => (
-              <div key={i} className={`w-1.5 h-1.5 rounded-full ${i === 0 ? "bg-blue-600" : "bg-slate-300"}`} />
-            ))}
-          </div>
-        </div>
 
         {/* ── Downward V-Curve ── */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
