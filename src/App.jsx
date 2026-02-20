@@ -19,8 +19,8 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* Global Navigation — hidden on / (hero has integrated navbar), auto-hide on /demo */}
-      {!isDashboard && <Navbar autoHide={isDemoPage} />}
+      {/* Global Navigation */}
+      <Navbar autoHide={isDemoPage} />
 
       {/* Route Pages */}
       <Routes>

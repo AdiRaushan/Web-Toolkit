@@ -220,40 +220,8 @@ const Dashboard = () => {
           <div className="absolute top-[25%] left-[40%] w-[500px] h-[200px] rounded-full bg-white/20 blur-[90px]" />
         </div>
 
-        {/* ── Hero Pill Navbar (inside hero) ── */}
-        <div className="relative z-30 pt-4 flex justify-center">
-          <div className="inline-flex items-center gap-1 bg-white/20 backdrop-blur-xl border border-white/30 rounded-full px-2 py-1.5 shadow-lg shadow-blue-900/10">
-            <Link to="/" className="flex items-center gap-2 px-3 py-1.5 mr-2">
-              <img src={toolkitFavicon} alt="WebToolkit" className="w-6 h-6" />
-              <span className="text-white font-extrabold text-sm tracking-tight hidden sm:inline">
-                WebToolkit
-              </span>
-            </Link>
-            {[
-              { to: "/", label: "Dashboard" },
-              { to: "/demo", label: "Demo" },
-              { to: "/audit", label: "Audit" },
-            ].map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide transition-all duration-200 text-white/80 hover:text-white hover:bg-white/15"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="w-px h-5 bg-white/20 mx-1" />
-            <Link
-              to="/demo"
-              className="ml-1 px-5 py-1.5 rounded-full bg-white text-blue-700 text-xs font-bold uppercase tracking-wide shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-200"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-
         {/* ── Main Centered Content ── */}
-        <div className="relative z-20 flex flex-col items-center text-center pt-6 sm:pt-8 lg:pt-10 px-5 sm:px-8">
+        <div className="relative z-20 flex flex-col items-center text-center pt-24 sm:pt-28 lg:pt-32 px-5 sm:px-8">
           {/* Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight mb-3 max-w-4xl">
             <span className="text-white/90" style={{ fontWeight: 400 }}>

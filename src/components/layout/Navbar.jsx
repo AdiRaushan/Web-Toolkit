@@ -52,7 +52,7 @@ const Navbar = ({ autoHide = false }) => {
   return (
     <>
       <nav
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-[200] w-[92%] sm:w-auto transition-all duration-500 rounded-full px-2 py-1.5 shadow-xl
+        className={`fixed top-4 left-1/2 z-[200] w-[92%] sm:w-auto transition-all duration-500 rounded-full px-2 py-1.5 shadow-xl
           ${
             isHero
               ? "bg-white/10 backdrop-blur-xl border border-white/20 shadow-blue-900/10"
@@ -65,11 +65,11 @@ const Navbar = ({ autoHide = false }) => {
           opacity: visible ? 1 : 0,
         }}
       >
-        <div className="flex items-center gap-1 sm:gap-4 px-2 sm:px-3 h-10 sm:h-11">
+        <div className="flex items-center justify-between sm:justify-start gap-1 sm:gap-4 px-2 sm:px-3 h-10 sm:h-11 w-full sm:w-auto">
           {/* Logo/Brand */}
           <Link
             to="/"
-            className="flex items-center gap-2 mr-2 sm:mr-4 transition-transform hover:scale-105"
+            className="flex items-center gap-2 transition-transform hover:scale-105"
           >
             <img
               src={favicon}
@@ -77,11 +77,11 @@ const Navbar = ({ autoHide = false }) => {
               className="w-6 h-6 sm:w-7 sm:h-7"
             />
             <span
-              className={`font-extrabold text-sm sm:text-base tracking-tight hidden sm:inline transition-colors ${
+              className={`font-extrabold text-xs sm:text-base tracking-tight transition-colors ${
                 isHero ? "text-white" : "text-slate-900"
               }`}
             >
-              Web<span className="text-blue-500">Toolkit</span>
+              Web<span className="text-black">-Toolkit</span>
             </span>
           </Link>
 
