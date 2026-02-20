@@ -40,6 +40,7 @@ import {
   Layers,
   Play,
 } from "lucide-react";
+import toolkitLogo from "../assets/webtoolkit-logo.png";
 
 /* ─── Color tokens ─── */
 const C = {
@@ -1087,29 +1088,11 @@ const Dashboard = () => {
             {/* Brand */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-5">
-                <div
-                  className="w-11 h-11 rounded-2xl flex items-center justify-center"
-                  style={{
-                    background: `linear-gradient(135deg, ${C.accentFrom}, ${C.accentTo})`,
-                    boxShadow: `0 4px 16px ${C.accentFrom}25`,
-                  }}
-                >
-                  <Zap size={20} className="text-white" />
-                </div>
-                <div>
-                  <span
-                    className="text-xl font-extrabold"
-                    style={{ color: C.dark }}
-                  >
-                    Web<span style={{ color: C.accentFrom }}>Toolkit</span>
-                  </span>
-                  <span
-                    className="block text-[10px] uppercase tracking-widest font-bold"
-                    style={{ color: C.muted }}
-                  >
-                    Creator Studio
-                  </span>
-                </div>
+                <img
+                  src={toolkitLogo}
+                  alt="WebToolkit"
+                  className="h-12 w-auto object-contain"
+                />
               </div>
               <p
                 className="text-sm leading-relaxed mb-6 max-w-xs"

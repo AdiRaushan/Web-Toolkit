@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <!-- Outer diamond -->
+  <g transform="translate(32, 4) rotate(45)">
+    <rect x="0" y="0" width="40" height="40" rx="4" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <!-- Inner diamond -->
+    <rect x="10" y="10" width="20" height="20" rx="2" fill="#3B82F6"/>
+  </g>
+</svg>

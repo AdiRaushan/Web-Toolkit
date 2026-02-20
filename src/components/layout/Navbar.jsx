@@ -1,15 +1,25 @@
 /**
  * Navbar.jsx
- * Top navigation bar for the multi-tool dashboard.
+ * Floating glassmorphism navigation bar for the multi-tool dashboard.
+ * Uses the WebToolkit logo from assets.
  * Shows branding + navigation links using React Router.
  */
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Zap, LayoutDashboard, Monitor, Search } from "lucide-react";
+import { LayoutDashboard, Monitor, Search, Menu, X } from "lucide-react";
+import logo from "../../assets/webtoolkit-logo.png";
 
 const Navbar = () => {
   const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const navLinks = [
     { to: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -18,45 +28,86 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[200] bg-slate-950/95 backdrop-blur-xl border-b border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-[200] w-[95%] max-w-5xl transition-all duration-500 rounded-2xl
+        ${
+          scrolled
+            ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-black/[0.04] border border-slate-200/60"
+            : "bg-white/60 backdrop-blur-lg border border-white/40"
+        }`}
+    >
+      <div className="px-4 sm:px-6">
+        <div className="flex items-center justify-between h-[60px]">
           {/* Brand */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-shadow">
-              <Zap size={18} className="text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-white font-bold text-lg tracking-tight">
-                Web<span className="text-indigo-400">Toolkit</span>
-              </span>
-              <span className="block text-[10px] text-slate-500 font-medium tracking-widest uppercase -mt-0.5">
-                Creator Studio
-              </span>
-            </div>
+          <Link
+            to="/"
+            className="flex items-center gap-2.5 group flex-shrink-0"
+          >
+            <img
+              src={logo}
+              alt="WebToolkit"
+              className="h-12 w-auto object-contain"
+            />
           </Link>
 
-          {/* Nav Links */}
-          <div className="flex items-center gap-1">
+          {/* Desktop Nav Links */}
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map(({ to, label, icon: Icon }) => {
               const isActive = location.pathname === to;
               return (
                 <Link
                   key={to}
                   to={to}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200
+                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200
                     ${
                       isActive
-                        ? "bg-indigo-500/15 text-indigo-400 shadow-inner"
-                        : "text-slate-400 hover:text-white hover:bg-slate-800/60"
+                        ? "bg-blue-600/10 text-blue-700 shadow-sm"
+                        : "text-slate-500 hover:text-slate-900 hover:bg-slate-100/60"
                     }`}
                 >
                   <Icon size={16} />
-                  <span className="hidden md:inline">{label}</span>
+                  <span>{label}</span>
                 </Link>
               );
             })}
           </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden w-9 h-9 rounded-xl flex items-center justify-center text-slate-600 hover:bg-slate-100/60 transition-colors"
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          mobileOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 pb-4 pt-2 space-y-1 border-t border-slate-200/40">
+          {navLinks.map(({ to, label, icon: Icon }) => {
+            const isActive = location.pathname === to;
+            return (
+              <Link
+                key={to}
+                to={to}
+                onClick={() => setMobileOpen(false)}
+                className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all
+                  ${
+                    isActive
+                      ? "bg-blue-600/10 text-blue-700"
+                      : "text-slate-500 hover:text-slate-900 hover:bg-slate-50"
+                  }`}
+              >
+                <Icon size={16} />
+                {label}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>
