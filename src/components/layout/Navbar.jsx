@@ -65,7 +65,7 @@ const Navbar = ({ autoHide = false }) => {
           opacity: visible ? 1 : 0,
         }}
       >
-        <div className="flex items-center justify-between sm:justify-start gap-1 sm:gap-4 px-2 sm:px-3 h-10 sm:h-11 w-full sm:w-auto">
+        <div className="flex items-center justify-between sm:justify-start gap-2 sm:gap-4 px-3 sm:px-4 h-11 sm:h-12 w-full sm:w-auto">
           {/* Logo/Brand */}
           <Link
             to="/"
@@ -81,7 +81,10 @@ const Navbar = ({ autoHide = false }) => {
                 isHero ? "text-white" : "text-slate-900"
               }`}
             >
-              Web<span className="text-black">-Toolkit</span>
+              Web
+              <span className={isHero ? "text-white" : "text-blue-500"}>
+                -Toolkit
+              </span>
             </span>
           </Link>
 
