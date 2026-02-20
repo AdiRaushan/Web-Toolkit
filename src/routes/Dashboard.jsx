@@ -114,12 +114,40 @@ const useFadeIn = () => {
   return ref;
 };
 
+const GridOverlay = ({ opacity = 0.04, color = "0,0,0" }) => (
+  <div
+    className="absolute inset-0 pointer-events-none"
+    style={{
+      backgroundImage: `linear-gradient(rgba(${color},${opacity}) 1px, transparent 1px), linear-gradient(90deg, rgba(${color},${opacity}) 1px, transparent 1px)`,
+      backgroundSize: "44px 44px",
+    }}
+  />
+);
+
 /* ─── Section Wrapper ─── */
-const Section = ({ children, className = "", id }) => {
+const Section = ({ children, className = "", id, blue = false }) => {
   const ref = useFadeIn();
   return (
-    <section ref={ref} id={id} className={`px-5 sm:px-8 lg:px-12 ${className}`}>
-      <div className="max-w-6xl mx-auto">{children}</div>
+    <section
+      ref={ref}
+      id={id}
+      className={`relative px-5 sm:px-8 lg:px-12 ${className} overflow-hidden`}
+    >
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background: blue
+            ? "linear-gradient(180deg, #F0F9FF 0%, #E0F2FE 100%)"
+            : "linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%)",
+        }}
+      />
+      <GridOverlay opacity={0.03} />
+      {/* Soft blue glow blobs for bright theme */}
+      <div className="absolute inset-0 pointer-events-none -z-10 opacity-40">
+        <div className="absolute -top-[20%] -left-[10%] w-[600px] h-[600px] rounded-full bg-blue-100 blur-[120px]" />
+        <div className="absolute -bottom-[20%] -right-[10%] w-[500px] h-[500px] rounded-full bg-indigo-50 blur-[100px]" />
+      </div>
+      <div className="max-w-6xl mx-auto relative z-10">{children}</div>
     </section>
   );
 };
@@ -172,8 +200,8 @@ const Dashboard = () => {
     <div style={{ background: C.bg, fontFamily: "'Inter', sans-serif" }}>
       {/* ═══════════════ 1. HERO ═══════════════ */}
       <section
-        className="relative overflow-hidden"
-        style={{ height: "100vh", maxHeight: "100vh" }}
+        className="relative overflow-hidden flex flex-col items-center"
+        style={{ minHeight: "100vh" }}
       >
         {/* ── Sky Gradient Background ── */}
         <div
@@ -183,6 +211,7 @@ const Dashboard = () => {
               "linear-gradient(180deg, #3B8BF6 0%, #6BB3FE 30%, #96CFFF 50%, #c2e3ff 65%, #e8f3ff 80%, #F8FAFC 100%)",
           }}
         />
+        <GridOverlay />
 
         {/* ── Soft cloud / light effects ── */}
         <div className="absolute inset-0 pointer-events-none">
@@ -268,25 +297,18 @@ const Dashboard = () => {
         </div>
 
         {/* ── Hero Landscape Image + Floating Cards Zone ── */}
-        <div className="relative z-10 flex justify-center px-5 sm:px-8 lg:px-12">
-          <div className="relative max-w-5xl w-full">
+        <div className="relative z-10 flex justify-center px-4 sm:px-6 lg:px-8 w-full mt-2 lg:mt-4">
+          <div className="relative max-w-5xl lg:max-w-7xl w-full">
             {/* Landscape Hero Image */}
             <div className="relative w-full">
               <img
                 src={heroImg}
                 alt="WebToolkit Dashboard"
-                className="w-full h-[280px] sm:h-[30px] lg:h-[470px] object-cover rounded-3xl shadow-2xl shadow-blue-900/20"
+                className="w-full h-[280px] sm:h-[450px] lg:h-[460px] object-cover rounded-[32px] lg:rounded-[48px] shadow-2xl shadow-blue-900/20"
               />
 
-              {/* Transparent Grid Overlay */}
-              <div
-                className="absolute inset-0 rounded-3xl pointer-events-none"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)",
-                  backgroundSize: "40px 40px",
-                }}
-              />
+              {/* Grid Overlay */}
+              <GridOverlay />
 
               {/* Subtle gradient overlay for card readability */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
@@ -295,7 +317,7 @@ const Dashboard = () => {
             {/* ── Floating UI Cards (on top of image) ── */}
 
             {/* Card 1: Sites Audited (top-left) */}
-            <div className="absolute top-[6%] left-[2%] lg:left-[3%] w-[160px] sm:w-[180px] bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl shadow-blue-900/15 p-3 border border-white/60 animate-float-slow">
+            <div className="absolute top-[6%] left-[2%] lg:left-[3%] w-[160px] sm:w-[180px] bg-white/10 backdrop-blur-xl rounded-2xl shadow-2xl shadow-blue-900/15 p-3 border border-white/20 animate-float-slow">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-6 h-6 rounded-lg bg-blue-100 flex items-center justify-center">
                   <Search size={12} className="text-blue-600" />
@@ -502,7 +524,7 @@ const Dashboard = () => {
       </section>
 
       {/* ═══════════════ 2. PROBLEM ═══════════════ */}
-      <Section className="py-20 lg:py-28" id="problem">
+      <Section className="py-24 lg:py-32" id="problem" blue>
         <SectionHeading
           eyebrow="The Problem"
           title={
@@ -539,17 +561,9 @@ const Dashboard = () => {
           ].map(({ icon: Icon, label, desc }, i) => (
             <div
               key={i}
-              className="group rounded-[20px] p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{
-                background: C.card,
-                border: `1px solid ${C.border}`,
-                boxShadow: `0 1px 3px ${C.border}`,
-              }}
+              className="group rounded-[20px] p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl bg-white border border-blue-100 shadow-sm"
             >
-              <div
-                className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 transition-colors"
-                style={{ background: "#FEE2E2", color: "#EF4444" }}
-              >
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 transition-colors bg-red-50 text-red-500">
                 <Icon size={22} />
               </div>
               <h3
@@ -567,20 +581,13 @@ const Dashboard = () => {
       </Section>
 
       {/* ═══════════════ 3. SOLUTION ═══════════════ */}
-      <Section className="py-20 lg:py-28" id="solution">
+      <Section className="py-24 lg:py-32" id="solution">
         <SectionHeading
           eyebrow="The Solution"
           title={
             <>
               Two Smart Tools.{" "}
-              <span
-                className="text-transparent bg-clip-text"
-                style={{
-                  backgroundImage: `linear-gradient(135deg, ${C.accentFrom}, ${C.accentTo})`,
-                }}
-              >
-                One Growth System.
-              </span>
+              <span className="text-blue-600">One Growth System.</span>
             </>
           }
           subtitle="Everything you need to turn cold outreach into signed clients."
@@ -588,10 +595,7 @@ const Dashboard = () => {
 
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Card 1: Template Maker */}
-          <div
-            className="group rounded-[20px] p-8 lg:p-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden"
-            style={{ background: C.card, border: `1px solid ${C.border}` }}
-          >
+          <div className="group rounded-[20px] p-8 lg:p-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden bg-white border border-blue-50 shadow-lg">
             {/* Accent top bar */}
             <div
               className="absolute top-0 left-0 w-full h-1.5 rounded-t-[20px]"
@@ -673,10 +677,7 @@ const Dashboard = () => {
           </div>
 
           {/* Card 2: Audit System */}
-          <div
-            className="group rounded-[20px] p-8 lg:p-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden"
-            style={{ background: C.card, border: `1px solid ${C.border}` }}
-          >
+          <div className="group rounded-[20px] p-8 lg:p-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden bg-white border border-blue-50 shadow-lg">
             <div
               className="absolute top-0 left-0 w-full h-1.5 rounded-t-[20px]"
               style={{
@@ -758,7 +759,7 @@ const Dashboard = () => {
       </Section>
 
       {/* ═══════════════ 4. HOW IT WORKS ═══════════════ */}
-      <Section className="py-20 lg:py-28" id="how-it-works">
+      <Section className="py-24 lg:py-32" id="how-it-works" blue>
         <SectionHeading
           eyebrow="How It Works"
           title="Three Steps to Closing More Clients"
@@ -849,7 +850,7 @@ const Dashboard = () => {
       </Section>
 
       {/* ═══════════════ 5. BENEFITS GRID ═══════════════ */}
-      <Section className="py-20 lg:py-28" id="benefits">
+      <Section className="py-24 lg:py-32" id="benefits">
         <SectionHeading
           eyebrow="Why It Works"
           title="Measurable Impact on Your Growth"
@@ -897,8 +898,7 @@ const Dashboard = () => {
           ].map(({ icon: Icon, title, desc, color }, i) => (
             <div
               key={i}
-              className="group rounded-[20px] p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-default"
-              style={{ background: C.card, border: `1px solid ${C.border}` }}
+              className="group rounded-[20px] p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl bg-white border border-blue-50 shadow-sm"
             >
               <div
                 className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
@@ -921,7 +921,7 @@ const Dashboard = () => {
       </Section>
 
       {/* ═══════════════ 6. FAQ ═══════════════ */}
-      <Section className="py-20 lg:py-28" id="faq">
+      <Section className="py-24 lg:py-32" id="faq" blue>
         <SectionHeading
           eyebrow="FAQ"
           title="Frequently Asked Questions"
@@ -953,12 +953,9 @@ const Dashboard = () => {
           ].map(({ q, a }, i) => (
             <div
               key={i}
-              className="rounded-[16px] overflow-hidden transition-all duration-300"
+              className="rounded-[16px] overflow-hidden transition-all duration-300 bg-white border shadow-sm"
               style={{
-                background: C.card,
-                border: `1px solid ${openFaq === i ? `${C.accentFrom}30` : C.border}`,
-                boxShadow:
-                  openFaq === i ? `0 4px 20px ${C.accentFrom}08` : "none",
+                borderColor: openFaq === i ? C.accentFrom : "#E2E8F0",
               }}
             >
               <button
@@ -974,8 +971,7 @@ const Dashboard = () => {
                 <div
                   className="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors"
                   style={{
-                    background:
-                      openFaq === i ? `${C.accentFrom}10` : `${C.border}60`,
+                    background: openFaq === i ? `${C.accentFrom}10` : "#F1F5F9",
                     color: openFaq === i ? C.accentFrom : C.muted,
                   }}
                 >
@@ -1051,13 +1047,14 @@ const Dashboard = () => {
       </section>
 
       {/* ═══════════════ 8. FOOTER ═══════════════ */}
-      <footer className="relative overflow-hidden pt-16 pb-10">
+      <footer className="relative overflow-hidden pt-16 pb-10 text-white">
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(180deg, ${C.bg}, ${C.primary}06)`,
+            background: "#0F172A",
           }}
         />
+        <GridOverlay opacity={0.04} />
 
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
@@ -1070,24 +1067,15 @@ const Dashboard = () => {
                   className="w-11 h-11"
                 />
                 <div>
-                  <span
-                    className="text-xl font-extrabold"
-                    style={{ color: C.dark }}
-                  >
+                  <span className="text-xl font-extrabold text-white">
                     Web<span style={{ color: C.accentFrom }}>Toolkit</span>
                   </span>
-                  <span
-                    className="block text-[10px] uppercase tracking-widest font-bold"
-                    style={{ color: C.muted }}
-                  >
+                  <span className="block text-[10px] uppercase tracking-widest font-bold text-white/50">
                     Creator Studio
                   </span>
                 </div>
               </div>
-              <p
-                className="text-sm leading-relaxed mb-6 max-w-xs"
-                style={{ color: C.muted }}
-              >
+              <p className="text-sm leading-relaxed mb-6 max-w-xs text-white/60">
                 Empowering agencies and freelancers to close more clients with
                 AI-powered website tools.
               </p>
@@ -1100,12 +1088,7 @@ const Dashboard = () => {
                   <a
                     key={i}
                     href={href}
-                    className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
-                    style={{
-                      background: `${C.primary}08`,
-                      color: C.muted,
-                      border: `1px solid ${C.border}`,
-                    }}
+                    className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md bg-white/5 border border-white/10 text-white/70"
                   >
                     <Icon size={18} />
                   </a>
@@ -1115,10 +1098,7 @@ const Dashboard = () => {
 
             {/* Quick Links */}
             <div>
-              <h4
-                className="text-xs font-bold uppercase tracking-widest mb-5"
-                style={{ color: C.dark }}
-              >
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-5 text-white/40">
                 Tools
               </h4>
               <div className="space-y-3">
@@ -1129,8 +1109,7 @@ const Dashboard = () => {
                   <Link
                     key={to}
                     to={to}
-                    className="group flex items-center gap-2 text-sm font-medium transition-colors hover:translate-x-0.5 duration-200"
-                    style={{ color: C.muted }}
+                    className="group flex items-center gap-2 text-sm font-medium transition-colors hover:translate-x-0.5 duration-200 text-white/60 hover:text-white"
                   >
                     <ArrowUpRight
                       size={14}
@@ -1145,16 +1124,12 @@ const Dashboard = () => {
 
             {/* Contact */}
             <div>
-              <h4
-                className="text-xs font-bold uppercase tracking-widest mb-5"
-                style={{ color: C.dark }}
-              >
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-5 text-white/40">
                 Contact
               </h4>
               <a
                 href="mailto:hello@webtoolkit.studio"
-                className="text-sm font-medium transition-colors"
-                style={{ color: C.muted }}
+                className="text-sm font-medium transition-colors text-white/60 hover:text-white"
               >
                 hello@webtoolkit.studio
               </a>
@@ -1162,11 +1137,8 @@ const Dashboard = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div
-            className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
-            style={{ borderTop: `1px solid ${C.border}` }}
-          >
-            <span className="text-xs" style={{ color: `${C.muted}80` }}>
+          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/5">
+            <span className="text-xs text-white/30">
               © {new Date().getFullYear()} WebToolkit Creator Studio. All rights
               reserved.
             </span>
@@ -1175,8 +1147,7 @@ const Dashboard = () => {
                 <a
                   key={text}
                   href="#"
-                  className="text-xs font-medium transition-colors hover:underline"
-                  style={{ color: `${C.muted}80` }}
+                  className="text-xs font-medium transition-colors hover:underline text-white/30 hover:text-white/50"
                 >
                   {text}
                 </a>
