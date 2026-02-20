@@ -48,6 +48,7 @@ const LandingPage = () => {
   const [scrapeError, setScrapeError] = useState("");
   const [scrapeSuccess, setScrapeSuccess] = useState("");
   const [improveLoading, setImproveLoading] = useState(false);
+  const [showMobileNotice, setShowMobileNotice] = useState(true);
 
   // Check if pre-filled data was passed from Audit page via router state
   const routerLocation = useLocation();
@@ -764,6 +765,36 @@ const LandingPage = () => {
 
   return (
     <div className="font-sans text-slate-800 bg-white selection:bg-red-100 selection:text-red-900 relative">
+      {/* --- MOBILE ONLY NOTICE --- */}
+      {showMobileNotice && (
+        <div className="md:hidden fixed inset-x-4 bottom-6 z-[300] bg-slate-900 text-white p-6 rounded-[32px] shadow-2xl border border-white/10 animate-in fade-in slide-in-from-bottom-8 duration-500">
+          <div className="flex justify-between items-start mb-3">
+            <div className="flex items-center gap-2 text-blue-400">
+              <Monitor size={18} />
+              <span className="font-bold text-xs uppercase tracking-widest">
+                Desktop Recommended
+              </span>
+            </div>
+            <button
+              onClick={() => setShowMobileNotice(false)}
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white/40 hover:text-white transition-colors"
+            >
+              <X size={16} />
+            </button>
+          </div>
+          <p className="text-sm text-white/70 leading-relaxed mb-6">
+            The Demo Creator Studio is best experienced on a laptop or desktop
+            monitor to use all customization features properly.
+          </p>
+          <button
+            onClick={() => setShowMobileNotice(false)}
+            className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl text-sm font-extrabold transition-all shadow-lg shadow-blue-500/20 active:scale-95"
+          >
+            Continue Anyway
+          </button>
+        </div>
+      )}
+
       {/* --- CUSTOMIZER SIDEBAR (Right Side) --- */}
       <div
         className={`fixed top-0 right-0 h-full w-[380px] bg-slate-900 text-white z-[100] shadow-2xl border-l border-slate-700/80 transition-transform duration-300 ease-in-out overflow-y-auto ${
