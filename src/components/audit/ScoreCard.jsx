@@ -2,6 +2,7 @@
  * ScoreCard.jsx
  * Displays the overall audit score with a circular gauge,
  * grade badge, and summary stats.
+ * Light theme to match the Dashboard design system.
  */
 
 import React from "react";
@@ -13,35 +14,35 @@ const getScoreStyle = (score) => {
   if (score >= 90)
     return {
       color: "#22c55e",
-      bg: "bg-green-500/10",
-      text: "text-green-400",
+      bg: "bg-green-50",
+      text: "text-green-600",
       label: "Excellent",
     };
   if (score >= 80)
     return {
       color: "#3b82f6",
-      bg: "bg-blue-500/10",
-      text: "text-blue-400",
+      bg: "bg-blue-50",
+      text: "text-blue-600",
       label: "Good",
     };
   if (score >= 70)
     return {
       color: "#eab308",
-      bg: "bg-yellow-500/10",
-      text: "text-yellow-400",
+      bg: "bg-yellow-50",
+      text: "text-yellow-600",
       label: "Needs Work",
     };
   if (score >= 50)
     return {
       color: "#f97316",
-      bg: "bg-orange-500/10",
-      text: "text-orange-400",
+      bg: "bg-orange-50",
+      text: "text-orange-600",
       label: "Poor",
     };
   return {
     color: "#ef4444",
-    bg: "bg-red-500/10",
-    text: "text-red-400",
+    bg: "bg-red-50",
+    text: "text-red-600",
     label: "Critical",
   };
 };
@@ -52,7 +53,7 @@ const ScoreCard = ({ score = 0, grade = "F", totalIssues = 0 }) => {
   const strokeDashoffset = circumference - (score / 100) * circumference;
 
   return (
-    <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 text-center backdrop-blur-sm">
+    <div className="bg-white border border-slate-200/60 rounded-2xl p-8 text-center shadow-sm">
       {/* Circular Score Gauge */}
       <div className="relative w-40 h-40 mx-auto mb-6">
         <svg
@@ -65,7 +66,7 @@ const ScoreCard = ({ score = 0, grade = "F", totalIssues = 0 }) => {
             cy="60"
             r="50"
             fill="none"
-            stroke="#334155"
+            stroke="#E2E8F0"
             strokeWidth="8"
           />
           {/* Score ring */}
@@ -84,7 +85,7 @@ const ScoreCard = ({ score = 0, grade = "F", totalIssues = 0 }) => {
         </svg>
         {/* Score Number */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="text-4xl font-black text-white">{score}</span>
+          <span className="text-4xl font-black text-slate-900">{score}</span>
           <span className="text-xs text-slate-400 font-medium">/ 100</span>
         </div>
       </div>
@@ -105,7 +106,7 @@ const ScoreCard = ({ score = 0, grade = "F", totalIssues = 0 }) => {
       </p>
 
       {/* Issues count */}
-      <p className="text-slate-500 text-sm">
+      <p className="text-slate-400 text-sm">
         {totalIssues} issue{totalIssues !== 1 ? "s" : ""} found
       </p>
     </div>

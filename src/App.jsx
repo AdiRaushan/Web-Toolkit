@@ -15,11 +15,12 @@ import AuditApp from "./routes/AuditApp";
 const App = () => {
   const location = useLocation();
   const isDemoPage = location.pathname === "/demo";
+  const isDashboard = location.pathname === "/";
 
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* Global Navigation — hidden on /demo since the template has its own navbar */}
-      {!isDemoPage && <Navbar />}
+      {/* Global Navigation — hidden on / (hero has integrated navbar), auto-hide on /demo */}
+      {!isDashboard && <Navbar autoHide={isDemoPage} />}
 
       {/* Route Pages */}
       <Routes>

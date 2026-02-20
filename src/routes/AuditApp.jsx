@@ -1,6 +1,7 @@
 /**
  * AuditApp.jsx
  * Website Audit Tool route page.
+ * Uses the same light theme as the Dashboard for consistency.
  * Allows users to enter a URL, runs SEO/conversion audit,
  * and displays a score + detailed report.
  * Includes "Generate Demo From This" button to redirect
@@ -97,12 +98,12 @@ const AuditApp = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 pt-16">
+    <div className="min-h-screen pt-24 pb-16" style={{ background: "#F8FAFC" }}>
       <div className="max-w-4xl mx-auto px-6 py-12">
         {/* Back to Dashboard */}
         <button
           onClick={() => navigate("/")}
-          className="flex items-center gap-2 text-slate-500 hover:text-slate-300 text-sm mb-8 transition-colors"
+          className="flex items-center gap-2 text-slate-400 hover:text-slate-700 text-sm mb-8 transition-colors"
         >
           <ArrowLeft size={16} />
           Back to Dashboard
@@ -116,10 +117,10 @@ const AuditApp = () => {
           <div className="mt-12 text-center">
             <Loader2
               size={32}
-              className="text-indigo-400 animate-spin mx-auto mb-4"
+              className="text-blue-500 animate-spin mx-auto mb-4"
             />
-            <p className="text-slate-400 text-sm">Scanning website...</p>
-            <p className="text-slate-600 text-xs mt-1">
+            <p className="text-slate-600 text-sm">Scanning website...</p>
+            <p className="text-slate-400 text-xs mt-1">
               Checking SEO, security, and conversion elements
             </p>
           </div>
@@ -140,31 +141,31 @@ const AuditApp = () => {
               <div className="md:col-span-2 flex flex-col justify-center">
                 {/* Generate Demo Button */}
                 {scrapedData && (
-                  <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-2xl p-6">
-                    <h3 className="text-white font-bold text-lg mb-2">
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/60 rounded-2xl p-6">
+                    <h3 className="text-slate-900 font-bold text-lg mb-2">
                       Want a landing page for this website?
                     </h3>
-                    <p className="text-slate-400 text-sm mb-4">
+                    <p className="text-slate-500 text-sm mb-4">
                       We detected the brand info, color scheme, and niche.
                       Generate a professional demo page instantly with all data
                       pre-filled.
                     </p>
                     <div className="flex flex-wrap gap-3 mb-4">
                       {scrapedData.title && (
-                        <span className="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">
+                        <span className="text-xs bg-white text-slate-600 px-3 py-1 rounded-full border border-slate-200">
                           {scrapedData.title.substring(0, 30)}
                         </span>
                       )}
-                      <span className="text-xs bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full capitalize">
+                      <span className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full capitalize">
                         {scrapedData.niche}
                       </span>
-                      <span className="text-xs bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">
+                      <span className="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">
                         {scrapedData.brandColor}
                       </span>
                     </div>
                     <button
                       onClick={handleGenerateDemo}
-                      className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-xl font-bold text-sm uppercase tracking-wider hover:from-indigo-600 hover:to-purple-700 transition-all flex items-center gap-2 shadow-lg shadow-indigo-500/20"
+                      className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-bold text-sm uppercase tracking-wider hover:from-blue-700 hover:to-indigo-700 transition-all flex items-center gap-2 shadow-lg shadow-blue-500/20"
                     >
                       <Monitor size={16} />
                       Generate Demo From This
@@ -184,8 +185,8 @@ const AuditApp = () => {
       </div>
 
       {/* Footer */}
-      <div className="border-t border-slate-800/60 py-6 mt-12">
-        <p className="text-center text-slate-600 text-xs">
+      <div className="border-t border-slate-200/60 py-6 mt-12">
+        <p className="text-center text-slate-400 text-xs">
           Website Audit Tool • WebToolkit Creator Studio
         </p>
       </div>

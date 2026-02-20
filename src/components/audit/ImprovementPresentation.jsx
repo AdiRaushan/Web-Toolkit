@@ -2,6 +2,7 @@
  * ImprovementPresentation.jsx
  * A slide-style presentation that shows how to improve the audited website.
  * Each "slide" focuses on one area: SEO, Speed, Conversion, Branding, Mobile.
+ * Light theme to match the Dashboard design system.
  */
 
 import React, { useState } from "react";
@@ -31,13 +32,13 @@ const buildSlides = (report, url) => {
     // Slide 1 — Overview
     {
       icon: Presentation,
-      iconColor: "text-indigo-400",
-      iconBg: "bg-indigo-500/15",
+      iconColor: "text-blue-600",
+      iconBg: "bg-blue-50",
       title: "Website Improvement Plan",
       subtitle: url,
       content: (
         <div className="space-y-6">
-          <p className="text-slate-400 text-sm leading-relaxed">
+          <p className="text-slate-500 text-sm leading-relaxed">
             Based on our analysis, here's a step-by-step improvement roadmap to
             boost your website's SEO ranking, conversion rate, and user trust.
           </p>
@@ -46,27 +47,27 @@ const buildSlides = (report, url) => {
               {
                 label: "Issues Found",
                 value: report.totalIssues,
-                color: "text-amber-400",
+                color: "text-amber-600",
               },
               {
                 label: "Current Score",
                 value: `${report.score}/100`,
-                color: "text-indigo-400",
+                color: "text-blue-600",
               },
               {
                 label: "Grade",
                 value: report.grade,
-                color: report.score >= 70 ? "text-green-400" : "text-red-400",
+                color: report.score >= 70 ? "text-green-600" : "text-red-600",
               },
             ].map((s) => (
               <div
                 key={s.label}
-                className="bg-slate-800/60 rounded-xl p-4 text-center border border-slate-700/50"
+                className="bg-slate-50 rounded-xl p-4 text-center border border-slate-200/60"
               >
                 <span className={`text-2xl font-black ${s.color}`}>
                   {s.value}
                 </span>
-                <span className="block text-xs text-slate-500 mt-1">
+                <span className="block text-xs text-slate-400 mt-1">
                   {s.label}
                 </span>
               </div>
@@ -78,13 +79,13 @@ const buildSlides = (report, url) => {
     // Slide 2 — SEO Basics
     {
       icon: Search,
-      iconColor: "text-blue-400",
-      iconBg: "bg-blue-500/15",
+      iconColor: "text-blue-600",
+      iconBg: "bg-blue-50",
       title: "SEO Fundamentals",
       subtitle: "Search Engine Optimization",
       content: (
         <div className="space-y-4">
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-500 text-sm">
             Fix these core SEO elements to improve your Google ranking:
           </p>
           <div className="space-y-3">
@@ -122,25 +123,25 @@ const buildSlides = (report, url) => {
             ].map((item) => (
               <div
                 key={item.label}
-                className="flex items-start gap-3 p-3 bg-slate-800/40 rounded-lg border border-slate-700/30"
+                className="flex items-start gap-3 p-3 bg-slate-50 rounded-lg border border-slate-200/60"
               >
                 {item.ok ? (
                   <CheckCircle
                     size={18}
-                    className="text-green-400 mt-0.5 flex-shrink-0"
+                    className="text-green-500 mt-0.5 flex-shrink-0"
                   />
                 ) : (
                   <XCircle
                     size={18}
-                    className="text-red-400 mt-0.5 flex-shrink-0"
+                    className="text-red-500 mt-0.5 flex-shrink-0"
                   />
                 )}
                 <div>
-                  <span className="text-sm font-semibold text-slate-200">
+                  <span className="text-sm font-semibold text-slate-800">
                     {item.label}
                   </span>
                   {!item.ok && (
-                    <p className="text-xs text-slate-500 mt-1">{item.fix}</p>
+                    <p className="text-xs text-slate-400 mt-1">{item.fix}</p>
                   )}
                 </div>
               </div>
@@ -152,13 +153,13 @@ const buildSlides = (report, url) => {
     // Slide 3 — Conversion
     {
       icon: MousePointerClick,
-      iconColor: "text-purple-400",
-      iconBg: "bg-purple-500/15",
+      iconColor: "text-indigo-600",
+      iconBg: "bg-indigo-50",
       title: "Conversion Optimization",
       subtitle: "Turn visitors into customers",
       content: (
         <div className="space-y-4">
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-500 text-sm">
             These conversion elements determine whether visitors take action:
           </p>
           <div className="space-y-3">
@@ -184,29 +185,29 @@ const buildSlides = (report, url) => {
             ].map((item) => (
               <div
                 key={item.label}
-                className="p-4 bg-slate-800/40 rounded-lg border border-slate-700/30"
+                className="p-4 bg-slate-50 rounded-lg border border-slate-200/60"
               >
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
                     {item.ok ? (
-                      <CheckCircle size={16} className="text-green-400" />
+                      <CheckCircle size={16} className="text-green-500" />
                     ) : (
-                      <XCircle size={16} className="text-red-400" />
+                      <XCircle size={16} className="text-red-500" />
                     )}
-                    <span className="text-sm font-semibold text-slate-200">
+                    <span className="text-sm font-semibold text-slate-800">
                       {item.label}
                     </span>
                   </div>
                   {!item.ok && (
                     <span
-                      className={`text-[10px] font-bold uppercase px-2 py-0.5 rounded-full ${item.impact === "High" ? "bg-red-500/15 text-red-400" : "bg-amber-500/15 text-amber-400"}`}
+                      className={`text-[10px] font-bold uppercase px-2 py-0.5 rounded-full ${item.impact === "High" ? "bg-red-50 text-red-600" : "bg-amber-50 text-amber-600"}`}
                     >
                       {item.impact} Impact
                     </span>
                   )}
                 </div>
                 {!item.ok && (
-                  <p className="text-xs text-slate-500 ml-6">{item.fix}</p>
+                  <p className="text-xs text-slate-400 ml-6">{item.fix}</p>
                 )}
               </div>
             ))}
@@ -217,13 +218,13 @@ const buildSlides = (report, url) => {
     // Slide 4 — Performance & Speed
     {
       icon: Zap,
-      iconColor: "text-amber-400",
-      iconBg: "bg-amber-500/15",
+      iconColor: "text-amber-600",
+      iconBg: "bg-amber-50",
       title: "Performance & Speed",
       subtitle: "Faster = Higher Rankings",
       content: (
         <div className="space-y-4">
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-500 text-sm">
             Speed directly impacts bounce rate and SEO. Here's what to optimize:
           </p>
           <div className="space-y-3">
@@ -251,19 +252,19 @@ const buildSlides = (report, url) => {
             ].map((tip) => (
               <div
                 key={tip.title}
-                className="p-4 bg-slate-800/40 rounded-lg border border-slate-700/30"
+                className="p-4 bg-slate-50 rounded-lg border border-slate-200/60"
               >
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-sm font-semibold text-slate-200">
+                  <span className="text-sm font-semibold text-slate-800">
                     {tip.title}
                   </span>
                   <span
-                    className={`text-[10px] font-bold uppercase px-2 py-0.5 rounded-full ${tip.priority === "Critical" ? "bg-red-500/15 text-red-400" : tip.priority === "High" ? "bg-amber-500/15 text-amber-400" : "bg-blue-500/15 text-blue-400"}`}
+                    className={`text-[10px] font-bold uppercase px-2 py-0.5 rounded-full ${tip.priority === "Critical" ? "bg-red-50 text-red-600" : tip.priority === "High" ? "bg-amber-50 text-amber-600" : "bg-blue-50 text-blue-600"}`}
                   >
                     {tip.priority}
                   </span>
                 </div>
-                <p className="text-xs text-slate-500">{tip.desc}</p>
+                <p className="text-xs text-slate-400">{tip.desc}</p>
               </div>
             ))}
           </div>
@@ -273,13 +274,13 @@ const buildSlides = (report, url) => {
     // Slide 5 — Branding & Trust
     {
       icon: Palette,
-      iconColor: "text-pink-400",
-      iconBg: "bg-pink-500/15",
+      iconColor: "text-pink-600",
+      iconBg: "bg-pink-50",
       title: "Branding & Trust Signals",
       subtitle: "Build credibility at first glance",
       content: (
         <div className="space-y-4">
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-500 text-sm">
             Trust signals can increase conversion by up to 42%. Add these
             elements:
           </p>
@@ -312,12 +313,12 @@ const buildSlides = (report, url) => {
             ].map((item) => (
               <div
                 key={item.title}
-                className="p-3 bg-slate-800/40 rounded-lg border border-slate-700/30"
+                className="p-3 bg-slate-50 rounded-lg border border-slate-200/60"
               >
-                <span className="text-sm font-semibold text-slate-200 block mb-1">
+                <span className="text-sm font-semibold text-slate-800 block mb-1">
                   {item.title}
                 </span>
-                <span className="text-xs text-slate-500">{item.desc}</span>
+                <span className="text-xs text-slate-400">{item.desc}</span>
               </div>
             ))}
           </div>
@@ -327,13 +328,13 @@ const buildSlides = (report, url) => {
     // Slide 6 — Mobile Optimization
     {
       icon: Smartphone,
-      iconColor: "text-emerald-400",
-      iconBg: "bg-emerald-500/15",
+      iconColor: "text-emerald-600",
+      iconBg: "bg-emerald-50",
       title: "Mobile Experience",
       subtitle: "60%+ traffic is mobile",
       content: (
         <div className="space-y-4">
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-500 text-sm">
             Mobile-first design is essential. Ensure these are in place:
           </p>
           <div className="space-y-3">
@@ -361,29 +362,29 @@ const buildSlides = (report, url) => {
             ].map((item) => (
               <div
                 key={item.label}
-                className="flex items-start gap-3 p-3 bg-slate-800/40 rounded-lg border border-slate-700/30"
+                className="flex items-start gap-3 p-3 bg-slate-50 rounded-lg border border-slate-200/60"
               >
                 {item.ok === true ? (
                   <CheckCircle
                     size={16}
-                    className="text-green-400 mt-0.5 flex-shrink-0"
+                    className="text-green-500 mt-0.5 flex-shrink-0"
                   />
                 ) : item.ok === false ? (
                   <XCircle
                     size={16}
-                    className="text-red-400 mt-0.5 flex-shrink-0"
+                    className="text-red-500 mt-0.5 flex-shrink-0"
                   />
                 ) : (
                   <ArrowRight
                     size={16}
-                    className="text-slate-500 mt-0.5 flex-shrink-0"
+                    className="text-slate-400 mt-0.5 flex-shrink-0"
                   />
                 )}
                 <div>
-                  <span className="text-sm font-semibold text-slate-200">
+                  <span className="text-sm font-semibold text-slate-800">
                     {item.label}
                   </span>
-                  <p className="text-xs text-slate-500 mt-0.5">{item.desc}</p>
+                  <p className="text-xs text-slate-400 mt-0.5">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -394,13 +395,13 @@ const buildSlides = (report, url) => {
     // Slide 7 — Action Plan Summary
     {
       icon: CheckCircle,
-      iconColor: "text-green-400",
-      iconBg: "bg-green-500/15",
+      iconColor: "text-green-600",
+      iconBg: "bg-green-50",
       title: "Your Action Plan",
       subtitle: "Prioritized next steps",
       content: (
         <div className="space-y-4">
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-500 text-sm">
             Here's your prioritized improvement roadmap:
           </p>
           <div className="space-y-2">
@@ -417,14 +418,14 @@ const buildSlides = (report, url) => {
             ).map((suggestion, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-3 p-3 bg-slate-800/40 rounded-lg border border-slate-700/30"
+                className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg border border-slate-200/60"
               >
-                <div className="w-7 h-7 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-xs font-bold text-indigo-400">
+                <div className="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                  <span className="text-xs font-bold text-blue-600">
                     {idx + 1}
                   </span>
                 </div>
-                <span className="text-sm text-slate-300">{suggestion}</span>
+                <span className="text-sm text-slate-600">{suggestion}</span>
               </div>
             ))}
           </div>
@@ -447,17 +448,17 @@ const ImprovementPresentation = ({ report, url }) => {
   const Icon = slide.icon;
 
   return (
-    <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl overflow-hidden backdrop-blur-sm">
+    <div className="bg-white border border-slate-200/60 rounded-2xl overflow-hidden shadow-sm">
       {/* Presentation Header */}
-      <div className="bg-slate-800/60 px-6 py-4 border-b border-slate-700/40 flex items-center justify-between">
+      <div className="bg-slate-50 px-6 py-4 border-b border-slate-200/60 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Presentation size={18} className="text-indigo-400" />
-          <span className="text-white font-bold text-sm">
+          <Presentation size={18} className="text-blue-500" />
+          <span className="text-slate-900 font-bold text-sm">
             Improvement Presentation
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-500">
+          <span className="text-xs text-slate-400">
             {currentSlide + 1} / {slides.length}
           </span>
           {/* Progress dots */}
@@ -466,7 +467,7 @@ const ImprovementPresentation = ({ report, url }) => {
               <button
                 key={idx}
                 onClick={() => setCurrentSlide(idx)}
-                className={`w-2 h-2 rounded-full transition-all ${idx === currentSlide ? "bg-indigo-400 w-6" : "bg-slate-600 hover:bg-slate-500"}`}
+                className={`w-2 h-2 rounded-full transition-all ${idx === currentSlide ? "bg-blue-500 w-6" : "bg-slate-300 hover:bg-slate-400"}`}
               />
             ))}
           </div>
@@ -483,8 +484,8 @@ const ImprovementPresentation = ({ report, url }) => {
             <Icon size={22} className={slide.iconColor} />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-white">{slide.title}</h3>
-            <p className="text-xs text-slate-500">{slide.subtitle}</p>
+            <h3 className="text-xl font-bold text-slate-900">{slide.title}</h3>
+            <p className="text-xs text-slate-400">{slide.subtitle}</p>
           </div>
         </div>
 
@@ -493,11 +494,11 @@ const ImprovementPresentation = ({ report, url }) => {
       </div>
 
       {/* Navigation */}
-      <div className="px-6 py-4 border-t border-slate-700/40 flex items-center justify-between">
+      <div className="px-6 py-4 border-t border-slate-200/60 flex items-center justify-between">
         <button
           onClick={() => setCurrentSlide(Math.max(0, currentSlide - 1))}
           disabled={currentSlide === 0}
-          className="flex items-center gap-2 text-sm text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+          className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           <ChevronLeft size={16} /> Previous
         </button>
@@ -506,7 +507,7 @@ const ImprovementPresentation = ({ report, url }) => {
             setCurrentSlide(Math.min(slides.length - 1, currentSlide + 1))
           }
           disabled={currentSlide === slides.length - 1}
-          className="flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 disabled:opacity-30 disabled:cursor-not-allowed transition-colors font-semibold"
+          className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors font-semibold"
         >
           Next <ChevronRight size={16} />
         </button>
