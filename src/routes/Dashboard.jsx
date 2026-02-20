@@ -272,7 +272,7 @@ const Dashboard = () => {
               <img
                 src={heroImg}
                 alt="WebToolkit Dashboard"
-                className="w-full h-[280px] sm:h-[450px] lg:h-[460px] object-cover rounded-[32px] lg:rounded-[48px] shadow-2xl shadow-blue-900/20"
+                className="w-full h-[300px] sm:h-[480px] lg:h-[460px] object-cover rounded-[32px] lg:rounded-[48px] shadow-2xl shadow-blue-900/20"
               />
 
               {/* Grid Overlay */}
