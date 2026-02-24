@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
+import BusinessOnboardingForm from "../components/demo/BusinessOnboardingForm";
 import { useLocation } from "react-router-dom";
 import {
   Menu,
@@ -28,6 +29,9 @@ import {
   Loader2,
   Sparkles,
   AlertCircle,
+  Eye,
+  Heart,
+  ChevronDown,
 } from "lucide-react";
 import { fetchWebsiteData } from "../services/scrapeService";
 import { improveHeroCopy } from "../services/improveCopyService";
@@ -36,11 +40,440 @@ import { improveHeroCopy } from "../services/improveCopyService";
  * DemoApp — Demo Creator Template App
  * Moved from original App.jsx. All existing logic preserved.
  * NEW: URL auto-fill + Improve Copy features added on top.
+ * UNIVERSAL SECTIONS: About Us, Our Mission, Why Choose Us (locked), Contact
  */
+
+/* ───────────────────────────────────────────────────────────
+   WHY CHOOSE US — Auto-loaded bullet points per category
+   These are LOCKED and NOT editable by the user.
+   ─────────────────────────────────────────────────────────── */
+const WHY_CHOOSE_US_DATA = {
+  ielts: [
+    {
+      title: "High Success Rate",
+      desc: "Our students consistently achieve Band 7+ scores, with a 98% first-attempt success rate.",
+    },
+    {
+      title: "Expert Trainers",
+      desc: "Learn from certified IELTS trainers with years of experience and international credentials.",
+    },
+    {
+      title: "Proven Methodology",
+      desc: "A structured, exam-focused curriculum refined over 18+ years of delivering results.",
+    },
+    {
+      title: "Flexible Timings",
+      desc: "Morning, evening, and weekend batches designed to fit every student's schedule.",
+    },
+  ],
+  institute: [
+    {
+      title: "High Success Rate",
+      desc: "Our students consistently achieve their goals with a proven track record of academic success.",
+    },
+    {
+      title: "Expert Trainers",
+      desc: "Internationally certified faculty with years of real-world teaching experience.",
+    },
+    {
+      title: "Proven Methodology",
+      desc: "A structured, skill-focused curriculum built on modern learning techniques.",
+    },
+    {
+      title: "Flexible Timings",
+      desc: "Multiple batch options to suit working professionals and students alike.",
+    },
+  ],
+  coaching: [
+    {
+      title: "High Success Rate",
+      desc: "2000+ selections and 50+ top rankers across India's toughest competitive exams.",
+    },
+    {
+      title: "Expert Trainers",
+      desc: "National-level faculty with track records in UPSC, SSC, and banking exams.",
+    },
+    {
+      title: "Proven Methodology",
+      desc: "Meticulously crafted study material, regular test series, and detailed performance analysis.",
+    },
+    {
+      title: "Flexible Timings",
+      desc: "Weekday and weekend batches plus doubt-clearing sessions at your convenience.",
+    },
+  ],
+  consultant: [
+    {
+      title: "Industry Experience",
+      desc: "Trusted by Fortune 500 companies with a global presence in 12+ countries.",
+    },
+    {
+      title: "Strategic Approach",
+      desc: "Every recommendation is backed by data analytics and measurable KPIs.",
+    },
+    {
+      title: "Client Focused",
+      desc: "Dedicated account managers ensuring seamless communication at every stage.",
+    },
+    {
+      title: "Result Driven",
+      desc: "Our clients consistently achieve 3x growth compared to industry benchmarks.",
+    },
+  ],
+  realestate: [
+    {
+      title: "Verified Properties",
+      desc: "Every listing is personally inspected, legally verified, and quality assured.",
+    },
+    {
+      title: "Transparent Deals",
+      desc: "No hidden charges or surprises — clear documentation and honest pricing.",
+    },
+    {
+      title: "Local Market Experts",
+      desc: "25+ years of deep knowledge across prime locations and emerging neighborhoods.",
+    },
+    {
+      title: "Strong Network",
+      desc: "Partnerships with leading banks, developers, and legal advisors for a seamless experience.",
+    },
+  ],
+  clinic: [
+    {
+      title: "Experienced Doctors",
+      desc: "40+ specialist doctors covering all major medical disciplines with decades of expertise.",
+    },
+    {
+      title: "Advanced Equipment",
+      desc: "State-of-the-art diagnostic and treatment technology for accurate, effective care.",
+    },
+    {
+      title: "Personalized Care",
+      desc: "Empathetic, patient-first treatment plans tailored to your individual health needs.",
+    },
+    {
+      title: "Trusted by Patients",
+      desc: "Thousands of satisfied patients and families who rely on us for their healthcare.",
+    },
+  ],
+  gym: [
+    {
+      title: "Certified Trainers",
+      desc: "25+ nationally certified coaches with specializations across all fitness disciplines.",
+    },
+    {
+      title: "Modern Equipment",
+      desc: "Premium machines and free weights from leading international fitness brands.",
+    },
+    {
+      title: "Personalized Programs",
+      desc: "Custom workout and nutrition plans designed around your specific goals.",
+    },
+    {
+      title: "Clean Environment",
+      desc: "Spotless, well-maintained facilities with premium amenities including sauna and steam.",
+    },
+  ],
+  marketing: [
+    {
+      title: "Creative Strategy",
+      desc: "Award-winning campaigns crafted by a dedicated team of strategists and designers.",
+    },
+    {
+      title: "Data-Driven Results",
+      desc: "Every campaign is optimized using real-time analytics, delivering 450% average ROI.",
+    },
+    {
+      title: "Experienced Team",
+      desc: "Google & Meta Premium Partners managing $10M+ in ad spend with proven expertise.",
+    },
+    {
+      title: "On-Time Delivery",
+      desc: "Transparent weekly reporting and on-schedule project milestones, every single time.",
+    },
+  ],
+  custom: [
+    {
+      title: "Industry Experience",
+      desc: "Years of experience delivering exceptional results in your sector.",
+    },
+    {
+      title: "Strategic Approach",
+      desc: "Every solution is tailored to your specific needs and business goals.",
+    },
+    {
+      title: "Client Focused",
+      desc: "A dedicated team ensuring seamless communication and project delivery.",
+    },
+    {
+      title: "Result Driven",
+      desc: "A proven portfolio of successful projects and satisfied clients.",
+    },
+  ],
+};
+
+// Helper to get Why Choose Us data for a brand
+const getWhyChooseUs = (brandId) => {
+  return WHY_CHOOSE_US_DATA[brandId] || WHY_CHOOSE_US_DATA.custom;
+};
+
+/* ───────────────────────────────────────────────────────────
+   NICHE SECTION CONFIG — Maps category to section type
+   When category changes, the niche section swaps dynamically.
+   ─────────────────────────────────────────────────────────── */
+const NICHE_SECTION_CONFIG = {
+  ielts: {
+    type: "courses",
+    sectionName: "Courses",
+    icon: GraduationCap,
+    subtitle:
+      "Structured programs designed to maximize your band score with expert-led modules.",
+  },
+  institute: {
+    type: "courses",
+    sectionName: "Courses",
+    icon: GraduationCap,
+    subtitle:
+      "Comprehensive training programs to build your skills and confidence.",
+  },
+  coaching: {
+    type: "courses",
+    sectionName: "Courses",
+    icon: GraduationCap,
+    subtitle:
+      "Rigorous preparation programs designed by top educators for exam success.",
+  },
+  consultant: {
+    type: "services",
+    sectionName: "Services",
+    icon: BookOpen,
+    subtitle:
+      "End-to-end professional services to transform your business operations.",
+  },
+  realestate: {
+    type: "properties",
+    sectionName: "Property Listings",
+    icon: MapPin,
+    subtitle:
+      "Discover your dream property from our curated collection of premium listings.",
+  },
+  clinic: {
+    type: "treatments",
+    sectionName: "Treatments",
+    icon: Activity,
+    subtitle:
+      "Advanced medical treatments delivered by specialist doctors with cutting-edge technology.",
+  },
+  gym: {
+    type: "membership",
+    sectionName: "Membership Plans",
+    icon: Zap,
+    subtitle:
+      "Flexible plans designed for every fitness level — from beginners to athletes.",
+  },
+  marketing: {
+    type: "projects",
+    sectionName: "Projects",
+    icon: PenTool,
+    subtitle:
+      "A showcase of campaigns and projects that delivered real, measurable results.",
+  },
+};
+
+const getNicheConfig = (brandId) => {
+  return (
+    NICHE_SECTION_CONFIG[brandId] || {
+      type: "services",
+      sectionName: "Services",
+      icon: BookOpen,
+      subtitle: "What we offer to help you succeed.",
+    }
+  );
+};
+
+/* ───────────────────────────────────────────────────────────
+   FONT PAIRS — 8 curated heading + body combinations
+   ─────────────────────────────────────────────────────────── */
+const FONT_PAIRS = [
+  { id: "modern1", label: "Modern", heading: "Poppins", body: "Inter" },
+  { id: "modern2", label: "Fresh", heading: "Montserrat", body: "Open Sans" },
+  { id: "corporate1", label: "Corporate", heading: "Lato", body: "Roboto" },
+  {
+    id: "corporate2",
+    label: "Editorial",
+    heading: "Playfair Display",
+    body: "Source Sans 3",
+  },
+  {
+    id: "luxury",
+    label: "Luxury",
+    heading: "Cormorant Garamond",
+    body: "Lato",
+  },
+  { id: "gym", label: "Bold", heading: "Oswald", body: "Inter" },
+  { id: "clean", label: "Clean", heading: "Outfit", body: "DM Sans" },
+  { id: "default", label: "Default", heading: "Inter", body: "Inter" },
+];
+
+const DEFAULT_FONT_PAIR = FONT_PAIRS[0]; // Poppins + Inter
+
+/* Category → recommended font */
+const CATEGORY_FONT_MAP = {
+  ielts: "modern1",
+  institute: "modern1",
+  coaching: "modern2",
+  consultant: "corporate1",
+  realestate: "corporate2",
+  clinic: "clean",
+  gym: "gym",
+  marketing: "modern2",
+  custom: "default",
+};
+
+/* ───────────────────────────────────────────────────────────
+   COLOR PALETTES — 8 presets with primary/secondary/accent
+   ─────────────────────────────────────────────────────────── */
+const COLOR_PALETTES = [
+  {
+    id: "red_black",
+    label: "Classic Red",
+    primary: "#dc2626",
+    secondary: "#0f172a",
+    accent: "#fbbf24",
+    mode: "light",
+  },
+  {
+    id: "blue_white",
+    label: "Calm Blue",
+    primary: "#2563eb",
+    secondary: "#f8fafc",
+    accent: "#06b6d4",
+    mode: "light",
+  },
+  {
+    id: "emerald_slate",
+    label: "Fresh Green",
+    primary: "#10b981",
+    secondary: "#1e293b",
+    accent: "#f59e0b",
+    mode: "light",
+  },
+  {
+    id: "orange_dark",
+    label: "Bold Orange",
+    primary: "#f97316",
+    secondary: "#0c0a09",
+    accent: "#eab308",
+    mode: "light",
+  },
+  {
+    id: "purple_black",
+    label: "Bold Purple",
+    primary: "#7c3aed",
+    secondary: "#0f0b1e",
+    accent: "#f472b6",
+    mode: "light",
+  },
+  {
+    id: "navy_gold",
+    label: "Navy & Gold",
+    primary: "#1e3a5f",
+    secondary: "#f7f3e9",
+    accent: "#d4a853",
+    mode: "light",
+  },
+  {
+    id: "slate_blue",
+    label: "Corporate",
+    primary: "#3b82f6",
+    secondary: "#f1f5f9",
+    accent: "#8b5cf6",
+    mode: "light",
+  },
+  {
+    id: "dark_red",
+    label: "Dark Power",
+    primary: "#ef4444",
+    secondary: "#09090b",
+    accent: "#fbbf24",
+    mode: "dark",
+  },
+];
+
+/* Category → recommended palette */
+const CATEGORY_PALETTE_MAP = {
+  ielts: "blue_white",
+  institute: "red_black",
+  coaching: "orange_dark",
+  consultant: "slate_blue",
+  realestate: "navy_gold",
+  clinic: "blue_white",
+  gym: "dark_red",
+  marketing: "purple_black",
+  custom: "red_black",
+};
+
+/* ───────────────────────────────────────────────────────────
+   SECTION DESIGN VARIANTS — 5 layout variants per section
+   ─────────────────────────────────────────────────────────── */
+const SECTION_VARIANTS = {
+  about: [
+    { id: "img_left", label: "Image Left, Text Right" },
+    { id: "img_right", label: "Text Left, Image Right" },
+    { id: "centered_bg", label: "Centered + Background" },
+    { id: "split_50", label: "Split Screen (50/50)" },
+    { id: "minimal_typo", label: "Minimal Large Typography" },
+  ],
+  mission: [
+    { id: "icon_centered", label: "Icon + Text Centered" },
+    { id: "full_highlight", label: "Full Width Highlight" },
+    { id: "card_layout", label: "Mission · Vision · Values" },
+    { id: "side_quote", label: "Side Image + Quote" },
+    { id: "dark_centered", label: "Dark Centered" },
+  ],
+  whyChooseUs: [
+    { id: "four_col_grid", label: "4-Column Icon Grid" },
+    { id: "two_by_two", label: "2×2 Card Layout" },
+    { id: "horizontal_list", label: "Horizontal List" },
+    { id: "icon_left_rows", label: "Icon Left, Text Right" },
+    { id: "large_blocks", label: "Large Trust Blocks" },
+  ],
+  niche: [
+    { id: "grid_3col", label: "3-Column Grid" },
+    { id: "grid_2col", label: "2-Column Grid" },
+    { id: "hover_cards", label: "Hover Overlay Cards" },
+    { id: "large_featured", label: "Featured + Grid" },
+    { id: "minimal_list", label: "Minimal List" },
+  ],
+  testimonials: [
+    { id: "grid_cards", label: "Card Grid" },
+    { id: "single_slider", label: "Single Slider" },
+    { id: "masonry", label: "Masonry Layout" },
+    { id: "large_quote", label: "Large Quote" },
+    { id: "side_by_side", label: "Side-by-Side" },
+  ],
+  contact: [
+    { id: "split_form", label: "Form + Info Split" },
+    { id: "centered_form", label: "Centered Form" },
+    { id: "card_overlap", label: "Card Overlap" },
+    { id: "full_dark", label: "Full Dark" },
+    { id: "minimal_clean", label: "Minimal Clean" },
+  ],
+  footer: [
+    { id: "four_col", label: "4-Column Classic" },
+    { id: "centered", label: "Centered Minimal" },
+    { id: "dark_wide", label: "Dark Wide" },
+    { id: "two_col", label: "2-Column Simple" },
+    { id: "gradient_bar", label: "Gradient Bar" },
+  ],
+};
 
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
+
+  // --- ONBOARDING FORM STATE ---
+  const [showOnboarding, setShowOnboarding] = useState(true);
 
   // --- NEW: URL Auto-Fill State ---
   const [scrapeUrl, setScrapeUrl] = useState("");
@@ -49,6 +482,28 @@ const LandingPage = () => {
   const [scrapeSuccess, setScrapeSuccess] = useState("");
   const [improveLoading, setImproveLoading] = useState(false);
   const [showMobileNotice, setShowMobileNotice] = useState(true);
+
+  // --- FONT + COLOR + DESIGN STATE ---
+  const [fontPairId, setFontPairId] = useState("modern1");
+  const [colorPaletteId, setColorPaletteId] = useState("red_black");
+  const [sectionDesigns, setSectionDesigns] = useState({
+    about: "img_right",
+    mission: "dark_centered",
+    whyChooseUs: "four_col_grid",
+    niche: "grid_3col",
+    testimonials: "grid_cards",
+    contact: "split_form",
+    footer: "four_col",
+  });
+
+  const updateSectionDesign = (section, variantId) => {
+    setSectionDesigns((prev) => ({ ...prev, [section]: variantId }));
+  };
+
+  const activeFontPair =
+    FONT_PAIRS.find((f) => f.id === fontPairId) || DEFAULT_FONT_PAIR;
+  const activePalette =
+    COLOR_PALETTES.find((p) => p.id === colorPaletteId) || COLOR_PALETTES[0];
 
   // Check if pre-filled data was passed from Audit page via router state
   const routerLocation = useLocation();
@@ -86,32 +541,42 @@ const LandingPage = () => {
         "IDP Nodal Centre",
         "98% Success Rate",
       ],
+      aboutDescription:
+        "We are a premier IELTS training institute with over 18 years of experience in helping students achieve their dream scores. Our expert faculty, comprehensive study materials, and personalised coaching methodology have empowered thousands of students to succeed globally.",
+      founderName: "Director",
+      founderTitle: "Founder & Chief Mentor",
+      missionDescription:
+        "Our mission is to make world-class IELTS preparation accessible to every aspiring student. We believe that with the right guidance, practice, and confidence, anyone can achieve their target band score and unlock doors to global opportunities.",
       stats: [
         { label: "Band 7+ Scorers", value: "1000+" },
         { label: "Years Experience", value: "8+" },
         { label: "Google Rating", value: "4.9/5" },
         { label: "Student Satisfaction", value: "100%" },
       ],
-      courses: [
+      nicheItems: [
         {
-          title: "IELTS Speaking",
+          courseName: "IELTS Speaking",
+          duration: "4 Weeks",
+          desc: "Master pronunciation, fluency, and real exam discussion strategies with mock tests.",
           icon: Mic,
-          desc: "Conversations with foreigners are not going to make you comfortable though. Does studying...",
         },
         {
-          title: "IELTS Writing",
+          courseName: "IELTS Writing",
+          duration: "6 Weeks",
+          desc: "Structured training in Task 1 & 2 with expert essay corrections and templates.",
           icon: PenTool,
-          desc: "Residing in an English speaking nation, one cannot avoid written communication...",
         },
         {
-          title: "IELTS Reading",
+          courseName: "IELTS Reading",
+          duration: "4 Weeks",
+          desc: "Speed reading techniques and passage analysis for Academic & General modules.",
           icon: BookOpen,
-          desc: "IELTS reading has been also classified into IELTS Academic reading and IELTS General...",
         },
         {
-          title: "IELTS Listening",
+          courseName: "IELTS Listening",
+          duration: "4 Weeks",
+          desc: "Audio drills, note-taking strategies, and full-length practice tests.",
           icon: Headphones,
-          desc: "Does studying in an English medium school makes someone a natural speaker...",
         },
       ],
       faqs: [
@@ -155,32 +620,42 @@ const LandingPage = () => {
         "Personality Development",
         "Live Classes",
       ],
+      aboutDescription:
+        "Expert English Speaking Academy (EESA) is dedicated to transforming lives through language mastery. Our innovative teaching methods, combined with a supportive learning environment, help students overcome barriers and communicate with confidence in any setting.",
+      founderName: "Lead Trainer",
+      founderTitle: "Head of Training & Development",
+      missionDescription:
+        "We are on a mission to break language barriers and empower individuals with the communication skills they need for personal and professional success. Every student who walks through our doors leaves with newfound confidence and fluency.",
       stats: [
         { label: "Active Students", value: "500+" },
         { label: "Expert Trainers", value: "15+" },
         { label: "Courses Offered", value: "12" },
         { label: "Success Rate", value: "98%" },
       ],
-      courses: [
+      nicheItems: [
         {
-          title: "Spoken English",
+          courseName: "Spoken English",
+          duration: "8 Weeks",
+          desc: "Enhance your daily communication skills and speak with confidence.",
           icon: Mic,
-          desc: "Enhance your daily communication skills with confidence.",
         },
         {
-          title: "Business English",
+          courseName: "Business English",
+          duration: "6 Weeks",
+          desc: "Professional communication for presentations, emails, and the corporate world.",
           icon: FileText,
-          desc: "Professional communication for the corporate world.",
         },
         {
-          title: "Public Speaking",
+          courseName: "Public Speaking",
+          duration: "4 Weeks",
+          desc: "Overcome stage fear and learn to speak with authority and impact.",
           icon: Users,
-          desc: "Overcome stage fear and speak with authority.",
         },
         {
-          title: "Personality Dev",
+          courseName: "Personality Development",
+          duration: "6 Weeks",
+          desc: "Holistic development covering grooming, body language, and soft skills.",
           icon: Star,
-          desc: "Holistic development for personal and professional growth.",
         },
       ],
       faqs: [
@@ -218,32 +693,42 @@ const LandingPage = () => {
         "Best Study Material",
         "Regular Test Series",
       ],
+      aboutDescription:
+        "City Coaching is a premier institution for competitive exam preparation with a national-level faculty. We provide a structured, result-oriented learning experience backed by comprehensive study material and a proven test series methodology.",
+      founderName: "Faculty Head",
+      founderTitle: "Director of Academics",
+      missionDescription:
+        "To empower every aspirant with the knowledge, strategy, and confidence needed to crack India's toughest competitive exams and build a successful career in public service.",
       stats: [
         { label: "Selections", value: "2000+" },
         { label: "Top Rankers", value: "50+" },
         { label: "Faculty Members", value: "30+" },
         { label: "Pan India Centers", value: "10" },
       ],
-      courses: [
+      nicheItems: [
         {
-          title: "UPSC Prelims",
+          courseName: "UPSC Prelims",
+          duration: "12 Months",
+          desc: "Comprehensive GS and CSAT preparation with mock tests and current affairs.",
           icon: BookOpen,
-          desc: "Comprehensive GS and CSAT preparation.",
         },
         {
-          title: "SSC CGL",
+          courseName: "SSC CGL",
+          duration: "6 Months",
+          desc: "Targeted coaching for staff selection commission exams with test series.",
           icon: TrendingUp,
-          desc: "Targeted coaching for staff selection commission exams.",
         },
         {
-          title: "Banking PO",
+          courseName: "Banking PO",
+          duration: "4 Months",
+          desc: "Specialized batches for IBPS and SBI PO exams with sectional tests.",
           icon: Target,
-          desc: "Specialized batches for IBPS and SBI PO exams.",
         },
         {
-          title: "State PCS",
+          courseName: "State PCS",
+          duration: "10 Months",
+          desc: "State-specific public service commission preparation with local faculty.",
           icon: MapPin,
-          desc: "State-specific public service commission preparation.",
         },
       ],
       faqs: [
@@ -281,32 +766,38 @@ const LandingPage = () => {
         "Global Presence",
         "Award Winning Strategy",
       ],
+      aboutDescription:
+        "Apex Solutions is a data-driven strategic consulting firm that helps enterprises scale, optimise operations, and maximise profitability. With a presence in 12+ countries, we bring global expertise with local market understanding to every engagement.",
+      founderName: "Managing Partner",
+      founderTitle: "CEO & Chief Strategist",
+      missionDescription:
+        "Our mission is to be the catalyst for transformative business growth. We partner with ambitious organisations to unlock hidden potential, drive operational excellence, and create lasting competitive advantage.",
       stats: [
         { label: "Clients Served", value: "150+" },
         { label: "Revenue Generated", value: "$500M" },
         { label: "Growth Rate", value: "3x" },
         { label: "Countries", value: "12" },
       ],
-      courses: [
+      nicheItems: [
         {
-          title: "Strategy Consulting",
+          serviceName: "Strategy Consulting",
+          desc: "Long-term planning for sustainable growth with actionable roadmaps and KPI frameworks.",
           icon: Target,
-          desc: "Long-term planning for sustainable growth.",
         },
         {
-          title: "Digital Transformation",
+          serviceName: "Digital Transformation",
+          desc: "Modernizing legacy systems for the digital era with cloud migration and automation.",
           icon: Monitor,
-          desc: "Modernizing legacy systems for the digital era.",
         },
         {
-          title: "Financial Advisory",
+          serviceName: "Financial Advisory",
+          desc: "Optimizing capital allocation, cash flow management, and investment strategy.",
           icon: TrendingUp,
-          desc: "Optimizing capital allocation and cash flow.",
         },
         {
-          title: "HR Solutions",
+          serviceName: "HR Solutions",
+          desc: "End-to-end talent acquisition, organizational restructuring, and culture building.",
           icon: Users,
-          desc: "Talent acquisition and organizational structure.",
         },
       ],
       faqs: [
@@ -344,32 +835,50 @@ const LandingPage = () => {
         "Prime Locations",
         "Exclusive Deals",
       ],
+      aboutDescription:
+        "Prime Estates is the definitive destination for luxury real estate in London's most prestigious postcodes. With 25 years of market expertise, we curate an exclusive collection of properties that redefine elegant living.",
+      founderName: "Estate Director",
+      founderTitle: "Managing Director",
+      missionDescription:
+        "To connect discerning buyers with exceptional properties, providing a seamless and luxurious real estate experience from first viewing to final handover. We believe every family deserves a dream home.",
       stats: [
         { label: "Properties Sold", value: "450+" },
         { label: "Happy Families", value: "400+" },
         { label: "Years in Market", value: "25" },
         { label: "Industry Awards", value: "18" },
       ],
-      courses: [
+      nicheItems: [
         {
-          title: "Luxury Villas",
+          propertyImage:
+            "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+          location: "Kensington, London",
+          price: "£2.4M",
+          details: "5 Bed · 4 Bath · 4,200 sqft · Private Garden",
           icon: Star,
-          desc: "Spacious independent villas with private pools.",
         },
         {
-          title: "Penthouse Suites",
+          propertyImage:
+            "https://images.unsplash.com/photo-1600596542815-2a4d04774c13?auto=format&fit=crop&w=800&q=80",
+          location: "Mayfair, London",
+          price: "£5.8M",
+          details: "Penthouse · 3 Bed · Sky Terrace · Concierge",
           icon: Zap,
-          desc: "Sky-high living with panoramic city views.",
         },
         {
-          title: "Commercial Spaces",
+          propertyImage:
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+          location: "Chelsea, London",
+          price: "£3.2M",
+          details: "4 Bed · 3 Bath · Period Conversion · Parking",
           icon: Monitor,
-          desc: "Premium office spaces in business districts.",
         },
         {
-          title: "Rental Management",
+          propertyImage:
+            "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
+          location: "Canary Wharf, London",
+          price: "£1.9M",
+          details: "3 Bed · River View · Gym Access · 24h Security",
           icon: CheckCircle,
-          desc: "End-to-end property management services.",
         },
       ],
       faqs: [
@@ -407,32 +916,38 @@ const LandingPage = () => {
         "Advanced Technology",
         "Patient Care First",
       ],
+      aboutDescription:
+        "CarePlus Medical Centre is a state-of-the-art healthcare facility providing comprehensive, compassionate care for you and your family. Our team of 40+ specialist doctors and cutting-edge medical technology ensure the highest standard of treatment.",
+      founderName: "Chief Medical Officer",
+      founderTitle: "Director of Healthcare Operations",
+      missionDescription:
+        "To provide accessible, affordable, and world-class healthcare that places patients at the centre of everything we do. We strive to be the most trusted name in community health.",
       stats: [
-        { label: "Pacients Treated", value: "50k+" },
+        { label: "Patients Treated", value: "50k+" },
         { label: "Specialist Doctors", value: "40+" },
         { label: "Emergency Rooms", value: "10" },
         { label: "Surgeries Done", value: "1200+" },
       ],
-      courses: [
+      nicheItems: [
         {
-          title: "General Medicine",
+          treatmentName: "General Medicine",
+          desc: "Comprehensive routine checkups, preventive screenings, and primary healthcare for all ages.",
           icon: Activity,
-          desc: "Routine checkups and primary healthcare.",
         },
         {
-          title: "Pediatrics",
+          treatmentName: "Pediatrics",
+          desc: "Specialized care for infants, children, and adolescents with child-friendly facilities.",
           icon: Users,
-          desc: "Specialized care for infants and children.",
         },
         {
-          title: "Dental Care",
+          treatmentName: "Dental Care",
+          desc: "Advanced dental treatments including cosmetic dentistry, implants, and orthodontics.",
           icon: CheckCircle,
-          desc: "Advanced dental treatments and cosmetics.",
         },
         {
-          title: "Cardiology",
+          treatmentName: "Cardiology",
+          desc: "Comprehensive heart health monitoring, diagnostics, and interventional treatments.",
           icon: Target,
-          desc: "Heart health monitoring and treatments.",
         },
       ],
       faqs: [
@@ -470,32 +985,64 @@ const LandingPage = () => {
         "State of Art Equipment",
         "Open 24/7",
       ],
+      aboutDescription:
+        "Iron Foundry is the undisputed home of serious fitness in Venice Beach. Premium equipment, expert trainers, and a motivating atmosphere come together to create the ultimate training experience for athletes of all levels.",
+      founderName: "Head Coach",
+      founderTitle: "Founder & Head of Training",
+      missionDescription:
+        "To ignite the fire of fitness in every individual. We create a judgment-free, high-energy environment where anyone can build strength, confidence, and a healthier lifestyle — one rep at a time.",
       stats: [
         { label: "Members", value: "2000+" },
         { label: "Trainers", value: "25" },
         { label: "Classes/Week", value: "50+" },
         { label: "Sq Ft Area", value: "10k" },
       ],
-      courses: [
+      nicheItems: [
         {
-          title: "Personal Training",
+          planName: "Starter Plan",
+          price: "$29/mo",
+          features: [
+            "Gym Access 6AM–10PM",
+            "Group Classes",
+            "Locker Room",
+            "Basic Assessment",
+          ],
           icon: Users,
-          desc: "1-on-1 coaching customized to your body.",
         },
         {
-          title: "Group Classes",
-          icon: Users,
-          desc: "High energy HIIT, Yoga, and Spin classes.",
-        },
-        {
-          title: "Nutrition Plans",
-          icon: FileText,
-          desc: "Dietary guidance to fuel your performance.",
-        },
-        {
-          title: "Strength Zone",
+          planName: "Pro Plan",
+          price: "$59/mo",
+          features: [
+            "24/7 Gym Access",
+            "All Group Classes",
+            "2 PT Sessions/month",
+            "Nutrition Guide",
+            "Sauna & Steam",
+          ],
           icon: Zap,
-          desc: "Free weights and heavy lifting area.",
+        },
+        {
+          planName: "Elite Plan",
+          price: "$99/mo",
+          features: [
+            "24/7 Unlimited Access",
+            "Unlimited PT Sessions",
+            "Custom Meal Plans",
+            "Recovery Zone",
+            "Guest Passes",
+            "Priority Booking",
+          ],
+          icon: Star,
+        },
+        {
+          planName: "Student Plan",
+          price: "$19/mo",
+          features: [
+            "Gym Access 6AM–6PM",
+            "Basic Classes",
+            "Valid Student ID Required",
+          ],
+          icon: GraduationCap,
         },
       ],
       faqs: [
@@ -533,32 +1080,42 @@ const LandingPage = () => {
         "ROI Focused",
         "Award Winning Agency",
       ],
+      aboutDescription:
+        "Pixel Growth is a performance-driven digital agency that combines creative strategy with data analytics to accelerate brand growth. As a Google Premium Partner and Meta Business Partner, we deliver campaigns that don't just look great — they convert.",
+      founderName: "Creative Director",
+      founderTitle: "Co-Founder & Head of Strategy",
+      missionDescription:
+        "To democratise digital marketing by giving every business — from startups to enterprises — access to the same calibre of data-driven strategy and creative excellence that Fortune 500 companies enjoy.",
       stats: [
         { label: "Ad Spend Managed", value: "$10M+" },
         { label: "ROI Average", value: "450%" },
         { label: "Campaigns Run", value: "1k+" },
         { label: "Team Size", value: "20" },
       ],
-      courses: [
+      nicheItems: [
         {
-          title: "SEO Optimization",
-          icon: TrendingUp,
-          desc: "Rank higher on Google organically.",
+          projectImage:
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+          projectTitle: "E-Commerce Growth Campaign",
+          desc: "Drove 450% ROI for a D2C fashion brand through Meta Ads and Google Shopping optimization.",
         },
         {
-          title: "PPC Advertising",
-          icon: Target,
-          desc: "Targeted ads on Google and Facebook.",
+          projectImage:
+            "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80",
+          projectTitle: "SaaS Lead Generation",
+          desc: "Generated 2,000+ qualified leads for a B2B SaaS platform using LinkedIn Ads and content marketing.",
         },
         {
-          title: "Content Strategy",
-          icon: PenTool,
-          desc: "Engaging content that converts visitors.",
+          projectImage:
+            "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
+          projectTitle: "Brand Identity Overhaul",
+          desc: "Complete rebranding including logo, website, and social media presence for a fintech startup.",
         },
         {
-          title: "Social Media",
-          icon: Share2,
-          desc: "Brand building on Instagram and LinkedIn.",
+          projectImage:
+            "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=800&q=80",
+          projectTitle: "SEO Domination Strategy",
+          desc: "Achieved #1 Google ranking for 50+ keywords driving 300% organic traffic growth in 6 months.",
         },
       ],
       faqs: [
@@ -578,6 +1135,23 @@ const LandingPage = () => {
   const [customBrand, setCustomBrand] = useState(defaultBrands.institute);
   const [showCustomizer, setShowCustomizer] = useState(true);
 
+  // --- ONBOARDING HANDLERS ---
+  const handleOnboardingComplete = useCallback((brandConfig) => {
+    // Apply all the collected data to the customBrand state
+    setCustomBrand((prev) => ({
+      ...prev,
+      ...brandConfig,
+    }));
+    setActiveBrandId("custom");
+    setShowOnboarding(false);
+    setShowCustomizer(true);
+  }, []);
+
+  const handleOnboardingSkip = useCallback(() => {
+    setShowOnboarding(false);
+    setShowCustomizer(true);
+  }, []);
+
   // When switching presets, reset the customBrand state but keep design config if desired?
   // For now, let's allow presets to also dictate default design, or just keep content.
   // The user asked for "customization section" for each. Let's attach design props to presets for a "starting point".
@@ -585,11 +1159,13 @@ const LandingPage = () => {
     setActiveBrandId(brandId);
     setCustomBrand({
       ...defaultBrands[brandId],
-      // Preserve current design choices or reset? Let's preserve to allow mixing & matching unless preset has specifics.
       navbarStyle: customBrand.navbarStyle,
       heroStyle: customBrand.heroStyle,
       themeColor: customBrand.themeColor,
     });
+    // Apply recommended font + palette for this category
+    setFontPairId(CATEGORY_FONT_MAP[brandId] || "default");
+    setColorPaletteId(CATEGORY_PALETTE_MAP[brandId] || "red_black");
   };
 
   // Draggable logic for the toggle button
@@ -763,8 +1339,35 @@ const LandingPage = () => {
     }
   }, [routerLocation.state]);
 
+  // If we received prefill data from audit, skip onboarding
+  React.useEffect(() => {
+    if (routerLocation.state?.prefillData) {
+      setShowOnboarding(false);
+    }
+  }, [routerLocation.state]);
+
+  // --- RENDER ONBOARDING FORM IF showOnboarding IS TRUE ---
+  if (showOnboarding) {
+    return (
+      <BusinessOnboardingForm
+        onComplete={handleOnboardingComplete}
+        onSkip={handleOnboardingSkip}
+      />
+    );
+  }
+
   return (
-    <div className="font-sans text-slate-800 bg-white selection:bg-red-100 selection:text-red-900 relative">
+    <div
+      className="text-slate-800 bg-white selection:bg-red-100 selection:text-red-900 relative"
+      style={{
+        fontFamily: `'${activeFontPair.body}', sans-serif`,
+        "--font-heading": `'${activeFontPair.heading}', sans-serif`,
+        "--font-body": `'${activeFontPair.body}', sans-serif`,
+        "--color-primary": activePalette.primary,
+        "--color-secondary": activePalette.secondary,
+        "--color-accent": activePalette.accent,
+      }}
+    >
       {/* --- MOBILE ONLY NOTICE --- */}
       {showMobileNotice && (
         <div className="md:hidden fixed inset-x-4 bottom-6 z-[300] bg-slate-900 text-white p-6 rounded-[32px] shadow-2xl border border-white/10 animate-in fade-in slide-in-from-bottom-8 duration-500">
@@ -1073,7 +1676,42 @@ const LandingPage = () => {
               Design & Layout
             </label>
 
-            {/* Theme Color */}
+            {/* Color Palette */}
+            <div>
+              <label className="block text-slate-500 mb-2 text-[11px]">
+                Color Palette
+              </label>
+              <div className="grid grid-cols-4 gap-2 mb-2">
+                {COLOR_PALETTES.map((p) => (
+                  <button
+                    key={p.id}
+                    onClick={() => setColorPaletteId(p.id)}
+                    className={`rounded-lg p-1.5 border-2 transition-all ${colorPaletteId === p.id ? "border-white scale-105 shadow-lg" : "border-slate-700 opacity-70 hover:opacity-100"}`}
+                    title={p.label}
+                  >
+                    <div className="flex h-5 rounded overflow-hidden">
+                      <div
+                        className="flex-1"
+                        style={{ backgroundColor: p.primary }}
+                      />
+                      <div
+                        className="flex-1"
+                        style={{ backgroundColor: p.secondary }}
+                      />
+                      <div
+                        className="w-2"
+                        style={{ backgroundColor: p.accent }}
+                      />
+                    </div>
+                    <div className="text-[8px] text-slate-400 mt-1 truncate">
+                      {p.label}
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Theme Color (legacy) */}
             <div>
               <label className="block text-slate-500 mb-2 text-[11px]">
                 Theme Color
@@ -1090,6 +1728,30 @@ const LandingPage = () => {
                     }`}
                     style={{ backgroundColor: c === "emerald" ? "#10b981" : c }}
                   />
+                ))}
+              </div>
+            </div>
+
+            {/* Font Pair */}
+            <div>
+              <label className="block text-slate-500 mb-2 text-[11px]">
+                Font Style
+              </label>
+              <div className="grid grid-cols-2 gap-1.5">
+                {FONT_PAIRS.map((fp) => (
+                  <button
+                    key={fp.id}
+                    onClick={() => setFontPairId(fp.id)}
+                    className={`px-2 py-1.5 rounded-lg text-[10px] font-bold transition-all text-left ${fontPairId === fp.id ? "bg-indigo-600 text-white ring-1 ring-indigo-400" : "bg-slate-800 text-slate-400 hover:bg-slate-700"}`}
+                  >
+                    <span style={{ fontFamily: fp.heading }}>{fp.label}</span>
+                    <span
+                      className="block text-[8px] opacity-60"
+                      style={{ fontFamily: fp.body }}
+                    >
+                      {fp.heading} + {fp.body}
+                    </span>
+                  </button>
                 ))}
               </div>
             </div>
@@ -1140,6 +1802,129 @@ const LandingPage = () => {
                 <option value="monitor">Digital Showcase</option>
                 <option value="diagonal">Diagonal Split</option>
               </select>
+            </div>
+
+            {/* ── Section Design Variants ── */}
+            <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider pt-4">
+              Section Layouts
+            </label>
+            {Object.entries(SECTION_VARIANTS).map(([section, variants]) => (
+              <div key={section}>
+                <label className="block text-slate-500 mb-1 text-[11px] capitalize">
+                  {section === "whyChooseUs"
+                    ? "Why Choose Us"
+                    : section === "niche"
+                      ? getNicheConfig(activeBrandId).sectionName
+                      : section}{" "}
+                  Style
+                </label>
+                <select
+                  value={sectionDesigns[section]}
+                  onChange={(e) => updateSectionDesign(section, e.target.value)}
+                  className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                >
+                  {variants.map((v) => (
+                    <option key={v.id} value={v.id}>
+                      {v.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            ))}
+
+            {/* About Us Section */}
+            <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider pt-4">
+              About Us Section
+            </label>
+            <div>
+              <label className="block text-slate-500 mb-1 text-[11px]">
+                About Description
+              </label>
+              <textarea
+                value={customBrand.aboutDescription || ""}
+                onChange={(e) =>
+                  handleInputChange("aboutDescription", e.target.value)
+                }
+                className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs h-20 resize-none"
+                placeholder="Describe your business, your story, and what makes you unique..."
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-slate-500 mb-1 text-[11px]">
+                  Founder Name
+                </label>
+                <input
+                  value={customBrand.founderName || ""}
+                  onChange={(e) =>
+                    handleInputChange("founderName", e.target.value)
+                  }
+                  className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div>
+                <label className="block text-slate-500 mb-1 text-[11px]">
+                  Founder Title
+                </label>
+                <input
+                  value={customBrand.founderTitle || ""}
+                  onChange={(e) =>
+                    handleInputChange("founderTitle", e.target.value)
+                  }
+                  className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                  placeholder="CEO & Founder"
+                />
+              </div>
+            </div>
+
+            {/* Our Mission Section */}
+            <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider pt-4">
+              Our Mission Section
+            </label>
+            <div>
+              <label className="block text-slate-500 mb-1 text-[11px]">
+                Mission Statement
+              </label>
+              <textarea
+                value={customBrand.missionDescription || ""}
+                onChange={(e) =>
+                  handleInputChange("missionDescription", e.target.value)
+                }
+                className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs h-20 resize-none"
+                placeholder="What is your mission? What drives your business?"
+              />
+            </div>
+
+            {/* Why Choose Us — Locked Notice */}
+            <div className="pt-4">
+              <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">
+                Why Choose Us
+              </label>
+              <div className="bg-slate-800/60 rounded-lg p-3 border border-slate-700/40">
+                <div className="flex items-center gap-2 text-amber-400 text-[10px] font-bold mb-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  LOCKED — Auto-Generated
+                </div>
+                <p className="text-slate-500 text-[10px] leading-relaxed">
+                  This section auto-loads premium bullet points based on your
+                  selected category. It cannot be edited to ensure professional
+                  consistency.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -1736,7 +2521,10 @@ const LandingPage = () => {
                   <Star size={14} />
                   {customBrand.tagline}
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-[3.2rem] font-black tracking-tight text-slate-900 mb-6 leading-[1.1]">
+                <h1
+                  className="text-4xl md:text-5xl lg:text-[3.2rem] font-black tracking-tight text-slate-900 mb-6 leading-[1.1]"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
                   {customBrand.heroTitle} <br />
                   <span className={theme.text}>{customBrand.heroSpan}</span>
                 </h1>
@@ -2121,118 +2909,900 @@ const LandingPage = () => {
         </div>
       )}
 
-      {/* --- EXPERIENCE BANNER --- */}
-      <div className={`${theme.lightBg} py-12 border-b ${theme.lightBorder}`}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-              Why Choose {customBrand.logoText} {customBrand.logoSpan}?
-            </h2>
-          </div>
+      {(() => {
+        const aboutVariant = sectionDesigns.about;
+        const aboutDesc =
+          customBrand.aboutDescription ||
+          "We are passionate about delivering excellence. With years of experience and a dedicated team, we've built a legacy of trust, innovation, and results that speak for themselves.";
+        const founderName = customBrand.founderName || "Our Leader";
+        const founderTitle = customBrand.founderTitle || "Founder & CEO";
+        const aboutImage =
+          customBrand.heroImage ||
+          "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80";
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {customBrand.stats &&
-              customBrand.stats.map((stat, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center text-center group hover:-translate-y-1 transition-transform cursor-default"
-                >
-                  <div
-                    className={`mb-4 ${theme.text} p-4 bg-white shadow-sm border ${theme.lightBorder} rounded-full group-hover:${theme.bg} group-hover:text-white transition-colors`}
-                  >
-                    <Star size={32} />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-3xl font-black text-slate-900">
-                      {stat.value}
-                    </span>
-                    <span className="text-slate-500 font-bold text-sm uppercase">
-                      {stat.label}
-                    </span>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </div>
-      </div>
-
-      {/* --- ABOUT SECTION --- */}
-      <div className="bg-white py-24" id="about">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center max-w-3xl">
-          <h2
-            className={`${theme.text} font-bold tracking-widest uppercase text-sm mb-3`}
+        return (
+          <div
+            className={`py-24 relative overflow-hidden ${aboutVariant === "split_50" ? "" : "bg-white"}`}
+            id="about"
           >
-            Who We Are
-          </h2>
-          <h3 className="text-3xl font-bold text-slate-900 mb-8">
-            {customBrand.heroTitle}
-          </h3>
-          <p className="text-slate-600 leading-relaxed mb-6 text-lg">
-            {customBrand.heroDesc}
-          </p>
-          <p className="text-slate-600 leading-relaxed mb-12">
-            We are dedicated to providing the best service to our clients. Our
-            team of experts works tirelessly to ensure your success. Whether you
-            are looking for {customBrand.tagline} or specific solutions, we are
-            here to help.
-          </p>
-        </div>
-      </div>
-
-      {/* --- COURSES / MODULES --- */}
-      <div className={`py-24 ${theme.lightBg}`} id="services">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2
-              className={`${theme.text} font-bold tracking-widest uppercase text-sm mb-3`}
+            <div
+              className={
+                aboutVariant === "split_50"
+                  ? ""
+                  : "max-w-7xl mx-auto px-6 lg:px-8 relative z-10"
+              }
             >
-              Our Services
-            </h2>
-            <h3 className="text-3xl font-bold text-slate-900">What We Offer</h3>
-          </div>
+              {/* ── Variant: img_left ── */}
+              {aboutVariant === "img_left" && (
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                  <div className="relative">
+                    <div
+                      className={`absolute -inset-4 ${theme.bg} rounded-3xl opacity-10 blur-2xl`}
+                    ></div>
+                    <img
+                      src={aboutImage}
+                      className="relative rounded-2xl shadow-2xl w-full h-[400px] object-cover"
+                      alt="About"
+                    />
+                  </div>
+                  <div>
+                    <div
+                      className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-6 border ${theme.lightBorder}`}
+                    >
+                      <Users size={14} /> About Us
+                    </div>
+                    <h2
+                      className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight tracking-tight"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      The Story Behind <br />
+                      <span className={theme.text}>
+                        {customBrand.logoText} {customBrand.logoSpan}
+                      </span>
+                    </h2>
+                    <p className="text-slate-500 text-lg leading-relaxed mb-8">
+                      {aboutDesc}
+                    </p>
+                    <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                      <div
+                        className={`w-14 h-14 ${theme.lightBg} rounded-full flex items-center justify-center font-black text-xl ${theme.text}`}
+                      >
+                        {founderName?.[0]}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-900">
+                          {founderName}
+                        </h4>
+                        <p
+                          className={`text-xs font-bold uppercase tracking-widest ${theme.text}`}
+                        >
+                          {founderTitle}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {customBrand.courses &&
-              customBrand.courses.map((cat, idx) => (
+              {/* ── Variant: img_right (Original) ── */}
+              {aboutVariant === "img_right" && (
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                  <div>
+                    <div
+                      className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-6 border ${theme.lightBorder}`}
+                    >
+                      <Users size={14} /> About Us
+                    </div>
+                    <h2
+                      className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight tracking-tight"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      The Story Behind <br />
+                      <span className={theme.text}>
+                        {customBrand.logoText} {customBrand.logoSpan}
+                      </span>
+                    </h2>
+                    <p className="text-slate-500 text-lg leading-relaxed mb-8">
+                      {aboutDesc}
+                    </p>
+                    <div className="flex flex-wrap gap-6 mb-8">
+                      {customBrand.stats &&
+                        customBrand.stats.slice(0, 3).map((stat, idx) => (
+                          <div key={idx} className="text-center">
+                            <span
+                              className={`block text-2xl font-black ${theme.text}`}
+                            >
+                              {stat.value}
+                            </span>
+                            <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">
+                              {stat.label}
+                            </span>
+                          </div>
+                        ))}
+                    </div>
+                    <div className="flex items-center gap-4 bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                      <div
+                        className={`w-14 h-14 ${theme.lightBg} rounded-full flex items-center justify-center font-black text-xl ${theme.text}`}
+                      >
+                        {founderName?.[0]}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-900">
+                          {founderName}
+                        </h4>
+                        <p
+                          className={`text-xs font-bold uppercase tracking-widest ${theme.text}`}
+                        >
+                          {founderTitle}
+                        </p>
+                      </div>
+                      <div className="ml-auto flex gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            size={12}
+                            className="text-amber-400 fill-amber-400"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <div
+                      className={`absolute -inset-4 ${theme.bg} rounded-3xl opacity-10 blur-2xl`}
+                    ></div>
+                    <img
+                      src={aboutImage}
+                      className="relative rounded-2xl shadow-2xl w-full h-[450px] object-cover border border-slate-200/60"
+                      alt="About"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* ── Variant: centered_bg ── */}
+              {aboutVariant === "centered_bg" && (
+                <div className="relative rounded-3xl overflow-hidden min-h-[500px] flex items-center justify-center">
+                  <img
+                    src={aboutImage}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    alt="About"
+                  />
+                  <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
+                  <div className="relative z-10 text-center max-w-3xl px-8 py-16">
+                    <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-widest mb-6 border border-white/20">
+                      <Users size={14} /> About Us
+                    </div>
+                    <h2
+                      className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      The Story Behind{" "}
+                      <span style={{ color: activePalette.primary }}>
+                        {customBrand.logoText} {customBrand.logoSpan}
+                      </span>
+                    </h2>
+                    <p className="text-slate-300 text-lg leading-relaxed mb-8">
+                      {aboutDesc}
+                    </p>
+                    <div className="flex justify-center items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white font-black">
+                        {founderName?.[0]}
+                      </div>
+                      <div className="text-left">
+                        <h4 className="font-bold text-white">{founderName}</h4>
+                        <p className="text-xs text-slate-400">{founderTitle}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* ── Variant: split_50 ── */}
+              {aboutVariant === "split_50" && (
+                <div className="grid lg:grid-cols-2 min-h-[600px]">
+                  <div className="bg-slate-900 flex items-center justify-center p-12 lg:p-16">
+                    <div className="max-w-lg">
+                      <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-widest mb-6 border border-white/10">
+                        <Users size={14} /> About Us
+                      </div>
+                      <h2
+                        className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight"
+                        style={{ fontFamily: "var(--font-heading)" }}
+                      >
+                        The Story Behind <br />
+                        <span style={{ color: activePalette.primary }}>
+                          {customBrand.logoText} {customBrand.logoSpan}
+                        </span>
+                      </h2>
+                      <p className="text-slate-400 text-lg leading-relaxed mb-8">
+                        {aboutDesc}
+                      </p>
+                      <div className="flex items-center gap-4 border-t border-white/10 pt-6">
+                        <div className="w-12 h-12 rounded-full border-2 border-white/20 flex items-center justify-center text-white font-black">
+                          {founderName?.[0]}
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white">
+                            {founderName}
+                          </h4>
+                          <p className="text-xs text-slate-500">
+                            {founderTitle}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <img
+                      src={aboutImage}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      alt="About"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* ── Variant: minimal_typo ── */}
+              {aboutVariant === "minimal_typo" && (
+                <div className="text-center max-w-4xl mx-auto">
+                  <div
+                    className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-8 border ${theme.lightBorder}`}
+                  >
+                    <Users size={14} /> About Us
+                  </div>
+                  <h2
+                    className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    <span className={theme.text}>{customBrand.logoText}</span>{" "}
+                    {customBrand.logoSpan}
+                  </h2>
+                  <p className="text-xl text-slate-500 leading-relaxed mb-12 max-w-2xl mx-auto">
+                    {aboutDesc}
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-8 mb-12">
+                    {customBrand.stats &&
+                      customBrand.stats.slice(0, 4).map((stat, idx) => (
+                        <div key={idx} className="text-center px-6">
+                          <span
+                            className={`block text-4xl font-black ${theme.text} mb-1`}
+                          >
+                            {stat.value}
+                          </span>
+                          <span className="text-xs text-slate-400 font-bold uppercase tracking-widest">
+                            {stat.label}
+                          </span>
+                        </div>
+                      ))}
+                  </div>
+                  <div className="inline-flex items-center gap-4 bg-slate-50 px-6 py-4 rounded-2xl border border-slate-100">
+                    <div
+                      className={`w-12 h-12 ${theme.lightBg} rounded-full flex items-center justify-center font-black text-lg ${theme.text}`}
+                    >
+                      {founderName?.[0]}
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-bold text-slate-900 text-sm">
+                        {founderName}
+                      </h4>
+                      <p
+                        className={`text-[10px] font-bold uppercase tracking-widest ${theme.text}`}
+                      >
+                        {founderTitle}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })()}
+
+      {(() => {
+        const missionVariant = sectionDesigns.mission;
+        const missionDesc =
+          customBrand.missionDescription ||
+          "Our mission is to deliver excellence in everything we do. We strive to empower our clients and community with the tools, knowledge, and support they need to thrive.";
+        const missionImage =
+          customBrand.heroImage ||
+          "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80";
+
+        return (
+          <div
+            className={`py-24 relative overflow-hidden ${missionVariant === "full_highlight" ? `${theme.lightBg}` : "bg-slate-900"}`}
+            id="mission"
+          >
+            {/* ── Variant: icon_centered (Original) ── */}
+            {missionVariant === "icon_centered" && (
+              <>
                 <div
-                  key={idx}
-                  className={`bg-white border border-slate-100 p-8 hover:shadow-xl hover:${theme.lightBorder} transition-all duration-300 group text-center rounded-xl`}
+                  className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] ${theme.bg} opacity-[0.05] rounded-full blur-[120px]`}
+                ></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:32px_32px]"></div>
+                <div className="max-w-5xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+                  <div className="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-white/5 text-white/80 text-xs font-bold uppercase tracking-widest mb-8 border border-white/10">
+                    <Target size={14} className={theme.text} /> Our Mission
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight tracking-tight">
+                    What Drives Us <span className={theme.text}>Forward</span>
+                  </h2>
+                  <div className="relative max-w-3xl mx-auto mb-16">
+                    <div
+                      className={`absolute -top-6 -left-4 text-8xl font-serif ${theme.text} opacity-20 leading-none`}
+                    >
+                      "
+                    </div>
+                    <p className="text-xl md:text-2xl text-slate-300 leading-relaxed font-medium italic relative z-10 px-8">
+                      {missionDesc}
+                    </p>
+                    <div
+                      className={`absolute -bottom-6 -right-4 text-8xl font-serif ${theme.text} opacity-20 leading-none rotate-180`}
+                    >
+                      "
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+                    {customBrand.stats &&
+                      customBrand.stats.slice(0, 4).map((stat, idx) => (
+                        <div key={idx} className="text-center px-6 py-3">
+                          <span
+                            className={`block text-3xl md:text-4xl font-black ${theme.text} mb-1`}
+                          >
+                            {stat.value}
+                          </span>
+                          <span className="text-slate-500 text-xs font-bold uppercase tracking-widest">
+                            {stat.label}
+                          </span>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* ── Variant: full_highlight ── */}
+            {missionVariant === "full_highlight" && (
+              <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div className="text-center mb-12">
+                  <div
+                    className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-6 border ${theme.lightBorder}`}
+                  >
+                    <Target size={14} /> Our Mission
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
+                    What Drives Us <span className={theme.text}>Forward</span>
+                  </h2>
+                </div>
+                <div
+                  className={`rounded-3xl p-8 md:p-12 border ${theme.lightBorder} bg-white relative overflow-hidden`}
                 >
                   <div
-                    className={`w-16 h-16 mx-auto ${theme.lightBg} ${theme.text} rounded-full flex items-center justify-center mb-6 group-hover:${theme.bg} group-hover:text-white transition-colors`}
-                  >
-                    {cat.icon && <cat.icon size={28} />}
-                  </div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-3">
-                    {cat.title}
-                  </h4>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">
-                    {cat.desc}
+                    className={`absolute top-0 right-0 w-64 h-64 ${theme.bg} opacity-[0.03] rounded-full -translate-y-1/2 translate-x-1/2`}
+                  ></div>
+                  <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-center max-w-3xl mx-auto mb-10 relative z-10">
+                    {missionDesc}
                   </p>
-                  <a
-                    href="#"
-                    className={`inline-flex items-center gap-2 ${theme.text} font-bold text-sm hover:underline`}
-                  >
-                    Learn More <ArrowRight size={16} />
-                  </a>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
+                    {customBrand.stats &&
+                      customBrand.stats.slice(0, 4).map((stat, idx) => (
+                        <div
+                          key={idx}
+                          className={`text-center p-4 rounded-xl ${theme.lightBg} border ${theme.lightBorder}`}
+                        >
+                          <span
+                            className={`block text-2xl font-black ${theme.text} mb-1`}
+                          >
+                            {stat.value}
+                          </span>
+                          <span className="text-xs text-slate-500 font-bold uppercase tracking-widest">
+                            {stat.label}
+                          </span>
+                        </div>
+                      ))}
+                  </div>
                 </div>
-              ))}
+              </div>
+            )}
+
+            {/* ── Variant: card_layout (Mission · Vision · Values) ── */}
+            {missionVariant === "card_layout" && (
+              <>
+                <div
+                  className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] ${theme.bg} opacity-[0.05] rounded-full blur-[120px]`}
+                ></div>
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                  <div className="text-center mb-12">
+                    <div className="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-white/5 text-white/80 text-xs font-bold uppercase tracking-widest mb-8 border border-white/10">
+                      <Target size={14} className={theme.text} /> Our Mission
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">
+                      What Drives Us <span className={theme.text}>Forward</span>
+                    </h2>
+                  </div>
+                  <div className="grid md:grid-cols-3 gap-8">
+                    {[
+                      { title: "Mission", icon: Target, desc: missionDesc },
+                      {
+                        title: "Vision",
+                        icon: Eye,
+                        desc: "To be the leading force of transformation, setting benchmarks others aspire to reach.",
+                      },
+                      {
+                        title: "Values",
+                        icon: Heart,
+                        desc: "Integrity, innovation, and impact guide every decision and interaction.",
+                      },
+                    ].map((card, idx) => {
+                      const CardIcon = card.icon;
+                      return (
+                        <div
+                          key={idx}
+                          className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+                        >
+                          <div
+                            className={`w-12 h-12 ${theme.bg} rounded-xl flex items-center justify-center text-white mb-6`}
+                          >
+                            <CardIcon size={22} />
+                          </div>
+                          <h3 className="text-xl font-black text-white mb-3">
+                            {card.title}
+                          </h3>
+                          <p className="text-slate-400 text-sm leading-relaxed">
+                            {card.desc}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* ── Variant: side_quote ── */}
+            {missionVariant === "side_quote" && (
+              <>
+                <div
+                  className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] ${theme.bg} opacity-[0.05] rounded-full blur-[120px]`}
+                ></div>
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                  <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="relative rounded-2xl overflow-hidden h-[400px]">
+                      <img
+                        src={missionImage}
+                        className="w-full h-full object-cover"
+                        alt="Mission"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-transparent"></div>
+                    </div>
+                    <div>
+                      <div className="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-white/5 text-white/80 text-xs font-bold uppercase tracking-widest mb-6 border border-white/10">
+                        <Target size={14} className={theme.text} /> Our Mission
+                      </div>
+                      <h2 className="text-3xl md:text-4xl font-black text-white mb-6 tracking-tight">
+                        What Drives Us{" "}
+                        <span className={theme.text}>Forward</span>
+                      </h2>
+                      <p className="text-lg text-slate-400 leading-relaxed mb-8 italic border-l-4 border-white/20 pl-6">
+                        {missionDesc}
+                      </p>
+                      <div className="grid grid-cols-2 gap-4">
+                        {customBrand.stats &&
+                          customBrand.stats.slice(0, 4).map((stat, idx) => (
+                            <div
+                              key={idx}
+                              className="bg-white/5 border border-white/10 rounded-xl p-4 text-center"
+                            >
+                              <span
+                                className={`block text-2xl font-black ${theme.text}`}
+                              >
+                                {stat.value}
+                              </span>
+                              <span className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">
+                                {stat.label}
+                              </span>
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* ── Variant: dark_centered ── */}
+            {missionVariant === "dark_centered" && (
+              <>
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+                <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+                  <div className="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-white/5 text-white/80 text-xs font-bold uppercase tracking-widest mb-8 border border-white/10">
+                    <Target size={14} className={theme.text} /> Our Mission
+                  </div>
+                  <h2 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1]">
+                    What Drives Us
+                    <br />
+                    <span className={theme.text}>Forward</span>
+                  </h2>
+                  <p className="text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                    {missionDesc}
+                  </p>
+                </div>
+              </>
+            )}
+          </div>
+        );
+      })()}
+
+      {/* ═══════════════════════════════════════════════════════════
+          UNIVERSAL SECTION 3 — WHY CHOOSE US (LOCKED — Not Editable)
+          Auto-loads content based on brand category.
+          Fixed order: Always appears after Our Mission
+          ═══════════════════════════════════════════════════════════ */}
+      <div
+        className={`${theme.lightBg} py-24 relative overflow-hidden`}
+        id="why-us"
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div
+              className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-6 border ${theme.lightBorder}`}
+            >
+              <CheckCircle size={14} />
+              Why Choose Us
+            </div>
+            <h2
+              className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              Why Choose{" "}
+              <span className={theme.text}>
+                {customBrand.logoText} {customBrand.logoSpan}
+              </span>
+              ?
+            </h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
+              Here's what sets us apart from the rest. These aren't just
+              promises — they're the foundation of everything we do.
+            </p>
+          </div>
+
+          {/* Why Choose Us Grid — Auto-loaded, NOT editable */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {getWhyChooseUs(activeBrandId).map((item, idx) => (
+              <div
+                key={idx}
+                className="group bg-white rounded-2xl p-7 border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+              >
+                {/* Decorative Number */}
+                <div
+                  className={`absolute top-4 right-4 text-5xl font-black ${theme.text} opacity-[0.06] leading-none`}
+                >
+                  {String(idx + 1).padStart(2, "0")}
+                </div>
+
+                {/* Icon */}
+                <div
+                  className={`w-12 h-12 ${theme.lightBg} ${theme.text} rounded-xl flex items-center justify-center mb-5 group-hover:${theme.bg} group-hover:text-white transition-colors duration-300`}
+                >
+                  <CheckCircle size={22} />
+                </div>
+
+                <h4 className="text-lg font-bold text-slate-900 mb-2 leading-snug">
+                  {item.title}
+                </h4>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* --- TESTIMONIALS SECTION --- */}
-      <div className={`${theme.lightBg} py-24`} id="reviews">
+      {/* ═══════════════════════════════════════════════════════════
+          DYNAMIC NICHE SECTION ENGINE
+          Swaps layout automatically when category changes.
+          Courses | Services | Properties | Treatments | Membership | Projects
+          ═══════════════════════════════════════════════════════════ */}
+      {(() => {
+        const nicheConfig = getNicheConfig(activeBrandId);
+        const NicheIcon = nicheConfig.icon;
+        const items = customBrand.nicheItems || [];
+
+        return (
+          <div className="py-24 bg-white" id="services">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+              {/* Dynamic Section Header */}
+              <div className="text-center mb-16">
+                <div
+                  className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-6 border ${theme.lightBorder}`}
+                >
+                  <NicheIcon size={14} />
+                  {nicheConfig.sectionName}
+                </div>
+                <h2
+                  className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  Our{" "}
+                  <span className={theme.text}>{nicheConfig.sectionName}</span>
+                </h2>
+                <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
+                  {nicheConfig.subtitle}
+                </p>
+              </div>
+
+              {/* ── COURSES LAYOUT (IELTS / Institute / Coaching) ── */}
+              {nicheConfig.type === "courses" && (
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className={`bg-white border border-slate-100 p-8 hover:shadow-2xl hover:${theme.lightBorder} transition-all duration-300 group text-center rounded-2xl relative overflow-hidden`}
+                    >
+                      <div
+                        className={`absolute inset-0 ${theme.bg} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`}
+                      ></div>
+                      <div
+                        className={`w-16 h-16 mx-auto ${theme.lightBg} ${theme.text} rounded-2xl flex items-center justify-center mb-6 group-hover:${theme.bg} group-hover:text-white transition-colors shadow-sm group-hover:shadow-lg ${theme.shadow} duration-300`}
+                      >
+                        {item.icon && <item.icon size={28} />}
+                      </div>
+                      <h4 className="text-xl font-bold text-slate-900 mb-1">
+                        {item.courseName}
+                      </h4>
+                      <span
+                        className={`inline-block text-xs font-bold ${theme.text} ${theme.lightBg} px-3 py-1 rounded-full mb-4 border ${theme.lightBorder}`}
+                      >
+                        <Clock size={10} className="inline mr-1" />
+                        {item.duration}
+                      </span>
+                      <p className="text-slate-500 text-sm leading-relaxed mb-5">
+                        {item.desc}
+                      </p>
+                      <a
+                        href="#"
+                        className={`inline-flex items-center gap-2 ${theme.text} font-bold text-sm hover:gap-3 transition-all`}
+                      >
+                        Enroll Now <ArrowRight size={16} />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ── SERVICES LAYOUT (Consultant) ── */}
+              {nicheConfig.type === "services" && (
+                <div className="grid md:grid-cols-2 gap-6">
+                  {items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="group bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all duration-300 flex gap-6 items-start relative overflow-hidden"
+                    >
+                      <div
+                        className={`absolute inset-0 ${theme.bg} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`}
+                      ></div>
+                      <div
+                        className={`w-14 h-14 flex-shrink-0 ${theme.lightBg} ${theme.text} rounded-2xl flex items-center justify-center group-hover:${theme.bg} group-hover:text-white transition-colors shadow-sm`}
+                      >
+                        {item.icon && <item.icon size={24} />}
+                      </div>
+                      <div className="relative z-10">
+                        <h4 className="text-xl font-bold text-slate-900 mb-2">
+                          {item.serviceName}
+                        </h4>
+                        <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                          {item.desc}
+                        </p>
+                        <a
+                          href="#"
+                          className={`inline-flex items-center gap-2 ${theme.text} font-bold text-sm hover:gap-3 transition-all`}
+                        >
+                          Learn More <ArrowRight size={16} />
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ── PROPERTIES LAYOUT (Real Estate) ── */}
+              {nicheConfig.type === "properties" && (
+                <div className="grid md:grid-cols-2 gap-8">
+                  {items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="group bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300"
+                    >
+                      <div className="h-56 overflow-hidden relative">
+                        <img
+                          src={item.propertyImage}
+                          alt={item.location}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div
+                          className={`absolute top-4 right-4 ${theme.bg} text-white px-4 py-2 rounded-xl font-black text-lg shadow-lg ${theme.shadow}`}
+                        >
+                          {item.price}
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <div className="flex items-center gap-2 mb-2">
+                          <MapPin size={16} className={theme.text} />
+                          <h4 className="text-xl font-bold text-slate-900">
+                            {item.location}
+                          </h4>
+                        </div>
+                        <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                          {item.details}
+                        </p>
+                        <a
+                          href="#"
+                          className={`inline-flex items-center gap-2 ${theme.text} font-bold text-sm hover:gap-3 transition-all`}
+                        >
+                          View Property <ArrowRight size={16} />
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ── TREATMENTS LAYOUT (Clinic) ── */}
+              {nicheConfig.type === "treatments" && (
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className={`bg-white border border-slate-100 p-8 hover:shadow-2xl hover:${theme.lightBorder} transition-all duration-300 group text-center rounded-2xl relative overflow-hidden`}
+                    >
+                      <div
+                        className={`absolute inset-0 ${theme.bg} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`}
+                      ></div>
+                      <div
+                        className={`w-16 h-16 mx-auto ${theme.lightBg} ${theme.text} rounded-2xl flex items-center justify-center mb-6 group-hover:${theme.bg} group-hover:text-white transition-colors shadow-sm group-hover:shadow-lg ${theme.shadow} duration-300`}
+                      >
+                        {item.icon && <item.icon size={28} />}
+                      </div>
+                      <h4 className="text-xl font-bold text-slate-900 mb-3">
+                        {item.treatmentName}
+                      </h4>
+                      <p className="text-slate-500 text-sm leading-relaxed mb-5">
+                        {item.desc}
+                      </p>
+                      <a
+                        href="#"
+                        className={`inline-flex items-center gap-2 ${theme.text} font-bold text-sm hover:gap-3 transition-all`}
+                      >
+                        Book Appointment <ArrowRight size={16} />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ── MEMBERSHIP LAYOUT (Gym) ── */}
+              {nicheConfig.type === "membership" && (
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className={`bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 group relative ${idx === 1 ? `ring-2 ${theme.border}` : ""}`}
+                    >
+                      {idx === 1 && (
+                        <div
+                          className={`${theme.bg} text-white text-center py-2 text-xs font-bold uppercase tracking-widest`}
+                        >
+                          Most Popular
+                        </div>
+                      )}
+                      <div className="p-8 text-center">
+                        <div
+                          className={`w-14 h-14 mx-auto ${theme.lightBg} ${theme.text} rounded-2xl flex items-center justify-center mb-4 group-hover:${theme.bg} group-hover:text-white transition-colors`}
+                        >
+                          {item.icon && <item.icon size={24} />}
+                        </div>
+                        <h4 className="text-xl font-bold text-slate-900 mb-1">
+                          {item.planName}
+                        </h4>
+                        <div className="mb-6">
+                          <span className={`text-3xl font-black ${theme.text}`}>
+                            {item.price}
+                          </span>
+                        </div>
+                        <ul className="space-y-3 text-left mb-8">
+                          {item.features &&
+                            item.features.map((f, fi) => (
+                              <li
+                                key={fi}
+                                className="flex items-center gap-2 text-sm text-slate-600"
+                              >
+                                <CheckCircle
+                                  size={16}
+                                  className={`${theme.text} flex-shrink-0`}
+                                />
+                                {f}
+                              </li>
+                            ))}
+                        </ul>
+                        <button
+                          className={`w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider transition-all ${idx === 1 ? `${theme.bg} text-white shadow-lg ${theme.shadow} hover:scale-[1.02]` : `border ${theme.border} ${theme.text} hover:${theme.bg} hover:text-white`}`}
+                        >
+                          Choose Plan
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ── PROJECTS LAYOUT (Digital Agency) ── */}
+              {nicheConfig.type === "projects" && (
+                <div className="grid md:grid-cols-2 gap-8">
+                  {items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="group bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300"
+                    >
+                      <div className="h-56 overflow-hidden relative">
+                        <img
+                          src={item.projectImage}
+                          alt={item.projectTitle}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <span
+                            className={`inline-block ${theme.bg} text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-2`}
+                          >
+                            Case Study
+                          </span>
+                          <h4 className="text-white font-bold text-lg leading-snug">
+                            {item.projectTitle}
+                          </h4>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                          {item.desc}
+                        </p>
+                        <a
+                          href="#"
+                          className={`inline-flex items-center gap-2 ${theme.text} font-bold text-sm hover:gap-3 transition-all`}
+                        >
+                          View Case Study <ArrowRight size={16} />
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* ═══════════════════════════════════════════════════════════
+          UNIVERSAL SECTION — TESTIMONIALS
+          Fixed order: Always appears after Niche Section
+          ═══════════════════════════════════════════════════════════ */}
+      <div className="bg-slate-50 py-24 border-y border-slate-100" id="reviews">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2
-              className={`${theme.text} font-bold tracking-widest uppercase text-sm mb-3`}
+            <div
+              className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-6 border ${theme.lightBorder}`}
             >
-              Student Success Stories
+              <Star size={14} />
+              Testimonials
+            </div>
+            <h2
+              className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              What People <span className={theme.text}>Say</span>
             </h2>
-            <h3 className="text-3xl font-bold text-slate-900">
-              What Our Students Say
-            </h3>
             <div className="flex justify-center items-center gap-2 mt-4">
               <div className="flex text-yellow-500">
                 <Star fill="currentColor" size={20} />
@@ -2249,8 +3819,8 @@ const LandingPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Review 1 */}
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-4 mb-4">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center gap-4 mb-5">
                 <div className="h-12 w-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 font-bold text-xl">
                   S
                 </div>
@@ -2258,43 +3828,41 @@ const LandingPage = () => {
                   <h4 className="font-bold text-slate-900">Simran Kaur</h4>
                   <p className="text-slate-500 text-xs">a month ago</p>
                 </div>
-                <div className="ml-auto text-yellow-500">
-                  <Star fill="currentColor" size={16} />
+                <div className="ml-auto flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      fill="currentColor"
+                      size={12}
+                      className="text-yellow-500"
+                    />
+                  ))}
                 </div>
-              </div>
-              <div className="flex text-yellow-500 mb-4 text-xs">
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
               </div>
               <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
                 "I am currently pursuing my studies at {customBrand.logoText}{" "}
                 {customBrand.logoSpan}, and I am extremely grateful to be part
                 of such a prestigious institution. The faculty members are
                 highly knowledgeable, supportive, and genuinely committed to
-                students’ growth."
+                students' growth."
               </p>
-
-              {/* Owner Response */}
               <div
-                className={`bg-slate-50 p-4 rounded-lg border-l-4 ${theme.border} mt-auto`}
+                className={`bg-slate-50 p-4 rounded-xl border-l-4 ${theme.border} mt-auto`}
               >
                 <p className="text-xs font-bold text-slate-900 mb-1">
                   Response from the owner
                 </p>
                 <p className="text-xs text-slate-600 leading-relaxed italic">
-                  "We sincerely thank you for sharing such encouraging feedback
-                  with us. Your kind words mean a lot and reassure us that our
-                  efforts are making a meaningful difference."
+                  "We sincerely thank you for sharing such encouraging feedback.
+                  Your kind words reassure us that our efforts are making a
+                  meaningful difference."
                 </p>
               </div>
             </div>
 
             {/* Review 2 */}
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-4 mb-4">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center gap-4 mb-5">
                 <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center text-green-700 font-bold text-xl">
                   K
                 </div>
@@ -2302,16 +3870,16 @@ const LandingPage = () => {
                   <h4 className="font-bold text-slate-900">Kamal Kumar</h4>
                   <p className="text-slate-500 text-xs">3 months ago</p>
                 </div>
-                <div className="ml-auto text-yellow-500">
-                  <Star fill="currentColor" size={16} />
+                <div className="ml-auto flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      fill="currentColor"
+                      size={12}
+                      className="text-yellow-500"
+                    />
+                  ))}
                 </div>
-              </div>
-              <div className="flex text-yellow-500 mb-4 text-xs">
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
               </div>
               <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
                 "I had an amazing experience with the course here. The classes
@@ -2319,25 +3887,22 @@ const LandingPage = () => {
                 supportive and made learning fun — we did lots of speaking
                 activities, role plays, and discussions."
               </p>
-
-              {/* Owner Response */}
               <div
-                className={`bg-slate-50 p-4 rounded-lg border-l-4 ${theme.border} mt-auto`}
+                className={`bg-slate-50 p-4 rounded-xl border-l-4 ${theme.border} mt-auto`}
               >
                 <p className="text-xs font-bold text-slate-900 mb-1">
                   Response from the owner
                 </p>
                 <p className="text-xs text-slate-600 leading-relaxed italic">
-                  "Thank you Kamal for such a heartfelt review! We’re delighted
-                  that our teaching methods and personalized approach helped you
-                  gain confidence."
+                  "Thank you Kamal for such a heartfelt review! We're delighted
+                  that our methods helped you gain confidence."
                 </p>
               </div>
             </div>
 
             {/* Review 3 */}
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-4 mb-4">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center gap-4 mb-5">
                 <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-bold text-xl">
                   S
                 </div>
@@ -2345,35 +3910,31 @@ const LandingPage = () => {
                   <h4 className="font-bold text-slate-900">Shweta Singh</h4>
                   <p className="text-slate-500 text-xs">a month ago</p>
                 </div>
-                <div className="ml-auto text-yellow-500">
-                  <Star fill="currentColor" size={16} />
+                <div className="ml-auto flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      fill="currentColor"
+                      size={12}
+                      className="text-yellow-500"
+                    />
+                  ))}
                 </div>
               </div>
-              <div className="flex text-yellow-500 mb-4 text-xs">
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
-                <Star fill="currentColor" size={14} />
-              </div>
               <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
-                "I had joined the academy one week ago. I realised it is a very
-                good platform to learn. When I come here to attend classes I get
-                lots of confidence. Before coming here I have hesitation to
-                speak."
+                "I had joined one week ago and I realised it is a very good
+                platform to learn. When I come here to attend classes I get lots
+                of confidence. Before coming here I had hesitation to speak."
               </p>
-
-              {/* Owner Response */}
               <div
-                className={`bg-slate-50 p-4 rounded-lg border-l-4 ${theme.border} mt-auto`}
+                className={`bg-slate-50 p-4 rounded-xl border-l-4 ${theme.border} mt-auto`}
               >
                 <p className="text-xs font-bold text-slate-900 mb-1">
                   Response from the owner
                 </p>
                 <p className="text-xs text-slate-600 leading-relaxed italic">
-                  "Thank you very much for taking the time to share your
-                  positive feedback. We truly appreciate your kind words and
-                  encouragement."
+                  "Thank you very much for sharing your positive feedback. We
+                  truly appreciate your kind words."
                 </p>
               </div>
             </div>
@@ -2381,91 +3942,225 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* --- TRAINERS --- */}
-      <div className="py-24 bg-slate-900 text-white" id="trainers">
+      {/* ═══════════════════════════════════════════════════════════
+          UNIVERSAL SECTION — CONTACT
+          Fixed order: Always appears before Footer
+          ═══════════════════════════════════════════════════════════ */}
+      <div className="py-24 bg-white" id="contact">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2
-              className={`${theme.text} font-bold tracking-widest uppercase text-sm mb-3`}
+            <div
+              className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-6 border ${theme.lightBorder}`}
             >
-              Our Team
+              <Phone size={14} />
+              Get In Touch
+            </div>
+            <h2
+              className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              Let's <span className={theme.text}>Connect</span>
             </h2>
-            <h3 className="text-3xl font-bold text-white">Meet The Experts</h3>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
+              Have questions? Ready to get started? Reach out and our team will
+              respond within 24 hours.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-800 p-8 rounded border border-slate-700 hover:border-slate-500 transition-all">
-              <h4 className="font-bold text-xl mb-1">Senior Consultant</h4>
-              <p
-                className={`${theme.text} text-xs font-bold uppercase tracking-widest mb-4`}
-              >
-                Head of Strategy
-              </p>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                With over 15 years of industry experience, leading the team to
-                deliver exceptional results and strategic growth for our
-                clients.
-              </p>
+          <div className="grid lg:grid-cols-5 gap-12">
+            {/* Contact Form — Left Side */}
+            <div className="lg:col-span-3">
+              <div className="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                  Send Us a Message
+                </h3>
+                <p className="text-slate-500 text-sm mb-8">
+                  Fill in your details and we'll get back to you promptly.
+                </p>
+
+                <form
+                  className="space-y-5"
+                  onSubmit={(e) => e.preventDefault()}
+                >
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="John Doe"
+                        className={`w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-white text-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:${theme.border} transition-all placeholder:text-slate-400`}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        placeholder="+91 98765 43210"
+                        className={`w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-white text-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:${theme.border} transition-all placeholder:text-slate-400`}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="john@example.com"
+                      className={`w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-white text-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:${theme.border} transition-all placeholder:text-slate-400`}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                      Your Message
+                    </label>
+                    <textarea
+                      placeholder="Tell us about your needs..."
+                      rows={4}
+                      className={`w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-white text-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:${theme.border} transition-all resize-none placeholder:text-slate-400`}
+                    ></textarea>
+                  </div>
+                  <button
+                    className={`w-full ${theme.bg} text-white font-bold py-4 rounded-xl uppercase tracking-wider text-sm hover:scale-[1.01] hover:shadow-xl transition-all shadow-lg ${theme.shadow} flex items-center justify-center gap-2`}
+                  >
+                    <ArrowRight size={18} />
+                    Send Message
+                  </button>
+                  <p className="text-center text-slate-400 text-[11px]">
+                    🔒 Your information is 100% secure and will never be shared.
+                  </p>
+                </form>
+              </div>
             </div>
-            <div className="bg-slate-800 p-8 rounded border border-slate-700 hover:border-slate-500 transition-all">
-              <h4 className="font-bold text-xl mb-1">Lead Specialist</h4>
-              <p
-                className={`${theme.text} text-xs font-bold uppercase tracking-widest mb-4`}
+
+            {/* Contact Info — Right Side */}
+            <div className="lg:col-span-2 space-y-6">
+              {/* Info Cards */}
+              <div className="bg-slate-900 text-white rounded-3xl p-8 space-y-6">
+                <h4 className="text-lg font-bold">Contact Information</h4>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <div
+                      className={`w-10 h-10 ${theme.bg} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg ${theme.shadow}`}
+                    >
+                      <Phone size={18} className="text-white" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">
+                        Phone
+                      </p>
+                      <p className="text-white font-bold text-lg">
+                        {customBrand.phone}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div
+                      className={`w-10 h-10 ${theme.bg} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg ${theme.shadow}`}
+                    >
+                      <Monitor size={18} className="text-white" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">
+                        Email
+                      </p>
+                      <p className="text-white font-semibold">
+                        {customBrand.email}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div
+                      className={`w-10 h-10 ${theme.bg} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg ${theme.shadow}`}
+                    >
+                      <MapPin size={18} className="text-white" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">
+                        Address
+                      </p>
+                      <p className="text-slate-300 font-medium leading-relaxed">
+                        {customBrand.address}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Business Hours Card */}
+              <div
+                className={`${theme.lightBg} rounded-3xl p-8 border ${theme.lightBorder}`}
               >
-                Operations Manager
-              </p>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Expert in operational efficiency and process optimization.
-                Ensuring smooth delivery of services and client satisfaction.
-              </p>
-            </div>
-            <div className="bg-slate-800 p-8 rounded border border-slate-700 hover:border-slate-500 transition-all">
-              <h4 className="font-bold text-xl mb-1">Director</h4>
-              <p
-                className={`${theme.text} text-xs font-bold uppercase tracking-widest mb-4`}
-              >
-                Leadership
-              </p>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Visionary leadership driving the company forward. Committed to
-                excellence and innovation in every aspect of our business.
-              </p>
+                <h4 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <Clock size={18} className={theme.text} />
+                  Business Hours
+                </h4>
+                <div className="space-y-3 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-slate-600 font-medium">
+                      Mon — Fri
+                    </span>
+                    <span className="font-bold text-slate-900">
+                      9:00 AM — 7:00 PM
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-600 font-medium">Saturday</span>
+                    <span className="font-bold text-slate-900">
+                      10:00 AM — 5:00 PM
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-600 font-medium">Sunday</span>
+                    <span className={`font-bold ${theme.text}`}>Closed</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* --- FAQ SECTION --- */}
-      <div className="py-24 bg-white">
+      {/* ═══════════════════════════════════════════════════════════
+          FAQ SECTION — Before Footer
+          ═══════════════════════════════════════════════════════════ */}
+      <div className={`py-24 ${theme.lightBg}`}>
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">
-            Common Queries
-          </h2>
-          <div className="space-y-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
+              Frequently Asked <span className={theme.text}>Questions</span>
+            </h2>
+          </div>
+          <div className="space-y-3">
             {customBrand.faqs &&
               customBrand.faqs.map((faq, index) => (
-                <div key={index} className="bg-white border-b border-slate-200">
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden"
+                >
                   <button
                     onClick={() =>
                       setActiveFaq(activeFaq === index ? null : index)
                     }
-                    className={`w-full flex justify-between items-center py-6 text-left hover:${theme.text} transition-colors`}
+                    className="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors"
                   >
-                    <span className="font-bold text-slate-800 text-lg">
+                    <span className="font-bold text-slate-800 text-base pr-4">
                       {faq.q}
                     </span>
-                    {activeFaq === index ? (
-                      <div className={theme.text}>
-                        <span className="text-2xl">-</span>
-                      </div>
-                    ) : (
-                      <div className="text-slate-400">
-                        <span className="text-2xl">+</span>
-                      </div>
-                    )}
+                    <div
+                      className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center ${activeFaq === index ? theme.bg + " text-white" : "bg-slate-100 text-slate-400"} transition-colors`}
+                    >
+                      <span className="text-lg font-bold leading-none">
+                        {activeFaq === index ? "−" : "+"}
+                      </span>
+                    </div>
                   </button>
                   <div
-                    className={`text-slate-600 leading-relaxed overflow-hidden transition-all duration-300 ${activeFaq === index ? "max-h-40 pb-6 opacity-100" : "max-h-0 opacity-0"}`}
+                    className={`text-slate-600 text-sm leading-relaxed overflow-hidden transition-all duration-300 ${activeFaq === index ? "max-h-40 px-6 pb-6 opacity-100" : "max-h-0 opacity-0"}`}
                   >
                     {faq.a}
                   </div>

@@ -43,3 +43,22 @@
     }
   }
 }
+
+/* Dynamic Font System — headings and body inherit from CSS custom properties set on the wrapper div */
+h1,
+h2,
+h3,
+h4.section-heading {
+  font-family: var(--font-heading, "Poppins", sans-serif);
+}
+
+body,
+p,
+span,
+li,
+input,
+textarea,
+select,
+button {
+  font-family: var(--font-body, "Inter", sans-serif);
+}
