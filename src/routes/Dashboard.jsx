@@ -270,7 +270,7 @@ const Dashboard = () => {
             {/* Landscape Hero Image */}
             <div className="relative w-full">
               <img
-                src={heroImg}
+                src={typeof heroImg === "string" ? heroImg : heroImg?.src}
                 alt="WebToolkit Dashboard"
                 className="w-full h-[370px] sm:h-[480px] lg:h-[460px] object-cover rounded-[32px] lg:rounded-[48px] shadow-2xl shadow-blue-900/20"
               />

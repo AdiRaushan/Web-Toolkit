@@ -64,6 +64,9 @@ export const metadata = {
   title: "WebToolkit - Creator Studio",
   description:
     "Build premium website templates and run website audits in minutes.",
+  icons: {
+    icon: "/toolkit-favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

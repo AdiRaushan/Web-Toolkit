@@ -35,6 +35,7 @@ import {
   Layers,
   Play,
 } from "lucide-react";
+import heroImg from "../assets/hero-img.png";
 
 /* ─── Color tokens ─── */
 const C = {
@@ -249,12 +250,11 @@ export default function DashboardPage() {
         <div className="relative z-10 flex justify-center px-4 sm:px-6 lg:px-8 w-full mt-2 lg:mt-4">
           <div className="relative max-w-5xl lg:max-w-7xl w-full">
             <div className="relative w-full">
-              <div className="w-full h-[370px] sm:h-[480px] lg:h-[460px] bg-gradient-to-br from-blue-900 to-indigo-900 rounded-[32px] lg:rounded-[48px] shadow-2xl shadow-blue-900/20 flex items-center justify-center">
-                <div className="text-white/20 text-center">
-                  <Monitor size={80} />
-                  <p className="text-lg font-bold mt-4">WebToolkit Dashboard</p>
-                </div>
-              </div>
+              <img
+                src={typeof heroImg === "string" ? heroImg : heroImg?.src}
+                alt="WebToolkit Dashboard"
+                className="w-full h-[370px] sm:h-[480px] lg:h-[460px] object-cover rounded-[32px] lg:rounded-[48px] shadow-2xl shadow-blue-900/20"
+              />
               <GridOverlay />
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
             </div>
