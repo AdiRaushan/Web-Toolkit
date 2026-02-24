@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import BusinessOnboardingForm from "../components/demo/BusinessOnboardingForm";
-import { useLocation } from "react-router-dom";
+// react-router-dom removed — not needed in Next.js
 import {
   Menu,
   X,
@@ -485,7 +485,7 @@ const LandingPage = () => {
 
   // --- FONT + COLOR + DESIGN STATE ---
   const [fontPairId, setFontPairId] = useState("modern1");
-  const [colorPaletteId, setColorPaletteId] = useState("red_black");
+  const [colorPaletteId, setColorPaletteId] = useState("crimson_gold");
   const [sectionDesigns, setSectionDesigns] = useState({
     about: "img_right",
     mission: "dark_centered",
@@ -505,8 +505,8 @@ const LandingPage = () => {
   const activePalette =
     COLOR_PALETTES.find((p) => p.id === colorPaletteId) || COLOR_PALETTES[0];
 
-  // Check if pre-filled data was passed from Audit page via router state
-  const routerLocation = useLocation();
+  // In Next.js, we don't have React Router state. Prefill from audit handled differently.
+  const routerLocation = { state: null };
   const prefillDataRef = React.useRef(false);
 
   // --- BRAND CONFIGURATION & STATE ---
@@ -1134,6 +1134,7 @@ const LandingPage = () => {
   const [activeBrandId, setActiveBrandId] = useState("institute");
   const [customBrand, setCustomBrand] = useState(defaultBrands.institute);
   const [showCustomizer, setShowCustomizer] = useState(true);
+  const [fullscreenCustomizer, setFullscreenCustomizer] = useState(false);
 
   // --- ONBOARDING HANDLERS ---
   const handleOnboardingComplete = useCallback((brandConfig) => {
@@ -1164,13 +1165,19 @@ const LandingPage = () => {
       themeColor: customBrand.themeColor,
     });
     // Apply recommended font + palette for this category
+    const newPaletteId = CATEGORY_PALETTE_MAP[brandId] || "crimson_gold";
     setFontPairId(CATEGORY_FONT_MAP[brandId] || "default");
-    setColorPaletteId(CATEGORY_PALETTE_MAP[brandId] || "red_black");
+    setColorPaletteId(newPaletteId);
+    // Sync themeColor from the palette's themeKey
+    const pal = COLOR_PALETTES.find((p) => p.id === newPaletteId);
+    if (pal?.themeKey) {
+      setCustomBrand((prev) => ({ ...prev, themeColor: pal.themeKey }));
+    }
   };
 
   // Draggable logic for the toggle button
   const [position, setPosition] = useState({
-    x: window.innerWidth - 80,
+    x: typeof window !== "undefined" ? window.innerWidth - 80 : 1200,
     y: 20,
   });
   const [isDragging, setIsDragging] = useState(false);
@@ -1212,7 +1219,7 @@ const LandingPage = () => {
     };
   }, [isDragging]);
 
-  // COLOR THEME HELPER
+  // COLOR THEME HELPER — 10 Theme Colors
   const getThemeClasses = (color) => {
     const themes = {
       red: {
@@ -1222,6 +1229,10 @@ const LandingPage = () => {
         lightBg: "bg-red-50",
         lightBorder: "border-red-100",
         shadow: "shadow-red-200",
+        ring: "ring-red-500",
+        hoverBg: "hover:bg-red-700",
+        gradientFrom: "from-red-500",
+        gradientTo: "to-rose-600",
       },
       blue: {
         text: "text-blue-600",
@@ -1230,6 +1241,10 @@ const LandingPage = () => {
         lightBg: "bg-blue-50",
         lightBorder: "border-blue-100",
         shadow: "shadow-blue-200",
+        ring: "ring-blue-500",
+        hoverBg: "hover:bg-blue-700",
+        gradientFrom: "from-blue-500",
+        gradientTo: "to-indigo-600",
       },
       emerald: {
         text: "text-emerald-600",
@@ -1238,6 +1253,10 @@ const LandingPage = () => {
         lightBg: "bg-emerald-50",
         lightBorder: "border-emerald-100",
         shadow: "shadow-emerald-200",
+        ring: "ring-emerald-500",
+        hoverBg: "hover:bg-emerald-700",
+        gradientFrom: "from-emerald-500",
+        gradientTo: "to-teal-600",
       },
       orange: {
         text: "text-orange-600",
@@ -1246,6 +1265,82 @@ const LandingPage = () => {
         lightBg: "bg-orange-50",
         lightBorder: "border-orange-100",
         shadow: "shadow-orange-200",
+        ring: "ring-orange-500",
+        hoverBg: "hover:bg-orange-700",
+        gradientFrom: "from-orange-500",
+        gradientTo: "to-amber-600",
+      },
+      purple: {
+        text: "text-purple-600",
+        bg: "bg-purple-600",
+        border: "border-purple-600",
+        lightBg: "bg-purple-50",
+        lightBorder: "border-purple-100",
+        shadow: "shadow-purple-200",
+        ring: "ring-purple-500",
+        hoverBg: "hover:bg-purple-700",
+        gradientFrom: "from-purple-500",
+        gradientTo: "to-violet-700",
+      },
+      navy: {
+        text: "text-sky-800",
+        bg: "bg-sky-900",
+        border: "border-sky-800",
+        lightBg: "bg-sky-50",
+        lightBorder: "border-sky-100",
+        shadow: "shadow-sky-200",
+        ring: "ring-sky-700",
+        hoverBg: "hover:bg-sky-950",
+        gradientFrom: "from-sky-800",
+        gradientTo: "to-indigo-900",
+      },
+      rose: {
+        text: "text-rose-600",
+        bg: "bg-rose-600",
+        border: "border-rose-600",
+        lightBg: "bg-rose-50",
+        lightBorder: "border-rose-100",
+        shadow: "shadow-rose-200",
+        ring: "ring-rose-500",
+        hoverBg: "hover:bg-rose-700",
+        gradientFrom: "from-rose-500",
+        gradientTo: "to-pink-600",
+      },
+      teal: {
+        text: "text-teal-600",
+        bg: "bg-teal-600",
+        border: "border-teal-600",
+        lightBg: "bg-teal-50",
+        lightBorder: "border-teal-100",
+        shadow: "shadow-teal-200",
+        ring: "ring-teal-500",
+        hoverBg: "hover:bg-teal-700",
+        gradientFrom: "from-teal-500",
+        gradientTo: "to-cyan-600",
+      },
+      indigo: {
+        text: "text-indigo-600",
+        bg: "bg-indigo-600",
+        border: "border-indigo-600",
+        lightBg: "bg-indigo-50",
+        lightBorder: "border-indigo-100",
+        shadow: "shadow-indigo-200",
+        ring: "ring-indigo-500",
+        hoverBg: "hover:bg-indigo-700",
+        gradientFrom: "from-indigo-500",
+        gradientTo: "to-blue-700",
+      },
+      amber: {
+        text: "text-amber-600",
+        bg: "bg-amber-600",
+        border: "border-amber-600",
+        lightBg: "bg-amber-50",
+        lightBorder: "border-amber-100",
+        shadow: "shadow-amber-200",
+        ring: "ring-amber-500",
+        hoverBg: "hover:bg-amber-700",
+        gradientFrom: "from-amber-500",
+        gradientTo: "to-yellow-600",
       },
     };
     return themes[color] || themes.red;
@@ -1400,23 +1495,45 @@ const LandingPage = () => {
 
       {/* --- CUSTOMIZER SIDEBAR (Right Side) --- */}
       <div
-        className={`fixed top-0 right-0 h-full w-[380px] bg-slate-900 text-white z-[100] shadow-2xl border-l border-slate-700/80 transition-transform duration-300 ease-in-out overflow-y-auto ${
-          showCustomizer ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full bg-slate-900 text-white z-[100] shadow-2xl border-l border-slate-700/80 transition-all duration-300 ease-in-out overflow-y-auto ${
+          fullscreenCustomizer ? "w-full left-0" : "w-[380px]"
+        } ${showCustomizer ? "translate-x-0" : "translate-x-full"}`}
       >
-        <div className="p-5">
+        <div
+          className={`p-5 ${fullscreenCustomizer ? "max-w-5xl mx-auto" : ""}`}
+        >
           {/* Sidebar Header */}
           <div className="flex justify-between items-center mb-5 pb-3 border-b border-slate-700/60">
             <h3 className="font-bold text-base flex items-center gap-2">
               <PenTool size={16} className="text-indigo-400" /> Customizer
             </h3>
-            <button
-              onClick={() => setShowCustomizer(false)}
-              className="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors"
-              title="Close Panel"
-            >
-              <X size={16} />
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setFullscreenCustomizer(!fullscreenCustomizer)}
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors"
+                title={
+                  fullscreenCustomizer
+                    ? "Exit Fullscreen"
+                    : "Open Fullscreen Editor"
+                }
+              >
+                {fullscreenCustomizer ? (
+                  <Monitor size={14} />
+                ) : (
+                  <Eye size={14} />
+                )}
+              </button>
+              <button
+                onClick={() => {
+                  setShowCustomizer(false);
+                  setFullscreenCustomizer(false);
+                }}
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors"
+                title="Close Panel"
+              >
+                <X size={16} />
+              </button>
+            </div>
           </div>
 
           {/* --- URL Auto-Fill Bar --- */}
@@ -1511,7 +1628,9 @@ const LandingPage = () => {
           </div>
 
           {/* Edit Fields */}
-          <div className="space-y-3 text-xs">
+          <div
+            className={`space-y-3 text-xs ${fullscreenCustomizer ? "grid grid-cols-2 gap-x-8 gap-y-3" : ""}`}
+          >
             <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">
               Brand Details
             </label>
@@ -1676,16 +1795,22 @@ const LandingPage = () => {
               Design & Layout
             </label>
 
-            {/* Color Palette */}
+            {/* Color Palette — 10 curated triads */}
             <div>
               <label className="block text-slate-500 mb-2 text-[11px]">
                 Color Palette
               </label>
-              <div className="grid grid-cols-4 gap-2 mb-2">
+              <div className="grid grid-cols-5 gap-2 mb-2">
                 {COLOR_PALETTES.map((p) => (
                   <button
                     key={p.id}
-                    onClick={() => setColorPaletteId(p.id)}
+                    onClick={() => {
+                      setColorPaletteId(p.id);
+                      setCustomBrand((prev) => ({
+                        ...prev,
+                        themeColor: p.themeKey || "red",
+                      }));
+                    }}
                     className={`rounded-lg p-1.5 border-2 transition-all ${colorPaletteId === p.id ? "border-white scale-105 shadow-lg" : "border-slate-700 opacity-70 hover:opacity-100"}`}
                     title={p.label}
                   >
@@ -1703,7 +1828,7 @@ const LandingPage = () => {
                         style={{ backgroundColor: p.accent }}
                       />
                     </div>
-                    <div className="text-[8px] text-slate-400 mt-1 truncate">
+                    <div className="text-[7px] text-slate-400 mt-1 truncate">
                       {p.label}
                     </div>
                   </button>
@@ -1711,25 +1836,77 @@ const LandingPage = () => {
               </div>
             </div>
 
-            {/* Theme Color (legacy) */}
+            {/* Theme Color — Full Color Wheel Grid */}
             <div>
               <label className="block text-slate-500 mb-2 text-[11px]">
                 Theme Color
               </label>
-              <div className="flex gap-3">
-                {["red", "blue", "emerald", "orange"].map((c) => (
+              <div className="grid grid-cols-5 gap-2">
+                {[
+                  { key: "red", hex: "#dc2626", label: "Red" },
+                  { key: "rose", hex: "#e11d48", label: "Rose" },
+                  { key: "orange", hex: "#ea580c", label: "Orange" },
+                  { key: "amber", hex: "#d97706", label: "Amber" },
+                  { key: "emerald", hex: "#059669", label: "Emerald" },
+                  { key: "teal", hex: "#0d9488", label: "Teal" },
+                  { key: "blue", hex: "#2563eb", label: "Blue" },
+                  { key: "indigo", hex: "#4f46e5", label: "Indigo" },
+                  { key: "purple", hex: "#7c3aed", label: "Purple" },
+                  { key: "navy", hex: "#1e3a5f", label: "Navy" },
+                ].map((c) => (
                   <button
-                    key={c}
-                    onClick={() => handleInputChange("themeColor", c)}
-                    className={`w-8 h-8 rounded-full border-2 transition-all ${
-                      customBrand.themeColor === c
-                        ? "border-white scale-110 shadow-lg"
-                        : "border-slate-600 opacity-60 hover:opacity-100"
+                    key={c.key}
+                    onClick={() => handleInputChange("themeColor", c.key)}
+                    className={`flex flex-col items-center gap-1 p-1.5 rounded-lg border transition-all ${
+                      customBrand.themeColor === c.key
+                        ? "border-white bg-slate-700 scale-105"
+                        : "border-slate-700/50 hover:border-slate-500"
                     }`}
-                    style={{ backgroundColor: c === "emerald" ? "#10b981" : c }}
-                  />
+                  >
+                    <div
+                      className="w-6 h-6 rounded-full shadow-inner"
+                      style={{ backgroundColor: c.hex }}
+                    />
+                    <span className="text-[8px] text-slate-400">{c.label}</span>
+                  </button>
                 ))}
               </div>
+            </div>
+
+            {/* Gradient Mode Toggle */}
+            <div>
+              <label className="block text-slate-500 mb-2 text-[11px]">
+                Gradient Accents
+              </label>
+              <button
+                onClick={() =>
+                  setCustomBrand((prev) => ({
+                    ...prev,
+                    useGradient: !prev.useGradient,
+                  }))
+                }
+                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border transition-all ${
+                  customBrand.useGradient
+                    ? "border-indigo-500 bg-indigo-950/50"
+                    : "border-slate-700 bg-slate-800/50"
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <div
+                    className={`w-8 h-4 rounded-full relative transition-all ${customBrand.useGradient ? "bg-indigo-600" : "bg-slate-600"}`}
+                  >
+                    <div
+                      className={`absolute top-0.5 w-3 h-3 rounded-full bg-white shadow transition-all ${customBrand.useGradient ? "left-[18px]" : "left-0.5"}`}
+                    />
+                  </div>
+                  <span className="text-xs font-bold text-slate-300">
+                    Enable Gradients
+                  </span>
+                </div>
+                <div
+                  className={`w-12 h-4 rounded bg-gradient-to-r ${theme.gradientFrom || "from-blue-500"} ${theme.gradientTo || "to-purple-600"} ${customBrand.useGradient ? "opacity-100" : "opacity-30"}`}
+                />
+              </button>
             </div>
 
             {/* Font Pair */}
@@ -1948,171 +2125,516 @@ const LandingPage = () => {
         </div>
       </button>
       {/* --- DYNAMIC NAVBAR RENDERER --- */}
-      <nav
-        className={`fixed w-full z-50 transition-all duration-300 transform
-        ${
-          customBrand.navbarStyle === "dark"
-            ? "bg-slate-900 text-white border-b border-slate-800"
-            : customBrand.navbarStyle === "transparent"
-              ? "bg-transparent text-white pt-4"
-              : customBrand.navbarStyle === "floating"
-                ? "top-6 w-[90%] left-1/2 -translate-x-1/2 max-w-7xl rounded-full shadow-2xl bg-white/90 backdrop-blur-md border border-slate-200/50"
-                : customBrand.navbarStyle === "glass"
-                  ? "bg-white/70 backdrop-blur-lg border-b border-white/20 shadow-sm"
-                  : customBrand.navbarStyle === "gradient"
-                    ? `bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-lg`
-                    : customBrand.navbarStyle === "borderless"
-                      ? "bg-white"
-                      : "bg-white shadow-md border-b " + theme.lightBorder
-        }`}
-      >
-        {/* Top Info Bar */}
-        {(customBrand.navbarStyle === "standard" ||
-          customBrand.navbarStyle === "dark") && (
-          <div
-            className={`${customBrand.navbarStyle === "dark" ? "bg-slate-950 text-slate-400" : "bg-slate-900 text-white"} text-xs py-2 px-4 hidden md:flex justify-between items-center transition-colors`}
-          >
-            <div className="flex items-center gap-6">
-              <span className="flex items-center gap-2">
-                <Phone size={14} className={theme.text} /> {customBrand.phone}
-              </span>
-              <span className="flex items-center gap-2">
-                <MapPin size={14} className={theme.text} />{" "}
-                {customBrand.address}
-              </span>
-            </div>
-            <div className="flex items-center gap-6">
-              <span className="flex items-center gap-2">
-                <Monitor size={14} className={theme.text} /> {customBrand.email}
-              </span>
-            </div>
-          </div>
-        )}
+      {(() => {
+        const ns = customBrand.navbarStyle || "standard";
+        const isDark = ["dark", "transparent", "gradient"].includes(ns);
+        const navLinks = [
+          "Home",
+          "Services",
+          "About",
+          "Reviews",
+          "Trainers",
+          "Contact",
+        ];
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className={`flex justify-between items-center ${customBrand.navbarStyle === "stack" ? "flex-col h-auto py-4 gap-4" : "h-20"}`}
+        // Navbar style-specific outer classes
+        const navOuterClass =
+          {
+            standard: `bg-white shadow-md border-b ${theme.lightBorder}`,
+            minimal: "bg-white border-b border-slate-100",
+            dark: "bg-slate-900 text-white border-b border-slate-800",
+            transparent: "bg-transparent text-white",
+            centered: "bg-white shadow-sm border-b border-slate-100",
+            floating:
+              "top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-6xl rounded-2xl shadow-2xl bg-white/95 backdrop-blur-xl border border-slate-200/60",
+            glass: `bg-white/60 backdrop-blur-2xl border-b border-white/40 shadow-lg`,
+            gradient: `bg-gradient-to-r ${theme.gradientFrom || "from-slate-900"} ${theme.gradientTo || "to-slate-800"} text-white shadow-xl`,
+            stack: "bg-white border-b border-slate-100 shadow-sm",
+            borderless: "bg-white",
+          }[ns] || "bg-white shadow-md";
+
+        return (
+          <nav
+            className={`fixed w-full z-50 transition-all duration-300 ${navOuterClass}`}
           >
-            {/* Logo Area */}
-            <div
-              className={`flex-shrink-0 flex items-center gap-3 cursor-pointer group z-20 ${customBrand.navbarStyle === "centered" ? "absolute left-1/2 -translate-x-1/2" : ""}`}
-            >
-              <div
-                className={`flex flex-col ${customBrand.navbarStyle === "centered" || customBrand.navbarStyle === "stack" ? "items-center text-center" : ""}`}
-              >
-                <span
-                  className={`text-2xl font-black tracking-tight leading-none transition-colors
-                    ${["dark", "transparent", "gradient"].includes(customBrand.navbarStyle) ? "text-white" : "text-slate-900"}
-                    group-hover:${customBrand.navbarStyle === "gradient" ? "text-white/80" : theme.text}`}
-                >
-                  {customBrand.logoText}
-                  <span
-                    className={
-                      ["dark", "transparent", "gradient"].includes(
-                        customBrand.navbarStyle,
-                      )
-                        ? "text-white/80"
-                        : theme.text
-                    }
-                  >
-                    {customBrand.logoSpan}
+            {/* ═══ STANDARD: Top Info Bar + Classic Nav ═══ */}
+            {ns === "standard" && (
+              <>
+                <div className="bg-slate-900 text-white text-xs py-2 px-4 hidden md:flex justify-between items-center">
+                  <div className="flex items-center gap-6">
+                    <span className="flex items-center gap-2">
+                      <Phone size={13} className={theme.text} />{" "}
+                      {customBrand.phone}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <MapPin size={13} className={theme.text} />{" "}
+                      {customBrand.address}
+                    </span>
+                  </div>
+                  <span className="flex items-center gap-2">
+                    <Monitor size={13} className={theme.text} />{" "}
+                    {customBrand.email}
                   </span>
-                </span>
-                {customBrand.navbarStyle !== "minimal" &&
-                  customBrand.navbarStyle !== "floating" && (
-                    <span
-                      className={`text-[10px] font-bold uppercase tracking-widest mt-0.5 ${["dark", "transparent", "gradient"].includes(customBrand.navbarStyle) ? "text-slate-300" : "text-slate-500"}`}
+                </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="flex justify-between items-center h-20">
+                    <div className="flex-shrink-0">
+                      <span className="text-2xl font-black text-slate-900 tracking-tight">
+                        {customBrand.logoText}
+                        <span className={theme.text}>
+                          {customBrand.logoSpan}
+                        </span>
+                      </span>
+                      <span className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mt-0.5">
+                        {customBrand.tagline}
+                      </span>
+                    </div>
+                    <div className="hidden lg:flex items-center gap-1">
+                      {navLinks.map((item) => (
+                        <a
+                          key={item}
+                          href={`#${item.toLowerCase()}`}
+                          className={`text-sm font-semibold px-4 py-2 rounded-lg text-slate-600 hover:${theme.lightBg} hover:${theme.text} transition-colors`}
+                        >
+                          {item}
+                        </a>
+                      ))}
+                    </div>
+                    <button
+                      className={`hidden md:flex ${theme.bg} text-white px-6 py-2.5 rounded-xl shadow-lg ${theme.shadow} hover:opacity-90 transition-all text-xs font-bold uppercase tracking-wider gap-2 items-center`}
                     >
+                      Book Now
+                    </button>
+                    <button
+                      onClick={() => setIsMenuOpen(!isMenuOpen)}
+                      className="lg:hidden p-2 text-slate-900"
+                    >
+                      {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                  </div>
+                </div>
+                <div className={`h-0.5 ${theme.bg} opacity-80`} />
+              </>
+            )}
+
+            {/* ═══ MINIMAL: Ultra-clean with dot separators ═══ */}
+            {ns === "minimal" && (
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-16">
+                  <span className="text-xl font-black text-slate-900 tracking-tight">
+                    {customBrand.logoText}
+                    <span className={theme.text}>{customBrand.logoSpan}</span>
+                  </span>
+                  <div className="hidden lg:flex items-center">
+                    {navLinks.map((item, i) => (
+                      <React.Fragment key={item}>
+                        {i > 0 && (
+                          <span className="w-1 h-1 rounded-full bg-slate-300 mx-3" />
+                        )}
+                        <a
+                          href={`#${item.toLowerCase()}`}
+                          className={`text-[13px] font-medium text-slate-500 hover:${theme.text} transition-colors`}
+                        >
+                          {item}
+                        </a>
+                      </React.Fragment>
+                    ))}
+                  </div>
+                  <button
+                    className={`hidden md:flex ${theme.text} border ${theme.border} px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:${theme.bg} hover:text-white transition-all`}
+                  >
+                    Contact
+                  </button>
+                  <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="lg:hidden p-2 text-slate-900"
+                  >
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ═══ DARK: Glowing CTA + top gradient line ═══ */}
+            {ns === "dark" && (
+              <>
+                <div
+                  className={`h-0.5 bg-gradient-to-r ${theme.gradientFrom || "from-blue-500"} ${theme.gradientTo || "to-purple-600"}`}
+                />
+                <div className="bg-slate-950 text-slate-400 text-xs py-1.5 px-4 hidden md:flex justify-between items-center border-b border-slate-800/50">
+                  <div className="flex items-center gap-6">
+                    <span className="flex items-center gap-2">
+                      <Phone size={12} /> {customBrand.phone}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <MapPin size={12} /> {customBrand.address}
+                    </span>
+                  </div>
+                  <span className="flex items-center gap-2">
+                    <Monitor size={12} /> {customBrand.email}
+                  </span>
+                </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="flex justify-between items-center h-18 py-4">
+                    <div className="flex-shrink-0">
+                      <span className="text-2xl font-black text-white tracking-tight">
+                        {customBrand.logoText}
+                        <span className="text-slate-400">
+                          {customBrand.logoSpan}
+                        </span>
+                      </span>
+                      <span className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mt-0.5">
+                        {customBrand.tagline}
+                      </span>
+                    </div>
+                    <div className="hidden lg:flex items-center gap-6">
+                      {navLinks.map((item) => (
+                        <a
+                          key={item}
+                          href={`#${item.toLowerCase()}`}
+                          className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-current hover:after:w-full after:transition-all"
+                        >
+                          {item}
+                        </a>
+                      ))}
+                    </div>
+                    <button
+                      className={`hidden md:flex bg-gradient-to-r ${theme.gradientFrom} ${theme.gradientTo} text-white px-6 py-2.5 rounded-xl shadow-lg shadow-${theme.shadow?.replace("shadow-", "")} hover:shadow-xl transition-all text-xs font-bold uppercase tracking-wider gap-2 items-center`}
+                    >
+                      <Zap size={14} /> Book Now
+                    </button>
+                    <button
+                      onClick={() => setIsMenuOpen(!isMenuOpen)}
+                      className="lg:hidden p-2 text-white"
+                    >
+                      {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* ═══ TRANSPARENT: No bg, text shadow for readability ═══ */}
+            {ns === "transparent" && (
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+                <div className="flex justify-between items-center h-16">
+                  <span className="text-2xl font-black text-white tracking-tight drop-shadow-lg">
+                    {customBrand.logoText}
+                    <span className="text-white/70">
+                      {customBrand.logoSpan}
+                    </span>
+                  </span>
+                  <div className="hidden lg:flex items-center gap-8">
+                    {navLinks.map((item) => (
+                      <a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        className="text-sm font-semibold text-white/80 hover:text-white transition-colors drop-shadow-md uppercase tracking-wide"
+                      >
+                        {item}
+                      </a>
+                    ))}
+                  </div>
+                  <button className="hidden md:flex border-2 border-white/50 text-white px-6 py-2.5 rounded-full hover:bg-white hover:text-slate-900 transition-all text-xs font-bold uppercase tracking-wider gap-2 items-center backdrop-blur-sm">
+                    Book Now
+                  </button>
+                  <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="lg:hidden p-2 text-white"
+                  >
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ═══ CENTERED: Logo centered between link groups + decorative lines ═══ */}
+            {ns === "centered" && (
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-center items-center h-20 relative">
+                  <div className="hidden lg:flex items-center gap-5 absolute left-0">
+                    {navLinks.slice(0, 3).map((item) => (
+                      <a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        className={`text-sm font-semibold text-slate-600 hover:${theme.text} transition-colors`}
+                      >
+                        {item}
+                      </a>
+                    ))}
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <div
+                      className={`w-10 h-10 ${theme.bg} rounded-xl flex items-center justify-center text-white font-black text-lg mb-1 shadow-lg ${theme.shadow}`}
+                    >
+                      {customBrand.logoText?.[0]}
+                    </div>
+                    <span className="text-lg font-black text-slate-900 tracking-tight">
+                      {customBrand.logoText}
+                      <span className={theme.text}>{customBrand.logoSpan}</span>
+                    </span>
+                  </div>
+                  <div className="hidden lg:flex items-center gap-5 absolute right-0">
+                    {navLinks.slice(3).map((item) => (
+                      <a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        className={`text-sm font-semibold text-slate-600 hover:${theme.text} transition-colors`}
+                      >
+                        {item}
+                      </a>
+                    ))}
+                    <button
+                      className={`${theme.bg} text-white px-5 py-2 rounded-xl text-xs font-bold uppercase shadow-lg ${theme.shadow}`}
+                    >
+                      Book
+                    </button>
+                  </div>
+                  <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="lg:hidden absolute right-0 p-2 text-slate-900"
+                  >
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  </button>
+                </div>
+                <div className="hidden lg:flex items-center justify-center gap-2 pb-2">
+                  <div
+                    className={`flex-1 h-px bg-gradient-to-r from-transparent ${theme.border ? `via-${theme.border.replace("border-", "")}` : "via-slate-200"} to-transparent opacity-30`}
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* ═══ FLOATING: Rounded pill floating below top ═══ */}
+            {ns === "floating" && (
+              <div className="max-w-6xl mx-auto px-3">
+                <div className="flex justify-between items-center h-14 px-6">
+                  <span className="text-lg font-black text-slate-900 tracking-tight">
+                    {customBrand.logoText}
+                    <span className={theme.text}>{customBrand.logoSpan}</span>
+                  </span>
+                  <div className="hidden lg:flex items-center gap-1">
+                    {navLinks.map((item) => (
+                      <a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        className={`text-[13px] font-semibold px-3 py-1.5 rounded-full text-slate-600 hover:${theme.lightBg} hover:${theme.text} transition-all`}
+                      >
+                        {item}
+                      </a>
+                    ))}
+                  </div>
+                  <button
+                    className={`hidden md:flex ${theme.bg} text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg ${theme.shadow} hover:scale-105 transition-transform`}
+                  >
+                    Book Now
+                  </button>
+                  <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="lg:hidden p-2 text-slate-900"
+                  >
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ═══ GLASS: Frosted glass with brand color tint ═══ */}
+            {ns === "glass" && (
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-18 py-3">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`w-9 h-9 ${theme.bg} rounded-lg flex items-center justify-center text-white font-black text-sm shadow ${theme.shadow}`}
+                    >
+                      {customBrand.logoText?.[0]}
+                    </div>
+                    <div>
+                      <span className="text-lg font-black text-slate-900 tracking-tight">
+                        {customBrand.logoText}
+                        <span className={theme.text}>
+                          {customBrand.logoSpan}
+                        </span>
+                      </span>
+                      <span className="block text-[9px] font-bold uppercase tracking-widest text-slate-400">
+                        {customBrand.tagline}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="hidden lg:flex items-center gap-1 bg-white/50 rounded-xl p-1 border border-slate-200/50">
+                    {navLinks.map((item) => (
+                      <a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        className={`text-[13px] font-semibold px-4 py-2 rounded-lg text-slate-600 hover:bg-white hover:shadow-sm hover:${theme.text} transition-all`}
+                      >
+                        {item}
+                      </a>
+                    ))}
+                  </div>
+                  <button
+                    className={`hidden md:flex ${theme.text} ring-2 ${theme.ring} px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider hover:${theme.bg} hover:text-white hover:ring-0 transition-all`}
+                  >
+                    Book Now
+                  </button>
+                  <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="lg:hidden p-2 text-slate-900"
+                  >
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ═══ GRADIENT: Brand gradient bg, links on light pills ═══ */}
+            {ns === "gradient" && (
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-20">
+                  <div className="flex-shrink-0">
+                    <span className="text-2xl font-black text-white tracking-tight">
+                      {customBrand.logoText}
+                      <span className="text-white/70">
+                        {customBrand.logoSpan}
+                      </span>
+                    </span>
+                    <span className="block text-[10px] font-bold uppercase tracking-widest text-white/50 mt-0.5">
                       {customBrand.tagline}
                     </span>
-                  )}
+                  </div>
+                  <div className="hidden lg:flex items-center gap-1 bg-white/10 rounded-xl p-1 backdrop-blur-sm">
+                    {navLinks.map((item) => (
+                      <a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        className="text-[13px] font-semibold px-4 py-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-all"
+                      >
+                        {item}
+                      </a>
+                    ))}
+                  </div>
+                  <button className="hidden md:flex bg-white text-slate-900 px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg hover:shadow-xl hover:scale-105 transition-all gap-2 items-center">
+                    <ArrowRight size={14} /> Get Started
+                  </button>
+                  <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="lg:hidden p-2 text-white"
+                  >
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
 
-            {/* Desktop Menu */}
-            <div
-              className={`hidden lg:flex items-center space-x-6 ${customBrand.navbarStyle === "centered" ? "order-1" : ""} ${customBrand.navbarStyle === "stack" ? "w-full justify-center border-t border-slate-100 pt-4" : ""}`}
-            >
-              {[
-                "Home",
-                "Services",
-                "About",
-                "Reviews",
-                "Trainers",
-                "Contact",
-              ].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
-                  className={`text-sm font-bold uppercase tracking-tight transition-colors hover:scale-105 transform
-                     ${
-                       ["dark", "transparent", "gradient"].includes(
-                         customBrand.navbarStyle,
-                       )
-                         ? "text-slate-200 hover:text-white"
-                         : `text-slate-700 hover:${theme.text}`
-                     }
-                  `}
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
+            {/* ═══ STACK: Two-row layout — logo+CTA top, nav bottom ═══ */}
+            {ns === "stack" && (
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center py-4">
+                  <div className="flex flex-col items-center w-full lg:flex-row lg:justify-between">
+                    <div className="text-center lg:text-left mb-3 lg:mb-0">
+                      <span className="text-2xl font-black text-slate-900 tracking-tight">
+                        {customBrand.logoText}
+                        <span className={theme.text}>
+                          {customBrand.logoSpan}
+                        </span>
+                      </span>
+                      <span className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mt-0.5">
+                        {customBrand.tagline}
+                      </span>
+                    </div>
+                    <button
+                      className={`hidden md:flex ${theme.bg} text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg ${theme.shadow}`}
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                  <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="lg:hidden p-2 text-slate-900"
+                  >
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  </button>
+                </div>
+                <div className="hidden lg:flex items-center justify-center gap-1 border-t border-slate-100 py-3">
+                  {navLinks.map((item) => (
+                    <a
+                      key={item}
+                      href={`#${item.toLowerCase()}`}
+                      className={`text-sm font-semibold px-5 py-2 text-slate-600 hover:${theme.text} transition-colors uppercase tracking-wide`}
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
 
-            {/* CTA Button */}
-            <div
-              className={`hidden md:flex items-center ${customBrand.navbarStyle === "centered" ? "order-3" : ""}`}
-            >
-              <button
-                className={`${theme.bg} text-white px-5 py-2 rounded shadow-lg ${theme.shadow} hover:opacity-90 hover:-translate-y-0.5 transition-all transform flex items-center gap-2 uppercase text-xs font-bold tracking-wider`}
-              >
-                Book Now
-              </button>
-            </div>
+            {/* ═══ BORDERLESS: Clean white, underline hover ═══ */}
+            {ns === "borderless" && (
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-20">
+                  <span className="text-2xl font-black text-slate-900 tracking-tight">
+                    {customBrand.logoText}
+                    <span className={theme.text}>{customBrand.logoSpan}</span>
+                  </span>
+                  <div className="hidden lg:flex items-center gap-8">
+                    {navLinks.map((item) => (
+                      <a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        className={`text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors relative group`}
+                      >
+                        {item}
+                        <span
+                          className={`absolute -bottom-1 left-0 w-0 h-0.5 ${theme.bg} group-hover:w-full transition-all duration-300`}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                  <button
+                    className={`hidden md:flex text-sm font-bold ${theme.text} hover:underline underline-offset-4 gap-2 items-center uppercase tracking-wider`}
+                  >
+                    Let's Talk <ArrowRight size={16} />
+                  </button>
+                  <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="lg:hidden p-2 text-slate-900"
+                  >
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  </button>
+                </div>
+              </div>
+            )}
 
-            {/* Mobile Dropdown */}
-            <div
-              className={`lg:hidden ${customBrand.navbarStyle === "centered" ? "absolute left-4" : ""}`}
-            >
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`${["dark", "transparent", "gradient"].includes(customBrand.navbarStyle) ? "text-white" : "text-slate-900"} p-2 hover:bg-white/10 rounded transition`}
-              >
-                {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t absolute w-full shadow-xl z-50">
-            <div className="px-4 pt-2 pb-6 space-y-2">
-              {[
-                "Home",
-                "About Us",
-                "Services",
-                "Study Material",
-                "Blog",
-                "Study Abroad",
-                "Contact Us",
-              ].map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className={`block px-4 py-3 text-base font-bold text-slate-800 hover:${theme.lightBg} hover:${theme.text} rounded transition-colors uppercase`}
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-      </nav>
+            {/* ═══ MOBILE DROPDOWN (shared) ═══ */}
+            {isMenuOpen && (
+              <div className="lg:hidden bg-white border-t absolute w-full shadow-xl z-50">
+                <div className="px-4 pt-2 pb-6 space-y-1">
+                  {navLinks.map((item) => (
+                    <a
+                      key={item}
+                      href={`#${item.toLowerCase()}`}
+                      className={`block px-4 py-3 text-sm font-bold text-slate-800 hover:${theme.lightBg} hover:${theme.text} rounded-lg transition-colors`}
+                    >
+                      {item}
+                    </a>
+                  ))}
+                  <button
+                    className={`w-full mt-2 ${theme.bg} text-white py-3 rounded-xl font-bold text-sm uppercase tracking-wider`}
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            )}
+          </nav>
+        );
+      })()}
 
       {/* --- HERO SECTION --- */}
       <div
-        className={`relative overflow-hidden w-full 
-        ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) ? "min-h-screen flex items-center" : "pt-36 pb-20 lg:pt-48 lg:pb-28"}
+        className={`relative overflow-hidden w-full min-h-[90vh] flex items-center pt-28 pb-16
+        ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) ? "min-h-screen pt-0 pb-0" : ""}
         ${customBrand.navbarStyle === "transparent" ? "bg-slate-900" : "bg-gradient-to-b from-white via-slate-50/50 to-white"}
         `}
       >
@@ -3439,67 +3961,186 @@ const LandingPage = () => {
           Auto-loads content based on brand category.
           Fixed order: Always appears after Our Mission
           ═══════════════════════════════════════════════════════════ */}
-      <div
-        className={`${theme.lightBg} py-24 relative overflow-hidden`}
-        id="why-us"
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <div
-              className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-6 border ${theme.lightBorder}`}
-            >
-              <CheckCircle size={14} />
-              Why Choose Us
-            </div>
-            <h2
-              className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Why Choose{" "}
-              <span className={theme.text}>
-                {customBrand.logoText} {customBrand.logoSpan}
-              </span>
-              ?
-            </h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
-              Here's what sets us apart from the rest. These aren't just
-              promises — they're the foundation of everything we do.
-            </p>
-          </div>
+      {(() => {
+        const wcuVariant = sectionDesigns.whyChooseUs;
+        const wcuItems = getWhyChooseUs(activeBrandId);
 
-          {/* Why Choose Us Grid — Auto-loaded, NOT editable */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {getWhyChooseUs(activeBrandId).map((item, idx) => (
-              <div
-                key={idx}
-                className="group bg-white rounded-2xl p-7 border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
-              >
-                {/* Decorative Number */}
+        return (
+          <div
+            className={`${theme.lightBg} py-24 relative overflow-hidden`}
+            id="why-us"
+          >
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+              {/* Section Header */}
+              <div className="text-center mb-16">
                 <div
-                  className={`absolute top-4 right-4 text-5xl font-black ${theme.text} opacity-[0.06] leading-none`}
+                  className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-6 border ${theme.lightBorder}`}
                 >
-                  {String(idx + 1).padStart(2, "0")}
+                  <CheckCircle size={14} /> Why Choose Us
                 </div>
-
-                {/* Icon */}
-                <div
-                  className={`w-12 h-12 ${theme.lightBg} ${theme.text} rounded-xl flex items-center justify-center mb-5 group-hover:${theme.bg} group-hover:text-white transition-colors duration-300`}
+                <h2
+                  className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight"
+                  style={{ fontFamily: "var(--font-heading)" }}
                 >
-                  <CheckCircle size={22} />
-                </div>
-
-                <h4 className="text-lg font-bold text-slate-900 mb-2 leading-snug">
-                  {item.title}
-                </h4>
-                <p className="text-slate-500 text-sm leading-relaxed">
-                  {item.desc}
+                  Why Choose{" "}
+                  <span className={theme.text}>
+                    {customBrand.logoText} {customBrand.logoSpan}
+                  </span>
+                  ?
+                </h2>
+                <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
+                  Here's what sets us apart from the rest. These aren't just
+                  promises — they're the foundation of everything we do.
                 </p>
               </div>
-            ))}
+
+              {/* ── Variant: four_col_grid ── */}
+              {wcuVariant === "four_col_grid" && (
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {wcuItems.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="group bg-white rounded-2xl p-7 border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                    >
+                      <div
+                        className={`absolute top-4 right-4 text-5xl font-black ${theme.text} opacity-[0.06] leading-none`}
+                      >
+                        {String(idx + 1).padStart(2, "0")}
+                      </div>
+                      <div
+                        className={`w-12 h-12 ${theme.lightBg} ${theme.text} rounded-xl flex items-center justify-center mb-5 transition-colors duration-300`}
+                      >
+                        <CheckCircle size={22} />
+                      </div>
+                      <h4 className="text-lg font-bold text-slate-900 mb-2 leading-snug">
+                        {item.title}
+                      </h4>
+                      <p className="text-slate-500 text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ── Variant: two_by_two ── */}
+              {wcuVariant === "two_by_two" && (
+                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                  {wcuItems.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 flex gap-5"
+                    >
+                      <div
+                        className={`w-14 h-14 ${theme.bg} text-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg ${theme.shadow}`}
+                      >
+                        <CheckCircle size={24} />
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-bold text-slate-900 mb-2">
+                          {item.title}
+                        </h4>
+                        <p className="text-slate-500 text-sm leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ── Variant: horizontal_list ── */}
+              {wcuVariant === "horizontal_list" && (
+                <div className="space-y-4 max-w-3xl mx-auto">
+                  {wcuItems.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-6 bg-white rounded-2xl px-8 py-6 border border-slate-100 shadow-sm hover:shadow-lg transition-all"
+                    >
+                      <div
+                        className={`w-10 h-10 ${theme.bg} text-white rounded-xl flex items-center justify-center flex-shrink-0`}
+                      >
+                        <span className="font-black text-sm">{idx + 1}</span>
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-base font-bold text-slate-900">
+                          {item.title}
+                        </h4>
+                        <p className="text-slate-500 text-sm mt-0.5">
+                          {item.desc}
+                        </p>
+                      </div>
+                      <CheckCircle
+                        size={20}
+                        className={`${theme.text} flex-shrink-0`}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ── Variant: icon_left_rows ── */}
+              {wcuVariant === "icon_left_rows" && (
+                <div className="grid md:grid-cols-2 gap-x-16 gap-y-10 max-w-5xl mx-auto">
+                  {wcuItems.map((item, idx) => (
+                    <div key={idx} className="flex gap-5 items-start">
+                      <div
+                        className={`w-12 h-12 ${theme.lightBg} ${theme.text} rounded-full flex items-center justify-center flex-shrink-0 border-2 ${theme.lightBorder}`}
+                      >
+                        <CheckCircle size={20} />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-slate-900 mb-1">
+                          {item.title}
+                        </h4>
+                        <p className="text-slate-500 text-sm leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ── Variant: large_blocks ── */}
+              {wcuVariant === "large_blocks" && (
+                <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                  {wcuItems.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className={`relative rounded-3xl p-10 overflow-hidden ${idx === 0 ? `${theme.bg} text-white` : "bg-white border border-slate-100"} hover:shadow-2xl transition-all`}
+                    >
+                      <div
+                        className={`absolute top-6 right-6 text-7xl font-black ${idx === 0 ? "text-white" : theme.text} opacity-[0.06]`}
+                      >
+                        {String(idx + 1).padStart(2, "0")}
+                      </div>
+                      <div
+                        className={`w-14 h-14 ${idx === 0 ? "bg-white/20" : `${theme.lightBg}`} rounded-2xl flex items-center justify-center mb-6`}
+                      >
+                        <CheckCircle
+                          size={26}
+                          className={idx === 0 ? "text-white" : theme.text}
+                        />
+                      </div>
+                      <h4
+                        className={`text-2xl font-bold mb-3 ${idx === 0 ? "text-white" : "text-slate-900"}`}
+                      >
+                        {item.title}
+                      </h4>
+                      <p
+                        className={`text-sm leading-relaxed ${idx === 0 ? "text-white/80" : "text-slate-500"}`}
+                      >
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      </div>
+        );
+      })()}
 
       {/* ═══════════════════════════════════════════════════════════
           DYNAMIC NICHE SECTION ENGINE
@@ -3510,6 +4151,17 @@ const LandingPage = () => {
         const nicheConfig = getNicheConfig(activeBrandId);
         const NicheIcon = nicheConfig.icon;
         const items = customBrand.nicheItems || [];
+        const nicheVariant = sectionDesigns.niche;
+        const nicheGridClass =
+          nicheVariant === "grid_2col"
+            ? "grid md:grid-cols-2 gap-8"
+            : nicheVariant === "hover_cards"
+              ? "grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+              : nicheVariant === "large_featured"
+                ? "grid md:grid-cols-2 gap-6"
+                : nicheVariant === "minimal_list"
+                  ? "space-y-4 max-w-3xl mx-auto"
+                  : "grid md:grid-cols-2 lg:grid-cols-4 gap-6"; // grid_3col fallback to 4col for 4 items
 
         return (
           <div className="py-24 bg-white" id="services">
@@ -3536,7 +4188,7 @@ const LandingPage = () => {
 
               {/* ── COURSES LAYOUT (IELTS / Institute / Coaching) ── */}
               {nicheConfig.type === "courses" && (
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className={nicheGridClass}>
                   {items.map((item, idx) => (
                     <div
                       key={idx}
@@ -3575,7 +4227,7 @@ const LandingPage = () => {
 
               {/* ── SERVICES LAYOUT (Consultant) ── */}
               {nicheConfig.type === "services" && (
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className={nicheGridClass}>
                   {items.map((item, idx) => (
                     <div
                       key={idx}
@@ -3610,7 +4262,7 @@ const LandingPage = () => {
 
               {/* ── PROPERTIES LAYOUT (Real Estate) ── */}
               {nicheConfig.type === "properties" && (
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className={nicheGridClass}>
                   {items.map((item, idx) => (
                     <div
                       key={idx}
@@ -3652,7 +4304,7 @@ const LandingPage = () => {
 
               {/* ── TREATMENTS LAYOUT (Clinic) ── */}
               {nicheConfig.type === "treatments" && (
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className={nicheGridClass}>
                   {items.map((item, idx) => (
                     <div
                       key={idx}
@@ -3685,7 +4337,7 @@ const LandingPage = () => {
 
               {/* ── MEMBERSHIP LAYOUT (Gym) ── */}
               {nicheConfig.type === "membership" && (
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className={nicheGridClass}>
                   {items.map((item, idx) => (
                     <div
                       key={idx}
@@ -3740,7 +4392,7 @@ const LandingPage = () => {
 
               {/* ── PROJECTS LAYOUT (Digital Agency) ── */}
               {nicheConfig.type === "projects" && (
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className={nicheGridClass}>
                   {items.map((item, idx) => (
                     <div
                       key={idx}
@@ -3817,7 +4469,19 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div
+            className={
+              sectionDesigns.testimonials === "single_slider"
+                ? "max-w-2xl mx-auto space-y-8"
+                : sectionDesigns.testimonials === "large_quote"
+                  ? "max-w-3xl mx-auto space-y-8"
+                  : sectionDesigns.testimonials === "side_by_side"
+                    ? "grid md:grid-cols-2 gap-8"
+                    : sectionDesigns.testimonials === "masonry"
+                      ? "columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6"
+                      : "grid md:grid-cols-3 gap-8"
+            }
+          >
             {/* Review 1 */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-center gap-4 mb-5">
@@ -3946,31 +4610,65 @@ const LandingPage = () => {
           UNIVERSAL SECTION — CONTACT
           Fixed order: Always appears before Footer
           ═══════════════════════════════════════════════════════════ */}
-      <div className="py-24 bg-white" id="contact">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div
+        className={`py-24 ${sectionDesigns.contact === "full_dark" ? "bg-slate-900 text-white" : "bg-white"}`}
+        id="contact"
+      >
+        <div
+          className={`max-w-7xl mx-auto px-6 lg:px-8 ${sectionDesigns.contact === "centered_form" || sectionDesigns.contact === "minimal_clean" ? "max-w-3xl" : ""}`}
+        >
           <div className="text-center mb-16">
             <div
-              className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-6 border ${theme.lightBorder}`}
+              className={`inline-flex items-center gap-2 py-2 px-4 rounded-full ${sectionDesigns.contact === "full_dark" ? "bg-white/10 text-white/80 border-white/10" : `${theme.lightBg} ${theme.text} border ${theme.lightBorder}`} text-xs font-bold uppercase tracking-widest mb-6 border`}
             >
               <Phone size={14} />
               Get In Touch
             </div>
             <h2
-              className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight"
+              className={`text-4xl md:text-5xl font-black mb-4 tracking-tight ${sectionDesigns.contact === "full_dark" ? "text-white" : "text-slate-900"}`}
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              Let's <span className={theme.text}>Connect</span>
+              Let's{" "}
+              <span
+                className={
+                  sectionDesigns.contact === "full_dark"
+                    ? theme.text
+                    : theme.text
+                }
+              >
+                Connect
+              </span>
             </h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p
+              className={`text-lg max-w-2xl mx-auto leading-relaxed ${sectionDesigns.contact === "full_dark" ? "text-slate-400" : "text-slate-500"}`}
+            >
               Have questions? Ready to get started? Reach out and our team will
               respond within 24 hours.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-12">
+          <div
+            className={
+              sectionDesigns.contact === "centered_form" ||
+              sectionDesigns.contact === "minimal_clean"
+                ? "max-w-2xl mx-auto"
+                : sectionDesigns.contact === "card_overlap"
+                  ? "grid lg:grid-cols-5 gap-12 relative"
+                  : "grid lg:grid-cols-5 gap-12"
+            }
+          >
             {/* Contact Form — Left Side */}
-            <div className="lg:col-span-3">
-              <div className="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100">
+            <div
+              className={
+                sectionDesigns.contact === "centered_form" ||
+                sectionDesigns.contact === "minimal_clean"
+                  ? ""
+                  : "lg:col-span-3"
+              }
+            >
+              <div
+                className={`rounded-3xl p-8 md:p-10 border ${sectionDesigns.contact === "full_dark" ? "bg-slate-800 border-slate-700" : sectionDesigns.contact === "card_overlap" ? "bg-white border-slate-100 shadow-2xl relative z-10" : "bg-slate-50 border-slate-100"}`}
+              >
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">
                   Send Us a Message
                 </h3>
@@ -4037,8 +4735,10 @@ const LandingPage = () => {
               </div>
             </div>
 
-            {/* Contact Info — Right Side */}
-            <div className="lg:col-span-2 space-y-6">
+            {/* Contact Info — Right Side (hidden in centered/minimal layouts) */}
+            <div
+              className={`lg:col-span-2 space-y-6 ${sectionDesigns.contact === "centered_form" || sectionDesigns.contact === "minimal_clean" ? "hidden" : ""}`}
+            >
               {/* Info Cards */}
               <div className="bg-slate-900 text-white rounded-3xl p-8 space-y-6">
                 <h4 className="text-lg font-bold">Contact Information</h4>
@@ -4172,11 +4872,28 @@ const LandingPage = () => {
 
       {/* --- FOOTER --- */}
       <footer
-        className={`${theme.lightBg} text-slate-600 pt-20 pb-10 border-t ${theme.lightBorder}`}
-        id="contact"
+        className={`${
+          sectionDesigns.footer === "dark_wide"
+            ? "bg-slate-900 text-slate-400"
+            : sectionDesigns.footer === "gradient_bar"
+              ? `bg-gradient-to-b from-slate-50 to-slate-100 text-slate-600`
+              : `${theme.lightBg} text-slate-600`
+        } pt-20 pb-10 border-t ${sectionDesigns.footer === "dark_wide" ? "border-slate-800" : theme.lightBorder} relative`}
+        id="footer"
       >
+        {sectionDesigns.footer === "gradient_bar" && (
+          <div className={`absolute top-0 left-0 right-0 h-1 ${theme.bg}`} />
+        )}
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-12 mb-16">
+          <div
+            className={
+              sectionDesigns.footer === "centered"
+                ? "text-center space-y-6 mb-10"
+                : sectionDesigns.footer === "two_col"
+                  ? "grid md:grid-cols-2 gap-12 mb-16"
+                  : "grid md:grid-cols-4 gap-12 mb-16"
+            }
+          >
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-2 mb-6">
                 <div

@@ -68,7 +68,7 @@ const Navbar = ({ autoHide = false }) => {
         <div className="flex items-center justify-between sm:justify-start gap-2 sm:gap-4 px-3 sm:px-4 h-11 sm:h-12 w-full sm:w-auto">
           {/* Logo/Brand */}
           <Link
-            to="/"
+            to="/assets/logo.png"
             className="flex items-center gap-2 transition-transform hover:scale-105"
           >
             <img
