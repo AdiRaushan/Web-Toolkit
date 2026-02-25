@@ -8,6 +8,8 @@ import {
   Monitor,
   Users,
   Target,
+  MessageCircle,
+  BookOpen,
 } from "lucide-react";
 
 const HeroSection = ({ customBrand, theme }) => {
@@ -107,7 +109,7 @@ const HeroSection = ({ customBrand, theme }) => {
               <button
                 className={`${theme.bg} text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:scale-105 hover:shadow-2xl transition-all shadow-xl ${theme.shadow}`}
               >
-                Get Started
+                {customBrand.heroCta || "Get Started"}
               </button>
               <button
                 className={`bg-white text-slate-800 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest border-2 border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all`}
@@ -152,7 +154,7 @@ const HeroSection = ({ customBrand, theme }) => {
               <button
                 className={`${theme.bg} border-2 border-transparent text-white px-10 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:scale-105 hover:shadow-2xl transition-all shadow-xl`}
               >
-                Start Now
+                {customBrand.heroCta || "Get Started"}
               </button>
               <button
                 className={`border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-white/10 backdrop-blur-sm transition-all`}
@@ -192,7 +194,7 @@ const HeroSection = ({ customBrand, theme }) => {
                 <button
                   className={`${theme.bg} text-white px-8 py-4 rounded-xl shadow-lg font-bold text-sm uppercase tracking-wider hover:scale-105 transition-all`}
                 >
-                  Explore More
+                  {customBrand.heroCta || "Get Started"}
                 </button>
                 <button
                   className={`bg-white text-slate-700 px-8 py-4 rounded-xl font-bold text-sm border-2 border-slate-200 hover:border-slate-300 transition-all`}
@@ -267,7 +269,7 @@ const HeroSection = ({ customBrand, theme }) => {
                 <button
                   className={`w-full ${theme.bg} text-white p-4 rounded-xl font-bold uppercase text-sm tracking-wider hover:scale-[1.02] transition-all shadow-lg ${theme.shadow}`}
                 >
-                  Join Now — It's Free
+                  {customBrand.heroCta || "Get Started"}
                 </button>
               </form>
               <p className="text-center text-slate-400 text-[11px] mt-3">
@@ -342,7 +344,7 @@ const HeroSection = ({ customBrand, theme }) => {
                   className={`${theme.bg} text-white px-10 py-4 rounded-none skew-x-[-8deg] font-bold text-sm uppercase tracking-wider shadow-xl hover:scale-105 transition-all ${theme.shadow}`}
                 >
                   <span className="skew-x-[8deg] inline-block">
-                    Start Journey
+                    {customBrand.heroCta || "Get Started"}
                   </span>
                 </button>
                 <button
@@ -439,7 +441,7 @@ const HeroSection = ({ customBrand, theme }) => {
                 <button
                   className={`${theme.bg} text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:scale-105 hover:shadow-2xl transition-all shadow-xl ${theme.shadow}`}
                 >
-                  Talk to an Expert
+                  {customBrand.heroCta || "Get Started"}
                 </button>
                 <button
                   className={`bg-white text-slate-800 border-2 border-slate-200 px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:border-slate-300 hover:shadow-lg transition-all`}
@@ -532,7 +534,7 @@ const HeroSection = ({ customBrand, theme }) => {
                     className={`w-full ${theme.bg} text-white font-bold py-4 rounded-xl uppercase tracking-wider hover:scale-[1.02] transition-all shadow-lg ${theme.shadow}`}
                     onClick={(e) => e.preventDefault()}
                   >
-                    Get Instant Call Back
+                    {customBrand.heroCta || "Get Started"}
                   </button>
                 </form>
                 <p className="text-center text-slate-400 text-[11px] mt-3">
@@ -563,7 +565,7 @@ const HeroSection = ({ customBrand, theme }) => {
                 <button
                   className={`${theme.bg} text-white px-10 py-4 rounded-xl shadow-lg font-bold text-sm uppercase tracking-wider hover:scale-105 hover:shadow-2xl transition-all ${theme.shadow}`}
                 >
-                  Get Started
+                  {customBrand.heroCta || "Get Started"}
                 </button>
                 <button className="flex items-center gap-3 text-slate-700 font-bold hover:opacity-80 transition-opacity">
                   <div

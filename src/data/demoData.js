@@ -421,6 +421,9 @@ export const DEFAULT_BRANDS = {
     heroSpan: "Starts Here",
     heroDesc:
       "Expert-led training focused on real exam strategies. Personalised guidance, structured practice, and results you can trust.",
+    heroCta: "Book Free Demo Class",
+    heroCta2: "Get Guidance",
+    formCta: "Request Call Back",
     themeColor: "red",
     navbarStyle: "standard",
     heroStyle: "split",

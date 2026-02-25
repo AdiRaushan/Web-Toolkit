@@ -33,9 +33,15 @@ import {
   Eye,
   Heart,
   ChevronDown,
+  Download,
+  ImagePlus,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { fetchWebsiteData } from "../services/scrapeService";
 import { improveHeroCopy } from "../services/improveCopyService";
+import { fetchNicheImages } from "../services/imageService";
+import prettier from "prettier/standalone";
+import htmlParser from "prettier/parser-html";
 
 /**
  * DemoApp — Demo Creator Template App
@@ -482,6 +488,7 @@ const LandingPage = () => {
   const [scrapeError, setScrapeError] = useState("");
   const [scrapeSuccess, setScrapeSuccess] = useState("");
   const [improveLoading, setImproveLoading] = useState(false);
+  const [imagesLoading, setImagesLoading] = useState(false);
   const [showMobileNotice, setShowMobileNotice] = useState(true);
 
   // --- FONT + COLOR + DESIGN STATE ---
@@ -525,6 +532,9 @@ const LandingPage = () => {
       heroSpan: "Starts Here",
       heroDesc:
         "Expert-led training focused on real exam strategies. Personalised guidance, structured practice, and results you can trust.",
+      heroCta: "Book Free Demo Class",
+      heroCta2: "Get Guidance",
+      formCta: "Request Call Back",
       themeColor: "#dc2626",
       navbarStyle: "standard",
       heroStyle: "split",
@@ -1335,6 +1345,157 @@ const LandingPage = () => {
     }, 800); // Small delay for UX feel
   };
 
+  // --- NEW: Generate Brand Images via API ---
+  const handleGenerateImages = async () => {
+    setImagesLoading(true);
+    setScrapeError("");
+    setScrapeSuccess("");
+
+    // We will use User's logoSpan or TAGLINE as the search query since it has the highest context
+    const query = customBrand.logoSpan || customBrand.id || "business";
+
+    try {
+      const result = await fetchNicheImages(query);
+
+      setCustomBrand((prev) => ({
+        ...prev,
+        heroImage: result.heroImage,
+        gridImages: result.gridImages,
+      }));
+
+      setScrapeSuccess(`Updated images for '${query}'`);
+    } catch (err) {
+      setScrapeError("Failed to fetch new images. Try again.");
+    } finally {
+      setImagesLoading(false);
+    }
+  };
+
+  // --- NEW: Export Static HTML ---
+  const handleExportHtml = async () => {
+    const element = document.getElementById("landing-page-export");
+    if (!element) return;
+
+    const clone = element.cloneNode(true);
+
+    // 1. Remove mobile-only notice
+    const mobileNotice = clone.querySelector(
+      ".md\\:hidden.fixed.inset-x-4.bottom-6",
+    );
+    if (mobileNotice) {
+      mobileNotice.remove();
+    }
+
+    // 2. Remove the customizer sidebar completely
+    const sidebar = clone.querySelector("#customizer-sidebar");
+    if (sidebar) {
+      sidebar.remove();
+    }
+
+    // 3. Remove the floating customizer toggle button
+    const toggleBtn = clone.querySelector("#customizer-toggle-btn");
+    if (toggleBtn) {
+      toggleBtn.remove();
+    }
+
+    // 4. Clean up Next.js / React injected specific attributes that pollute the clean HTML
+    const allElements = clone.querySelectorAll("*");
+    allElements.forEach((el) => {
+      // Remove React specific props or Next router props that might leak
+      for (const attr of el.attributes) {
+        if (attr.name.startsWith("data-") || attr.name.startsWith("aria-")) {
+          // Keep specific useful ones like aria-hidden, but strip framework specific chunks
+        }
+      }
+    });
+
+    const rawHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${customBrand.logoText || "Site"} ${customBrand.logoSpan || ""} - ${customBrand.tagline || ""}</title>
+  
+  <!-- Add Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'marquee': 'marquee 25s linear infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-100%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Add smooth scrolling and font map */
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', sans-serif; }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-white">
+  ${clone.outerHTML}
+</body>
+</html>`;
+
+    try {
+      // Use prettier directly in the browser to perfectly format the exported HTML code!
+      const formattedHtml = await prettier.format(rawHtml, {
+        parser: "html",
+        plugins: [htmlParser],
+        printWidth: 100,
+        tabWidth: 2,
+        useTabs: false,
+        htmlWhitespaceSensitivity: "ignore",
+      });
+
+      const blob = new Blob([formattedHtml], {
+        type: "text/html;charset=utf-8",
+      });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      const companyName =
+        `${customBrand.logoText || "company"}-${customBrand.logoSpan || "landing-page"}`
+          .replace(/[\s_]+/g, "-")
+          .toLowerCase();
+      link.download = `${companyName}.html`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error("Failed to prettify HTML", err);
+      // Fallback to raw if prettier fails
+      const blob = new Blob([rawHtml], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      const companyName =
+        `${customBrand.logoText || "company"}-${customBrand.logoSpan || "landing-page"}`
+          .replace(/[\s_]+/g, "-")
+          .toLowerCase();
+      link.download = `${companyName}.html`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+  };
+
   // --- NEW: Pre-fill from Audit page navigation ---
   React.useEffect(() => {
     if (routerLocation.state?.prefillData && !prefillDataRef.current) {
@@ -1379,6 +1540,7 @@ const LandingPage = () => {
 
   return (
     <div
+      id="landing-page-export"
       className="text-slate-800 bg-white selection:bg-red-100 selection:text-red-900 relative"
       style={{
         fontFamily: `'${activeFontPair.body}', sans-serif`,
@@ -1423,6 +1585,7 @@ const LandingPage = () => {
 
       {/* --- CUSTOMIZER SIDEBAR (Right Side) --- */}
       <div
+        id="customizer-sidebar"
         className={`fixed top-0 right-0 h-full bg-slate-900 text-white z-[100] shadow-2xl border-l border-slate-700/80 transition-all duration-300 ease-in-out overflow-y-auto ${
           fullscreenCustomizer ? "w-full left-0" : "w-[380px]"
         } ${showCustomizer ? "translate-x-0" : "translate-x-full"}`}
@@ -1493,21 +1656,47 @@ const LandingPage = () => {
                 )}
               </button>
             </div>
+            <div className="grid grid-cols-2 gap-2 mt-2">
+              <button
+                onClick={handleImproveCopy}
+                disabled={improveLoading}
+                className="w-full px-3 py-2 bg-purple-600/80 text-white rounded-lg text-xs font-bold hover:bg-purple-700 transition-colors disabled:opacity-50 flex items-center justify-center gap-1"
+                title="Rewrite headline & description into high-converting copy"
+              >
+                {improveLoading ? (
+                  <>
+                    <Loader2 size={12} className="animate-spin" /> ...
+                  </>
+                ) : (
+                  <>
+                    <Sparkles size={12} /> Rewrite Text
+                  </>
+                )}
+              </button>
+              <button
+                onClick={handleGenerateImages}
+                disabled={imagesLoading}
+                className="w-full px-3 py-2 bg-pink-600/80 text-white rounded-lg text-xs font-bold hover:bg-pink-700 transition-colors disabled:opacity-50 flex items-center justify-center gap-1"
+                title="Generate HD images based on your brand"
+              >
+                {imagesLoading ? (
+                  <>
+                    <Loader2 size={12} className="animate-spin" /> ...
+                  </>
+                ) : (
+                  <>
+                    <ImagePlus size={12} /> Auto Images
+                  </>
+                )}
+              </button>
+            </div>
+
             <button
-              onClick={handleImproveCopy}
-              disabled={improveLoading}
-              className="w-full px-3 py-2 bg-purple-600/80 text-white rounded-lg text-xs font-bold hover:bg-purple-700 transition-colors disabled:opacity-50 flex items-center justify-center gap-1"
-              title="Rewrite headline & description into high-converting copy"
+              onClick={handleExportHtml}
+              className="w-full mt-2 px-3 py-2 bg-emerald-600/80 text-white rounded-lg text-xs font-bold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1 shadow-lg shadow-emerald-900/20"
+              title="Download clean HTML template with Tailwind CSS"
             >
-              {improveLoading ? (
-                <>
-                  <Loader2 size={12} className="animate-spin" /> Improving...
-                </>
-              ) : (
-                <>
-                  <Sparkles size={12} /> Improve Hero Copy
-                </>
-              )}
+              <Download size={12} /> Export to HTML
             </button>
             {scrapeError && (
               <div className="mt-2 flex items-center gap-2 text-red-400 text-[11px]">
@@ -1774,7 +1963,44 @@ const LandingPage = () => {
               <textarea
                 value={customBrand.heroDesc}
                 onChange={(e) => handleInputChange("heroDesc", e.target.value)}
-                className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs h-16 resize-none"
+                className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs h-16 resize-none mb-3"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-3 mb-3">
+              <div>
+                <label className="block text-slate-500 mb-1 text-[11px]">
+                  Primary CTA
+                </label>
+                <input
+                  value={customBrand.heroCta || ""}
+                  onChange={(e) => handleInputChange("heroCta", e.target.value)}
+                  className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                  placeholder="e.g. Get Started"
+                />
+              </div>
+              <div>
+                <label className="block text-slate-500 mb-1 text-[11px]">
+                  Secondary CTA
+                </label>
+                <input
+                  value={customBrand.heroCta2 || ""}
+                  onChange={(e) =>
+                    handleInputChange("heroCta2", e.target.value)
+                  }
+                  className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                  placeholder="e.g. Learn More"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="block text-slate-500 mb-1 text-[11px]">
+                Lead Form Submit Text
+              </label>
+              <input
+                value={customBrand.formCta || ""}
+                onChange={(e) => handleInputChange("formCta", e.target.value)}
+                className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                placeholder="e.g. Instant Call Back"
               />
             </div>
 
@@ -2116,6 +2342,7 @@ const LandingPage = () => {
 
       {/* --- SIDEBAR TOGGLE TAB (Always visible on right edge) --- */}
       <button
+        id="customizer-toggle-btn"
         onClick={() => setShowCustomizer(!showCustomizer)}
         className={`fixed top-1/2 -translate-y-1/2 z-[99] transition-all duration-300 ${
           showCustomizer ? "right-[380px]" : "right-0"
@@ -2722,12 +2949,12 @@ const LandingPage = () => {
                 <button
                   className={`${theme.bg} text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:scale-105 hover:shadow-2xl transition-all shadow-xl ${theme.shadow}`}
                 >
-                  Get Started
+                  {customBrand.heroCta || "Get Started"}
                 </button>
                 <button
                   className={`bg-white text-slate-800 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest border-2 border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all`}
                 >
-                  Learn More
+                  {customBrand.heroCta2 || "Learn More"}
                 </button>
               </div>
               <div className="relative">
@@ -2772,7 +2999,7 @@ const LandingPage = () => {
                 <button
                   className={`border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-white/10 backdrop-blur-sm transition-all`}
                 >
-                  Watch Video
+                  {customBrand.heroCta2 || "Watch Video"}
                 </button>
               </div>
               {/* Scroll indicator */}
@@ -2812,7 +3039,7 @@ const LandingPage = () => {
                   <button
                     className={`bg-white text-slate-700 px-8 py-4 rounded-xl font-bold text-sm border-2 border-slate-200 hover:border-slate-300 transition-all`}
                   >
-                    View Plans
+                    {customBrand.heroCta2 || "View Plans"}
                   </button>
                 </div>
               </div>
@@ -2963,7 +3190,7 @@ const LandingPage = () => {
                     className={`bg-white text-slate-800 px-8 py-4 rounded-none skew-x-[-8deg] font-bold text-sm uppercase border-2 border-slate-200 hover:border-slate-300 transition-all`}
                   >
                     <span className="skew-x-[8deg] inline-block">
-                      Learn More
+                      {customBrand.heroCta2 || "Learn More"}
                     </span>
                   </button>
                 </div>
@@ -3054,12 +3281,12 @@ const LandingPage = () => {
                   <button
                     className={`${theme.bg} text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:scale-105 hover:shadow-2xl transition-all shadow-xl ${theme.shadow}`}
                   >
-                    Talk to an Expert
+                    {customBrand.heroCta || "Talk to an Expert"}
                   </button>
                   <button
                     className={`bg-white text-slate-800 border-2 border-slate-200 px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:border-slate-300 hover:shadow-lg transition-all`}
                   >
-                    Get Guidance
+                    {customBrand.heroCta2 || "Get Guidance"}
                   </button>
                 </div>
 
@@ -3146,7 +3373,7 @@ const LandingPage = () => {
                     <button
                       className={`w-full ${theme.bg} text-white font-bold py-4 rounded-xl uppercase tracking-wider hover:scale-[1.02] transition-all shadow-lg ${theme.shadow}`}
                     >
-                      Get Instant Call Back
+                      {customBrand.formCta || "Get Instant Call Back"}
                     </button>
                   </form>
                   <p className="text-center text-slate-400 text-[11px] mt-3">
@@ -3177,7 +3404,7 @@ const LandingPage = () => {
                   <button
                     className={`${theme.bg} text-white px-10 py-4 rounded-xl shadow-lg font-bold text-sm uppercase tracking-wider hover:scale-105 hover:shadow-2xl transition-all ${theme.shadow}`}
                   >
-                    Get Started
+                    {customBrand.heroCta || "Get Started"}
                   </button>
                   <button className="flex items-center gap-3 text-slate-700 font-bold hover:opacity-80 transition-opacity">
                     <div
@@ -3185,7 +3412,7 @@ const LandingPage = () => {
                     >
                       <Video size={18} className={theme.text} />
                     </div>
-                    Watch Demo
+                    {customBrand.heroCta2 || "Watch Demo"}
                   </button>
                 </div>
               </div>
@@ -3248,12 +3475,12 @@ const LandingPage = () => {
                   <button
                     className={`${theme.bg} text-white px-6 py-3 rounded font-bold text-sm uppercase tracking-widest hover:bg-slate-900 hover:-translate-y-1 transition-all shadow-xl ${theme.shadow}`}
                   >
-                    Talk to an Expert
+                    {customBrand.heroCta || "Talk to an Expert"}
                   </button>
                   <button
                     className={`bg-white text-slate-900 border-2 border-slate-200 px-6 py-3 rounded font-bold text-sm uppercase tracking-widest hover:${theme.border} hover:${theme.text} transition-all`}
                   >
-                    Get Guidance
+                    {customBrand.heroCta2 || "Get Guidance"}
                   </button>
                 </div>
 
@@ -3337,7 +3564,7 @@ const LandingPage = () => {
                     <button
                       className={`w-full ${theme.bg} text-white font-bold py-3 rounded uppercase tracking-wider hover:bg-slate-900 transition-colors`}
                     >
-                      Get Instant Call Back
+                      {customBrand.formCta || "Get Instant Call Back"}
                     </button>
                   </form>
                 </div>
@@ -3365,7 +3592,7 @@ const LandingPage = () => {
                   <button
                     className={`${theme.bg} text-white px-8 py-3 rounded shadow-lg font-bold hover:opacity-90`}
                   >
-                    Get Started
+                    {customBrand.heroCta || "Get Started"}
                   </button>
                   <button className="flex items-center gap-2 text-slate-900 font-bold hover:opacity-75">
                     <div
@@ -3401,6 +3628,66 @@ const LandingPage = () => {
           )}
         </div>
       </div>
+
+      {/* --- SMART IELTS TRUST BAR (Sits safely between Hero and Marquee without overlapping) --- */}
+      {customBrand.id === "ielts" && (
+        <div
+          className={`w-full relative z-20 flex justify-center py-5 border-b shadow-sm ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) || customBrand.navbarStyle === "transparent" ? "bg-slate-900 border-slate-800 shadow-black/20" : "bg-white border-slate-100"}`}
+        >
+          <div className="max-w-7xl mx-auto px-6 w-full">
+            <div className="flex flex-wrap justify-center md:justify-between items-center gap-4 lg:gap-8">
+              <div className="flex items-center gap-3">
+                <div
+                  className={`p-2 rounded-full ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) || customBrand.navbarStyle === "transparent" ? "bg-emerald-500/20" : "bg-emerald-50"}`}
+                >
+                  <CheckCircle size={20} className="text-emerald-500" />
+                </div>
+                <span
+                  className={`text-sm md:text-base font-black uppercase tracking-wider ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) || customBrand.navbarStyle === "transparent" ? "text-slate-200" : "text-slate-800"}`}
+                >
+                  Band 8+ Success Rate
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div
+                  className={`p-2 rounded-full ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) || customBrand.navbarStyle === "transparent" ? "bg-blue-500/20" : "bg-blue-50"}`}
+                >
+                  <Users size={20} className="text-blue-500" />
+                </div>
+                <span
+                  className={`text-sm md:text-base font-black uppercase tracking-wider ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) || customBrand.navbarStyle === "transparent" ? "text-slate-200" : "text-slate-800"}`}
+                >
+                  5000+ Students Trained
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div
+                  className={`p-2 rounded-full ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) || customBrand.navbarStyle === "transparent" ? "bg-purple-500/20" : "bg-purple-50"}`}
+                >
+                  <BookOpen size={20} className="text-purple-500" />
+                </div>
+                <span
+                  className={`text-sm md:text-base font-black uppercase tracking-wider ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) || customBrand.navbarStyle === "transparent" ? "text-slate-200" : "text-slate-800"}`}
+                >
+                  Cambridge Material
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div
+                  className={`p-2 rounded-full ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) || customBrand.navbarStyle === "transparent" ? "bg-rose-500/20" : "bg-rose-50"}`}
+                >
+                  <Target size={20} className="text-rose-500" />
+                </div>
+                <span
+                  className={`text-sm md:text-base font-black uppercase tracking-wider ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) || customBrand.navbarStyle === "transparent" ? "text-slate-200" : "text-slate-800"}`}
+                >
+                  Weekly Mock Tests
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* --- MARQUEE SECTION --- */}
       {customBrand.marqueeItems && (
@@ -4960,6 +5247,17 @@ const LandingPage = () => {
           </div>
         </div>
       </footer>
+
+      {/* --- GLOBAL FLOATING WHATSAPP BUTTON --- */}
+      <a
+        href="https://wa.me/919319933553"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-8 right-8 z-[200] w-14 h-14 bg-[#25d366] text-white rounded-full flex items-center justify-center shadow-lg shadow-[#25d366]/30 hover:scale-110 hover:shadow-2xl hover:shadow-[#25d366]/40 transition-all cursor-pointer border border-white/20"
+        title="Chat on WhatsApp"
+      >
+        <FaWhatsapp size={32} />
+      </a>
     </div>
   );
 };

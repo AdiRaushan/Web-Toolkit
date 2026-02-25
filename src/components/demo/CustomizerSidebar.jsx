@@ -262,7 +262,42 @@ const CustomizerSidebar = ({
             <textarea
               value={customBrand.heroDesc}
               onChange={(e) => handleInputChange("heroDesc", e.target.value)}
-              className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs h-16 resize-none"
+              className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs h-16 resize-none mb-3"
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-3 mb-3">
+            <div>
+              <label className="block text-slate-500 mb-1 text-[11px]">
+                Primary CTA
+              </label>
+              <input
+                value={customBrand.heroCta || ""}
+                onChange={(e) => handleInputChange("heroCta", e.target.value)}
+                className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                placeholder="e.g. Get Started"
+              />
+            </div>
+            <div>
+              <label className="block text-slate-500 mb-1 text-[11px]">
+                Secondary CTA
+              </label>
+              <input
+                value={customBrand.heroCta2 || ""}
+                onChange={(e) => handleInputChange("heroCta2", e.target.value)}
+                className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                placeholder="e.g. Learn More"
+              />
+            </div>
+          </div>
+          <div>
+            <label className="block text-slate-500 mb-1 text-[11px]">
+              Lead Form Submit Text
+            </label>
+            <input
+              value={customBrand.formCta || ""}
+              onChange={(e) => handleInputChange("formCta", e.target.value)}
+              className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+              placeholder="e.g. Instant Call Back"
             />
           </div>
 
