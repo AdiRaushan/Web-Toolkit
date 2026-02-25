@@ -1,5 +1,6 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import BusinessOnboardingForm from "../components/demo/BusinessOnboardingForm";
+import { HexColorPicker } from "react-colorful";
 // react-router-dom removed — not needed in Next.js
 import {
   Menu,
@@ -524,7 +525,7 @@ const LandingPage = () => {
       heroSpan: "Starts Here",
       heroDesc:
         "Expert-led training focused on real exam strategies. Personalised guidance, structured practice, and results you can trust.",
-      themeColor: "red",
+      themeColor: "#dc2626",
       navbarStyle: "standard",
       heroStyle: "split",
       heroImage:
@@ -603,7 +604,7 @@ const LandingPage = () => {
       heroSpan: "EESA Academy",
       heroDesc:
         "The premier institute for Spoken English and IELTS training in Delhi. Gain confidence, fluency, and the skills to succeed globally.",
-      themeColor: "red",
+      themeColor: "#dc2626",
       navbarStyle: "standard",
       heroStyle: "split",
       heroImage:
@@ -682,7 +683,7 @@ const LandingPage = () => {
       heroSpan: "Potential Today",
       heroDesc:
         "Comprehensive coaching for competitive exams and academic success. Join us to achieve your dreams with expert guidance.",
-      themeColor: "orange",
+      themeColor: "#f97316",
       navbarStyle: "standard",
       heroStyle: "classic",
       heroImage:
@@ -755,7 +756,7 @@ const LandingPage = () => {
       heroSpan: "Business Vision",
       heroDesc:
         "We provide data-driven strategies to help enterprises grow, optimize operations, and maximize profitability in a digital age.",
-      themeColor: "blue",
+      themeColor: "#2563eb",
       navbarStyle: "minimal",
       heroStyle: "centered",
       heroImage:
@@ -824,7 +825,7 @@ const LandingPage = () => {
       heroSpan: "Dream Home",
       heroDesc:
         "Discover an exclusive collection of luxury properties in prime locations. Experience elegant living with world-class amenities.",
-      themeColor: "emerald",
+      themeColor: "#10b981",
       navbarStyle: "dark",
       heroStyle: "classic",
       heroImage:
@@ -905,7 +906,7 @@ const LandingPage = () => {
       heroSpan: "Healthcare",
       heroDesc:
         "State-of-the-art medical facility providing comprehensive care for you and your family. Expert doctors available 24/7.",
-      themeColor: "blue",
+      themeColor: "#2563eb",
       navbarStyle: "standard",
       heroStyle: "split",
       heroImage:
@@ -974,7 +975,7 @@ const LandingPage = () => {
       heroSpan: "No Excuses",
       heroDesc:
         "Join the elite fitness community. Premium equipment, expert trainers, and a motivating atmosphere to crush your goals.",
-      themeColor: "orange",
+      themeColor: "#f97316",
       navbarStyle: "dark",
       heroStyle: "centered",
       heroImage:
@@ -1069,7 +1070,7 @@ const LandingPage = () => {
       heroSpan: "Your Growth",
       heroDesc:
         "We build brands and drive revenue through SEO, PPC, and Social Media strategies that actually deliver ROI.",
-      themeColor: "emerald", // Using emerald as purple isn't in my theme map, will default or add
+      themeColor: "#10b981", // Using emerald as purple isn't in my theme map, will default or add
       navbarStyle: "minimal",
       heroStyle: "centered",
       heroImage:
@@ -1165,13 +1166,12 @@ const LandingPage = () => {
       themeColor: customBrand.themeColor,
     });
     // Apply recommended font + palette for this category
-    const newPaletteId = CATEGORY_PALETTE_MAP[brandId] || "crimson_gold";
+    const newPaletteId = CATEGORY_PALETTE_MAP[brandId] || "red_black";
     setFontPairId(CATEGORY_FONT_MAP[brandId] || "default");
     setColorPaletteId(newPaletteId);
-    // Sync themeColor from the palette's themeKey
     const pal = COLOR_PALETTES.find((p) => p.id === newPaletteId);
-    if (pal?.themeKey) {
-      setCustomBrand((prev) => ({ ...prev, themeColor: pal.themeKey }));
+    if (pal?.primary) {
+      setCustomBrand((prev) => ({ ...prev, themeColor: pal.primary }));
     }
   };
 
@@ -1219,134 +1219,60 @@ const LandingPage = () => {
     };
   }, [isDragging]);
 
-  // COLOR THEME HELPER — 10 Theme Colors
-  const getThemeClasses = (color) => {
-    const themes = {
-      red: {
-        text: "text-red-600",
-        bg: "bg-red-600",
-        border: "border-red-600",
-        lightBg: "bg-red-50",
-        lightBorder: "border-red-100",
-        shadow: "shadow-red-200",
-        ring: "ring-red-500",
-        hoverBg: "hover:bg-red-700",
-        gradientFrom: "from-red-500",
-        gradientTo: "to-rose-600",
-      },
-      blue: {
-        text: "text-blue-600",
-        bg: "bg-blue-600",
-        border: "border-blue-600",
-        lightBg: "bg-blue-50",
-        lightBorder: "border-blue-100",
-        shadow: "shadow-blue-200",
-        ring: "ring-blue-500",
-        hoverBg: "hover:bg-blue-700",
-        gradientFrom: "from-blue-500",
-        gradientTo: "to-indigo-600",
-      },
-      emerald: {
-        text: "text-emerald-600",
-        bg: "bg-emerald-600",
-        border: "border-emerald-600",
-        lightBg: "bg-emerald-50",
-        lightBorder: "border-emerald-100",
-        shadow: "shadow-emerald-200",
-        ring: "ring-emerald-500",
-        hoverBg: "hover:bg-emerald-700",
-        gradientFrom: "from-emerald-500",
-        gradientTo: "to-teal-600",
-      },
-      orange: {
-        text: "text-orange-600",
-        bg: "bg-orange-600",
-        border: "border-orange-600",
-        lightBg: "bg-orange-50",
-        lightBorder: "border-orange-100",
-        shadow: "shadow-orange-200",
-        ring: "ring-orange-500",
-        hoverBg: "hover:bg-orange-700",
-        gradientFrom: "from-orange-500",
-        gradientTo: "to-amber-600",
-      },
-      purple: {
-        text: "text-purple-600",
-        bg: "bg-purple-600",
-        border: "border-purple-600",
-        lightBg: "bg-purple-50",
-        lightBorder: "border-purple-100",
-        shadow: "shadow-purple-200",
-        ring: "ring-purple-500",
-        hoverBg: "hover:bg-purple-700",
-        gradientFrom: "from-purple-500",
-        gradientTo: "to-violet-700",
-      },
-      navy: {
-        text: "text-sky-800",
-        bg: "bg-sky-900",
-        border: "border-sky-800",
-        lightBg: "bg-sky-50",
-        lightBorder: "border-sky-100",
-        shadow: "shadow-sky-200",
-        ring: "ring-sky-700",
-        hoverBg: "hover:bg-sky-950",
-        gradientFrom: "from-sky-800",
-        gradientTo: "to-indigo-900",
-      },
-      rose: {
-        text: "text-rose-600",
-        bg: "bg-rose-600",
-        border: "border-rose-600",
-        lightBg: "bg-rose-50",
-        lightBorder: "border-rose-100",
-        shadow: "shadow-rose-200",
-        ring: "ring-rose-500",
-        hoverBg: "hover:bg-rose-700",
-        gradientFrom: "from-rose-500",
-        gradientTo: "to-pink-600",
-      },
-      teal: {
-        text: "text-teal-600",
-        bg: "bg-teal-600",
-        border: "border-teal-600",
-        lightBg: "bg-teal-50",
-        lightBorder: "border-teal-100",
-        shadow: "shadow-teal-200",
-        ring: "ring-teal-500",
-        hoverBg: "hover:bg-teal-700",
-        gradientFrom: "from-teal-500",
-        gradientTo: "to-cyan-600",
-      },
-      indigo: {
-        text: "text-indigo-600",
-        bg: "bg-indigo-600",
-        border: "border-indigo-600",
-        lightBg: "bg-indigo-50",
-        lightBorder: "border-indigo-100",
-        shadow: "shadow-indigo-200",
-        ring: "ring-indigo-500",
-        hoverBg: "hover:bg-indigo-700",
-        gradientFrom: "from-indigo-500",
-        gradientTo: "to-blue-700",
-      },
-      amber: {
-        text: "text-amber-600",
-        bg: "bg-amber-600",
-        border: "border-amber-600",
-        lightBg: "bg-amber-50",
-        lightBorder: "border-amber-100",
-        shadow: "shadow-amber-200",
-        ring: "ring-amber-500",
-        hoverBg: "hover:bg-amber-700",
-        gradientFrom: "from-amber-500",
-        gradientTo: "to-yellow-600",
-      },
+  // COLOR THEME HELPER — Dynamic CSS Variables
+  const getThemeClasses = () => {
+    return {
+      text: "text-[var(--primary-color)]",
+      bg: "bg-[var(--primary-color)]",
+      border: "border-[var(--primary-color)]",
+      lightBg: "bg-[var(--primary-color)]/10",
+      lightBorder: "border-[var(--primary-color)]/20",
+      shadow: "shadow-[var(--primary-color)]/30",
+      ring: "ring-[var(--primary-color)]",
+      hoverBg: "hover:brightness-90 hover:bg-[var(--primary-color)]",
+      gradientFrom: "from-[var(--primary-color)]",
+      gradientTo: "to-[var(--secondary-color,var(--primary-color))]",
     };
-    return themes[color] || themes.red;
   };
 
-  const theme = getThemeClasses(customBrand.themeColor || "red");
+  const theme = getThemeClasses();
+
+  // LOGO RENDERER HELPER
+  const renderLogo = (textClasses, spanClasses) => {
+    const size = customBrand.logoSize || 56;
+    if (customBrand.logoType === "upload" && customBrand.logoUpload) {
+      return (
+        <img
+          src={customBrand.logoUpload}
+          alt="Brand Logo"
+          style={{ height: `${size}px`, maxHeight: "120px" }}
+          className="w-auto inline-block object-contain align-middle"
+        />
+      );
+    }
+    if (customBrand.logoType === "url" && customBrand.logoUrl) {
+      return (
+        <img
+          src={customBrand.logoUrl}
+          alt="Brand Logo"
+          style={{ height: `${size}px`, maxHeight: "120px" }}
+          className="w-auto inline-block object-contain align-middle"
+        />
+      );
+    }
+    return (
+      <span
+        className={
+          textClasses || "text-xl font-black text-slate-900 tracking-tight"
+        }
+      >
+        {customBrand.logoText}
+        <span className={spanClasses || theme.text}>
+          {customBrand.logoSpan}
+        </span>
+      </span>
+    );
+  };
 
   // Handle manual edits
   const handleInputChange = (field, value) => {
@@ -1458,9 +1384,11 @@ const LandingPage = () => {
         fontFamily: `'${activeFontPair.body}', sans-serif`,
         "--font-heading": `'${activeFontPair.heading}', sans-serif`,
         "--font-body": `'${activeFontPair.body}', sans-serif`,
-        "--color-primary": activePalette.primary,
-        "--color-secondary": activePalette.secondary,
-        "--color-accent": activePalette.accent,
+        "--primary-color": customBrand.themeColor || "#dc2626",
+        "--secondary-color": "#0f172a",
+        "--accent-color": "#fbbf24",
+        "--background-color": "#ffffff",
+        "--text-color": "#0f172a",
       }}
     >
       {/* --- MOBILE ONLY NOTICE --- */}
@@ -1631,35 +1559,139 @@ const LandingPage = () => {
           <div
             className={`space-y-3 text-xs ${fullscreenCustomizer ? "grid grid-cols-2 gap-x-8 gap-y-3" : ""}`}
           >
-            <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+            <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">
+              Logo Settings
+            </label>
+            <div className="bg-slate-800/20 p-3 rounded-xl border border-slate-700/50 space-y-3">
+              <div>
+                <label className="block text-slate-500 mb-1 text-[11px]">
+                  Logo Type
+                </label>
+                <select
+                  value={customBrand.logoType || "text"}
+                  onChange={(e) =>
+                    handleInputChange("logoType", e.target.value)
+                  }
+                  className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                >
+                  <option value="text">Text Logo</option>
+                  <option value="upload">Upload from PC</option>
+                  <option value="url">Use Logo URL</option>
+                </select>
+              </div>
+
+              {(!customBrand.logoType || customBrand.logoType === "text") && (
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-slate-500 mb-1 text-[11px]">
+                      Logo Main
+                    </label>
+                    <input
+                      value={customBrand.logoText || ""}
+                      onChange={(e) =>
+                        handleInputChange("logoText", e.target.value)
+                      }
+                      className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-slate-500 mb-1 text-[11px]">
+                      Logo Highlight
+                    </label>
+                    <input
+                      value={customBrand.logoSpan || ""}
+                      onChange={(e) =>
+                        handleInputChange("logoSpan", e.target.value)
+                      }
+                      className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {customBrand.logoType === "upload" && (
+                <div>
+                  <label className="block text-slate-500 mb-1 text-[11px]">
+                    Upload Image
+                  </label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => {
+                      const file = e.target.files[0];
+                      if (file) {
+                        const url = URL.createObjectURL(file);
+                        handleInputChange("logoUpload", url);
+                      }
+                    }}
+                    className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-400 file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-bold file:bg-indigo-600 file:text-white"
+                  />
+                  {customBrand.logoUpload && (
+                    <div className="mt-2 p-2 bg-slate-900 rounded-lg border border-slate-700 flex justify-center">
+                      <img
+                        src={customBrand.logoUpload}
+                        alt="Logo Preview"
+                        className="max-h-12 object-contain"
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {customBrand.logoType === "url" && (
+                <div>
+                  <label className="block text-slate-500 mb-1 text-[11px]">
+                    Image URL
+                  </label>
+                  <input
+                    value={customBrand.logoUrl || ""}
+                    onChange={(e) =>
+                      handleInputChange("logoUrl", e.target.value)
+                    }
+                    placeholder="https://example.com/logo.png"
+                    className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
+                  />
+                  {customBrand.logoUrl && (
+                    <div className="mt-2 p-2 bg-slate-900 rounded-lg border border-slate-700 flex justify-center">
+                      <img
+                        src={customBrand.logoUrl}
+                        alt="Logo Preview"
+                        className="max-h-12 object-contain"
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Logo Size Control */}
+              {(customBrand.logoType === "upload" ||
+                customBrand.logoType === "url") && (
+                <div className="mt-4">
+                  <div className="flex justify-between items-center mb-1">
+                    <label className="block text-slate-500 text-[11px]">
+                      Logo Size
+                    </label>
+                    <span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-300 font-mono">
+                      {customBrand.logoSize || 56}px
+                    </span>
+                  </div>
+                  <input
+                    type="range"
+                    min="20"
+                    max="120"
+                    value={customBrand.logoSize || 56}
+                    onChange={(e) =>
+                      handleInputChange("logoSize", parseInt(e.target.value))
+                    }
+                    className="w-full accent-indigo-500"
+                  />
+                </div>
+              )}
+            </div>
+
+            <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-4">
               Brand Details
             </label>
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="block text-slate-500 mb-1 text-[11px]">
-                  Logo Main
-                </label>
-                <input
-                  value={customBrand.logoText}
-                  onChange={(e) =>
-                    handleInputChange("logoText", e.target.value)
-                  }
-                  className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
-                />
-              </div>
-              <div>
-                <label className="block text-slate-500 mb-1 text-[11px]">
-                  Logo Highlight
-                </label>
-                <input
-                  value={customBrand.logoSpan}
-                  onChange={(e) =>
-                    handleInputChange("logoSpan", e.target.value)
-                  }
-                  className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
-                />
-              </div>
-            </div>
             <div>
               <label className="block text-slate-500 mb-1 text-[11px]">
                 Tagline
@@ -1795,81 +1827,56 @@ const LandingPage = () => {
               Design & Layout
             </label>
 
-            {/* Color Palette — 10 curated triads */}
+            {/* Theme Color — Full Color Wheel Picker */}
             <div>
-              <label className="block text-slate-500 mb-2 text-[11px]">
-                Color Palette
-              </label>
-              <div className="grid grid-cols-5 gap-2 mb-2">
-                {COLOR_PALETTES.map((p) => (
+              <div className="flex justify-between items-center mb-2">
+                <label className="block text-slate-500 text-[11px]">
+                  Theme Color (Primary)
+                </label>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300 font-mono">
+                    {customBrand.themeColor || "#dc2626"}
+                  </span>
                   <button
-                    key={p.id}
                     onClick={() => {
-                      setColorPaletteId(p.id);
-                      setCustomBrand((prev) => ({
-                        ...prev,
-                        themeColor: p.themeKey || "red",
-                      }));
+                      const palId =
+                        CATEGORY_PALETTE_MAP[activeBrandId] || "red_black";
+                      const pal = COLOR_PALETTES.find((p) => p.id === palId);
+                      handleInputChange(
+                        "themeColor",
+                        pal?.primary || "#dc2626",
+                      );
                     }}
-                    className={`rounded-lg p-1.5 border-2 transition-all ${colorPaletteId === p.id ? "border-white scale-105 shadow-lg" : "border-slate-700 opacity-70 hover:opacity-100"}`}
-                    title={p.label}
+                    className="text-[10px] bg-slate-800 hover:bg-slate-700 px-2 py-1 rounded text-slate-300 transition-colors"
                   >
-                    <div className="flex h-5 rounded overflow-hidden">
-                      <div
-                        className="flex-1"
-                        style={{ backgroundColor: p.primary }}
-                      />
-                      <div
-                        className="flex-1"
-                        style={{ backgroundColor: p.secondary }}
-                      />
-                      <div
-                        className="w-2"
-                        style={{ backgroundColor: p.accent }}
-                      />
-                    </div>
-                    <div className="text-[7px] text-slate-400 mt-1 truncate">
-                      {p.label}
-                    </div>
+                    Reset
                   </button>
-                ))}
+                </div>
               </div>
-            </div>
-
-            {/* Theme Color — Full Color Wheel Grid */}
-            <div>
-              <label className="block text-slate-500 mb-2 text-[11px]">
-                Theme Color
-              </label>
-              <div className="grid grid-cols-5 gap-2">
-                {[
-                  { key: "red", hex: "#dc2626", label: "Red" },
-                  { key: "rose", hex: "#e11d48", label: "Rose" },
-                  { key: "orange", hex: "#ea580c", label: "Orange" },
-                  { key: "amber", hex: "#d97706", label: "Amber" },
-                  { key: "emerald", hex: "#059669", label: "Emerald" },
-                  { key: "teal", hex: "#0d9488", label: "Teal" },
-                  { key: "blue", hex: "#2563eb", label: "Blue" },
-                  { key: "indigo", hex: "#4f46e5", label: "Indigo" },
-                  { key: "purple", hex: "#7c3aed", label: "Purple" },
-                  { key: "navy", hex: "#1e3a5f", label: "Navy" },
-                ].map((c) => (
-                  <button
-                    key={c.key}
-                    onClick={() => handleInputChange("themeColor", c.key)}
-                    className={`flex flex-col items-center gap-1 p-1.5 rounded-lg border transition-all ${
-                      customBrand.themeColor === c.key
-                        ? "border-white bg-slate-700 scale-105"
-                        : "border-slate-700/50 hover:border-slate-500"
-                    }`}
-                  >
-                    <div
-                      className="w-6 h-6 rounded-full shadow-inner"
-                      style={{ backgroundColor: c.hex }}
-                    />
-                    <span className="text-[8px] text-slate-400">{c.label}</span>
-                  </button>
-                ))}
+              <div className="bg-slate-950 p-3 rounded-xl border border-slate-700">
+                <HexColorPicker
+                  color={customBrand.themeColor || "#dc2626"}
+                  onChange={(color) => handleInputChange("themeColor", color)}
+                />
+                <div className="mt-3 flex gap-2">
+                  <input
+                    type="text"
+                    value={customBrand.themeColor || "#dc2626"}
+                    onChange={(e) =>
+                      handleInputChange("themeColor", e.target.value)
+                    }
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 focus:border-indigo-500 outline-none text-xs text-center font-mono"
+                    maxLength={7}
+                  />
+                  <input
+                    type="color"
+                    value={customBrand.themeColor || "#dc2626"}
+                    onChange={(e) =>
+                      handleInputChange("themeColor", e.target.value)
+                    }
+                    className="w-8 h-8 rounded cursor-pointer border-0 p-0 overflow-hidden"
+                  />
+                </div>
               </div>
             </div>
 
@@ -2179,12 +2186,10 @@ const LandingPage = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="flex justify-between items-center h-20">
                     <div className="flex-shrink-0">
-                      <span className="text-2xl font-black text-slate-900 tracking-tight">
-                        {customBrand.logoText}
-                        <span className={theme.text}>
-                          {customBrand.logoSpan}
-                        </span>
-                      </span>
+                      {renderLogo(
+                        "text-2xl font-black text-slate-900 tracking-tight",
+                        theme.text,
+                      )}
                       <span className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mt-0.5">
                         {customBrand.tagline}
                       </span>
@@ -2221,10 +2226,10 @@ const LandingPage = () => {
             {ns === "minimal" && (
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                  <span className="text-xl font-black text-slate-900 tracking-tight">
-                    {customBrand.logoText}
-                    <span className={theme.text}>{customBrand.logoSpan}</span>
-                  </span>
+                  {renderLogo(
+                    "text-xl font-black text-slate-900 tracking-tight",
+                    theme.text,
+                  )}
                   <div className="hidden lg:flex items-center">
                     {navLinks.map((item, i) => (
                       <React.Fragment key={item}>
@@ -2277,12 +2282,10 @@ const LandingPage = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="flex justify-between items-center h-18 py-4">
                     <div className="flex-shrink-0">
-                      <span className="text-2xl font-black text-white tracking-tight">
-                        {customBrand.logoText}
-                        <span className="text-slate-400">
-                          {customBrand.logoSpan}
-                        </span>
-                      </span>
+                      {renderLogo(
+                        "text-2xl font-black text-white tracking-tight",
+                        "text-slate-400",
+                      )}
                       <span className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mt-0.5">
                         {customBrand.tagline}
                       </span>
@@ -2318,12 +2321,10 @@ const LandingPage = () => {
             {ns === "transparent" && (
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
                 <div className="flex justify-between items-center h-16">
-                  <span className="text-2xl font-black text-white tracking-tight drop-shadow-lg">
-                    {customBrand.logoText}
-                    <span className="text-white/70">
-                      {customBrand.logoSpan}
-                    </span>
-                  </span>
+                  {renderLogo(
+                    "text-2xl font-black text-white tracking-tight drop-shadow-lg",
+                    "text-white/70",
+                  )}
                   <div className="hidden lg:flex items-center gap-8">
                     {navLinks.map((item) => (
                       <a
@@ -2369,10 +2370,10 @@ const LandingPage = () => {
                     >
                       {customBrand.logoText?.[0]}
                     </div>
-                    <span className="text-lg font-black text-slate-900 tracking-tight">
-                      {customBrand.logoText}
-                      <span className={theme.text}>{customBrand.logoSpan}</span>
-                    </span>
+                    {renderLogo(
+                      "text-lg font-black text-slate-900 tracking-tight",
+                      theme.text,
+                    )}
                   </div>
                   <div className="hidden lg:flex items-center gap-5 absolute right-0">
                     {navLinks.slice(3).map((item) => (
@@ -2409,10 +2410,10 @@ const LandingPage = () => {
             {ns === "floating" && (
               <div className="max-w-6xl mx-auto px-3">
                 <div className="flex justify-between items-center h-14 px-6">
-                  <span className="text-lg font-black text-slate-900 tracking-tight">
-                    {customBrand.logoText}
-                    <span className={theme.text}>{customBrand.logoSpan}</span>
-                  </span>
+                  {renderLogo(
+                    "text-lg font-black text-slate-900 tracking-tight",
+                    theme.text,
+                  )}
                   <div className="hidden lg:flex items-center gap-1">
                     {navLinks.map((item) => (
                       <a
@@ -2450,12 +2451,10 @@ const LandingPage = () => {
                       {customBrand.logoText?.[0]}
                     </div>
                     <div>
-                      <span className="text-lg font-black text-slate-900 tracking-tight">
-                        {customBrand.logoText}
-                        <span className={theme.text}>
-                          {customBrand.logoSpan}
-                        </span>
-                      </span>
+                      {renderLogo(
+                        "text-lg font-black text-slate-900 tracking-tight",
+                        theme.text,
+                      )}
                       <span className="block text-[9px] font-bold uppercase tracking-widest text-slate-400">
                         {customBrand.tagline}
                       </span>
@@ -2492,12 +2491,10 @@ const LandingPage = () => {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                   <div className="flex-shrink-0">
-                    <span className="text-2xl font-black text-white tracking-tight">
-                      {customBrand.logoText}
-                      <span className="text-white/70">
-                        {customBrand.logoSpan}
-                      </span>
-                    </span>
+                    {renderLogo(
+                      "text-2xl font-black text-white tracking-tight",
+                      "text-white/70",
+                    )}
                     <span className="block text-[10px] font-bold uppercase tracking-widest text-white/50 mt-0.5">
                       {customBrand.tagline}
                     </span>
@@ -2532,12 +2529,10 @@ const LandingPage = () => {
                 <div className="flex justify-between items-center py-4">
                   <div className="flex flex-col items-center w-full lg:flex-row lg:justify-between">
                     <div className="text-center lg:text-left mb-3 lg:mb-0">
-                      <span className="text-2xl font-black text-slate-900 tracking-tight">
-                        {customBrand.logoText}
-                        <span className={theme.text}>
-                          {customBrand.logoSpan}
-                        </span>
-                      </span>
+                      {renderLogo(
+                        "text-2xl font-black text-slate-900 tracking-tight",
+                        theme.text,
+                      )}
                       <span className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mt-0.5">
                         {customBrand.tagline}
                       </span>
@@ -2573,10 +2568,10 @@ const LandingPage = () => {
             {ns === "borderless" && (
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
-                  <span className="text-2xl font-black text-slate-900 tracking-tight">
-                    {customBrand.logoText}
-                    <span className={theme.text}>{customBrand.logoSpan}</span>
-                  </span>
+                  {renderLogo(
+                    "text-2xl font-black text-slate-900 tracking-tight",
+                    theme.text,
+                  )}
                   <div className="hidden lg:flex items-center gap-8">
                     {navLinks.map((item) => (
                       <a
@@ -4896,14 +4891,14 @@ const LandingPage = () => {
           >
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-2 mb-6">
-                <div
-                  className={`h-8 w-8 ${theme.bg} rounded flex items-center justify-center font-bold text-white`}
-                >
-                  {customBrand.logoText?.[0]}
-                </div>
-                <span className="font-bold text-slate-900 text-lg">
-                  {customBrand.logoText} {customBrand.logoSpan}
-                </span>
+                {customBrand.logoType === "text" && (
+                  <div
+                    className={`h-8 w-8 ${theme.bg} rounded flex items-center justify-center font-bold text-white`}
+                  >
+                    {customBrand.logoText?.[0]}
+                  </div>
+                )}
+                {renderLogo("font-bold text-slate-900 text-lg", theme.text)}
               </div>
               <p className="text-sm leading-relaxed mb-6">
                 Empowering growth and success through dedicated service and
