@@ -126,6 +126,24 @@ export const WHY_CHOOSE_US_DATA = {
       desc: "Thousands of satisfied patients and families who rely on us for their healthcare.",
     },
   ],
+  skin_clinic: [
+    {
+      title: "Dermatology Experts",
+      desc: "Board-certified dermatologists specializing in medical and aesthetic skin care.",
+    },
+    {
+      title: "Premium Aesthetics",
+      desc: "Latest skin rejuvenation technologies and premium skincare products.",
+    },
+    {
+      title: "Holistic Approach",
+      desc: "Treatments designed to enhance natural beauty and promote skin health from within.",
+    },
+    {
+      title: "Global Standards",
+      desc: "Following international protocols for safety, hygiene, and clinical excellence.",
+    },
+  ],
   gym: [
     {
       title: "Certified Trainers",
@@ -224,6 +242,13 @@ export const NICHE_SECTION_CONFIG = {
     icon: Activity,
     subtitle:
       "Advanced medical treatments delivered by specialist doctors with cutting-edge technology.",
+  },
+  skin_clinic: {
+    type: "treatments",
+    sectionName: "Aesthetic Treatments",
+    icon: Activity,
+    subtitle:
+      "Curated skincare and aesthetic treatments designed to enhance your natural beauty.",
   },
   gym: {
     type: "membership",
@@ -362,6 +387,7 @@ export const SECTION_VARIANTS = {
     { id: "centered_bg", label: "Centered + Background" },
     { id: "split_50", label: "Split Screen (50/50)" },
     { id: "minimal_typo", label: "Minimal Large Typography" },
+    { id: "modern_split", label: "Modern Split + Badge" },
   ],
   mission: [
     { id: "icon_centered", label: "Icon + Text Centered" },
@@ -369,6 +395,7 @@ export const SECTION_VARIANTS = {
     { id: "card_layout", label: "Mission · Vision · Values" },
     { id: "side_quote", label: "Side Image + Quote" },
     { id: "dark_centered", label: "Dark Centered" },
+    { id: "aesthetic_grid", label: "Aesthetic Image Grid" },
   ],
   whyChooseUs: [
     { id: "four_col_grid", label: "4-Column Icon Grid" },
@@ -1029,6 +1056,80 @@ export const DEFAULT_BRANDS = {
       },
     ],
   },
+  skin_clinic: {
+    id: "skin_clinic",
+    name: "Skin Clinic",
+    logoText: "Lumina",
+    logoSpan: "Clinic",
+    tagline: "Reveal Your Natural Glow",
+    phone: "+1 888-SKIN-PRO",
+    address: "Aesthetic Lane, Beverly Hills",
+    email: "hello@luminaclinic.com",
+    heroTitle: "Premium Care for",
+    heroSpan: "Your Skin Journey",
+    heroDesc:
+      "Experience the pinnacle of aesthetic medicine with our expert dermatologists. We combine cutting-edge technology with a holistic approach to reveal your skin's true potential.",
+    themeColor: "#e11d48",
+    navbarStyle: "transparent",
+    heroStyle: "aesthetic_fullscreen_form",
+    heroImage:
+      "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612343.jpg",
+    gridImages: [
+      "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612359.jpg",
+      "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612426.jpg",
+      "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612437.jpg",
+    ],
+    marqueeItems: [
+      "Board Certified Dermatologists",
+      "Award Winning Clinic 2024",
+      "Premium FDA Approved Tech",
+      "Holistic Skin Consultations",
+    ],
+    aboutDescription:
+      "Lumina Clinic is a sanctuary for skin health and aesthetic excellence. Founded on the principle that true beauty is a reflection of health, we offer personalized treatment plans that deliver visible, long-lasting results in a luxurious, calming environment.",
+    founderName: "Dr. Elena Rossi",
+    founderTitle: "Senior Aesthetic Surgeon",
+    missionDescription:
+      "To empower our clients through expert care and transformative results. We believe in enhancing natural features rather than changing them, ensuring you look and feel like the best version of yourself.",
+    stats: [
+      { label: "Happy Clients", value: "12k+" },
+      { label: "Treatments Done", value: "35k+" },
+      { label: "Expert Doctors", value: "12" },
+      { label: "Years Experience", value: "15" },
+    ],
+    nicheItems: [
+      {
+        treatmentName: "Facial Rejuvenation",
+        desc: "Advanced laser treatments and chemical peels to restore youthful radiance and texture.",
+        icon: Activity,
+      },
+      {
+        treatmentName: "Injectable Aesthetics",
+        desc: "Expertly administered dermal fillers and anti-wrinkle injections for a natural lift.",
+        icon: Activity,
+      },
+      {
+        treatmentName: "Clinical Skincare",
+        desc: "Medical-grade facials and targeted treatments for acne, pigmentation, and aging.",
+        icon: Activity,
+      },
+      {
+        treatmentName: "Body Contouring",
+        desc: "Non-invasive fat reduction and skin tightening for a sculpted, confident silhouette.",
+        icon: Activity,
+      },
+    ],
+    faqs: [
+      {
+        q: "What should I expect at my first consultation?",
+        a: "A full digital skin analysis and a personalized treatment roadmap.",
+      },
+      {
+        q: "Do you offer financing?",
+        a: "Yes, we have flexible payment plans for our signature treatment packages.",
+      },
+    ],
+  },
 };
 
 export const CATEGORY_FONT_MAP = {
@@ -1038,6 +1139,7 @@ export const CATEGORY_FONT_MAP = {
   consultant: "corporate1",
   realestate: "corporate2",
   clinic: "clean",
+  skin_clinic: "luxury",
   gym: "gym",
   marketing: "modern2",
   custom: "default",
@@ -1050,6 +1152,7 @@ export const CATEGORY_PALETTE_MAP = {
   consultant: "slate_indigo",
   realestate: "navy_gold",
   clinic: "teal_coral",
+  skin_clinic: "rose_blush",
   gym: "midnight_fire",
   marketing: "royal_violet",
   custom: "crimson_gold",

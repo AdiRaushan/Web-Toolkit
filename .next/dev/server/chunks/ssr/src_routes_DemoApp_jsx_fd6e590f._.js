@@ -45,7 +45,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/fa/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$services$2f$scrapeService$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/services/scrapeService.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$services$2f$improveCopyService$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/services/improveCopyService.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$services$2f$imageService$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/services/imageService.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$services$2f$imageServices$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/services/imageServices.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$prettier$2f$standalone__$5b$external$5d$__$28$prettier$2f$standalone$2c$__esm_import$2c$__$5b$project$5d2f$node_modules$2f$prettier$29$__ = __turbopack_context__.i("[externals]/prettier/standalone [external] (prettier/standalone, esm_import, [project]/node_modules/prettier)");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$prettier$2f$parser$2d$html__$5b$external$5d$__$28$prettier$2f$parser$2d$html$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$prettier$29$__ = __turbopack_context__.i("[externals]/prettier/parser-html [external] (prettier/parser-html, cjs, [project]/node_modules/prettier)");
 var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
@@ -1317,6 +1317,94 @@ const LandingPage = ()=>{
                     a: "Yes, we provide weekly transparent performance reports."
                 }
             ]
+        },
+        skin_clinic: {
+            id: "skin_clinic",
+            name: "Skin Clinic",
+            logoText: "Lumina",
+            logoSpan: "Clinic",
+            tagline: "Reveal Your Natural Glow",
+            phone: "+1 888-999-0123",
+            address: "Aesthetic Lane, Beverly Hills",
+            email: "hello@luminaclinic.com",
+            heroTitle: "Premium Care for",
+            heroSpan: "Your Skin Journey",
+            heroDesc: "Experience the pinnacle of aesthetic medicine with our expert dermatologists. We combine cutting-edge technology with a holistic approach to reveal your skin's true potential.",
+            themeColor: "#e11d48",
+            navbarStyle: "transparent",
+            heroStyle: "aesthetic_fullscreen_form",
+            heroImage: "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612343.jpg",
+            gridImages: [
+                "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612359.jpg",
+                "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612426.jpg",
+                "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612437.jpg"
+            ],
+            marqueeItems: [
+                "Board Certified Dermatologists",
+                "Award Winning Clinic 2024",
+                "Premium FDA Approved Tech",
+                "Holistic Skin Consultations"
+            ],
+            aboutDescription: "Lumina Clinic is a sanctuary for skin health and aesthetic excellence. Founded on the principle that true beauty is a reflection of health, we offer personalized treatment plans that deliver visible, long-lasting results in a luxurious, calming environment.",
+            founderName: "Dr. Elena Rossi",
+            founderTitle: "Senior Aesthetic Surgeon",
+            missionDescription: "To empower our clients through expert care and transformative results. We believe in enhancing natural features rather than changing them, ensuring you look and feel like the best version of yourself.",
+            stats: [
+                {
+                    label: "Happy Clients",
+                    value: "12k+"
+                },
+                {
+                    label: "Treatments Done",
+                    value: "35k+"
+                },
+                {
+                    label: "Expert Doctors",
+                    value: "12"
+                },
+                {
+                    label: "Years Experience",
+                    value: "15"
+                }
+            ],
+            nicheItems: [
+                {
+                    treatmentImage: "https://images.unsplash.com/photo-1512290923902-8a9f81df236c?auto=format&fit=crop&w=800&q=80",
+                    treatmentName: "Facial Rejuvenation",
+                    desc: "Advanced laser treatments and chemical peels to restore youthful radiance and texture.",
+                    icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"]
+                },
+                {
+                    treatmentImage: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
+                    treatmentName: "Injectable Aesthetics",
+                    desc: "Expertly administered dermal fillers and anti-wrinkle injections for a natural lift.",
+                    icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"]
+                },
+                {
+                    treatmentImage: "https://images.unsplash.com/photo-1515377662630-cd6a7be0bb01?auto=format&fit=crop&w=800&q=80",
+                    treatmentName: "Clinical Skincare",
+                    desc: "Medical-grade facials and targeted treatments for acne, pigmentation, and aging.",
+                    icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"]
+                },
+                {
+                    treatmentImage: "https://images.unsplash.com/photo-1570172619665-227d81966b9a?auto=format&fit=crop&w=800&q=80",
+                    treatmentName: "Body Contouring",
+                    desc: "Non-invasive fat reduction and skin tightening for a sculpted, confident silhouette.",
+                    icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$target$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Target$3e$__["Target"]
+                }
+            ],
+            faqs: [
+                {
+                    q: "What should I expect at my first consultation?",
+                    a: "A full digital skin analysis and a personalized treatment roadmap."
+                },
+                {
+                    q: "Do you offer financing?",
+                    a: "Yes, we have flexible payment plans for our signature treatment packages."
+                }
+            ],
+            aboutImage: "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612359.jpg",
+            missionImage: "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612426.jpg"
         }
     };
     const [activeBrandId, setActiveBrandId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("institute");
@@ -1435,7 +1523,7 @@ const LandingPage = ()=>{
                 className: "w-auto inline-block object-contain align-middle"
             }, void 0, false, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 1255,
+                lineNumber: 1341,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0));
         }
@@ -1450,7 +1538,7 @@ const LandingPage = ()=>{
                 className: "w-auto inline-block object-contain align-middle"
             }, void 0, false, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 1265,
+                lineNumber: 1351,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0));
         }
@@ -1463,13 +1551,13 @@ const LandingPage = ()=>{
                     children: customBrand.logoSpan
                 }, void 0, false, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 1280,
+                    lineNumber: 1366,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/routes/DemoApp.jsx",
-            lineNumber: 1274,
+            lineNumber: 1360,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0));
     };
@@ -1533,18 +1621,54 @@ const LandingPage = ()=>{
         setImagesLoading(true);
         setScrapeError("");
         setScrapeSuccess("");
-        // We will use User's logoSpan or TAGLINE as the search query since it has the highest context
-        const query = customBrand.logoSpan || customBrand.id || "business";
+        // Use the active category (e.g., ielts, digital_agency) for the search
+        const category = activeBrandId || "custom";
         try {
-            const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$services$2f$imageService$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["fetchNicheImages"])(query);
-            setCustomBrand((prev)=>({
-                    ...prev,
-                    heroImage: result.heroImage,
-                    gridImages: result.gridImages
-                }));
-            setScrapeSuccess(`Updated images for '${query}'`);
+            // Call our new dynamic image service with refresh: true to always get new ones
+            // Fetch 30 images to ensure enough unique ones for all sections
+            const images = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$services$2f$imageServices$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["fetchCategoryImages"])(category, {
+                refresh: true,
+                per_page: 30
+            });
+            // Distribute images to relevant sections uniquely
+            setCustomBrand((prev)=>{
+                const updated = {
+                    ...prev
+                };
+                // 1. Hero (Index 0)
+                updated.heroImage = images[0] || prev.heroImage;
+                // 2. About Us (Index 1)
+                updated.aboutImage = images[1] || images[10] || prev.aboutImage;
+                // 3. Grid Images (Indices 2-5) - used in some Hero styles
+                if (images.slice(2, 6).length === 4) {
+                    updated.gridImages = images.slice(2, 6);
+                }
+                // 4. Mission (Index 6)
+                updated.missionImage = images[6] || images[11] || prev.missionImage;
+                // 5. Niche Items (Indices 12+) - For Properties, Projects, etc.
+                if (updated.nicheItems && updated.nicheItems.length > 0) {
+                    updated.nicheItems = updated.nicheItems.map((item, idx)=>{
+                        const newItem = {
+                            ...item
+                        };
+                        const imgIdx = 12 + idx;
+                        if (images[imgIdx]) {
+                            // Map to common niche image fields
+                            if (newItem.propertyImage !== undefined) newItem.propertyImage = images[imgIdx];
+                            if (newItem.projectImage !== undefined) newItem.projectImage = images[imgIdx];
+                            if (newItem.courseImage !== undefined) newItem.courseImage = images[imgIdx];
+                            if (newItem.serviceImage !== undefined) newItem.serviceImage = images[imgIdx];
+                            if (newItem.treatmentImage !== undefined) newItem.treatmentImage = images[imgIdx];
+                        }
+                        return newItem;
+                    });
+                }
+                return updated;
+            });
+            setScrapeSuccess(`Fresh unique images generated for: ${category}`);
         } catch (err) {
-            setScrapeError("Failed to fetch new images. Try again.");
+            console.error("Image Fix Error:", err);
+            setScrapeError(err.message || "Failed to fetch new images. Check Unsplash API Key.");
         } finally{
             setImagesLoading(false);
         }
@@ -1702,7 +1826,7 @@ const LandingPage = ()=>{
             onSkip: handleOnboardingSkip
         }, void 0, false, {
             fileName: "[project]/src/routes/DemoApp.jsx",
-            lineNumber: 1534,
+            lineNumber: 1664,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0));
     }
@@ -1733,7 +1857,7 @@ const LandingPage = ()=>{
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 1561,
+                                        lineNumber: 1691,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1741,13 +1865,13 @@ const LandingPage = ()=>{
                                         children: "Desktop Recommended"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 1562,
+                                        lineNumber: 1692,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 1560,
+                                lineNumber: 1690,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1757,18 +1881,18 @@ const LandingPage = ()=>{
                                     size: 16
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1570,
+                                    lineNumber: 1700,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 1566,
+                                lineNumber: 1696,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 1559,
+                        lineNumber: 1689,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1776,7 +1900,7 @@ const LandingPage = ()=>{
                         children: "The Demo Creator Studio is best experienced on a laptop or desktop monitor to use all customization features properly."
                     }, void 0, false, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 1573,
+                        lineNumber: 1703,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1785,13 +1909,13 @@ const LandingPage = ()=>{
                         children: "Continue Anyway"
                     }, void 0, false, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 1577,
+                        lineNumber: 1707,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 1558,
+                lineNumber: 1688,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1811,14 +1935,14 @@ const LandingPage = ()=>{
                                             className: "text-indigo-400"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1599,
+                                            lineNumber: 1729,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " Customizer"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1598,
+                                    lineNumber: 1728,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1832,18 +1956,18 @@ const LandingPage = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 1612,
+                                                lineNumber: 1742,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"], {
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 1614,
+                                                lineNumber: 1744,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1602,
+                                            lineNumber: 1732,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1857,24 +1981,24 @@ const LandingPage = ()=>{
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 1625,
+                                                lineNumber: 1755,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1617,
+                                            lineNumber: 1747,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1601,
+                                    lineNumber: 1731,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 1597,
+                            lineNumber: 1727,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1888,7 +2012,7 @@ const LandingPage = ()=>{
                                             className: "text-indigo-400"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1633,
+                                            lineNumber: 1763,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1896,13 +2020,13 @@ const LandingPage = ()=>{
                                             children: "Auto-Fill from URL"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1634,
+                                            lineNumber: 1764,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1632,
+                                    lineNumber: 1762,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1917,7 +2041,7 @@ const LandingPage = ()=>{
                                             onKeyDown: (e)=>e.key === "Enter" && handleUrlScrape()
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1639,
+                                            lineNumber: 1769,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1929,24 +2053,24 @@ const LandingPage = ()=>{
                                                 className: "animate-spin"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 1653,
+                                                lineNumber: 1783,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__["Globe"], {
                                                 size: 12
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 1655,
+                                                lineNumber: 1785,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1647,
+                                            lineNumber: 1777,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1638,
+                                    lineNumber: 1768,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1964,7 +2088,7 @@ const LandingPage = ()=>{
                                                         className: "animate-spin"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 1668,
+                                                        lineNumber: 1798,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " ..."
@@ -1975,7 +2099,7 @@ const LandingPage = ()=>{
                                                         size: 12
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 1672,
+                                                        lineNumber: 1802,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " Rewrite Text"
@@ -1983,7 +2107,7 @@ const LandingPage = ()=>{
                                             }, void 0, true)
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1660,
+                                            lineNumber: 1790,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1998,7 +2122,7 @@ const LandingPage = ()=>{
                                                         className: "animate-spin"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 1684,
+                                                        lineNumber: 1814,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " ..."
@@ -2009,7 +2133,7 @@ const LandingPage = ()=>{
                                                         size: 12
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 1688,
+                                                        lineNumber: 1818,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " Auto Images"
@@ -2017,13 +2141,13 @@ const LandingPage = ()=>{
                                             }, void 0, true)
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1676,
+                                            lineNumber: 1806,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1659,
+                                    lineNumber: 1789,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2035,14 +2159,14 @@ const LandingPage = ()=>{
                                             size: 12
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1699,
+                                            lineNumber: 1829,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " Export to HTML"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1694,
+                                    lineNumber: 1824,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 scrapeError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2052,7 +2176,7 @@ const LandingPage = ()=>{
                                             size: 11
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1703,
+                                            lineNumber: 1833,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " ",
@@ -2060,7 +2184,7 @@ const LandingPage = ()=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1702,
+                                    lineNumber: 1832,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 scrapeSuccess && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2070,7 +2194,7 @@ const LandingPage = ()=>{
                                             size: 11
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1708,
+                                            lineNumber: 1838,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " ",
@@ -2078,13 +2202,13 @@ const LandingPage = ()=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1707,
+                                    lineNumber: 1837,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 1631,
+                            lineNumber: 1761,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2095,7 +2219,7 @@ const LandingPage = ()=>{
                                     children: "Brand Presets"
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1715,
+                                    lineNumber: 1845,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2109,18 +2233,18 @@ const LandingPage = ()=>{
                                             children: brand.name
                                         }, brand.id, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1720,
+                                            lineNumber: 1850,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1718,
+                                    lineNumber: 1848,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 1714,
+                            lineNumber: 1844,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2131,7 +2255,7 @@ const LandingPage = ()=>{
                                     children: "Logo Settings"
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1751,
+                                    lineNumber: 1881,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2144,7 +2268,7 @@ const LandingPage = ()=>{
                                                     children: "Logo Type"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1756,
+                                                    lineNumber: 1886,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -2157,7 +2281,7 @@ const LandingPage = ()=>{
                                                             children: "Text Logo"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 1766,
+                                                            lineNumber: 1896,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -2165,7 +2289,7 @@ const LandingPage = ()=>{
                                                             children: "Upload from PC"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 1767,
+                                                            lineNumber: 1897,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -2173,19 +2297,19 @@ const LandingPage = ()=>{
                                                             children: "Use Logo URL"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 1768,
+                                                            lineNumber: 1898,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1759,
+                                                    lineNumber: 1889,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1755,
+                                            lineNumber: 1885,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         (!customBrand.logoType || customBrand.logoType === "text") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2198,7 +2322,7 @@ const LandingPage = ()=>{
                                                             children: "Logo Main"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 1775,
+                                                            lineNumber: 1905,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2207,13 +2331,13 @@ const LandingPage = ()=>{
                                                             className: "w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 1778,
+                                                            lineNumber: 1908,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1774,
+                                                    lineNumber: 1904,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2223,7 +2347,7 @@ const LandingPage = ()=>{
                                                             children: "Logo Highlight"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 1787,
+                                                            lineNumber: 1917,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2232,19 +2356,19 @@ const LandingPage = ()=>{
                                                             className: "w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 1790,
+                                                            lineNumber: 1920,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1786,
+                                                    lineNumber: 1916,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1773,
+                                            lineNumber: 1903,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         customBrand.logoType === "upload" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2254,7 +2378,7 @@ const LandingPage = ()=>{
                                                     children: "Upload Image"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1803,
+                                                    lineNumber: 1933,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2270,7 +2394,7 @@ const LandingPage = ()=>{
                                                     className: "w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-400 file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-bold file:bg-indigo-600 file:text-white"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1806,
+                                                    lineNumber: 1936,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 customBrand.logoUpload && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2281,18 +2405,18 @@ const LandingPage = ()=>{
                                                         className: "max-h-12 object-contain"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 1820,
+                                                        lineNumber: 1950,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1819,
+                                                    lineNumber: 1949,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1802,
+                                            lineNumber: 1932,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         customBrand.logoType === "url" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2302,7 +2426,7 @@ const LandingPage = ()=>{
                                                     children: "Image URL"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1832,
+                                                    lineNumber: 1962,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2312,7 +2436,7 @@ const LandingPage = ()=>{
                                                     className: "w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1835,
+                                                    lineNumber: 1965,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 customBrand.logoUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2323,18 +2447,18 @@ const LandingPage = ()=>{
                                                         className: "max-h-12 object-contain"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 1845,
+                                                        lineNumber: 1975,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1844,
+                                                    lineNumber: 1974,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1831,
+                                            lineNumber: 1961,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         (customBrand.logoType === "upload" || customBrand.logoType === "url") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2348,7 +2472,7 @@ const LandingPage = ()=>{
                                                             children: "Logo Size"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 1860,
+                                                            lineNumber: 1990,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2359,13 +2483,13 @@ const LandingPage = ()=>{
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 1863,
+                                                            lineNumber: 1993,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1859,
+                                                    lineNumber: 1989,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2377,19 +2501,19 @@ const LandingPage = ()=>{
                                                     className: "w-full accent-indigo-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1867,
+                                                    lineNumber: 1997,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1858,
+                                            lineNumber: 1988,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1754,
+                                    lineNumber: 1884,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -2397,7 +2521,7 @@ const LandingPage = ()=>{
                                     children: "Brand Details"
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1881,
+                                    lineNumber: 2011,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2407,7 +2531,7 @@ const LandingPage = ()=>{
                                             children: "Tagline"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1885,
+                                            lineNumber: 2015,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2416,13 +2540,13 @@ const LandingPage = ()=>{
                                             className: "w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1888,
+                                            lineNumber: 2018,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1884,
+                                    lineNumber: 2014,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2435,7 +2559,7 @@ const LandingPage = ()=>{
                                                     children: "Phone"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1896,
+                                                    lineNumber: 2026,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2444,13 +2568,13 @@ const LandingPage = ()=>{
                                                     className: "w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1899,
+                                                    lineNumber: 2029,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1895,
+                                            lineNumber: 2025,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2460,7 +2584,7 @@ const LandingPage = ()=>{
                                                     children: "Email"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1906,
+                                                    lineNumber: 2036,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2469,19 +2593,19 @@ const LandingPage = ()=>{
                                                     className: "w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1909,
+                                                    lineNumber: 2039,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1905,
+                                            lineNumber: 2035,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1894,
+                                    lineNumber: 2024,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2491,7 +2615,7 @@ const LandingPage = ()=>{
                                             children: "Address"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1917,
+                                            lineNumber: 2047,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2500,13 +2624,13 @@ const LandingPage = ()=>{
                                             className: "w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1920,
+                                            lineNumber: 2050,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1916,
+                                    lineNumber: 2046,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -2514,7 +2638,7 @@ const LandingPage = ()=>{
                                     children: "Hero Content"
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1928,
+                                    lineNumber: 2058,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2527,7 +2651,7 @@ const LandingPage = ()=>{
                                                     children: "Title"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1933,
+                                                    lineNumber: 2063,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2537,13 +2661,13 @@ const LandingPage = ()=>{
                                                     placeholder: "First Line"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1936,
+                                                    lineNumber: 2066,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1932,
+                                            lineNumber: 2062,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2553,7 +2677,7 @@ const LandingPage = ()=>{
                                                     children: "Highlight"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1946,
+                                                    lineNumber: 2076,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2563,19 +2687,19 @@ const LandingPage = ()=>{
                                                     placeholder: "Highlight Line"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1949,
+                                                    lineNumber: 2079,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1945,
+                                            lineNumber: 2075,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1931,
+                                    lineNumber: 2061,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2585,7 +2709,7 @@ const LandingPage = ()=>{
                                             children: "Description"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1960,
+                                            lineNumber: 2090,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -2594,13 +2718,13 @@ const LandingPage = ()=>{
                                             className: "w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 focus:border-indigo-500 outline-none text-xs h-16 resize-none mb-3"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1963,
+                                            lineNumber: 2093,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1959,
+                                    lineNumber: 2089,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2613,7 +2737,7 @@ const LandingPage = ()=>{
                                                     children: "Primary CTA"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1971,
+                                                    lineNumber: 2101,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2623,13 +2747,13 @@ const LandingPage = ()=>{
                                                     placeholder: "e.g. Get Started"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1974,
+                                                    lineNumber: 2104,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1970,
+                                            lineNumber: 2100,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2639,7 +2763,7 @@ const LandingPage = ()=>{
                                                     children: "Secondary CTA"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1982,
+                                                    lineNumber: 2112,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2649,19 +2773,19 @@ const LandingPage = ()=>{
                                                     placeholder: "e.g. Learn More"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 1985,
+                                                    lineNumber: 2115,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1981,
+                                            lineNumber: 2111,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1969,
+                                    lineNumber: 2099,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2671,7 +2795,7 @@ const LandingPage = ()=>{
                                             children: "Lead Form Submit Text"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1996,
+                                            lineNumber: 2126,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2681,13 +2805,13 @@ const LandingPage = ()=>{
                                             placeholder: "e.g. Instant Call Back"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 1999,
+                                            lineNumber: 2129,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 1995,
+                                    lineNumber: 2125,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 customBrand.heroStyle === "grid" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2698,7 +2822,7 @@ const LandingPage = ()=>{
                                             children: "Grid Images (4)"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2010,
+                                            lineNumber: 2140,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         [
@@ -2725,13 +2849,13 @@ const LandingPage = ()=>{
                                                 placeholder: `Image URL ${index + 1}`
                                             }, index, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2014,
+                                                lineNumber: 2144,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2009,
+                                    lineNumber: 2139,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2741,7 +2865,7 @@ const LandingPage = ()=>{
                                             children: "Hero Image URL"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2040,
+                                            lineNumber: 2170,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2751,13 +2875,13 @@ const LandingPage = ()=>{
                                             placeholder: "https://images.unsplash.com/..."
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2043,
+                                            lineNumber: 2173,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2039,
+                                    lineNumber: 2169,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -2765,7 +2889,7 @@ const LandingPage = ()=>{
                                     children: "Design & Layout"
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2052,
+                                    lineNumber: 2182,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2778,7 +2902,7 @@ const LandingPage = ()=>{
                                                     children: "Theme Color (Primary)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2059,
+                                                    lineNumber: 2189,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2789,7 +2913,7 @@ const LandingPage = ()=>{
                                                             children: customBrand.themeColor || "#dc2626"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2063,
+                                                            lineNumber: 2193,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2802,19 +2926,19 @@ const LandingPage = ()=>{
                                                             children: "Reset"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2066,
+                                                            lineNumber: 2196,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2062,
+                                                    lineNumber: 2192,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2058,
+                                            lineNumber: 2188,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2825,7 +2949,7 @@ const LandingPage = ()=>{
                                                     onChange: (color)=>handleInputChange("themeColor", color)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2083,
+                                                    lineNumber: 2213,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2839,7 +2963,7 @@ const LandingPage = ()=>{
                                                             maxLength: 7
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2088,
+                                                            lineNumber: 2218,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2849,25 +2973,25 @@ const LandingPage = ()=>{
                                                             className: "w-8 h-8 rounded cursor-pointer border-0 p-0 overflow-hidden"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2097,
+                                                            lineNumber: 2227,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2087,
+                                                    lineNumber: 2217,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2082,
+                                            lineNumber: 2212,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2057,
+                                    lineNumber: 2187,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2877,7 +3001,7 @@ const LandingPage = ()=>{
                                             children: "Gradient Accents"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2111,
+                                            lineNumber: 2241,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2896,12 +3020,12 @@ const LandingPage = ()=>{
                                                                 className: `absolute top-0.5 w-3 h-3 rounded-full bg-white shadow transition-all ${customBrand.useGradient ? "left-[18px]" : "left-0.5"}`
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 2131,
+                                                                lineNumber: 2261,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2128,
+                                                            lineNumber: 2258,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2909,32 +3033,32 @@ const LandingPage = ()=>{
                                                             children: "Enable Gradients"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2135,
+                                                            lineNumber: 2265,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2127,
+                                                    lineNumber: 2257,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: `w-12 h-4 rounded bg-gradient-to-r ${theme.gradientFrom || "from-blue-500"} ${theme.gradientTo || "to-purple-600"} ${customBrand.useGradient ? "opacity-100" : "opacity-30"}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2139,
+                                                    lineNumber: 2269,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2114,
+                                            lineNumber: 2244,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2110,
+                                    lineNumber: 2240,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2944,7 +3068,7 @@ const LandingPage = ()=>{
                                             children: "Font Style"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2147,
+                                            lineNumber: 2277,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2960,7 +3084,7 @@ const LandingPage = ()=>{
                                                             children: fp.label
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2157,
+                                                            lineNumber: 2287,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2975,24 +3099,24 @@ const LandingPage = ()=>{
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2158,
+                                                            lineNumber: 2288,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, fp.id, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2152,
+                                                    lineNumber: 2282,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)))
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2150,
+                                            lineNumber: 2280,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2146,
+                                    lineNumber: 2276,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3002,7 +3126,7 @@ const LandingPage = ()=>{
                                             children: "Navbar Style"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2171,
+                                            lineNumber: 2301,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -3015,7 +3139,7 @@ const LandingPage = ()=>{
                                                     children: "Standard (Top Bar)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2181,
+                                                    lineNumber: 2311,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3023,7 +3147,7 @@ const LandingPage = ()=>{
                                                     children: "Minimal (Clean)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2182,
+                                                    lineNumber: 2312,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3031,7 +3155,7 @@ const LandingPage = ()=>{
                                                     children: "Dark Mode"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2183,
+                                                    lineNumber: 2313,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3039,7 +3163,7 @@ const LandingPage = ()=>{
                                                     children: "Transparent Overlay"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2184,
+                                                    lineNumber: 2314,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3047,7 +3171,7 @@ const LandingPage = ()=>{
                                                     children: "Centered Logo"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2185,
+                                                    lineNumber: 2315,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3055,7 +3179,7 @@ const LandingPage = ()=>{
                                                     children: "Floating Pill"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2186,
+                                                    lineNumber: 2316,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3063,7 +3187,7 @@ const LandingPage = ()=>{
                                                     children: "Glassmorphism"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2187,
+                                                    lineNumber: 2317,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3071,7 +3195,7 @@ const LandingPage = ()=>{
                                                     children: "Gradient Header"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2188,
+                                                    lineNumber: 2318,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3079,7 +3203,7 @@ const LandingPage = ()=>{
                                                     children: "Stacked (Logo Top)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2189,
+                                                    lineNumber: 2319,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3087,19 +3211,19 @@ const LandingPage = ()=>{
                                                     children: "Borderless Pure"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2190,
+                                                    lineNumber: 2320,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2174,
+                                            lineNumber: 2304,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2170,
+                                    lineNumber: 2300,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3109,7 +3233,7 @@ const LandingPage = ()=>{
                                             children: "Hero Style"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2196,
+                                            lineNumber: 2326,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -3122,7 +3246,7 @@ const LandingPage = ()=>{
                                                     children: "Split (Image Right)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2204,
+                                                    lineNumber: 2334,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3130,7 +3254,7 @@ const LandingPage = ()=>{
                                                     children: "Centered (Focus)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2205,
+                                                    lineNumber: 2335,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3138,7 +3262,7 @@ const LandingPage = ()=>{
                                                     children: "Classic (Simple)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2206,
+                                                    lineNumber: 2336,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3146,7 +3270,7 @@ const LandingPage = ()=>{
                                                     children: "Full Screen Image"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2207,
+                                                    lineNumber: 2337,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3154,7 +3278,7 @@ const LandingPage = ()=>{
                                                     children: "Video Background"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2208,
+                                                    lineNumber: 2338,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3162,7 +3286,7 @@ const LandingPage = ()=>{
                                                     children: "Carousel / Slider"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2209,
+                                                    lineNumber: 2339,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3170,7 +3294,7 @@ const LandingPage = ()=>{
                                                     children: "Image Grid"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2210,
+                                                    lineNumber: 2340,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3178,7 +3302,7 @@ const LandingPage = ()=>{
                                                     children: "Lead Gen (Form Left)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2211,
+                                                    lineNumber: 2341,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3186,7 +3310,7 @@ const LandingPage = ()=>{
                                                     children: "Digital Showcase"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2212,
+                                                    lineNumber: 2342,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3194,19 +3318,43 @@ const LandingPage = ()=>{
                                                     children: "Diagonal Split"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2213,
+                                                    lineNumber: 2343,
+                                                    columnNumber: 17
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                    value: "aesthetic_fullscreen_form",
+                                                    children: "Aesthetic Full (Form)"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 2344,
+                                                    columnNumber: 17
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                    value: "aesthetic_fullscreen",
+                                                    children: "Aesthetic Full (No Form)"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 2347,
+                                                    columnNumber: 17
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                    value: "creative_split",
+                                                    children: "Creative Modern Split"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 2350,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2199,
+                                            lineNumber: 2329,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2195,
+                                    lineNumber: 2325,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -3214,7 +3362,7 @@ const LandingPage = ()=>{
                                     children: "Section Layouts"
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2218,
+                                    lineNumber: 2355,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 Object.entries(SECTION_VARIANTS).map(([section, variants])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3228,7 +3376,7 @@ const LandingPage = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2223,
+                                                lineNumber: 2360,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -3240,18 +3388,18 @@ const LandingPage = ()=>{
                                                         children: v.label
                                                     }, v.id, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2237,
+                                                        lineNumber: 2374,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2231,
+                                                lineNumber: 2368,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, section, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2222,
+                                        lineNumber: 2359,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -3259,7 +3407,7 @@ const LandingPage = ()=>{
                                     children: "About Us Section"
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2246,
+                                    lineNumber: 2383,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3269,7 +3417,7 @@ const LandingPage = ()=>{
                                             children: "About Description"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2250,
+                                            lineNumber: 2387,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -3279,13 +3427,13 @@ const LandingPage = ()=>{
                                             placeholder: "Describe your business, your story, and what makes you unique..."
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2253,
+                                            lineNumber: 2390,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2249,
+                                    lineNumber: 2386,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3298,7 +3446,7 @@ const LandingPage = ()=>{
                                                     children: "Founder Name"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2264,
+                                                    lineNumber: 2401,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3308,13 +3456,13 @@ const LandingPage = ()=>{
                                                     placeholder: "John Doe"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2267,
+                                                    lineNumber: 2404,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2263,
+                                            lineNumber: 2400,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3324,7 +3472,7 @@ const LandingPage = ()=>{
                                                     children: "Founder Title"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2277,
+                                                    lineNumber: 2414,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3334,19 +3482,19 @@ const LandingPage = ()=>{
                                                     placeholder: "CEO & Founder"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2280,
+                                                    lineNumber: 2417,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2276,
+                                            lineNumber: 2413,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2262,
+                                    lineNumber: 2399,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -3354,7 +3502,7 @@ const LandingPage = ()=>{
                                     children: "Our Mission Section"
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2292,
+                                    lineNumber: 2429,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3364,7 +3512,7 @@ const LandingPage = ()=>{
                                             children: "Mission Statement"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2296,
+                                            lineNumber: 2433,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -3374,13 +3522,13 @@ const LandingPage = ()=>{
                                             placeholder: "What is your mission? What drives your business?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2299,
+                                            lineNumber: 2436,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2295,
+                                    lineNumber: 2432,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3391,7 +3539,7 @@ const LandingPage = ()=>{
                                             children: "Why Choose Us"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2311,
+                                            lineNumber: 2448,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3420,27 +3568,27 @@ const LandingPage = ()=>{
                                                                     ry: "2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 2327,
+                                                                    lineNumber: 2464,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                                     d: "M7 11V7a5 5 0 0 1 10 0v4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 2328,
+                                                                    lineNumber: 2465,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2316,
+                                                            lineNumber: 2453,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         "LOCKED — Auto-Generated"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2315,
+                                                    lineNumber: 2452,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3448,36 +3596,36 @@ const LandingPage = ()=>{
                                                     children: "This section auto-loads premium bullet points based on your selected category. It cannot be edited to ensure professional consistency."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2332,
+                                                    lineNumber: 2469,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2314,
+                                            lineNumber: 2451,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2310,
+                                    lineNumber: 2447,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 1748,
+                            lineNumber: 1878,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 1593,
+                    lineNumber: 1723,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 1587,
+                lineNumber: 1717,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3492,7 +3640,7 @@ const LandingPage = ()=>{
                             className: "text-indigo-400 group-hover:text-indigo-300"
                         }, void 0, false, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2352,
+                            lineNumber: 2489,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3500,18 +3648,18 @@ const LandingPage = ()=>{
                             children: showCustomizer ? "Close" : "Edit"
                         }, void 0, false, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2356,
+                            lineNumber: 2493,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 2351,
+                    lineNumber: 2488,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 2344,
+                lineNumber: 2481,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             (()=>{
@@ -3561,7 +3709,7 @@ const LandingPage = ()=>{
                                                             className: theme.text
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2400,
+                                                            lineNumber: 2537,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         " ",
@@ -3569,7 +3717,7 @@ const LandingPage = ()=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2399,
+                                                    lineNumber: 2536,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3580,7 +3728,7 @@ const LandingPage = ()=>{
                                                             className: theme.text
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2404,
+                                                            lineNumber: 2541,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         " ",
@@ -3588,13 +3736,13 @@ const LandingPage = ()=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2403,
+                                                    lineNumber: 2540,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2398,
+                                            lineNumber: 2535,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3605,7 +3753,7 @@ const LandingPage = ()=>{
                                                     className: theme.text
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2409,
+                                                    lineNumber: 2546,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 " ",
@@ -3613,13 +3761,13 @@ const LandingPage = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2408,
+                                            lineNumber: 2545,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2397,
+                                    lineNumber: 2534,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3636,13 +3784,13 @@ const LandingPage = ()=>{
                                                         children: customBrand.tagline
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2420,
+                                                        lineNumber: 2557,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2415,
+                                                lineNumber: 2552,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3653,12 +3801,12 @@ const LandingPage = ()=>{
                                                         children: item
                                                     }, item, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2426,
+                                                        lineNumber: 2563,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2424,
+                                                lineNumber: 2561,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3666,7 +3814,7 @@ const LandingPage = ()=>{
                                                 children: "Book Now"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2435,
+                                                lineNumber: 2572,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3676,36 +3824,36 @@ const LandingPage = ()=>{
                                                     size: 24
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2444,
+                                                    lineNumber: 2581,
                                                     columnNumber: 37
                                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                                     size: 24
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2444,
+                                                    lineNumber: 2581,
                                                     columnNumber: 55
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2440,
+                                                lineNumber: 2577,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2414,
+                                        lineNumber: 2551,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2413,
+                                    lineNumber: 2550,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `h-0.5 ${theme.bg} opacity-80`
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2448,
+                                    lineNumber: 2585,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
@@ -3724,7 +3872,7 @@ const LandingPage = ()=>{
                                                         className: "w-1 h-1 rounded-full bg-slate-300 mx-3"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2464,
+                                                        lineNumber: 2601,
                                                         columnNumber: 27
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3733,18 +3881,18 @@ const LandingPage = ()=>{
                                                         children: item
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2466,
+                                                        lineNumber: 2603,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, item, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2462,
+                                                lineNumber: 2599,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2460,
+                                        lineNumber: 2597,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3752,7 +3900,7 @@ const LandingPage = ()=>{
                                         children: "Contact"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2475,
+                                        lineNumber: 2612,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3762,29 +3910,29 @@ const LandingPage = ()=>{
                                             size: 24
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2484,
+                                            lineNumber: 2621,
                                             columnNumber: 35
                                         }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                             size: 24
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2484,
+                                            lineNumber: 2621,
                                             columnNumber: 53
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2480,
+                                        lineNumber: 2617,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2455,
+                                lineNumber: 2592,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2454,
+                            lineNumber: 2591,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)),
                         ns === "dark" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -3793,7 +3941,7 @@ const LandingPage = ()=>{
                                     className: `h-0.5 bg-gradient-to-r ${theme.gradientFrom || "from-blue-500"} ${theme.gradientTo || "to-purple-600"}`
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2493,
+                                    lineNumber: 2630,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3809,7 +3957,7 @@ const LandingPage = ()=>{
                                                             size: 12
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2499,
+                                                            lineNumber: 2636,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         " ",
@@ -3817,7 +3965,7 @@ const LandingPage = ()=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2498,
+                                                    lineNumber: 2635,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3827,7 +3975,7 @@ const LandingPage = ()=>{
                                                             size: 12
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2502,
+                                                            lineNumber: 2639,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         " ",
@@ -3835,13 +3983,13 @@ const LandingPage = ()=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2501,
+                                                    lineNumber: 2638,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2497,
+                                            lineNumber: 2634,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3851,7 +3999,7 @@ const LandingPage = ()=>{
                                                     size: 12
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2506,
+                                                    lineNumber: 2643,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 " ",
@@ -3859,13 +4007,13 @@ const LandingPage = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2505,
+                                            lineNumber: 2642,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2496,
+                                    lineNumber: 2633,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3882,13 +4030,13 @@ const LandingPage = ()=>{
                                                         children: customBrand.tagline
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2516,
+                                                        lineNumber: 2653,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2511,
+                                                lineNumber: 2648,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3899,12 +4047,12 @@ const LandingPage = ()=>{
                                                         children: item
                                                     }, item, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2522,
+                                                        lineNumber: 2659,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2520,
+                                                lineNumber: 2657,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3914,14 +4062,14 @@ const LandingPage = ()=>{
                                                         size: 14
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2534,
+                                                        lineNumber: 2671,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " Book Now"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2531,
+                                                lineNumber: 2668,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3931,29 +4079,29 @@ const LandingPage = ()=>{
                                                     size: 24
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2540,
+                                                    lineNumber: 2677,
                                                     columnNumber: 37
                                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                                     size: 24
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2540,
+                                                    lineNumber: 2677,
                                                     columnNumber: 55
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2536,
+                                                lineNumber: 2673,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2510,
+                                        lineNumber: 2647,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2509,
+                                    lineNumber: 2646,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
@@ -3972,12 +4120,12 @@ const LandingPage = ()=>{
                                                 children: item
                                             }, item, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2557,
+                                                lineNumber: 2694,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2555,
+                                        lineNumber: 2692,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3985,282 +4133,12 @@ const LandingPage = ()=>{
                                         children: "Book Now"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2566,
+                                        lineNumber: 2703,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>setIsMenuOpen(!isMenuOpen),
                                         className: "lg:hidden p-2 text-white",
-                                        children: isMenuOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                            size: 24
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2573,
-                                            columnNumber: 35
-                                        }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
-                                            size: 24
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2573,
-                                            columnNumber: 53
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2569,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2550,
-                                columnNumber: 17
-                            }, ("TURBOPACK compile-time value", void 0))
-                        }, void 0, false, {
-                            fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2549,
-                            columnNumber: 15
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        ns === "centered" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex justify-center items-center h-20 relative",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "hidden lg:flex items-center gap-5 absolute left-0",
-                                            children: navLinks.slice(0, 3).map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                    href: `#${item.toLowerCase()}`,
-                                                    className: `text-sm font-semibold text-slate-600 hover:${theme.text} transition-colors`,
-                                                    children: item
-                                                }, item, false, {
-                                                    fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2585,
-                                                    columnNumber: 23
-                                                }, ("TURBOPACK compile-time value", void 0)))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2583,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex flex-col items-center",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: `w-10 h-10 ${theme.bg} rounded-xl flex items-center justify-center text-white font-black text-lg mb-1 shadow-lg ${theme.shadow}`,
-                                                    children: customBrand.logoText?.[0]
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2595,
-                                                    columnNumber: 21
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                renderLogo("text-lg font-black text-slate-900 tracking-tight", theme.text)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2594,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "hidden lg:flex items-center gap-5 absolute right-0",
-                                            children: [
-                                                navLinks.slice(3).map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: `#${item.toLowerCase()}`,
-                                                        className: `text-sm font-semibold text-slate-600 hover:${theme.text} transition-colors`,
-                                                        children: item
-                                                    }, item, false, {
-                                                        fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2607,
-                                                        columnNumber: 23
-                                                    }, ("TURBOPACK compile-time value", void 0))),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                    className: `${theme.bg} text-white px-5 py-2 rounded-xl text-xs font-bold uppercase shadow-lg ${theme.shadow}`,
-                                                    children: "Book"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2615,
-                                                    columnNumber: 21
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2605,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            onClick: ()=>setIsMenuOpen(!isMenuOpen),
-                                            className: "lg:hidden absolute right-0 p-2 text-slate-900",
-                                            children: isMenuOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                                size: 24
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2625,
-                                                columnNumber: 35
-                                            }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
-                                                size: 24
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2625,
-                                                columnNumber: 53
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2621,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2582,
-                                    columnNumber: 17
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "hidden lg:flex items-center justify-center gap-2 pb-2",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: `flex-1 h-px bg-gradient-to-r from-transparent ${theme.border ? `via-${theme.border.replace("border-", "")}` : "via-slate-200"} to-transparent opacity-30`
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2629,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                }, void 0, false, {
-                                    fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2628,
-                                    columnNumber: 17
-                                }, ("TURBOPACK compile-time value", void 0))
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2581,
-                            columnNumber: 15
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        ns === "floating" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "max-w-6xl mx-auto px-3",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex justify-between items-center h-14 px-6",
-                                children: [
-                                    renderLogo("text-lg font-black text-slate-900 tracking-tight", theme.text),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "hidden lg:flex items-center gap-1",
-                                        children: navLinks.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: `#${item.toLowerCase()}`,
-                                                className: `text-[13px] font-semibold px-3 py-1.5 rounded-full text-slate-600 hover:${theme.lightBg} hover:${theme.text} transition-all`,
-                                                children: item
-                                            }, item, false, {
-                                                fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2646,
-                                                columnNumber: 23
-                                            }, ("TURBOPACK compile-time value", void 0)))
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2644,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: `hidden md:flex ${theme.bg} text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg ${theme.shadow} hover:scale-105 transition-transform`,
-                                        children: "Book Now"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2655,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setIsMenuOpen(!isMenuOpen),
-                                        className: "lg:hidden p-2 text-slate-900",
-                                        children: isMenuOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                            size: 24
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2664,
-                                            columnNumber: 35
-                                        }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
-                                            size: 24
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2664,
-                                            columnNumber: 53
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2660,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2639,
-                                columnNumber: 17
-                            }, ("TURBOPACK compile-time value", void 0))
-                        }, void 0, false, {
-                            fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2638,
-                            columnNumber: 15
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        ns === "glass" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex justify-between items-center h-18 py-3",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center gap-3",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: `w-9 h-9 ${theme.bg} rounded-lg flex items-center justify-center text-white font-black text-sm shadow ${theme.shadow}`,
-                                                children: customBrand.logoText?.[0]
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2675,
-                                                columnNumber: 21
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                children: [
-                                                    renderLogo("text-lg font-black text-slate-900 tracking-tight", theme.text),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "block text-[9px] font-bold uppercase tracking-widest text-slate-400",
-                                                        children: customBrand.tagline
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2685,
-                                                        columnNumber: 23
-                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2680,
-                                                columnNumber: 21
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2674,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "hidden lg:flex items-center gap-1 bg-white/50 rounded-xl p-1 border border-slate-200/50",
-                                        children: navLinks.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: `#${item.toLowerCase()}`,
-                                                className: `text-[13px] font-semibold px-4 py-2 rounded-lg text-slate-600 hover:bg-white hover:shadow-sm hover:${theme.text} transition-all`,
-                                                children: item
-                                            }, item, false, {
-                                                fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2692,
-                                                columnNumber: 23
-                                            }, ("TURBOPACK compile-time value", void 0)))
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2690,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: `hidden md:flex ${theme.text} ring-2 ${theme.ring} px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider hover:${theme.bg} hover:text-white hover:ring-0 transition-all`,
-                                        children: "Book Now"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2701,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setIsMenuOpen(!isMenuOpen),
-                                        className: "lg:hidden p-2 text-slate-900",
                                         children: isMenuOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                             size: 24
                                         }, void 0, false, {
@@ -4282,12 +4160,282 @@ const LandingPage = ()=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2673,
+                                lineNumber: 2687,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2672,
+                            lineNumber: 2686,
+                            columnNumber: 15
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        ns === "centered" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex justify-center items-center h-20 relative",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "hidden lg:flex items-center gap-5 absolute left-0",
+                                            children: navLinks.slice(0, 3).map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: `#${item.toLowerCase()}`,
+                                                    className: `text-sm font-semibold text-slate-600 hover:${theme.text} transition-colors`,
+                                                    children: item
+                                                }, item, false, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 2722,
+                                                    columnNumber: 23
+                                                }, ("TURBOPACK compile-time value", void 0)))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 2720,
+                                            columnNumber: 19
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex flex-col items-center",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: `w-10 h-10 ${theme.bg} rounded-xl flex items-center justify-center text-white font-black text-lg mb-1 shadow-lg ${theme.shadow}`,
+                                                    children: customBrand.logoText?.[0]
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 2732,
+                                                    columnNumber: 21
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                renderLogo("text-lg font-black text-slate-900 tracking-tight", theme.text)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 2731,
+                                            columnNumber: 19
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "hidden lg:flex items-center gap-5 absolute right-0",
+                                            children: [
+                                                navLinks.slice(3).map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: `#${item.toLowerCase()}`,
+                                                        className: `text-sm font-semibold text-slate-600 hover:${theme.text} transition-colors`,
+                                                        children: item
+                                                    }, item, false, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 2744,
+                                                        columnNumber: 23
+                                                    }, ("TURBOPACK compile-time value", void 0))),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    className: `${theme.bg} text-white px-5 py-2 rounded-xl text-xs font-bold uppercase shadow-lg ${theme.shadow}`,
+                                                    children: "Book"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 2752,
+                                                    columnNumber: 21
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 2742,
+                                            columnNumber: 19
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: ()=>setIsMenuOpen(!isMenuOpen),
+                                            className: "lg:hidden absolute right-0 p-2 text-slate-900",
+                                            children: isMenuOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                                size: 24
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 2762,
+                                                columnNumber: 35
+                                            }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
+                                                size: 24
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 2762,
+                                                columnNumber: 53
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 2758,
+                                            columnNumber: 19
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                    lineNumber: 2719,
+                                    columnNumber: 17
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "hidden lg:flex items-center justify-center gap-2 pb-2",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: `flex-1 h-px bg-gradient-to-r from-transparent ${theme.border ? `via-${theme.border.replace("border-", "")}` : "via-slate-200"} to-transparent opacity-30`
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 2766,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                    lineNumber: 2765,
+                                    columnNumber: 17
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/routes/DemoApp.jsx",
+                            lineNumber: 2718,
+                            columnNumber: 15
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        ns === "floating" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "max-w-6xl mx-auto px-3",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex justify-between items-center h-14 px-6",
+                                children: [
+                                    renderLogo("text-lg font-black text-slate-900 tracking-tight", theme.text),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "hidden lg:flex items-center gap-1",
+                                        children: navLinks.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                href: `#${item.toLowerCase()}`,
+                                                className: `text-[13px] font-semibold px-3 py-1.5 rounded-full text-slate-600 hover:${theme.lightBg} hover:${theme.text} transition-all`,
+                                                children: item
+                                            }, item, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 2783,
+                                                columnNumber: 23
+                                            }, ("TURBOPACK compile-time value", void 0)))
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 2781,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        className: `hidden md:flex ${theme.bg} text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg ${theme.shadow} hover:scale-105 transition-transform`,
+                                        children: "Book Now"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 2792,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>setIsMenuOpen(!isMenuOpen),
+                                        className: "lg:hidden p-2 text-slate-900",
+                                        children: isMenuOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                            size: 24
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 2801,
+                                            columnNumber: 35
+                                        }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
+                                            size: 24
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 2801,
+                                            columnNumber: 53
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 2797,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                lineNumber: 2776,
+                                columnNumber: 17
+                            }, ("TURBOPACK compile-time value", void 0))
+                        }, void 0, false, {
+                            fileName: "[project]/src/routes/DemoApp.jsx",
+                            lineNumber: 2775,
+                            columnNumber: 15
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        ns === "glass" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex justify-between items-center h-18 py-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: `w-9 h-9 ${theme.bg} rounded-lg flex items-center justify-center text-white font-black text-sm shadow ${theme.shadow}`,
+                                                children: customBrand.logoText?.[0]
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 2812,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    renderLogo("text-lg font-black text-slate-900 tracking-tight", theme.text),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "block text-[9px] font-bold uppercase tracking-widest text-slate-400",
+                                                        children: customBrand.tagline
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 2822,
+                                                        columnNumber: 23
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 2817,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 2811,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "hidden lg:flex items-center gap-1 bg-white/50 rounded-xl p-1 border border-slate-200/50",
+                                        children: navLinks.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                href: `#${item.toLowerCase()}`,
+                                                className: `text-[13px] font-semibold px-4 py-2 rounded-lg text-slate-600 hover:bg-white hover:shadow-sm hover:${theme.text} transition-all`,
+                                                children: item
+                                            }, item, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 2829,
+                                                columnNumber: 23
+                                            }, ("TURBOPACK compile-time value", void 0)))
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 2827,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        className: `hidden md:flex ${theme.text} ring-2 ${theme.ring} px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider hover:${theme.bg} hover:text-white hover:ring-0 transition-all`,
+                                        children: "Book Now"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 2838,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>setIsMenuOpen(!isMenuOpen),
+                                        className: "lg:hidden p-2 text-slate-900",
+                                        children: isMenuOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                            size: 24
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 2847,
+                                            columnNumber: 35
+                                        }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
+                                            size: 24
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 2847,
+                                            columnNumber: 53
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 2843,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                lineNumber: 2810,
+                                columnNumber: 17
+                            }, ("TURBOPACK compile-time value", void 0))
+                        }, void 0, false, {
+                            fileName: "[project]/src/routes/DemoApp.jsx",
+                            lineNumber: 2809,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)),
                         ns === "gradient" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4304,13 +4452,13 @@ const LandingPage = ()=>{
                                                 children: customBrand.tagline
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2725,
+                                                lineNumber: 2862,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2720,
+                                        lineNumber: 2857,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4321,12 +4469,12 @@ const LandingPage = ()=>{
                                                 children: item
                                             }, item, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2731,
+                                                lineNumber: 2868,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2729,
+                                        lineNumber: 2866,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4336,14 +4484,14 @@ const LandingPage = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2741,
+                                                lineNumber: 2878,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " Get Started"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2740,
+                                        lineNumber: 2877,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4353,29 +4501,29 @@ const LandingPage = ()=>{
                                             size: 24
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2747,
+                                            lineNumber: 2884,
                                             columnNumber: 35
                                         }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                             size: 24
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2747,
+                                            lineNumber: 2884,
                                             columnNumber: 53
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2743,
+                                        lineNumber: 2880,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2719,
+                                lineNumber: 2856,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2718,
+                            lineNumber: 2855,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)),
                         ns === "stack" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4396,13 +4544,13 @@ const LandingPage = ()=>{
                                                             children: customBrand.tagline
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2763,
+                                                            lineNumber: 2900,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2758,
+                                                    lineNumber: 2895,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4410,13 +4558,13 @@ const LandingPage = ()=>{
                                                     children: "Book Now"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 2767,
+                                                    lineNumber: 2904,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2757,
+                                            lineNumber: 2894,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4426,24 +4574,24 @@ const LandingPage = ()=>{
                                                 size: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2777,
+                                                lineNumber: 2914,
                                                 columnNumber: 35
                                             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                                 size: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2777,
+                                                lineNumber: 2914,
                                                 columnNumber: 53
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2773,
+                                            lineNumber: 2910,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2756,
+                                    lineNumber: 2893,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4454,18 +4602,18 @@ const LandingPage = ()=>{
                                             children: item
                                         }, item, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2782,
+                                            lineNumber: 2919,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 2780,
+                                    lineNumber: 2917,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2755,
+                            lineNumber: 2892,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)),
                         ns === "borderless" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4485,18 +4633,18 @@ const LandingPage = ()=>{
                                                         className: `absolute -bottom-1 left-0 w-0 h-0.5 ${theme.bg} group-hover:w-full transition-all duration-300`
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2810,
+                                                        lineNumber: 2947,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, item, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2804,
+                                                lineNumber: 2941,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2802,
+                                        lineNumber: 2939,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4507,13 +4655,13 @@ const LandingPage = ()=>{
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2819,
+                                                lineNumber: 2956,
                                                 columnNumber: 32
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2816,
+                                        lineNumber: 2953,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4523,29 +4671,29 @@ const LandingPage = ()=>{
                                             size: 24
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2825,
+                                            lineNumber: 2962,
                                             columnNumber: 35
                                         }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                             size: 24
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2825,
+                                            lineNumber: 2962,
                                             columnNumber: 53
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2821,
+                                        lineNumber: 2958,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2797,
+                                lineNumber: 2934,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2796,
+                            lineNumber: 2933,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)),
                         isMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4559,7 +4707,7 @@ const LandingPage = ()=>{
                                             children: item
                                         }, item, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 2836,
+                                            lineNumber: 2973,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0))),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4567,34 +4715,37 @@ const LandingPage = ()=>{
                                         children: "Book Now"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2844,
+                                        lineNumber: 2981,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2834,
+                                lineNumber: 2971,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 2833,
+                            lineNumber: 2970,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 2391,
+                    lineNumber: 2528,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0));
             })(),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `relative overflow-hidden w-full min-h-[90vh] flex items-center pt-28 pb-16
+                className: `relative overflow-hidden w-full flex flex-col
         ${[
                     "fullscreen",
                     "video",
-                    "carousel"
-                ].includes(customBrand.heroStyle) ? "min-h-screen pt-0 pb-0" : ""}
+                    "carousel",
+                    "aesthetic_fullscreen",
+                    "aesthetic_fullscreen_form",
+                    "creative_split"
+                ].includes(customBrand.heroStyle) ? "h-screen pt-0" : "min-h-[90vh] pt-28 pb-16"}
         ${customBrand.navbarStyle === "transparent" ? "bg-slate-900" : "bg-gradient-to-b from-white via-slate-50/50 to-white"}
         `,
                 children: [
@@ -4608,21 +4759,21 @@ const LandingPage = ()=>{
                                 className: "absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-30"
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2868,
+                                lineNumber: 3005,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-indigo-100/30 via-transparent to-transparent rounded-full blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2869,
+                                lineNumber: 3006,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-rose-100/20 via-transparent to-transparent rounded-full blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2870,
+                                lineNumber: 3007,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
@@ -4634,7 +4785,7 @@ const LandingPage = ()=>{
                                 className: `absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40 z-10`
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2877,
+                                lineNumber: 3014,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -4642,13 +4793,13 @@ const LandingPage = ()=>{
                                 className: "w-full h-full object-cover"
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2880,
+                                lineNumber: 3017,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 2876,
+                        lineNumber: 3013,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     customBrand.heroStyle === "video" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4658,7 +4809,7 @@ const LandingPage = ()=>{
                                 className: "absolute inset-0 bg-black/60 z-10"
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2890,
+                                lineNumber: 3027,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -4666,13 +4817,13 @@ const LandingPage = ()=>{
                                 className: "w-full h-full object-cover opacity-60"
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2892,
+                                lineNumber: 3029,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 2889,
+                        lineNumber: 3026,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     customBrand.heroStyle === "carousel" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4682,7 +4833,7 @@ const LandingPage = ()=>{
                                 className: "absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-slate-900/20 z-10"
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2902,
+                                lineNumber: 3039,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -4690,7 +4841,7 @@ const LandingPage = ()=>{
                                 className: "w-full h-full object-cover"
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2903,
+                                lineNumber: 3040,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4700,40 +4851,46 @@ const LandingPage = ()=>{
                                         className: "w-12 h-1 bg-white rounded-full"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2908,
+                                        lineNumber: 3045,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-3 h-1 bg-white/50 rounded-full"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2909,
+                                        lineNumber: 3046,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-3 h-1 bg-white/50 rounded-full"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2910,
+                                        lineNumber: 3047,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2907,
+                                lineNumber: 3044,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 2901,
+                        lineNumber: 3038,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: `mx-auto max-w-7xl px-6 lg:px-8 relative z-10 ${[
+                        className: `flex-1 flex flex-col justify-center relative z-10 ${[
+                            "aesthetic_fullscreen",
+                            "aesthetic_fullscreen_form",
+                            "creative_split"
+                        ].includes(customBrand.heroStyle) ? "w-full min-h-0" : "mx-auto max-w-7xl px-6 lg:px-8"} ${[
                             "fullscreen",
                             "video",
-                            "carousel"
+                            "carousel",
+                            "aesthetic_fullscreen",
+                            "aesthetic_fullscreen_form"
                         ].includes(customBrand.heroStyle) ? "text-white" : ""}`,
                         children: [
                             customBrand.heroStyle === "centered" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4746,14 +4903,14 @@ const LandingPage = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2924,
+                                                lineNumber: 3061,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             customBrand.tagline
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2921,
+                                        lineNumber: 3058,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -4763,7 +4920,7 @@ const LandingPage = ()=>{
                                             " ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2928,
+                                                lineNumber: 3065,
                                                 columnNumber: 41
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4781,24 +4938,24 @@ const LandingPage = ()=>{
                                                             fill: "none"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 2936,
+                                                            lineNumber: 3073,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 2931,
+                                                        lineNumber: 3068,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2929,
+                                                lineNumber: 3066,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2927,
+                                        lineNumber: 3064,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4806,7 +4963,7 @@ const LandingPage = ()=>{
                                         children: customBrand.heroDesc
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2945,
+                                        lineNumber: 3082,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4817,7 +4974,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroCta || "Get Started"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2949,
+                                                lineNumber: 3086,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4825,13 +4982,13 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroCta2 || "Learn More"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2954,
+                                                lineNumber: 3091,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2948,
+                                        lineNumber: 3085,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4841,7 +4998,7 @@ const LandingPage = ()=>{
                                                 className: `absolute -inset-4 ${theme.bg} rounded-3xl opacity-10 blur-2xl`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2961,
+                                                lineNumber: 3098,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -4850,19 +5007,19 @@ const LandingPage = ()=>{
                                                 className: "relative w-full rounded-2xl shadow-2xl border border-slate-200/60 max-h-[520px] object-cover"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2964,
+                                                lineNumber: 3101,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2960,
+                                        lineNumber: 3097,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2920,
+                                lineNumber: 3057,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             [
@@ -4879,14 +5036,14 @@ const LandingPage = ()=>{
                                                 className: "w-2 h-2 rounded-full bg-green-400 animate-pulse"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2981,
+                                                lineNumber: 3118,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             customBrand.tagline
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2978,
+                                        lineNumber: 3115,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -4896,7 +5053,7 @@ const LandingPage = ()=>{
                                             " ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2985,
+                                                lineNumber: 3122,
                                                 columnNumber: 41
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4904,13 +5061,13 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroSpan
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2986,
+                                                lineNumber: 3123,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2984,
+                                        lineNumber: 3121,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4918,7 +5075,7 @@ const LandingPage = ()=>{
                                         children: customBrand.heroDesc
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2990,
+                                        lineNumber: 3127,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4929,7 +5086,7 @@ const LandingPage = ()=>{
                                                 children: "Start Now"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2994,
+                                                lineNumber: 3131,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4937,13 +5094,13 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroCta2 || "Watch Video"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 2999,
+                                                lineNumber: 3136,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 2993,
+                                        lineNumber: 3130,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4954,7 +5111,7 @@ const LandingPage = ()=>{
                                                 children: "Scroll"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3007,
+                                                lineNumber: 3144,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4963,24 +5120,24 @@ const LandingPage = ()=>{
                                                     className: "w-1 h-2 bg-white/40 rounded-full animate-bounce"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 3011,
+                                                    lineNumber: 3148,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3010,
+                                                lineNumber: 3147,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3006,
+                                        lineNumber: 3143,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 2977,
+                                lineNumber: 3114,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             customBrand.heroStyle === "grid" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4993,7 +5150,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.tagline
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3021,
+                                                lineNumber: 3158,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -5003,7 +5160,7 @@ const LandingPage = ()=>{
                                                     " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3027,
+                                                        lineNumber: 3164,
                                                         columnNumber: 43
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5011,13 +5168,13 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroSpan
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3028,
+                                                        lineNumber: 3165,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3026,
+                                                lineNumber: 3163,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5025,7 +5182,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroDesc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3030,
+                                                lineNumber: 3167,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5036,7 +5193,7 @@ const LandingPage = ()=>{
                                                         children: "Explore More"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3034,
+                                                        lineNumber: 3171,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5044,19 +5201,19 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroCta2 || "View Plans"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3039,
+                                                        lineNumber: 3176,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3033,
+                                                lineNumber: 3170,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3020,
+                                        lineNumber: 3157,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5074,31 +5231,31 @@ const LandingPage = ()=>{
                                                         className: "w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3059,
+                                                        lineNumber: 3196,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3066,
+                                                        lineNumber: 3203,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, i, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3055,
+                                                lineNumber: 3192,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3046,
+                                        lineNumber: 3183,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3019,
+                                lineNumber: 3156,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             customBrand.heroStyle === "form_left" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5111,7 +5268,7 @@ const LandingPage = ()=>{
                                                 className: `absolute top-0 left-0 w-full h-1.5 ${theme.bg} rounded-t-2xl`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3077,
+                                                lineNumber: 3214,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5121,14 +5278,14 @@ const LandingPage = ()=>{
                                                         className: "w-1.5 h-1.5 rounded-full bg-current"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3083,
+                                                        lineNumber: 3220,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     "Limited Spots"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3080,
+                                                lineNumber: 3217,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -5136,7 +5293,7 @@ const LandingPage = ()=>{
                                                 children: "Get Started Today"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3086,
+                                                lineNumber: 3223,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5144,7 +5301,7 @@ const LandingPage = ()=>{
                                                 children: "Fill in your details for a free consultation"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3089,
+                                                lineNumber: 3226,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -5156,7 +5313,7 @@ const LandingPage = ()=>{
                                                         className: "w-full p-3.5 border border-slate-200 rounded-xl bg-slate-50 text-sm focus:outline-none focus:border-indigo-300 transition-colors"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3093,
+                                                        lineNumber: 3230,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5165,7 +5322,7 @@ const LandingPage = ()=>{
                                                         className: "w-full p-3.5 border border-slate-200 rounded-xl bg-slate-50 text-sm focus:outline-none focus:border-indigo-300 transition-colors"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3098,
+                                                        lineNumber: 3235,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5174,7 +5331,7 @@ const LandingPage = ()=>{
                                                         className: "w-full p-3.5 border border-slate-200 rounded-xl bg-slate-50 text-sm focus:outline-none focus:border-indigo-300 transition-colors"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3103,
+                                                        lineNumber: 3240,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5182,13 +5339,13 @@ const LandingPage = ()=>{
                                                         children: "Join Now — It's Free"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3108,
+                                                        lineNumber: 3245,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3092,
+                                                lineNumber: 3229,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5196,13 +5353,13 @@ const LandingPage = ()=>{
                                                 children: "🔒 Your data is safe with us"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3114,
+                                                lineNumber: 3251,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3076,
+                                        lineNumber: 3213,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5218,13 +5375,13 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroSpan
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3121,
+                                                        lineNumber: 3258,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3119,
+                                                lineNumber: 3256,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5232,7 +5389,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroDesc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3123,
+                                                lineNumber: 3260,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5261,7 +5418,7 @@ const LandingPage = ()=>{
                                                                 size: 22
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3148,
+                                                                lineNumber: 3285,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5269,7 +5426,7 @@ const LandingPage = ()=>{
                                                                 children: label
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3149,
+                                                                lineNumber: 3286,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5277,30 +5434,30 @@ const LandingPage = ()=>{
                                                                 children: desc
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3152,
+                                                                lineNumber: 3289,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, label, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3144,
+                                                        lineNumber: 3281,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3126,
+                                                lineNumber: 3263,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3118,
+                                        lineNumber: 3255,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3075,
+                                lineNumber: 3212,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             customBrand.heroStyle === "diagonal" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5316,14 +5473,14 @@ const LandingPage = ()=>{
                                                         size: 14
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3167,
+                                                        lineNumber: 3304,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     "Trending Now"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3164,
+                                                lineNumber: 3301,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -5331,7 +5488,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroTitle
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3170,
+                                                lineNumber: 3307,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -5339,7 +5496,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroSpan
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3173,
+                                                lineNumber: 3310,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5347,7 +5504,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroDesc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3178,
+                                                lineNumber: 3315,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5360,12 +5517,12 @@ const LandingPage = ()=>{
                                                             children: "Start Journey"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 3185,
+                                                            lineNumber: 3322,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3182,
+                                                        lineNumber: 3319,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5375,24 +5532,24 @@ const LandingPage = ()=>{
                                                             children: customBrand.heroCta2 || "Learn More"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 3192,
+                                                            lineNumber: 3329,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3189,
+                                                        lineNumber: 3326,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3181,
+                                                lineNumber: 3318,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3163,
+                                        lineNumber: 3300,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5403,26 +5560,26 @@ const LandingPage = ()=>{
                                                 className: "w-full h-full object-cover skew-x-[8deg] scale-[1.2] translate-x-[-80px]"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3199,
+                                                lineNumber: 3336,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 bg-gradient-to-l from-transparent to-white/10 skew-x-[8deg]"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3203,
+                                                lineNumber: 3340,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3198,
+                                        lineNumber: 3335,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3162,
+                                lineNumber: 3299,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             customBrand.heroStyle === "monitor" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5435,14 +5592,14 @@ const LandingPage = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3214,
+                                                lineNumber: 3351,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             customBrand.tagline
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3211,
+                                        lineNumber: 3348,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -5455,13 +5612,13 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroSpan
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3219,
+                                                lineNumber: 3356,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3217,
+                                        lineNumber: 3354,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5469,7 +5626,7 @@ const LandingPage = ()=>{
                                         children: customBrand.heroDesc
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3221,
+                                        lineNumber: 3358,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5479,7 +5636,7 @@ const LandingPage = ()=>{
                                                 className: "absolute -inset-8 bg-gradient-to-b from-indigo-100/40 to-transparent rounded-3xl blur-2xl"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3227,
+                                                lineNumber: 3364,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5492,21 +5649,21 @@ const LandingPage = ()=>{
                                                                 className: "w-2.5 h-2.5 rounded-full bg-red-400"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3231,
+                                                                lineNumber: 3368,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "w-2.5 h-2.5 rounded-full bg-amber-400"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3232,
+                                                                lineNumber: 3369,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "w-2.5 h-2.5 rounded-full bg-green-400"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3233,
+                                                                lineNumber: 3370,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5516,18 +5673,18 @@ const LandingPage = ()=>{
                                                                     children: customBrand.tagline || "yourwebsite.com"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 3235,
+                                                                    lineNumber: 3372,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3234,
+                                                                lineNumber: 3371,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3230,
+                                                        lineNumber: 3367,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5538,18 +5695,18 @@ const LandingPage = ()=>{
                                                             alt: "Website preview"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 3241,
+                                                            lineNumber: 3378,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3240,
+                                                        lineNumber: 3377,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3228,
+                                                lineNumber: 3365,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5558,31 +5715,31 @@ const LandingPage = ()=>{
                                                     className: "absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-16 h-2 bg-slate-600"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 3249,
+                                                    lineNumber: 3386,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3248,
+                                                lineNumber: 3385,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "mx-auto w-20 h-6 bg-gradient-to-b from-slate-600 to-slate-500 rounded-b-lg"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3252,
+                                                lineNumber: 3389,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3226,
+                                        lineNumber: 3363,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3210,
+                                lineNumber: 3347,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             (customBrand.heroStyle === "split" || !customBrand.heroStyle) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5598,14 +5755,14 @@ const LandingPage = ()=>{
                                                         size: 14
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3265,
+                                                        lineNumber: 3402,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     customBrand.tagline
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3262,
+                                                lineNumber: 3399,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -5618,7 +5775,7 @@ const LandingPage = ()=>{
                                                     " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3272,
+                                                        lineNumber: 3409,
                                                         columnNumber: 43
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5626,13 +5783,13 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroSpan
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3273,
+                                                        lineNumber: 3410,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3268,
+                                                lineNumber: 3405,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5640,7 +5797,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroDesc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3276,
+                                                lineNumber: 3413,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5651,7 +5808,7 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroCta || "Talk to an Expert"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3281,
+                                                        lineNumber: 3418,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5659,13 +5816,13 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroCta2 || "Get Guidance"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3286,
+                                                        lineNumber: 3423,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3280,
+                                                lineNumber: 3417,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5695,7 +5852,7 @@ const LandingPage = ()=>{
                                                                 className: theme.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3305,
+                                                                lineNumber: 3442,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             " ",
@@ -5703,18 +5860,18 @@ const LandingPage = ()=>{
                                                         ]
                                                     }, label, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3301,
+                                                        lineNumber: 3438,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3294,
+                                                lineNumber: 3431,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3261,
+                                        lineNumber: 3398,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5729,20 +5886,20 @@ const LandingPage = ()=>{
                                                         className: "w-full h-full object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3315,
+                                                        lineNumber: 3452,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute inset-0 bg-gradient-to-r from-white/5 to-transparent"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3323,
+                                                        lineNumber: 3460,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3314,
+                                                lineNumber: 3451,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5752,7 +5909,7 @@ const LandingPage = ()=>{
                                                         className: `absolute top-0 left-0 w-full h-1.5 ${theme.bg} rounded-t-2xl`
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3330,
+                                                        lineNumber: 3467,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -5760,7 +5917,7 @@ const LandingPage = ()=>{
                                                         children: "Speak to Our Expert"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3333,
+                                                        lineNumber: 3470,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5768,7 +5925,7 @@ const LandingPage = ()=>{
                                                         children: "Get a free consultation for your study abroad journey."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3336,
+                                                        lineNumber: 3473,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -5781,7 +5938,7 @@ const LandingPage = ()=>{
                                                                         children: "Name"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3342,
+                                                                        lineNumber: 3479,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5790,13 +5947,13 @@ const LandingPage = ()=>{
                                                                         placeholder: "Your Full Name"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3345,
+                                                                        lineNumber: 3482,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3341,
+                                                                lineNumber: 3478,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5806,7 +5963,7 @@ const LandingPage = ()=>{
                                                                         children: "Phone Number"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3352,
+                                                                        lineNumber: 3489,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5815,13 +5972,13 @@ const LandingPage = ()=>{
                                                                         placeholder: "+91 XXXXX XXXXX"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3355,
+                                                                        lineNumber: 3492,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3351,
+                                                                lineNumber: 3488,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5831,7 +5988,7 @@ const LandingPage = ()=>{
                                                                         children: "Service Interest"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3362,
+                                                                        lineNumber: 3499,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -5841,33 +5998,33 @@ const LandingPage = ()=>{
                                                                                 children: "IELTS Coaching"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                                lineNumber: 3368,
+                                                                                lineNumber: 3505,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                                                 children: "Study Abroad"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                                lineNumber: 3369,
+                                                                                lineNumber: 3506,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                                                 children: "PTE / TOEFL"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                                lineNumber: 3370,
+                                                                                lineNumber: 3507,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3365,
+                                                                        lineNumber: 3502,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3361,
+                                                                lineNumber: 3498,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5875,13 +6032,13 @@ const LandingPage = ()=>{
                                                                 children: customBrand.formCta || "Get Instant Call Back"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3373,
+                                                                lineNumber: 3510,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3340,
+                                                        lineNumber: 3477,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5889,25 +6046,25 @@ const LandingPage = ()=>{
                                                         children: "🔒 Your data is safe with us"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3379,
+                                                        lineNumber: 3516,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3327,
+                                                lineNumber: 3464,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3312,
+                                        lineNumber: 3449,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3259,
+                                lineNumber: 3396,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             customBrand.heroStyle === "classic" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5922,14 +6079,14 @@ const LandingPage = ()=>{
                                                         size: 14
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3394,
+                                                        lineNumber: 3531,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " Top Rated"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3391,
+                                                lineNumber: 3528,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -5939,7 +6096,7 @@ const LandingPage = ()=>{
                                                     " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3397,
+                                                        lineNumber: 3534,
                                                         columnNumber: 43
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5947,13 +6104,13 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroSpan
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3398,
+                                                        lineNumber: 3535,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3396,
+                                                lineNumber: 3533,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5961,7 +6118,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroDesc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3400,
+                                                lineNumber: 3537,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5972,7 +6129,7 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroCta || "Get Started"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3404,
+                                                        lineNumber: 3541,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5985,31 +6142,31 @@ const LandingPage = ()=>{
                                                                     className: theme.text
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 3413,
+                                                                    lineNumber: 3550,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3410,
+                                                                lineNumber: 3547,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             customBrand.heroCta2 || "Watch Demo"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3409,
+                                                        lineNumber: 3546,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3403,
+                                                lineNumber: 3540,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3390,
+                                        lineNumber: 3527,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6019,7 +6176,7 @@ const LandingPage = ()=>{
                                                 className: `absolute -inset-6 ${theme.bg} rounded-3xl opacity-10 blur-3xl`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3420,
+                                                lineNumber: 3557,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -6028,7 +6185,7 @@ const LandingPage = ()=>{
                                                 alt: "Classic Hero"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3423,
+                                                lineNumber: 3560,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6041,27 +6198,27 @@ const LandingPage = ()=>{
                                                                 className: "w-9 h-9 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 border-2 border-white"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3430,
+                                                                lineNumber: 3567,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "w-9 h-9 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 border-2 border-white"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3431,
+                                                                lineNumber: 3568,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 border-2 border-white"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3432,
+                                                                lineNumber: 3569,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3429,
+                                                        lineNumber: 3566,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6073,12 +6230,12 @@ const LandingPage = ()=>{
                                                                     children: "1,200+"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 3436,
+                                                                    lineNumber: 3573,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3435,
+                                                                lineNumber: 3572,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6086,19 +6243,19 @@ const LandingPage = ()=>{
                                                                 children: "Students Enrolled"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3438,
+                                                                lineNumber: 3575,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3434,
+                                                        lineNumber: 3571,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3428,
+                                                lineNumber: 3565,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6113,12 +6270,12 @@ const LandingPage = ()=>{
                                                                 className: "text-amber-400 fill-amber-400"
                                                             }, i, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3447,
+                                                                lineNumber: 3584,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0)))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3445,
+                                                        lineNumber: 3582,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6126,25 +6283,824 @@ const LandingPage = ()=>{
                                                         children: "4.9"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3454,
+                                                        lineNumber: 3591,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3444,
+                                                lineNumber: 3581,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3419,
+                                        lineNumber: 3556,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3389,
+                                lineNumber: 3526,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            customBrand.heroStyle === "aesthetic_fullscreen_form" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "w-full h-full flex items-center justify-center relative overflow-hidden",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute inset-0 z-0",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                src: customBrand.heroImage,
+                                                className: "w-full h-full object-cover",
+                                                alt: "Background"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3601,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "absolute inset-0 bg-slate-950/40 backdrop-blur-[1px]"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3606,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/20 to-transparent"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3607,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 3600,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full pt-28 pb-12",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "grid lg:grid-cols-12 gap-12 items-center",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-6 border border-white/20",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
+                                                                    size: 12,
+                                                                    className: "text-rose-300"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 3614,
+                                                                    columnNumber: 23
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                customBrand.tagline
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 3613,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                                            className: "text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tighter",
+                                                            children: [
+                                                                customBrand.heroTitle,
+                                                                " ",
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 3618,
+                                                                    columnNumber: 47
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "text-transparent bg-clip-text bg-gradient-to-r from-rose-200 to-rose-100",
+                                                                    children: customBrand.heroSpan
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 3619,
+                                                                    columnNumber: 23
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 3617,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "text-lg text-white/70 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium mb-10",
+                                                            children: customBrand.heroDesc
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 3623,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "flex flex-wrap gap-6 justify-center lg:justify-start",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "flex items-center gap-3",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: `w-10 h-10 rounded-full ${theme.bg} flex items-center justify-center text-white shadow-lg`,
+                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
+                                                                                size: 20
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                                lineNumber: 3631,
+                                                                                columnNumber: 27
+                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3628,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "text-white font-bold text-xs uppercase tracking-wider",
+                                                                            children: "Premium Quality"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3633,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 3627,
+                                                                    columnNumber: 23
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "flex items-center gap-3",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: `w-10 h-10 rounded-full ${theme.bg} flex items-center justify-center text-white shadow-lg`,
+                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
+                                                                                size: 20
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                                lineNumber: 3641,
+                                                                                columnNumber: 27
+                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3638,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "text-white font-bold text-xs uppercase tracking-wider",
+                                                                            children: "Expert Results"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3643,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 3637,
+                                                                    columnNumber: 23
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 3626,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 3612,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "lg:col-span-5 relative group",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: `absolute -inset-1 bg-gradient-to-r ${theme.gradientFrom} ${theme.gradientTo} rounded-[32px] opacity-10 blur-xl group-hover:opacity-20 transition-opacity duration-500`
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 3651,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "relative bg-black/40 backdrop-blur-3xl p-10 rounded-[40px] border border-white/10 shadow-2xl",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "mb-8",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                                            className: "text-3xl font-black text-white mb-2 tracking-tight",
+                                                                            children: "Start Your Journey"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3656,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                            className: "text-white/50 text-sm",
+                                                                            children: "Book a consultation with our clinicians."
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3659,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 3655,
+                                                                    columnNumber: 23
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                                                                    className: "space-y-5",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "relative",
+                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                type: "text",
+                                                                                placeholder: "Your Name",
+                                                                                className: "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-all"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                                lineNumber: 3665,
+                                                                                columnNumber: 27
+                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3664,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "relative",
+                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                type: "email",
+                                                                                placeholder: "Email Address",
+                                                                                className: "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-all"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                                lineNumber: 3672,
+                                                                                columnNumber: 27
+                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3671,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "relative",
+                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                type: "tel",
+                                                                                placeholder: "Phone Number",
+                                                                                className: "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-all"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                                lineNumber: 3679,
+                                                                                columnNumber: 27
+                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3678,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                            className: `w-full ${theme.bg} py-5 rounded-2xl text-white font-black uppercase tracking-widest text-xs hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl ${theme.shadow}`,
+                                                                            children: customBrand.formCta || "Book Consultation"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3685,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 3663,
+                                                                    columnNumber: 23
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "mt-8 flex items-center justify-center gap-4 text-white/30 text-[10px] font-bold uppercase tracking-widest",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "h-px flex-1 bg-white/10"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3692,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: "Privacy Guaranteed"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3693,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "h-px flex-1 bg-white/10"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3694,
+                                                                            columnNumber: 25
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 3691,
+                                                                    columnNumber: 23
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 3654,
+                                                            columnNumber: 21
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 3650,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 3611,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 3610,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                lineNumber: 3599,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            customBrand.heroStyle === "aesthetic_fullscreen" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "w-full h-full flex flex-col items-center justify-center text-center relative px-6 overflow-hidden",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute inset-0 z-0",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                src: customBrand.heroImage,
+                                                className: "w-full h-full object-cover",
+                                                alt: "Background"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3707,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "absolute inset-0 bg-slate-950/40"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3712,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "absolute inset-0 bg-gradient-to-b from-slate-950/70 via-transparent to-slate-950/80"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3713,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 3706,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "relative z-10 max-w-7xl mx-auto pt-28 pb-12",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex justify-center mb-8 overflow-hidden",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "animate-in slide-in-from-bottom duration-1000",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "inline-flex items-center gap-3 py-2 px-6 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-white text-[11px] font-bold uppercase tracking-[0.4em]",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "w-1.5 h-1.5 rounded-full bg-white animate-pulse"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3720,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            customBrand.tagline
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 3719,
+                                                        columnNumber: 21
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 3718,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3717,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                                className: "text-6xl md:text-8xl lg:text-[10rem] font-black text-white leading-[0.88] tracking-tighter mb-10 drop-shadow-2xl italic",
+                                                children: [
+                                                    customBrand.heroTitle,
+                                                    " ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 3727,
+                                                        columnNumber: 43
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-transparent bg-clip-text bg-gradient-to-br from-white via-white/80 to-white/10",
+                                                        children: customBrand.heroSpan
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 3728,
+                                                        columnNumber: 19
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3726,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-lg md:text-2xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light mb-12 px-4 drop-shadow-lg",
+                                                children: customBrand.heroDesc
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3733,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex flex-col sm:flex-row gap-6 justify-center items-center",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        className: `bg-white text-slate-900 px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.2)]`,
+                                                        children: customBrand.heroCta || "Experience Now"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 3738,
+                                                        columnNumber: 19
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        className: "group flex items-center gap-4 text-white font-bold uppercase tracking-widest text-xs py-5 px-10 rounded-full border border-white/20 hover:bg-white/10 transition-all",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-slate-900 transition-all",
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
+                                                                    size: 14,
+                                                                    className: "fill-current"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 3745,
+                                                                    columnNumber: 23
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3744,
+                                                                columnNumber: 21
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            customBrand.heroCta2 || "View Our Work"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 3743,
+                                                        columnNumber: 19
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3737,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 3716,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute bottom-10 left-10 hidden lg:flex items-center gap-4 text-white/30 text-[10px] uppercase tracking-[0.5em] font-bold",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-12 h-px bg-white/20"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3754,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            "LUMINA ARCHIVE"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 3753,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute top-1/2 -right-20 -translate-y-1/2 hidden xl:flex flex-col items-center gap-8 text-white/10 font-black text-2xl vertical-text tracking-[1.2em] pointer-events-none select-none",
+                                        children: "ESTHETIQUE • LUXE • PURE"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 3758,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                lineNumber: 3705,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            customBrand.heroStyle === "creative_split" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative lg:pt-0 lg:pb-0 overflow-hidden w-full h-full flex flex-col items-center bg-white",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full flex-1 flex items-center pt-24",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "grid lg:grid-cols-12 gap-8 lg:gap-16 items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "lg:col-span-6 relative",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: `absolute -top-32 -left-32 w-[600px] h-[600px] ${theme.lightBg} rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-blob`
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 3770,
+                                                        columnNumber: 21
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "relative",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: `inline-flex items-center gap-2 py-2 px-4 rounded-xl ${theme.lightBg} ${theme.text} text-[11px] font-black uppercase tracking-[0.3em] mb-8 border ${theme.lightBorder}`,
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
+                                                                        size: 14
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3778,
+                                                                        columnNumber: 25
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    customBrand.tagline
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3775,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                                                className: "text-5xl md:text-7xl lg:text-[5.5rem] font-black text-slate-900 mb-8 leading-[1] tracking-tight",
+                                                                style: {
+                                                                    fontFamily: "var(--font-heading)"
+                                                                },
+                                                                children: [
+                                                                    customBrand.heroTitle,
+                                                                    " ",
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3786,
+                                                                        columnNumber: 49
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: `inline-block mt-4 ${theme.text} italic font-serif`,
+                                                                        children: customBrand.heroSpan
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3787,
+                                                                        columnNumber: 25
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3782,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-lg text-slate-500 leading-relaxed font-medium mb-12 max-w-lg",
+                                                                children: customBrand.heroDesc
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3794,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "flex flex-col sm:flex-row gap-6 items-center",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                        className: `${theme.bg} text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-[0.2em] hover:shadow-2xl hover:-translate-y-1 transition-all shadow-xl ${theme.shadow}`,
+                                                                        children: customBrand.heroCta || "Book Consultation"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3799,
+                                                                        columnNumber: 25
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                        className: "group flex items-center gap-4 text-slate-400 font-bold uppercase tracking-widest text-[10px] hover:text-slate-900 transition-colors",
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                className: `w-14 h-14 border-2 border-slate-200 rounded-full flex items-center justify-center group-hover:${theme.bg} group-hover:text-white group-hover:border-transparent transition-all`,
+                                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
+                                                                                    size: 18
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                                    lineNumber: 3808,
+                                                                                    columnNumber: 29
+                                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                                lineNumber: 3805,
+                                                                                columnNumber: 27
+                                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                                            customBrand.heroCta2 || "See Our Work"
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3804,
+                                                                        columnNumber: 25
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3798,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 3774,
+                                                        columnNumber: 21
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3769,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "lg:col-span-6 relative hidden lg:block",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "flex gap-6 h-[550px] items-center",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "w-[60%] h-full",
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "h-full rounded-[48px] overflow-hidden shadow-2xl border-[6px] border-white",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                        src: customBrand.heroImage,
+                                                                        className: "w-full h-full object-cover",
+                                                                        alt: "Visual 1"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3820,
+                                                                        columnNumber: 27
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 3819,
+                                                                    columnNumber: 25
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3818,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "w-[40%] flex flex-col gap-6 h-[85%]",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "flex-1 rounded-[36px] overflow-hidden shadow-xl border-[6px] border-white",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                            src: customBrand.gridImages?.[0] || customBrand.heroImage,
+                                                                            className: "w-full h-full object-cover",
+                                                                            alt: "Visual 2"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3829,
+                                                                            columnNumber: 27
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3828,
+                                                                        columnNumber: 25
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "flex-1 rounded-[36px] overflow-hidden shadow-xl border-[6px] border-white relative group",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                            src: customBrand.gridImages?.[1] || customBrand.heroImage,
+                                                                            className: "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
+                                                                            alt: "Visual 3"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                            lineNumber: 3839,
+                                                                            columnNumber: 27
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3838,
+                                                                        columnNumber: 25
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3827,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 3817,
+                                                        columnNumber: 21
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl px-12 py-6 rounded-[32px] shadow-2xl border border-slate-100 flex items-center gap-10 whitespace-nowrap",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "text-2xl font-black text-slate-900 italic",
+                                                                        children: "4.9/5"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3854,
+                                                                        columnNumber: 25
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                        className: "text-[9px] font-black uppercase tracking-widest text-slate-400",
+                                                                        children: "Patient Satisfaction"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3857,
+                                                                        columnNumber: 25
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3853,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "w-px h-10 bg-slate-100"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3861,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "text-2xl font-black text-slate-900 italic",
+                                                                        children: "25k+"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3863,
+                                                                        columnNumber: 25
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                        className: "text-[9px] font-black uppercase tracking-widest text-slate-400",
+                                                                        children: "Transformations"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 3866,
+                                                                        columnNumber: 25
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 3862,
+                                                                columnNumber: 23
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 3852,
+                                                        columnNumber: 21
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 3816,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 3768,
+                                        columnNumber: 17
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                    lineNumber: 3767,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                lineNumber: 3766,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             false && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6160,7 +7116,7 @@ const LandingPage = ()=>{
                                                     " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3466,
+                                                        lineNumber: 3883,
                                                         columnNumber: 43
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6168,13 +7124,13 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroSpan
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3467,
+                                                        lineNumber: 3884,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3465,
+                                                lineNumber: 3882,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6182,7 +7138,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroDesc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3470,
+                                                lineNumber: 3887,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6193,7 +7149,7 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroCta || "Talk to an Expert"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3475,
+                                                        lineNumber: 3892,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6201,13 +7157,13 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroCta2 || "Get Guidance"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3480,
+                                                        lineNumber: 3897,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3474,
+                                                lineNumber: 3891,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6221,14 +7177,14 @@ const LandingPage = ()=>{
                                                                 className: theme.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3490,
+                                                                lineNumber: 3907,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             " 18+ Years Exp."
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3489,
+                                                        lineNumber: 3906,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6239,7 +7195,7 @@ const LandingPage = ()=>{
                                                                 className: theme.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3494,
+                                                                lineNumber: 3911,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             " ",
@@ -6247,7 +7203,7 @@ const LandingPage = ()=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3493,
+                                                        lineNumber: 3910,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6258,14 +7214,14 @@ const LandingPage = ()=>{
                                                                 className: theme.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3498,
+                                                                lineNumber: 3915,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             " 45,000+ Students"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3497,
+                                                        lineNumber: 3914,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6276,26 +7232,26 @@ const LandingPage = ()=>{
                                                                 className: theme.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3502,
+                                                                lineNumber: 3919,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             " 1-on-1 Sessions"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3501,
+                                                        lineNumber: 3918,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3488,
+                                                lineNumber: 3905,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3464,
+                                        lineNumber: 3881,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6307,7 +7263,7 @@ const LandingPage = ()=>{
                                                 className: "hidden md:block w-48 lg:w-64 h-auto object-cover rounded-xl shadow-lg border-4 border-white transform translate-x-4 z-0 mb-8"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3511,
+                                                lineNumber: 3928,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6317,7 +7273,7 @@ const LandingPage = ()=>{
                                                         className: `absolute top-0 left-0 w-full h-2 ${theme.bg} rounded-t-2xl`
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3521,
+                                                        lineNumber: 3938,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -6325,7 +7281,7 @@ const LandingPage = ()=>{
                                                         children: "Speak to Our Expert"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3524,
+                                                        lineNumber: 3941,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6333,7 +7289,7 @@ const LandingPage = ()=>{
                                                         children: "Get a free consultation for your study abroad journey."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3527,
+                                                        lineNumber: 3944,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -6346,7 +7302,7 @@ const LandingPage = ()=>{
                                                                         children: "Name"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3533,
+                                                                        lineNumber: 3950,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -6355,13 +7311,13 @@ const LandingPage = ()=>{
                                                                         placeholder: "Your Full Name"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3536,
+                                                                        lineNumber: 3953,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3532,
+                                                                lineNumber: 3949,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6371,7 +7327,7 @@ const LandingPage = ()=>{
                                                                         children: "Phone Number"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3543,
+                                                                        lineNumber: 3960,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -6380,13 +7336,13 @@ const LandingPage = ()=>{
                                                                         placeholder: "+91 XXXXX XXXXX"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3546,
+                                                                        lineNumber: 3963,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3542,
+                                                                lineNumber: 3959,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6396,7 +7352,7 @@ const LandingPage = ()=>{
                                                                         children: "Service Interest"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3553,
+                                                                        lineNumber: 3970,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -6406,33 +7362,33 @@ const LandingPage = ()=>{
                                                                                 children: "IELTS Coaching"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                                lineNumber: 3559,
+                                                                                lineNumber: 3976,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                                                 children: "Study Abroad"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                                lineNumber: 3560,
+                                                                                lineNumber: 3977,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                                                 children: "PTE / TOEFL"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                                lineNumber: 3561,
+                                                                                lineNumber: 3978,
                                                                                 columnNumber: 25
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 3556,
+                                                                        lineNumber: 3973,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3552,
+                                                                lineNumber: 3969,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6440,31 +7396,31 @@ const LandingPage = ()=>{
                                                                 children: customBrand.formCta || "Get Instant Call Back"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3564,
+                                                                lineNumber: 3981,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3531,
+                                                        lineNumber: 3948,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3518,
+                                                lineNumber: 3935,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3509,
+                                        lineNumber: 3926,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3462,
+                                lineNumber: 3879,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             false && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6477,7 +7433,7 @@ const LandingPage = ()=>{
                                                 children: "Best Institute in Delhi"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3579,
+                                                lineNumber: 3996,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -6487,7 +7443,7 @@ const LandingPage = ()=>{
                                                     " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3585,
+                                                        lineNumber: 4002,
                                                         columnNumber: 43
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6495,13 +7451,13 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroSpan
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3586,
+                                                        lineNumber: 4003,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3584,
+                                                lineNumber: 4001,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6509,7 +7465,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.heroDesc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3588,
+                                                lineNumber: 4005,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6520,7 +7476,7 @@ const LandingPage = ()=>{
                                                         children: customBrand.heroCta || "Get Started"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3592,
+                                                        lineNumber: 4009,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6533,31 +7489,31 @@ const LandingPage = ()=>{
                                                                     className: theme.text
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 3601,
+                                                                    lineNumber: 4018,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3598,
+                                                                lineNumber: 4015,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             "Watch Demo"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3597,
+                                                        lineNumber: 4014,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3591,
+                                                lineNumber: 4008,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3578,
+                                        lineNumber: 3995,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6567,7 +7523,7 @@ const LandingPage = ()=>{
                                                 className: `absolute -inset-4 ${theme.bg} rounded-full opacity-20 blur-2xl`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3608,
+                                                lineNumber: 4025,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -6576,7 +7532,7 @@ const LandingPage = ()=>{
                                                 alt: "Classic Hero"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3611,
+                                                lineNumber: 4028,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6589,27 +7545,27 @@ const LandingPage = ()=>{
                                                                 className: "w-8 h-8 rounded-full bg-slate-200 border-2 border-white"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3618,
+                                                                lineNumber: 4035,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "w-8 h-8 rounded-full bg-slate-300 border-2 border-white"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3619,
+                                                                lineNumber: 4036,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "w-8 h-8 rounded-full bg-slate-400 border-2 border-white"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3620,
+                                                                lineNumber: 4037,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3617,
+                                                        lineNumber: 4034,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6620,44 +7576,88 @@ const LandingPage = ()=>{
                                                                 children: "1k+"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3623,
+                                                                lineNumber: 4040,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             " Enrollment"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3622,
+                                                        lineNumber: 4039,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3616,
+                                                lineNumber: 4033,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3607,
+                                        lineNumber: 4024,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3577,
+                                lineNumber: 3994,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 2915,
+                        lineNumber: 3052,
                         columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    customBrand.marqueeItems && [
+                        "aesthetic_fullscreen",
+                        "aesthetic_fullscreen_form",
+                        "creative_split"
+                    ].includes(customBrand.heroStyle) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "w-full bg-slate-950/40 backdrop-blur-md border-t border-white/5 py-4 relative z-30",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex w-full whitespace-nowrap animate-marquee",
+                            children: [
+                                ...Array(6)
+                            ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex gap-16 mx-8 items-center",
+                                    children: customBrand.marqueeItems.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex items-center gap-3 text-white/50 font-bold uppercase tracking-[0.4em] text-[10px]",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: `w-1.5 h-1.5 rounded-full ${theme.bg} shadow-[0_0_12px_rgba(255,255,255,0.4)]`
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 4064,
+                                                    columnNumber: 25
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                item
+                                            ]
+                                        }, `${i}-${idx}`, true, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 4060,
+                                            columnNumber: 23
+                                        }, ("TURBOPACK compile-time value", void 0)))
+                                }, i, false, {
+                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                    lineNumber: 4058,
+                                    columnNumber: 19
+                                }, ("TURBOPACK compile-time value", void 0)))
+                        }, void 0, false, {
+                            fileName: "[project]/src/routes/DemoApp.jsx",
+                            lineNumber: 4056,
+                            columnNumber: 15
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/src/routes/DemoApp.jsx",
+                        lineNumber: 4055,
+                        columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 2857,
+                lineNumber: 2994,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             customBrand.id === "ielts" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6685,12 +7685,12 @@ const LandingPage = ()=>{
                                             className: "text-emerald-500"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 3643,
+                                            lineNumber: 4088,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3640,
+                                        lineNumber: 4085,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6702,13 +7702,13 @@ const LandingPage = ()=>{
                                         children: "Band 8+ Success Rate"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3645,
+                                        lineNumber: 4090,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3639,
+                                lineNumber: 4084,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6725,12 +7725,12 @@ const LandingPage = ()=>{
                                             className: "text-blue-500"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 3655,
+                                            lineNumber: 4100,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3652,
+                                        lineNumber: 4097,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6742,13 +7742,13 @@ const LandingPage = ()=>{
                                         children: "5000+ Students Trained"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3657,
+                                        lineNumber: 4102,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3651,
+                                lineNumber: 4096,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6765,12 +7765,12 @@ const LandingPage = ()=>{
                                             className: "text-purple-500"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 3667,
+                                            lineNumber: 4112,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3664,
+                                        lineNumber: 4109,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6782,13 +7782,13 @@ const LandingPage = ()=>{
                                         children: "Cambridge Material"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3669,
+                                        lineNumber: 4114,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3663,
+                                lineNumber: 4108,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6805,12 +7805,12 @@ const LandingPage = ()=>{
                                             className: "text-rose-500"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 3679,
+                                            lineNumber: 4124,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3676,
+                                        lineNumber: 4121,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6822,33 +7822,37 @@ const LandingPage = ()=>{
                                         children: "Weekly Mock Tests"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3681,
+                                        lineNumber: 4126,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3675,
+                                lineNumber: 4120,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 3638,
+                        lineNumber: 4083,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 3637,
+                    lineNumber: 4082,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 3634,
+                lineNumber: 4079,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
-            customBrand.marqueeItems && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-slate-900 border-y border-slate-800 overflow-hidden py-3 relative z-30",
+            customBrand.marqueeItems && ![
+                "aesthetic_fullscreen",
+                "aesthetic_fullscreen_form",
+                "creative_split"
+            ].includes(customBrand.heroStyle) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `bg-slate-900 border-y border-slate-800 overflow-hidden py-4 relative z-30`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex w-full whitespace-nowrap animate-marquee hover:[animation-play-state:paused]",
                     children: [
@@ -6856,44 +7860,43 @@ const LandingPage = ()=>{
                     ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex gap-16 mx-8 items-center",
                             children: customBrand.marqueeItems.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-center gap-3 text-slate-300 font-bold uppercase tracking-[0.2em] text-xs",
+                                    className: "flex items-center gap-3 text-slate-400 font-bold uppercase tracking-[0.3em] text-[10px]",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
-                                            size: 14,
-                                            className: `${theme.text} drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]`
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: `w-1.5 h-1.5 rounded-full ${theme.bg} shadow-[0_0_8px_rgba(255,255,255,0.3)]`
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 3703,
-                                            columnNumber: 21
+                                            lineNumber: 4155,
+                                            columnNumber: 23
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         item
                                     ]
                                 }, `${i}-${idx}`, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 3699,
-                                    columnNumber: 19
+                                    lineNumber: 4151,
+                                    columnNumber: 21
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, i, false, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 3697,
-                            columnNumber: 15
+                            lineNumber: 4149,
+                            columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 3695,
-                    columnNumber: 11
+                    lineNumber: 4147,
+                    columnNumber: 13
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 3694,
-                columnNumber: 9
+                lineNumber: 4144,
+                columnNumber: 11
             }, ("TURBOPACK compile-time value", void 0)),
             (()=>{
                 const aboutVariant = sectionDesigns.about;
                 const aboutDesc = customBrand.aboutDescription || "We are passionate about delivering excellence. With years of experience and a dedicated team, we've built a legacy of trust, innovation, and results that speak for themselves.";
                 const founderName = customBrand.founderName || "Our Leader";
                 const founderTitle = customBrand.founderTitle || "Founder & CEO";
-                const aboutImage = customBrand.heroImage || "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80";
+                const aboutImage = customBrand.aboutImage || customBrand.heroImage || "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80";
                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: `py-24 relative overflow-hidden ${aboutVariant === "split_50" ? "" : "bg-white"}`,
                     id: "about",
@@ -6910,7 +7913,7 @@ const LandingPage = ()=>{
                                                 className: `absolute -inset-4 ${theme.bg} rounded-3xl opacity-10 blur-2xl`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3743,
+                                                lineNumber: 4195,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -6919,13 +7922,13 @@ const LandingPage = ()=>{
                                                 alt: "About"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3746,
+                                                lineNumber: 4198,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3742,
+                                        lineNumber: 4194,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6937,14 +7940,14 @@ const LandingPage = ()=>{
                                                         size: 14
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3756,
+                                                        lineNumber: 4208,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " About Us"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3753,
+                                                lineNumber: 4205,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -6956,7 +7959,7 @@ const LandingPage = ()=>{
                                                     "The Story Behind ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3762,
+                                                        lineNumber: 4214,
                                                         columnNumber: 40
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6968,13 +7971,13 @@ const LandingPage = ()=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3763,
+                                                        lineNumber: 4215,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3758,
+                                                lineNumber: 4210,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6982,7 +7985,7 @@ const LandingPage = ()=>{
                                                 children: aboutDesc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3767,
+                                                lineNumber: 4219,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6993,7 +7996,7 @@ const LandingPage = ()=>{
                                                         children: founderName?.[0]
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3771,
+                                                        lineNumber: 4223,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7003,7 +8006,7 @@ const LandingPage = ()=>{
                                                                 children: founderName
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3777,
+                                                                lineNumber: 4229,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7011,31 +8014,31 @@ const LandingPage = ()=>{
                                                                 children: founderTitle
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3780,
+                                                                lineNumber: 4232,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3776,
+                                                        lineNumber: 4228,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3770,
+                                                lineNumber: 4222,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3752,
+                                        lineNumber: 4204,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3741,
+                                lineNumber: 4193,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             aboutVariant === "img_right" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7050,14 +8053,14 @@ const LandingPage = ()=>{
                                                         size: 14
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3798,
+                                                        lineNumber: 4250,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " About Us"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3795,
+                                                lineNumber: 4247,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -7069,7 +8072,7 @@ const LandingPage = ()=>{
                                                     "The Story Behind ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3804,
+                                                        lineNumber: 4256,
                                                         columnNumber: 40
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7081,13 +8084,13 @@ const LandingPage = ()=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3805,
+                                                        lineNumber: 4257,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3800,
+                                                lineNumber: 4252,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7095,7 +8098,7 @@ const LandingPage = ()=>{
                                                 children: aboutDesc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3809,
+                                                lineNumber: 4261,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7108,7 +8111,7 @@ const LandingPage = ()=>{
                                                                 children: stat.value
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3816,
+                                                                lineNumber: 4268,
                                                                 columnNumber: 29
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7116,18 +8119,18 @@ const LandingPage = ()=>{
                                                                 children: stat.label
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3821,
+                                                                lineNumber: 4273,
                                                                 columnNumber: 29
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, idx, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3815,
+                                                        lineNumber: 4267,
                                                         columnNumber: 27
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3812,
+                                                lineNumber: 4264,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7138,7 +8141,7 @@ const LandingPage = ()=>{
                                                         children: founderName?.[0]
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3828,
+                                                        lineNumber: 4280,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7148,7 +8151,7 @@ const LandingPage = ()=>{
                                                                 children: founderName
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3834,
+                                                                lineNumber: 4286,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7156,13 +8159,13 @@ const LandingPage = ()=>{
                                                                 children: founderTitle
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3837,
+                                                                lineNumber: 4289,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3833,
+                                                        lineNumber: 4285,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7174,24 +8177,24 @@ const LandingPage = ()=>{
                                                                 className: "text-amber-400 fill-amber-400"
                                                             }, i, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3845,
+                                                                lineNumber: 4297,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3843,
+                                                        lineNumber: 4295,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3827,
+                                                lineNumber: 4279,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3794,
+                                        lineNumber: 4246,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7201,7 +8204,7 @@ const LandingPage = ()=>{
                                                 className: `absolute -inset-4 ${theme.bg} rounded-3xl opacity-10 blur-2xl`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3855,
+                                                lineNumber: 4307,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -7210,19 +8213,19 @@ const LandingPage = ()=>{
                                                 alt: "About"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3858,
+                                                lineNumber: 4310,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3854,
+                                        lineNumber: 4306,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3793,
+                                lineNumber: 4245,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             aboutVariant === "centered_bg" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7234,14 +8237,14 @@ const LandingPage = ()=>{
                                         alt: "About"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3870,
+                                        lineNumber: 4322,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute inset-0 bg-slate-900/80 backdrop-blur-sm"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3875,
+                                        lineNumber: 4327,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7254,14 +8257,14 @@ const LandingPage = ()=>{
                                                         size: 14
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3878,
+                                                        lineNumber: 4330,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " About Us"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3877,
+                                                lineNumber: 4329,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -7283,13 +8286,13 @@ const LandingPage = ()=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3885,
+                                                        lineNumber: 4337,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3880,
+                                                lineNumber: 4332,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7297,7 +8300,7 @@ const LandingPage = ()=>{
                                                 children: aboutDesc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3889,
+                                                lineNumber: 4341,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7308,7 +8311,7 @@ const LandingPage = ()=>{
                                                         children: founderName?.[0]
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3893,
+                                                        lineNumber: 4345,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7319,7 +8322,7 @@ const LandingPage = ()=>{
                                                                 children: founderName
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3897,
+                                                                lineNumber: 4349,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7327,31 +8330,31 @@ const LandingPage = ()=>{
                                                                 children: founderTitle
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 3898,
+                                                                lineNumber: 4350,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3896,
+                                                        lineNumber: 4348,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3892,
+                                                lineNumber: 4344,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3876,
+                                        lineNumber: 4328,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3869,
+                                lineNumber: 4321,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             aboutVariant === "split_50" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7369,14 +8372,14 @@ const LandingPage = ()=>{
                                                             size: 14
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 3911,
+                                                            lineNumber: 4363,
                                                             columnNumber: 25
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         " About Us"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 3910,
+                                                    lineNumber: 4362,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -7388,7 +8391,7 @@ const LandingPage = ()=>{
                                                         "The Story Behind ",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 3917,
+                                                            lineNumber: 4369,
                                                             columnNumber: 42
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7402,13 +8405,13 @@ const LandingPage = ()=>{
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 3918,
+                                                            lineNumber: 4370,
                                                             columnNumber: 25
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 3913,
+                                                    lineNumber: 4365,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7416,7 +8419,7 @@ const LandingPage = ()=>{
                                                     children: aboutDesc
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 3922,
+                                                    lineNumber: 4374,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7427,7 +8430,7 @@ const LandingPage = ()=>{
                                                             children: founderName?.[0]
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 3926,
+                                                            lineNumber: 4378,
                                                             columnNumber: 25
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7437,7 +8440,7 @@ const LandingPage = ()=>{
                                                                     children: founderName
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 3930,
+                                                                    lineNumber: 4382,
                                                                     columnNumber: 27
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7445,30 +8448,30 @@ const LandingPage = ()=>{
                                                                     children: founderTitle
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 3933,
+                                                                    lineNumber: 4385,
                                                                     columnNumber: 27
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 3929,
+                                                            lineNumber: 4381,
                                                             columnNumber: 25
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 3925,
+                                                    lineNumber: 4377,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 3909,
+                                            lineNumber: 4361,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3908,
+                                        lineNumber: 4360,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7479,18 +8482,18 @@ const LandingPage = ()=>{
                                             alt: "About"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 3941,
+                                            lineNumber: 4393,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3940,
+                                        lineNumber: 4392,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3907,
+                                lineNumber: 4359,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             aboutVariant === "minimal_typo" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7503,14 +8506,14 @@ const LandingPage = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3956,
+                                                lineNumber: 4408,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " About Us"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3953,
+                                        lineNumber: 4405,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -7524,7 +8527,7 @@ const LandingPage = ()=>{
                                                 children: customBrand.logoText
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3962,
+                                                lineNumber: 4414,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " ",
@@ -7532,7 +8535,7 @@ const LandingPage = ()=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3958,
+                                        lineNumber: 4410,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7540,7 +8543,7 @@ const LandingPage = ()=>{
                                         children: aboutDesc
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3965,
+                                        lineNumber: 4417,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7553,7 +8556,7 @@ const LandingPage = ()=>{
                                                         children: stat.value
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3972,
+                                                        lineNumber: 4424,
                                                         columnNumber: 27
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7561,18 +8564,18 @@ const LandingPage = ()=>{
                                                         children: stat.label
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3977,
+                                                        lineNumber: 4429,
                                                         columnNumber: 27
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, idx, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3971,
+                                                lineNumber: 4423,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3968,
+                                        lineNumber: 4420,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7583,7 +8586,7 @@ const LandingPage = ()=>{
                                                 children: founderName?.[0]
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3984,
+                                                lineNumber: 4436,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7594,7 +8597,7 @@ const LandingPage = ()=>{
                                                         children: founderName
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3990,
+                                                        lineNumber: 4442,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7602,43 +8605,312 @@ const LandingPage = ()=>{
                                                         children: founderTitle
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 3993,
+                                                        lineNumber: 4445,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 3989,
+                                                lineNumber: 4441,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 3983,
+                                        lineNumber: 4435,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 3952,
+                                lineNumber: 4404,
+                                columnNumber: 17
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            aboutVariant === "modern_split" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "grid lg:grid-cols-12 gap-16 items-center",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "lg:col-span-7",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "relative group",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: `absolute -inset-4 bg-gradient-to-tr ${theme.gradientFrom} ${theme.gradientTo} rounded-[40px] opacity-20 blur-2xl group-hover:opacity-30 transition-shadow`
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 4460,
+                                                    columnNumber: 23
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "relative aspect-[16/10] rounded-[32px] overflow-hidden shadow-2xl",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                            src: aboutImage,
+                                                            className: "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
+                                                            alt: "About"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 4464,
+                                                            columnNumber: 25
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 4469,
+                                                            columnNumber: 25
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 4463,
+                                                    columnNumber: 23
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "absolute -bottom-10 -right-10 bg-white p-6 rounded-[32px] shadow-2xl border border-slate-100 hidden md:block",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "flex items-center gap-4",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: `w-14 h-14 rounded-2xl ${theme.bg} flex items-center justify-center text-white`,
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"], {
+                                                                    size: 28
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4477,
+                                                                    columnNumber: 29
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 4474,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "text-2xl font-black text-slate-900",
+                                                                        children: customBrand.stats?.[0]?.value || "12k+"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 4480,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "text-[10px] text-slate-400 font-bold uppercase tracking-widest",
+                                                                        children: "Happy Patients"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 4483,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 4479,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 4473,
+                                                        columnNumber: 25
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 4472,
+                                                    columnNumber: 23
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 4459,
+                                            columnNumber: 21
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 4458,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "lg:col-span-5 px-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: `inline-flex items-center gap-2 py-2 px-5 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-8 border ${theme.lightBorder}`,
+                                                children: "Our Legacy"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 4492,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                className: "text-4xl md:text-5xl font-black text-slate-900 mb-8 leading-[1.15]",
+                                                style: {
+                                                    fontFamily: "var(--font-heading)"
+                                                },
+                                                children: [
+                                                    "Defining the Future of",
+                                                    " ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: theme.text,
+                                                        children: "Aesthetic Care"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 4502,
+                                                        columnNumber: 23
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 4497,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-lg text-slate-500 leading-relaxed mb-10",
+                                                children: aboutDesc
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 4504,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "space-y-6 mb-10",
+                                                children: [
+                                                    {
+                                                        title: "Personalized Approach",
+                                                        desc: "Every skin is unique, so is our treatment."
+                                                    },
+                                                    {
+                                                        title: "Latest Technology",
+                                                        desc: "FDA approved lasers and premium skincare."
+                                                    }
+                                                ].map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "flex gap-4",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: `w-6 h-6 rounded-full ${theme.lightBg} flex items-center justify-center flex-shrink-0 mt-1`,
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: `w-2 h-2 rounded-full ${theme.bg}`
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4522,
+                                                                    columnNumber: 29
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 4519,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                        className: "font-bold text-slate-900",
+                                                                        children: item.title
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 4527,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                        className: "text-sm text-slate-400",
+                                                                        children: item.desc
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                        lineNumber: 4530,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 4526,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        ]
+                                                    }, i, true, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 4518,
+                                                        columnNumber: 25
+                                                    }, ("TURBOPACK compile-time value", void 0)))
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 4507,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "pt-8 border-t border-slate-100 flex items-center gap-5",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "w-16 h-16 rounded-full overflow-hidden border-2 border-slate-50 shadow-md",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: `w-full h-full ${theme.bg} flex items-center justify-center text-white font-black text-xl`,
+                                                            children: founderName?.[0]
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 4539,
+                                                            columnNumber: 25
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 4538,
+                                                        columnNumber: 23
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                className: "font-black text-slate-900 text-lg leading-tight",
+                                                                children: founderName
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 4546,
+                                                                columnNumber: 25
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: `text-[11px] font-bold uppercase tracking-widest ${theme.text}`,
+                                                                children: founderTitle
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 4549,
+                                                                columnNumber: 25
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 4545,
+                                                        columnNumber: 23
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 4537,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 4491,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                lineNumber: 4457,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 3732,
+                        lineNumber: 4184,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 3728,
+                    lineNumber: 4180,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0));
             })(),
             (()=>{
                 const missionVariant = sectionDesigns.mission;
                 const missionDesc = customBrand.missionDescription || "Our mission is to deliver excellence in everything we do. We strive to empower our clients and community with the tools, knowledge, and support they need to thrive.";
-                const missionImage = customBrand.heroImage || "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80";
+                const missionImage = customBrand.missionImage || customBrand.heroImage || "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80";
                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: `py-24 relative overflow-hidden ${missionVariant === "full_highlight" ? `${theme.lightBg}` : "bg-slate-900"}`,
                     id: "mission",
@@ -7649,14 +8921,14 @@ const LandingPage = ()=>{
                                     className: `absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] ${theme.bg} opacity-[0.05] rounded-full blur-[120px]`
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4024,
+                                    lineNumber: 4582,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "absolute top-0 left-0 w-full h-full bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:32px_32px]"
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4027,
+                                    lineNumber: 4585,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7670,14 +8942,14 @@ const LandingPage = ()=>{
                                                     className: theme.text
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4030,
+                                                    lineNumber: 4588,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 " Our Mission"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4029,
+                                            lineNumber: 4587,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -7689,13 +8961,13 @@ const LandingPage = ()=>{
                                                     children: "Forward"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4033,
+                                                    lineNumber: 4591,
                                                     columnNumber: 36
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4032,
+                                            lineNumber: 4590,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7706,7 +8978,7 @@ const LandingPage = ()=>{
                                                     children: '"'
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4036,
+                                                    lineNumber: 4594,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7714,7 +8986,7 @@ const LandingPage = ()=>{
                                                     children: missionDesc
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4041,
+                                                    lineNumber: 4599,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7722,13 +8994,13 @@ const LandingPage = ()=>{
                                                     children: '"'
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4044,
+                                                    lineNumber: 4602,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4035,
+                                            lineNumber: 4593,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7741,7 +9013,7 @@ const LandingPage = ()=>{
                                                             children: stat.value
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4054,
+                                                            lineNumber: 4612,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7749,24 +9021,24 @@ const LandingPage = ()=>{
                                                             children: stat.label
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4059,
+                                                            lineNumber: 4617,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, idx, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4053,
+                                                    lineNumber: 4611,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0)))
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4050,
+                                            lineNumber: 4608,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4028,
+                                    lineNumber: 4586,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
@@ -7784,14 +9056,14 @@ const LandingPage = ()=>{
                                                     size: 14
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4076,
+                                                    lineNumber: 4634,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 " Our Mission"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4073,
+                                            lineNumber: 4631,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -7803,19 +9075,19 @@ const LandingPage = ()=>{
                                                     children: "Forward"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4079,
+                                                    lineNumber: 4637,
                                                     columnNumber: 36
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4078,
+                                            lineNumber: 4636,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4072,
+                                    lineNumber: 4630,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7825,7 +9097,7 @@ const LandingPage = ()=>{
                                             className: `absolute top-0 right-0 w-64 h-64 ${theme.bg} opacity-[0.03] rounded-full -translate-y-1/2 translate-x-1/2`
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4085,
+                                            lineNumber: 4643,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7833,7 +9105,7 @@ const LandingPage = ()=>{
                                             children: missionDesc
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4088,
+                                            lineNumber: 4646,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7846,7 +9118,7 @@ const LandingPage = ()=>{
                                                             children: stat.value
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4098,
+                                                            lineNumber: 4656,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7854,30 +9126,30 @@ const LandingPage = ()=>{
                                                             children: stat.label
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4103,
+                                                            lineNumber: 4661,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, idx, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4094,
+                                                    lineNumber: 4652,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0)))
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4091,
+                                            lineNumber: 4649,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4082,
+                                    lineNumber: 4640,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 4071,
+                            lineNumber: 4629,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)),
                         missionVariant === "card_layout" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -7886,7 +9158,7 @@ const LandingPage = ()=>{
                                     className: `absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] ${theme.bg} opacity-[0.05] rounded-full blur-[120px]`
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4116,
+                                    lineNumber: 4674,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7903,14 +9175,14 @@ const LandingPage = ()=>{
                                                             className: theme.text
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4122,
+                                                            lineNumber: 4680,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         " Our Mission"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4121,
+                                                    lineNumber: 4679,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -7922,19 +9194,19 @@ const LandingPage = ()=>{
                                                             children: "Forward"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4125,
+                                                            lineNumber: 4683,
                                                             columnNumber: 38
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4124,
+                                                    lineNumber: 4682,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4120,
+                                            lineNumber: 4678,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7966,12 +9238,12 @@ const LandingPage = ()=>{
                                                                 size: 22
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4151,
+                                                                lineNumber: 4709,
                                                                 columnNumber: 29
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4148,
+                                                            lineNumber: 4706,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -7979,7 +9251,7 @@ const LandingPage = ()=>{
                                                             children: card.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4153,
+                                                            lineNumber: 4711,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7987,25 +9259,25 @@ const LandingPage = ()=>{
                                                             children: card.desc
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4156,
+                                                            lineNumber: 4714,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, idx, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4144,
+                                                    lineNumber: 4702,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0));
                                             })
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4128,
+                                            lineNumber: 4686,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4119,
+                                    lineNumber: 4677,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
@@ -8016,7 +9288,7 @@ const LandingPage = ()=>{
                                     className: `absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] ${theme.bg} opacity-[0.05] rounded-full blur-[120px]`
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4170,
+                                    lineNumber: 4728,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8033,20 +9305,20 @@ const LandingPage = ()=>{
                                                         alt: "Mission"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4176,
+                                                        lineNumber: 4734,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute inset-0 bg-gradient-to-r from-slate-900/50 to-transparent"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4181,
+                                                        lineNumber: 4739,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4175,
+                                                lineNumber: 4733,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8059,14 +9331,14 @@ const LandingPage = ()=>{
                                                                 className: theme.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4185,
+                                                                lineNumber: 4743,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             " Our Mission"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4184,
+                                                        lineNumber: 4742,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -8079,13 +9351,13 @@ const LandingPage = ()=>{
                                                                 children: "Forward"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4189,
+                                                                lineNumber: 4747,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4187,
+                                                        lineNumber: 4745,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8093,7 +9365,7 @@ const LandingPage = ()=>{
                                                         children: missionDesc
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4191,
+                                                        lineNumber: 4749,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8106,7 +9378,7 @@ const LandingPage = ()=>{
                                                                         children: stat.value
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 4201,
+                                                                        lineNumber: 4759,
                                                                         columnNumber: 31
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -8114,35 +9386,35 @@ const LandingPage = ()=>{
                                                                         children: stat.label
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 4206,
+                                                                        lineNumber: 4764,
                                                                         columnNumber: 31
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, idx, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4197,
+                                                                lineNumber: 4755,
                                                                 columnNumber: 29
                                                             }, ("TURBOPACK compile-time value", void 0)))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4194,
+                                                        lineNumber: 4752,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4183,
+                                                lineNumber: 4741,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4174,
+                                        lineNumber: 4732,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4173,
+                                    lineNumber: 4731,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
@@ -8153,7 +9425,7 @@ const LandingPage = ()=>{
                                     className: "absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]"
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4221,
+                                    lineNumber: 4779,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8167,14 +9439,14 @@ const LandingPage = ()=>{
                                                     className: theme.text
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4224,
+                                                    lineNumber: 4782,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 " Our Mission"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4223,
+                                            lineNumber: 4781,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -8183,7 +9455,7 @@ const LandingPage = ()=>{
                                                 "What Drives Us",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4228,
+                                                    lineNumber: 4786,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -8191,13 +9463,13 @@ const LandingPage = ()=>{
                                                     children: "Forward"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4229,
+                                                    lineNumber: 4787,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4226,
+                                            lineNumber: 4784,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8205,21 +9477,279 @@ const LandingPage = ()=>{
                                             children: missionDesc
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4231,
+                                            lineNumber: 4789,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4222,
+                                    lineNumber: 4780,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
-                        }, void 0, true)
+                        }, void 0, true),
+                        missionVariant === "aesthetic_grid" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "max-w-7xl mx-auto px-6 lg:px-8 relative z-10",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "grid lg:grid-cols-12 gap-16 items-center",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "lg:col-span-5",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "inline-flex items-center gap-2 py-2 px-5 rounded-full bg-white/5 text-white/80 text-xs font-bold uppercase tracking-widest mb-8 border border-white/10",
+                                                children: "Vision & Mission"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 4801,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                className: "text-5xl md:text-6xl font-black text-white mb-10 leading-[1.05] tracking-tighter",
+                                                children: [
+                                                    "Excellence is not ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 4805,
+                                                        columnNumber: 41
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: theme.text,
+                                                        children: "Our Act, but Our Habit"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 4806,
+                                                        columnNumber: 23
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 4804,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xl text-slate-400 leading-relaxed mb-12 font-medium italic",
+                                                children: [
+                                                    '" ',
+                                                    missionDesc,
+                                                    ' "'
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 4808,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "grid grid-cols-2 gap-8",
+                                                children: [
+                                                    {
+                                                        label: "Core Values",
+                                                        val: "Integrity"
+                                                    },
+                                                    {
+                                                        label: "Our Focus",
+                                                        val: "Innovation"
+                                                    }
+                                                ].map((v, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "border-l-2 border-white/10 pl-6",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "text-[10px] text-white/40 font-bold uppercase tracking-widest mb-2",
+                                                                children: v.label
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 4820,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "text-xl font-black text-white tracking-wide",
+                                                                children: v.val
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                lineNumber: 4823,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        ]
+                                                    }, i, true, {
+                                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                                        lineNumber: 4816,
+                                                        columnNumber: 25
+                                                    }, ("TURBOPACK compile-time value", void 0)))
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                                lineNumber: 4811,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 4800,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "lg:col-span-7",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "grid grid-cols-2 gap-6 items-start",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "space-y-6",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                    src: missionImage,
+                                                                    className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-700",
+                                                                    alt: "M1"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4835,
+                                                                    columnNumber: 27
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "absolute inset-0 bg-slate-900/30"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4840,
+                                                                    columnNumber: 27
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 4834,
+                                                            columnNumber: 25
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: `aspect-square rounded-[40px] ${theme.bg} p-10 flex flex-col justify-end text-white shadow-2xl relative overflow-hidden`,
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4845,
+                                                                    columnNumber: 27
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
+                                                                    size: 40,
+                                                                    className: "mb-6 opacity-30"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4846,
+                                                                    columnNumber: 27
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                                    className: "text-3xl font-black leading-tight mb-2",
+                                                                    children: "Award Winning Service"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4847,
+                                                                    columnNumber: 27
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    className: "text-white/60 text-sm",
+                                                                    children: "Recognized globally for quality."
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4850,
+                                                                    columnNumber: 27
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 4842,
+                                                            columnNumber: 25
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 4833,
+                                                    columnNumber: 23
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "space-y-6 pt-12",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "aspect-square rounded-[40px] bg-white/5 border border-white/10 p-10 backdrop-blur-md flex flex-col justify-center items-center shadow-2xl",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: `text-6xl font-black ${theme.text} mb-4`,
+                                                                    children: "99%"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4857,
+                                                                    columnNumber: 27
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "text-white/40 text-[10px] font-bold uppercase tracking-[0.3em]",
+                                                                    children: "Success Rate"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4862,
+                                                                    columnNumber: 27
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 4856,
+                                                            columnNumber: 25
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                    src: customBrand.gridImages?.[2] || missionImage,
+                                                                    className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-700",
+                                                                    alt: "M2"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4867,
+                                                                    columnNumber: 27
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "absolute inset-0 bg-slate-900/40"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                                    lineNumber: 4872,
+                                                                    columnNumber: 27
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                                            lineNumber: 4866,
+                                                            columnNumber: 25
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/routes/DemoApp.jsx",
+                                                    lineNumber: 4855,
+                                                    columnNumber: 23
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/routes/DemoApp.jsx",
+                                            lineNumber: 4832,
+                                            columnNumber: 21
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/routes/DemoApp.jsx",
+                                        lineNumber: 4831,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/routes/DemoApp.jsx",
+                                lineNumber: 4799,
+                                columnNumber: 17
+                            }, ("TURBOPACK compile-time value", void 0))
+                        }, void 0, false, {
+                            fileName: "[project]/src/routes/DemoApp.jsx",
+                            lineNumber: 4798,
+                            columnNumber: 15
+                        }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 4017,
+                    lineNumber: 4575,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0));
             })(),
@@ -8242,14 +9772,14 @@ const LandingPage = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4261,
+                                                lineNumber: 4904,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " Why Choose Us"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4258,
+                                        lineNumber: 4901,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -8269,14 +9799,14 @@ const LandingPage = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4268,
+                                                lineNumber: 4911,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             "?"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4263,
+                                        lineNumber: 4906,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8284,13 +9814,13 @@ const LandingPage = ()=>{
                                         children: "Here's what sets us apart from the rest. These aren't just promises — they're the foundation of everything we do."
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4273,
+                                        lineNumber: 4916,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4257,
+                                lineNumber: 4900,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             wcuVariant === "four_col_grid" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8303,7 +9833,7 @@ const LandingPage = ()=>{
                                                 children: String(idx + 1).padStart(2, "0")
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4287,
+                                                lineNumber: 4930,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8312,12 +9842,12 @@ const LandingPage = ()=>{
                                                     size: 22
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4295,
+                                                    lineNumber: 4938,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4292,
+                                                lineNumber: 4935,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -8325,7 +9855,7 @@ const LandingPage = ()=>{
                                                 children: item.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4297,
+                                                lineNumber: 4940,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8333,18 +9863,18 @@ const LandingPage = ()=>{
                                                 children: item.desc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4300,
+                                                lineNumber: 4943,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4283,
+                                        lineNumber: 4926,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4281,
+                                lineNumber: 4924,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             wcuVariant === "two_by_two" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8358,12 +9888,12 @@ const LandingPage = ()=>{
                                                     size: 24
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4319,
+                                                    lineNumber: 4962,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4316,
+                                                lineNumber: 4959,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8373,7 +9903,7 @@ const LandingPage = ()=>{
                                                         children: item.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4322,
+                                                        lineNumber: 4965,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8381,24 +9911,24 @@ const LandingPage = ()=>{
                                                         children: item.desc
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4325,
+                                                        lineNumber: 4968,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4321,
+                                                lineNumber: 4964,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4312,
+                                        lineNumber: 4955,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4310,
+                                lineNumber: 4953,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             wcuVariant === "horizontal_list" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8413,12 +9943,12 @@ const LandingPage = ()=>{
                                                     children: idx + 1
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4345,
+                                                    lineNumber: 4988,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4342,
+                                                lineNumber: 4985,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8429,7 +9959,7 @@ const LandingPage = ()=>{
                                                         children: item.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4348,
+                                                        lineNumber: 4991,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8437,13 +9967,13 @@ const LandingPage = ()=>{
                                                         children: item.desc
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4351,
+                                                        lineNumber: 4994,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4347,
+                                                lineNumber: 4990,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
@@ -8451,18 +9981,18 @@ const LandingPage = ()=>{
                                                 className: `${theme.text} flex-shrink-0`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4355,
+                                                lineNumber: 4998,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4338,
+                                        lineNumber: 4981,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4336,
+                                lineNumber: 4979,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             wcuVariant === "icon_left_rows" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8476,12 +10006,12 @@ const LandingPage = ()=>{
                                                     size: 20
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4372,
+                                                    lineNumber: 5015,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4369,
+                                                lineNumber: 5012,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8491,7 +10021,7 @@ const LandingPage = ()=>{
                                                         children: item.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4375,
+                                                        lineNumber: 5018,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8499,24 +10029,24 @@ const LandingPage = ()=>{
                                                         children: item.desc
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4378,
+                                                        lineNumber: 5021,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4374,
+                                                lineNumber: 5017,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4368,
+                                        lineNumber: 5011,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4366,
+                                lineNumber: 5009,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             wcuVariant === "large_blocks" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8529,7 +10059,7 @@ const LandingPage = ()=>{
                                                 children: String(idx + 1).padStart(2, "0")
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4395,
+                                                lineNumber: 5038,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8539,12 +10069,12 @@ const LandingPage = ()=>{
                                                     className: idx === 0 ? "text-white" : theme.text
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4403,
+                                                    lineNumber: 5046,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4400,
+                                                lineNumber: 5043,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -8552,7 +10082,7 @@ const LandingPage = ()=>{
                                                 children: item.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4408,
+                                                lineNumber: 5051,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8560,29 +10090,29 @@ const LandingPage = ()=>{
                                                 children: item.desc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4413,
+                                                lineNumber: 5056,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4391,
+                                        lineNumber: 5034,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4389,
+                                lineNumber: 5032,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 4255,
+                        lineNumber: 4898,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 4251,
+                    lineNumber: 4894,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0));
             })(),
@@ -8608,14 +10138,14 @@ const LandingPage = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4456,
+                                                lineNumber: 5099,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             nicheConfig.sectionName
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4453,
+                                        lineNumber: 5096,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -8631,13 +10161,13 @@ const LandingPage = ()=>{
                                                 children: nicheConfig.sectionName
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4464,
+                                                lineNumber: 5107,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4459,
+                                        lineNumber: 5102,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8645,13 +10175,13 @@ const LandingPage = ()=>{
                                         children: nicheConfig.subtitle
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4466,
+                                        lineNumber: 5109,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4452,
+                                lineNumber: 5095,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             nicheConfig.type === "courses" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8663,7 +10193,7 @@ const LandingPage = ()=>{
                                                 className: `absolute inset-0 ${theme.bg} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4479,
+                                                lineNumber: 5122,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8672,12 +10202,12 @@ const LandingPage = ()=>{
                                                     size: 28
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4485,
+                                                    lineNumber: 5128,
                                                     columnNumber: 39
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4482,
+                                                lineNumber: 5125,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -8685,7 +10215,7 @@ const LandingPage = ()=>{
                                                 children: item.courseName
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4487,
+                                                lineNumber: 5130,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -8696,14 +10226,14 @@ const LandingPage = ()=>{
                                                         className: "inline mr-1"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4493,
+                                                        lineNumber: 5136,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     item.duration
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4490,
+                                                lineNumber: 5133,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8711,7 +10241,7 @@ const LandingPage = ()=>{
                                                 children: item.desc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4496,
+                                                lineNumber: 5139,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -8723,24 +10253,24 @@ const LandingPage = ()=>{
                                                         size: 16
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4503,
+                                                        lineNumber: 5146,
                                                         columnNumber: 36
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4499,
+                                                lineNumber: 5142,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4475,
+                                        lineNumber: 5118,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4473,
+                                lineNumber: 5116,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             nicheConfig.type === "services" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8752,7 +10282,7 @@ const LandingPage = ()=>{
                                                 className: `absolute inset-0 ${theme.bg} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4518,
+                                                lineNumber: 5161,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8761,12 +10291,12 @@ const LandingPage = ()=>{
                                                     size: 24
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4524,
+                                                    lineNumber: 5167,
                                                     columnNumber: 39
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4521,
+                                                lineNumber: 5164,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8777,7 +10307,7 @@ const LandingPage = ()=>{
                                                         children: item.serviceName
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4527,
+                                                        lineNumber: 5170,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8785,7 +10315,7 @@ const LandingPage = ()=>{
                                                         children: item.desc
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4530,
+                                                        lineNumber: 5173,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -8797,30 +10327,30 @@ const LandingPage = ()=>{
                                                                 size: 16
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4537,
+                                                                lineNumber: 5180,
                                                                 columnNumber: 38
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4533,
+                                                        lineNumber: 5176,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4526,
+                                                lineNumber: 5169,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4514,
+                                        lineNumber: 5157,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4512,
+                                lineNumber: 5155,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             nicheConfig.type === "properties" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8837,7 +10367,7 @@ const LandingPage = ()=>{
                                                         className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4554,
+                                                        lineNumber: 5197,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8845,13 +10375,13 @@ const LandingPage = ()=>{
                                                         children: item.price
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4559,
+                                                        lineNumber: 5202,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4553,
+                                                lineNumber: 5196,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8865,7 +10395,7 @@ const LandingPage = ()=>{
                                                                 className: theme.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4567,
+                                                                lineNumber: 5210,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -8873,13 +10403,13 @@ const LandingPage = ()=>{
                                                                 children: item.location
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4568,
+                                                                lineNumber: 5211,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4566,
+                                                        lineNumber: 5209,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8887,7 +10417,7 @@ const LandingPage = ()=>{
                                                         children: item.details
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4572,
+                                                        lineNumber: 5215,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -8899,30 +10429,30 @@ const LandingPage = ()=>{
                                                                 size: 16
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4579,
+                                                                lineNumber: 5222,
                                                                 columnNumber: 41
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4575,
+                                                        lineNumber: 5218,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4565,
+                                                lineNumber: 5208,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4549,
+                                        lineNumber: 5192,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4547,
+                                lineNumber: 5190,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             nicheConfig.type === "treatments" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8934,7 +10464,7 @@ const LandingPage = ()=>{
                                                 className: `absolute inset-0 ${theme.bg} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300`
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4595,
+                                                lineNumber: 5238,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8943,12 +10473,12 @@ const LandingPage = ()=>{
                                                     size: 28
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4601,
+                                                    lineNumber: 5244,
                                                     columnNumber: 39
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4598,
+                                                lineNumber: 5241,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -8956,7 +10486,7 @@ const LandingPage = ()=>{
                                                 children: item.treatmentName
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4603,
+                                                lineNumber: 5246,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8964,7 +10494,7 @@ const LandingPage = ()=>{
                                                 children: item.desc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4606,
+                                                lineNumber: 5249,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -8976,24 +10506,24 @@ const LandingPage = ()=>{
                                                         size: 16
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4613,
+                                                        lineNumber: 5256,
                                                         columnNumber: 42
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4609,
+                                                lineNumber: 5252,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4591,
+                                        lineNumber: 5234,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4589,
+                                lineNumber: 5232,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             nicheConfig.type === "membership" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9006,7 +10536,7 @@ const LandingPage = ()=>{
                                                 children: "Most Popular"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4629,
+                                                lineNumber: 5272,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9018,12 +10548,12 @@ const LandingPage = ()=>{
                                                             size: 24
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4639,
+                                                            lineNumber: 5282,
                                                             columnNumber: 41
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4636,
+                                                        lineNumber: 5279,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -9031,7 +10561,7 @@ const LandingPage = ()=>{
                                                         children: item.planName
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4641,
+                                                        lineNumber: 5284,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9041,12 +10571,12 @@ const LandingPage = ()=>{
                                                             children: item.price
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4645,
+                                                            lineNumber: 5288,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4644,
+                                                        lineNumber: 5287,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -9059,19 +10589,19 @@ const LandingPage = ()=>{
                                                                         className: `${theme.text} flex-shrink-0`
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 4656,
+                                                                        lineNumber: 5299,
                                                                         columnNumber: 33
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     f
                                                                 ]
                                                             }, fi, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4652,
+                                                                lineNumber: 5295,
                                                                 columnNumber: 31
                                                             }, ("TURBOPACK compile-time value", void 0)))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4649,
+                                                        lineNumber: 5292,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9079,24 +10609,24 @@ const LandingPage = ()=>{
                                                         children: "Choose Plan"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4664,
+                                                        lineNumber: 5307,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4635,
+                                                lineNumber: 5278,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4624,
+                                        lineNumber: 5267,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4622,
+                                lineNumber: 5265,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)),
                             nicheConfig.type === "projects" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9113,14 +10643,14 @@ const LandingPage = ()=>{
                                                         className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4684,
+                                                        lineNumber: 5327,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4689,
+                                                        lineNumber: 5332,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9131,7 +10661,7 @@ const LandingPage = ()=>{
                                                                 children: "Case Study"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4691,
+                                                                lineNumber: 5334,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -9139,19 +10669,19 @@ const LandingPage = ()=>{
                                                                 children: item.projectTitle
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4696,
+                                                                lineNumber: 5339,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4690,
+                                                        lineNumber: 5333,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4683,
+                                                lineNumber: 5326,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9162,7 +10692,7 @@ const LandingPage = ()=>{
                                                         children: item.desc
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4702,
+                                                        lineNumber: 5345,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -9174,41 +10704,41 @@ const LandingPage = ()=>{
                                                                 size: 16
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4709,
+                                                                lineNumber: 5352,
                                                                 columnNumber: 43
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4705,
+                                                        lineNumber: 5348,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4701,
+                                                lineNumber: 5344,
                                                 columnNumber: 23
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4679,
+                                        lineNumber: 5322,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 4677,
+                                lineNumber: 5320,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 4450,
+                        lineNumber: 5093,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 4449,
+                    lineNumber: 5092,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0));
             })(),
@@ -9228,14 +10758,14 @@ const LandingPage = ()=>{
                                             size: 14
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4731,
+                                            lineNumber: 5374,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         "Testimonials"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4728,
+                                    lineNumber: 5371,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -9250,13 +10780,13 @@ const LandingPage = ()=>{
                                             children: "Say"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4738,
+                                            lineNumber: 5381,
                                             columnNumber: 27
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4734,
+                                    lineNumber: 5377,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9270,7 +10800,7 @@ const LandingPage = ()=>{
                                                     size: 20
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4742,
+                                                    lineNumber: 5385,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
@@ -9278,7 +10808,7 @@ const LandingPage = ()=>{
                                                     size: 20
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4743,
+                                                    lineNumber: 5386,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
@@ -9286,7 +10816,7 @@ const LandingPage = ()=>{
                                                     size: 20
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4744,
+                                                    lineNumber: 5387,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
@@ -9294,7 +10824,7 @@ const LandingPage = ()=>{
                                                     size: 20
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4745,
+                                                    lineNumber: 5388,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
@@ -9302,13 +10832,13 @@ const LandingPage = ()=>{
                                                     size: 20
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4746,
+                                                    lineNumber: 5389,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4741,
+                                            lineNumber: 5384,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -9316,19 +10846,19 @@ const LandingPage = ()=>{
                                             children: "4.9/5 Average Rating"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4748,
+                                            lineNumber: 5391,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4740,
+                                    lineNumber: 5383,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 4727,
+                            lineNumber: 5370,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9345,7 +10875,7 @@ const LandingPage = ()=>{
                                                     children: "S"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4770,
+                                                    lineNumber: 5413,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9355,7 +10885,7 @@ const LandingPage = ()=>{
                                                             children: "Simran Kaur"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4774,
+                                                            lineNumber: 5417,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9363,13 +10893,13 @@ const LandingPage = ()=>{
                                                             children: "a month ago"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4775,
+                                                            lineNumber: 5418,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4773,
+                                                    lineNumber: 5416,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9382,18 +10912,18 @@ const LandingPage = ()=>{
                                                             className: "text-yellow-500"
                                                         }, i, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4779,
+                                                            lineNumber: 5422,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4777,
+                                                    lineNumber: 5420,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4769,
+                                            lineNumber: 5412,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9407,7 +10937,7 @@ const LandingPage = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4788,
+                                            lineNumber: 5431,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9418,7 +10948,7 @@ const LandingPage = ()=>{
                                                     children: "Response from the owner"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4798,
+                                                    lineNumber: 5441,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9426,19 +10956,19 @@ const LandingPage = ()=>{
                                                     children: '"We sincerely thank you for sharing such encouraging feedback. Your kind words reassure us that our efforts are making a meaningful difference."'
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4801,
+                                                    lineNumber: 5444,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4795,
+                                            lineNumber: 5438,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4768,
+                                    lineNumber: 5411,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9452,7 +10982,7 @@ const LandingPage = ()=>{
                                                     children: "K"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4812,
+                                                    lineNumber: 5455,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9462,7 +10992,7 @@ const LandingPage = ()=>{
                                                             children: "Kamal Kumar"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4816,
+                                                            lineNumber: 5459,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9470,13 +11000,13 @@ const LandingPage = ()=>{
                                                             children: "3 months ago"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4817,
+                                                            lineNumber: 5460,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4815,
+                                                    lineNumber: 5458,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9489,18 +11019,18 @@ const LandingPage = ()=>{
                                                             className: "text-yellow-500"
                                                         }, i, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4821,
+                                                            lineNumber: 5464,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4819,
+                                                    lineNumber: 5462,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4811,
+                                            lineNumber: 5454,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9508,7 +11038,7 @@ const LandingPage = ()=>{
                                             children: '"I had an amazing experience with the course here. The classes were super engaging and easy to follow. My trainer was really supportive and made learning fun — we did lots of speaking activities, role plays, and discussions."'
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4830,
+                                            lineNumber: 5473,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9519,7 +11049,7 @@ const LandingPage = ()=>{
                                                     children: "Response from the owner"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4839,
+                                                    lineNumber: 5482,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9527,19 +11057,19 @@ const LandingPage = ()=>{
                                                     children: '"Thank you Kamal for such a heartfelt review! We\'re delighted that our methods helped you gain confidence."'
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4842,
+                                                    lineNumber: 5485,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4836,
+                                            lineNumber: 5479,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4810,
+                                    lineNumber: 5453,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9553,7 +11083,7 @@ const LandingPage = ()=>{
                                                     children: "S"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4852,
+                                                    lineNumber: 5495,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9563,7 +11093,7 @@ const LandingPage = ()=>{
                                                             children: "Shweta Singh"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4856,
+                                                            lineNumber: 5499,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9571,13 +11101,13 @@ const LandingPage = ()=>{
                                                             children: "a month ago"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4857,
+                                                            lineNumber: 5500,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4855,
+                                                    lineNumber: 5498,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9590,18 +11120,18 @@ const LandingPage = ()=>{
                                                             className: "text-yellow-500"
                                                         }, i, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 4861,
+                                                            lineNumber: 5504,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4859,
+                                                    lineNumber: 5502,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4851,
+                                            lineNumber: 5494,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9609,7 +11139,7 @@ const LandingPage = ()=>{
                                             children: '"I had joined one week ago and I realised it is a very good platform to learn. When I come here to attend classes I get lots of confidence. Before coming here I had hesitation to speak."'
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4870,
+                                            lineNumber: 5513,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9620,7 +11150,7 @@ const LandingPage = ()=>{
                                                     children: "Response from the owner"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4878,
+                                                    lineNumber: 5521,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9628,36 +11158,36 @@ const LandingPage = ()=>{
                                                     children: '"Thank you very much for sharing your positive feedback. We truly appreciate your kind words."'
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 4881,
+                                                    lineNumber: 5524,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4875,
+                                            lineNumber: 5518,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4850,
+                                    lineNumber: 5493,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 4754,
+                            lineNumber: 5397,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 4726,
+                    lineNumber: 5369,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 4725,
+                lineNumber: 5368,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9676,14 +11206,14 @@ const LandingPage = ()=>{
                                             size: 14
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4906,
+                                            lineNumber: 5549,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         "Get In Touch"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4903,
+                                    lineNumber: 5546,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -9699,13 +11229,13 @@ const LandingPage = ()=>{
                                             children: "Connect"
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 4914,
+                                            lineNumber: 5557,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4909,
+                                    lineNumber: 5552,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9713,13 +11243,13 @@ const LandingPage = ()=>{
                                     children: "Have questions? Ready to get started? Reach out and our team will respond within 24 hours."
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4924,
+                                    lineNumber: 5567,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 4902,
+                            lineNumber: 5545,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9735,7 +11265,7 @@ const LandingPage = ()=>{
                                                 children: "Send Us a Message"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4954,
+                                                lineNumber: 5597,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9743,7 +11273,7 @@ const LandingPage = ()=>{
                                                 children: "Fill in your details and we'll get back to you promptly."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4957,
+                                                lineNumber: 5600,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -9760,7 +11290,7 @@ const LandingPage = ()=>{
                                                                         children: "Full Name"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 4967,
+                                                                        lineNumber: 5610,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -9769,13 +11299,13 @@ const LandingPage = ()=>{
                                                                         className: `w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-white text-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:${theme.border} transition-all placeholder:text-slate-400`
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 4970,
+                                                                        lineNumber: 5613,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4966,
+                                                                lineNumber: 5609,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9785,7 +11315,7 @@ const LandingPage = ()=>{
                                                                         children: "Phone Number"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 4977,
+                                                                        lineNumber: 5620,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -9794,19 +11324,19 @@ const LandingPage = ()=>{
                                                                         className: `w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-white text-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:${theme.border} transition-all placeholder:text-slate-400`
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 4980,
+                                                                        lineNumber: 5623,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4976,
+                                                                lineNumber: 5619,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4965,
+                                                        lineNumber: 5608,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9816,7 +11346,7 @@ const LandingPage = ()=>{
                                                                 children: "Email Address"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4988,
+                                                                lineNumber: 5631,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -9825,13 +11355,13 @@ const LandingPage = ()=>{
                                                                 className: `w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-white text-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:${theme.border} transition-all placeholder:text-slate-400`
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4991,
+                                                                lineNumber: 5634,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4987,
+                                                        lineNumber: 5630,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9841,7 +11371,7 @@ const LandingPage = ()=>{
                                                                 children: "Your Message"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 4998,
+                                                                lineNumber: 5641,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -9850,13 +11380,13 @@ const LandingPage = ()=>{
                                                                 className: `w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-white text-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:${theme.border} transition-all resize-none placeholder:text-slate-400`
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 5001,
+                                                                lineNumber: 5644,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 4997,
+                                                        lineNumber: 5640,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9866,14 +11396,14 @@ const LandingPage = ()=>{
                                                                 size: 18
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 5010,
+                                                                lineNumber: 5653,
                                                                 columnNumber: 21
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             "Send Message"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 5007,
+                                                        lineNumber: 5650,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9881,24 +11411,24 @@ const LandingPage = ()=>{
                                                         children: "🔒 Your information is 100% secure and will never be shared."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 5013,
+                                                        lineNumber: 5656,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 4961,
+                                                lineNumber: 5604,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 4951,
+                                        lineNumber: 5594,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 4943,
+                                    lineNumber: 5586,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9912,7 +11442,7 @@ const LandingPage = ()=>{
                                                     children: "Contact Information"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 5026,
+                                                    lineNumber: 5669,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9928,12 +11458,12 @@ const LandingPage = ()=>{
                                                                         className: "text-white"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 5032,
+                                                                        lineNumber: 5675,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5029,
+                                                                    lineNumber: 5672,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9943,7 +11473,7 @@ const LandingPage = ()=>{
                                                                             children: "Phone"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                            lineNumber: 5035,
+                                                                            lineNumber: 5678,
                                                                             columnNumber: 23
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9951,19 +11481,19 @@ const LandingPage = ()=>{
                                                                             children: customBrand.phone
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                            lineNumber: 5038,
+                                                                            lineNumber: 5681,
                                                                             columnNumber: 23
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5034,
+                                                                    lineNumber: 5677,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 5028,
+                                                            lineNumber: 5671,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9976,12 +11506,12 @@ const LandingPage = ()=>{
                                                                         className: "text-white"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 5047,
+                                                                        lineNumber: 5690,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5044,
+                                                                    lineNumber: 5687,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9991,7 +11521,7 @@ const LandingPage = ()=>{
                                                                             children: "Email"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                            lineNumber: 5050,
+                                                                            lineNumber: 5693,
                                                                             columnNumber: 23
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9999,19 +11529,19 @@ const LandingPage = ()=>{
                                                                             children: customBrand.email
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                            lineNumber: 5053,
+                                                                            lineNumber: 5696,
                                                                             columnNumber: 23
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5049,
+                                                                    lineNumber: 5692,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 5043,
+                                                            lineNumber: 5686,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10024,12 +11554,12 @@ const LandingPage = ()=>{
                                                                         className: "text-white"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 5062,
+                                                                        lineNumber: 5705,
                                                                         columnNumber: 23
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5059,
+                                                                    lineNumber: 5702,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10039,7 +11569,7 @@ const LandingPage = ()=>{
                                                                             children: "Address"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                            lineNumber: 5065,
+                                                                            lineNumber: 5708,
                                                                             columnNumber: 23
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -10047,31 +11577,31 @@ const LandingPage = ()=>{
                                                                             children: customBrand.address
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                            lineNumber: 5068,
+                                                                            lineNumber: 5711,
                                                                             columnNumber: 23
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5064,
+                                                                    lineNumber: 5707,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 5058,
+                                                            lineNumber: 5701,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 5027,
+                                                    lineNumber: 5670,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 5025,
+                                            lineNumber: 5668,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10085,14 +11615,14 @@ const LandingPage = ()=>{
                                                             className: theme.text
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 5081,
+                                                            lineNumber: 5724,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         "Business Hours"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 5080,
+                                                    lineNumber: 5723,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10106,7 +11636,7 @@ const LandingPage = ()=>{
                                                                     children: "Mon — Fri"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5086,
+                                                                    lineNumber: 5729,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10114,13 +11644,13 @@ const LandingPage = ()=>{
                                                                     children: "9:00 AM — 7:00 PM"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5089,
+                                                                    lineNumber: 5732,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 5085,
+                                                            lineNumber: 5728,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10131,7 +11661,7 @@ const LandingPage = ()=>{
                                                                     children: "Saturday"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5094,
+                                                                    lineNumber: 5737,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10139,13 +11669,13 @@ const LandingPage = ()=>{
                                                                     children: "10:00 AM — 5:00 PM"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5095,
+                                                                    lineNumber: 5738,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 5093,
+                                                            lineNumber: 5736,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10156,7 +11686,7 @@ const LandingPage = ()=>{
                                                                     children: "Sunday"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5100,
+                                                                    lineNumber: 5743,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10164,48 +11694,48 @@ const LandingPage = ()=>{
                                                                     children: "Closed"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5101,
+                                                                    lineNumber: 5744,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 5099,
+                                                            lineNumber: 5742,
                                                             columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 5084,
+                                                    lineNumber: 5727,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 5077,
+                                            lineNumber: 5720,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 5021,
+                                    lineNumber: 5664,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 4932,
+                            lineNumber: 5575,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 4899,
+                    lineNumber: 5542,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 4895,
+                lineNumber: 5538,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10224,18 +11754,18 @@ const LandingPage = ()=>{
                                         children: "Questions"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 5117,
+                                        lineNumber: 5760,
                                         columnNumber: 32
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 5116,
+                                lineNumber: 5759,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 5115,
+                            lineNumber: 5758,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10252,7 +11782,7 @@ const LandingPage = ()=>{
                                                     children: faq.q
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 5133,
+                                                    lineNumber: 5776,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10262,18 +11792,18 @@ const LandingPage = ()=>{
                                                         children: activeFaq === index ? "−" : "+"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 5139,
+                                                        lineNumber: 5782,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                    lineNumber: 5136,
+                                                    lineNumber: 5779,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 5127,
+                                            lineNumber: 5770,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10281,29 +11811,29 @@ const LandingPage = ()=>{
                                             children: faq.a
                                         }, void 0, false, {
                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                            lineNumber: 5144,
+                                            lineNumber: 5787,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, index, true, {
                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                    lineNumber: 5123,
+                                    lineNumber: 5766,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/src/routes/DemoApp.jsx",
-                            lineNumber: 5120,
+                            lineNumber: 5763,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 5114,
+                    lineNumber: 5757,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 5113,
+                lineNumber: 5756,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -10314,7 +11844,7 @@ const LandingPage = ()=>{
                         className: `absolute top-0 left-0 right-0 h-1 ${theme.bg}`
                     }, void 0, false, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 5167,
+                        lineNumber: 5810,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10334,14 +11864,14 @@ const LandingPage = ()=>{
                                                         children: customBrand.logoText?.[0]
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 5182,
+                                                        lineNumber: 5825,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     renderLogo("font-bold text-slate-900 text-lg", theme.text)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 5180,
+                                                lineNumber: 5823,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -10349,13 +11879,13 @@ const LandingPage = ()=>{
                                                 children: "Empowering growth and success through dedicated service and expert guidance."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 5190,
+                                                lineNumber: 5833,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 5179,
+                                        lineNumber: 5822,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10365,7 +11895,7 @@ const LandingPage = ()=>{
                                                 children: "Quick Links"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 5197,
+                                                lineNumber: 5840,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -10382,23 +11912,23 @@ const LandingPage = ()=>{
                                                             children: item
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/routes/DemoApp.jsx",
-                                                            lineNumber: 5203,
+                                                            lineNumber: 5846,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, item, false, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 5202,
+                                                        lineNumber: 5845,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 5200,
+                                                lineNumber: 5843,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 5196,
+                                        lineNumber: 5839,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10409,7 +11939,7 @@ const LandingPage = ()=>{
                                                 children: "Contact & Address"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 5215,
+                                                lineNumber: 5858,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -10424,12 +11954,12 @@ const LandingPage = ()=>{
                                                                     className: `w-5 h-5 ${theme.text}`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5221,
+                                                                    lineNumber: 5864,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 5220,
+                                                                lineNumber: 5863,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10439,25 +11969,25 @@ const LandingPage = ()=>{
                                                                         children: "Main Office:"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 5224,
+                                                                        lineNumber: 5867,
                                                                         columnNumber: 21
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                        lineNumber: 5225,
+                                                                        lineNumber: 5868,
                                                                         columnNumber: 21
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     customBrand.address
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 5223,
+                                                                lineNumber: 5866,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 5219,
+                                                        lineNumber: 5862,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -10469,12 +11999,12 @@ const LandingPage = ()=>{
                                                                     className: `w-5 h-5 ${theme.text}`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                    lineNumber: 5231,
+                                                                    lineNumber: 5874,
                                                                     columnNumber: 21
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 5230,
+                                                                lineNumber: 5873,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10482,31 +12012,31 @@ const LandingPage = ()=>{
                                                                 children: customBrand.phone
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                                lineNumber: 5233,
+                                                                lineNumber: 5876,
                                                                 columnNumber: 19
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                                        lineNumber: 5229,
+                                                        lineNumber: 5872,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                                lineNumber: 5218,
+                                                lineNumber: 5861,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 5214,
+                                        lineNumber: 5857,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 5170,
+                                lineNumber: 5813,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10524,7 +12054,7 @@ const LandingPage = ()=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 5242,
+                                        lineNumber: 5885,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -10532,25 +12062,25 @@ const LandingPage = ()=>{
                                         children: "Premium Services & Consulting"
                                     }, void 0, false, {
                                         fileName: "[project]/src/routes/DemoApp.jsx",
-                                        lineNumber: 5246,
+                                        lineNumber: 5889,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/routes/DemoApp.jsx",
-                                lineNumber: 5241,
+                                lineNumber: 5884,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/routes/DemoApp.jsx",
-                        lineNumber: 5169,
+                        lineNumber: 5812,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 5156,
+                lineNumber: 5799,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -10563,18 +12093,18 @@ const LandingPage = ()=>{
                     size: 32
                 }, void 0, false, {
                     fileName: "[project]/src/routes/DemoApp.jsx",
-                    lineNumber: 5259,
+                    lineNumber: 5902,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/routes/DemoApp.jsx",
-                lineNumber: 5252,
+                lineNumber: 5895,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/routes/DemoApp.jsx",
-        lineNumber: 1542,
+        lineNumber: 1672,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

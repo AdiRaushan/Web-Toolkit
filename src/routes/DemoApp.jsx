@@ -39,7 +39,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import { fetchWebsiteData } from "../services/scrapeService";
 import { improveHeroCopy } from "../services/improveCopyService";
-import { fetchNicheImages } from "../services/imageService";
+import { fetchCategoryImages } from "../services/imageServices";
 import prettier from "prettier/standalone";
 import htmlParser from "prettier/parser-html";
 
@@ -1140,6 +1140,92 @@ const LandingPage = () => {
         },
       ],
     },
+    skin_clinic: {
+      id: "skin_clinic",
+      name: "Skin Clinic",
+      logoText: "Lumina",
+      logoSpan: "Clinic",
+      tagline: "Reveal Your Natural Glow",
+      phone: "+1 888-999-0123",
+      address: "Aesthetic Lane, Beverly Hills",
+      email: "hello@luminaclinic.com",
+      heroTitle: "Premium Care for",
+      heroSpan: "Your Skin Journey",
+      heroDesc:
+        "Experience the pinnacle of aesthetic medicine with our expert dermatologists. We combine cutting-edge technology with a holistic approach to reveal your skin's true potential.",
+      themeColor: "#e11d48",
+      navbarStyle: "transparent",
+      heroStyle: "aesthetic_fullscreen_form",
+      heroImage:
+        "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612343.jpg",
+      gridImages: [
+        "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612359.jpg",
+        "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612426.jpg",
+        "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612437.jpg",
+      ],
+      marqueeItems: [
+        "Board Certified Dermatologists",
+        "Award Winning Clinic 2024",
+        "Premium FDA Approved Tech",
+        "Holistic Skin Consultations",
+      ],
+      aboutDescription:
+        "Lumina Clinic is a sanctuary for skin health and aesthetic excellence. Founded on the principle that true beauty is a reflection of health, we offer personalized treatment plans that deliver visible, long-lasting results in a luxurious, calming environment.",
+      founderName: "Dr. Elena Rossi",
+      founderTitle: "Senior Aesthetic Surgeon",
+      missionDescription:
+        "To empower our clients through expert care and transformative results. We believe in enhancing natural features rather than changing them, ensuring you look and feel like the best version of yourself.",
+      stats: [
+        { label: "Happy Clients", value: "12k+" },
+        { label: "Treatments Done", value: "35k+" },
+        { label: "Expert Doctors", value: "12" },
+        { label: "Years Experience", value: "15" },
+      ],
+      nicheItems: [
+        {
+          treatmentImage:
+            "https://images.unsplash.com/photo-1512290923902-8a9f81df236c?auto=format&fit=crop&w=800&q=80",
+          treatmentName: "Facial Rejuvenation",
+          desc: "Advanced laser treatments and chemical peels to restore youthful radiance and texture.",
+          icon: Star,
+        },
+        {
+          treatmentImage:
+            "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
+          treatmentName: "Injectable Aesthetics",
+          desc: "Expertly administered dermal fillers and anti-wrinkle injections for a natural lift.",
+          icon: Zap,
+        },
+        {
+          treatmentImage:
+            "https://images.unsplash.com/photo-1515377662630-cd6a7be0bb01?auto=format&fit=crop&w=800&q=80",
+          treatmentName: "Clinical Skincare",
+          desc: "Medical-grade facials and targeted treatments for acne, pigmentation, and aging.",
+          icon: CheckCircle,
+        },
+        {
+          treatmentImage:
+            "https://images.unsplash.com/photo-1570172619665-227d81966b9a?auto=format&fit=crop&w=800&q=80",
+          treatmentName: "Body Contouring",
+          desc: "Non-invasive fat reduction and skin tightening for a sculpted, confident silhouette.",
+          icon: Target,
+        },
+      ],
+      faqs: [
+        {
+          q: "What should I expect at my first consultation?",
+          a: "A full digital skin analysis and a personalized treatment roadmap.",
+        },
+        {
+          q: "Do you offer financing?",
+          a: "Yes, we have flexible payment plans for our signature treatment packages.",
+        },
+      ],
+      aboutImage:
+        "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612359.jpg",
+      missionImage:
+        "C:/Users/Acer/.gemini/antigravity/brain/69789311-0228-4086-9304-e09bc34708e0/media__1772175612426.jpg",
+    },
   };
 
   const [activeBrandId, setActiveBrandId] = useState("institute");
@@ -1350,22 +1436,66 @@ const LandingPage = () => {
     setImagesLoading(true);
     setScrapeError("");
     setScrapeSuccess("");
-
-    // We will use User's logoSpan or TAGLINE as the search query since it has the highest context
-    const query = customBrand.logoSpan || customBrand.id || "business";
+    // Use the active category (e.g., ielts, digital_agency) for the search
+    const category = activeBrandId || "custom";
 
     try {
-      const result = await fetchNicheImages(query);
+      // Call our new dynamic image service with refresh: true to always get new ones
+      // Fetch 30 images to ensure enough unique ones for all sections
+      const images = await fetchCategoryImages(category, {
+        refresh: true,
+        per_page: 30,
+      });
 
-      setCustomBrand((prev) => ({
-        ...prev,
-        heroImage: result.heroImage,
-        gridImages: result.gridImages,
-      }));
+      // Distribute images to relevant sections uniquely
+      setCustomBrand((prev) => {
+        const updated = { ...prev };
 
-      setScrapeSuccess(`Updated images for '${query}'`);
+        // 1. Hero (Index 0)
+        updated.heroImage = images[0] || prev.heroImage;
+
+        // 2. About Us (Index 1)
+        updated.aboutImage = images[1] || images[10] || prev.aboutImage;
+
+        // 3. Grid Images (Indices 2-5) - used in some Hero styles
+        if (images.slice(2, 6).length === 4) {
+          updated.gridImages = images.slice(2, 6);
+        }
+
+        // 4. Mission (Index 6)
+        updated.missionImage = images[6] || images[11] || prev.missionImage;
+
+        // 5. Niche Items (Indices 12+) - For Properties, Projects, etc.
+        if (updated.nicheItems && updated.nicheItems.length > 0) {
+          updated.nicheItems = updated.nicheItems.map((item, idx) => {
+            const newItem = { ...item };
+            const imgIdx = 12 + idx;
+            if (images[imgIdx]) {
+              // Map to common niche image fields
+              if (newItem.propertyImage !== undefined)
+                newItem.propertyImage = images[imgIdx];
+              if (newItem.projectImage !== undefined)
+                newItem.projectImage = images[imgIdx];
+              if (newItem.courseImage !== undefined)
+                newItem.courseImage = images[imgIdx];
+              if (newItem.serviceImage !== undefined)
+                newItem.serviceImage = images[imgIdx];
+              if (newItem.treatmentImage !== undefined)
+                newItem.treatmentImage = images[imgIdx];
+            }
+            return newItem;
+          });
+        }
+
+        return updated;
+      });
+
+      setScrapeSuccess(`Fresh unique images generated for: ${category}`);
     } catch (err) {
-      setScrapeError("Failed to fetch new images. Try again.");
+      console.error("Image Fix Error:", err);
+      setScrapeError(
+        err.message || "Failed to fetch new images. Check Unsplash API Key.",
+      );
     } finally {
       setImagesLoading(false);
     }
@@ -2211,6 +2341,13 @@ const LandingPage = () => {
                 <option value="form_left">Lead Gen (Form Left)</option>
                 <option value="monitor">Digital Showcase</option>
                 <option value="diagonal">Diagonal Split</option>
+                <option value="aesthetic_fullscreen_form">
+                  Aesthetic Full (Form)
+                </option>
+                <option value="aesthetic_fullscreen">
+                  Aesthetic Full (No Form)
+                </option>
+                <option value="creative_split">Creative Modern Split</option>
               </select>
             </div>
 
@@ -2855,8 +2992,8 @@ const LandingPage = () => {
 
       {/* --- HERO SECTION --- */}
       <div
-        className={`relative overflow-hidden w-full min-h-[90vh] flex items-center pt-28 pb-16
-        ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) ? "min-h-screen pt-0 pb-0" : ""}
+        className={`relative overflow-hidden w-full flex flex-col
+        ${["fullscreen", "video", "carousel", "aesthetic_fullscreen", "aesthetic_fullscreen_form", "creative_split"].includes(customBrand.heroStyle) ? "h-screen pt-0" : "min-h-[90vh] pt-28 pb-16"}
         ${customBrand.navbarStyle === "transparent" ? "bg-slate-900" : "bg-gradient-to-b from-white via-slate-50/50 to-white"}
         `}
       >
@@ -2913,7 +3050,7 @@ const LandingPage = () => {
         )}
 
         <div
-          className={`mx-auto max-w-7xl px-6 lg:px-8 relative z-10 ${["fullscreen", "video", "carousel"].includes(customBrand.heroStyle) ? "text-white" : ""}`}
+          className={`flex-1 flex flex-col justify-center relative z-10 ${["aesthetic_fullscreen", "aesthetic_fullscreen_form", "creative_split"].includes(customBrand.heroStyle) ? "w-full min-h-0" : "mx-auto max-w-7xl px-6 lg:px-8"} ${["fullscreen", "video", "carousel", "aesthetic_fullscreen", "aesthetic_fullscreen_form"].includes(customBrand.heroStyle) ? "text-white" : ""}`}
         >
           {/* --- CENTERED STYLE --- */}
           {customBrand.heroStyle === "centered" && (
@@ -3457,6 +3594,286 @@ const LandingPage = () => {
             </div>
           )}
 
+          {/* --- AESTHETIC FULLSCREEN (FORM) --- */}
+          {customBrand.heroStyle === "aesthetic_fullscreen_form" && (
+            <div className="w-full h-full flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 z-0">
+                <img
+                  src={customBrand.heroImage}
+                  className="w-full h-full object-cover"
+                  alt="Background"
+                />
+                <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-[1px]"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/20 to-transparent"></div>
+              </div>
+
+              <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full pt-28 pb-12">
+                <div className="grid lg:grid-cols-12 gap-12 items-center">
+                  <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+                    <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-6 border border-white/20">
+                      <Sparkles size={12} className="text-rose-300" />
+                      {customBrand.tagline}
+                    </div>
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tighter">
+                      {customBrand.heroTitle} <br />
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-200 to-rose-100">
+                        {customBrand.heroSpan}
+                      </span>
+                    </h1>
+                    <p className="text-lg text-white/70 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium mb-10">
+                      {customBrand.heroDesc}
+                    </p>
+                    <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
+                      <div className="flex items-center gap-3">
+                        <div
+                          className={`w-10 h-10 rounded-full ${theme.bg} flex items-center justify-center text-white shadow-lg`}
+                        >
+                          <CheckCircle size={20} />
+                        </div>
+                        <span className="text-white font-bold text-xs uppercase tracking-wider">
+                          Premium Quality
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div
+                          className={`w-10 h-10 rounded-full ${theme.bg} flex items-center justify-center text-white shadow-lg`}
+                        >
+                          <Star size={20} />
+                        </div>
+                        <span className="text-white font-bold text-xs uppercase tracking-wider">
+                          Expert Results
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-5 relative group">
+                    <div
+                      className={`absolute -inset-1 bg-gradient-to-r ${theme.gradientFrom} ${theme.gradientTo} rounded-[32px] opacity-10 blur-xl group-hover:opacity-20 transition-opacity duration-500`}
+                    ></div>
+                    <div className="relative bg-black/40 backdrop-blur-3xl p-10 rounded-[40px] border border-white/10 shadow-2xl">
+                      <div className="mb-8">
+                        <h3 className="text-3xl font-black text-white mb-2 tracking-tight">
+                          Start Your Journey
+                        </h3>
+                        <p className="text-white/50 text-sm">
+                          Book a consultation with our clinicians.
+                        </p>
+                      </div>
+                      <form className="space-y-5">
+                        <div className="relative">
+                          <input
+                            type="text"
+                            placeholder="Your Name"
+                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-all"
+                          />
+                        </div>
+                        <div className="relative">
+                          <input
+                            type="email"
+                            placeholder="Email Address"
+                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-all"
+                          />
+                        </div>
+                        <div className="relative">
+                          <input
+                            type="tel"
+                            placeholder="Phone Number"
+                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-all"
+                          />
+                        </div>
+                        <button
+                          className={`w-full ${theme.bg} py-5 rounded-2xl text-white font-black uppercase tracking-widest text-xs hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl ${theme.shadow}`}
+                        >
+                          {customBrand.formCta || "Book Consultation"}
+                        </button>
+                      </form>
+                      <div className="mt-8 flex items-center justify-center gap-4 text-white/30 text-[10px] font-bold uppercase tracking-widest">
+                        <div className="h-px flex-1 bg-white/10"></div>
+                        <span>Privacy Guaranteed</span>
+                        <div className="h-px flex-1 bg-white/10"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* --- AESTHETIC FULLSCREEN (NO FORM) --- */}
+          {customBrand.heroStyle === "aesthetic_fullscreen" && (
+            <div className="w-full h-full flex flex-col items-center justify-center text-center relative px-6 overflow-hidden">
+              <div className="absolute inset-0 z-0">
+                <img
+                  src={customBrand.heroImage}
+                  className="w-full h-full object-cover"
+                  alt="Background"
+                />
+                <div className="absolute inset-0 bg-slate-950/40"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-transparent to-slate-950/80"></div>
+              </div>
+
+              <div className="relative z-10 max-w-7xl mx-auto pt-28 pb-12">
+                <div className="flex justify-center mb-8 overflow-hidden">
+                  <div className="animate-in slide-in-from-bottom duration-1000">
+                    <div className="inline-flex items-center gap-3 py-2 px-6 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-white text-[11px] font-bold uppercase tracking-[0.4em]">
+                      <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></div>
+                      {customBrand.tagline}
+                    </div>
+                  </div>
+                </div>
+
+                <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black text-white leading-[0.88] tracking-tighter mb-10 drop-shadow-2xl italic">
+                  {customBrand.heroTitle} <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-white/80 to-white/10">
+                    {customBrand.heroSpan}
+                  </span>
+                </h1>
+
+                <p className="text-lg md:text-2xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light mb-12 px-4 drop-shadow-lg">
+                  {customBrand.heroDesc}
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                  <button
+                    className={`bg-white text-slate-900 px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.2)]`}
+                  >
+                    {customBrand.heroCta || "Experience Now"}
+                  </button>
+                  <button className="group flex items-center gap-4 text-white font-bold uppercase tracking-widest text-xs py-5 px-10 rounded-full border border-white/20 hover:bg-white/10 transition-all">
+                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-slate-900 transition-all">
+                      <Zap size={14} className="fill-current" />
+                    </div>
+                    {customBrand.heroCta2 || "View Our Work"}
+                  </button>
+                </div>
+              </div>
+
+              {/* Minimal floating elements */}
+              <div className="absolute bottom-10 left-10 hidden lg:flex items-center gap-4 text-white/30 text-[10px] uppercase tracking-[0.5em] font-bold">
+                <div className="w-12 h-px bg-white/20"></div>
+                LUMINA ARCHIVE
+              </div>
+
+              <div className="absolute top-1/2 -right-20 -translate-y-1/2 hidden xl:flex flex-col items-center gap-8 text-white/10 font-black text-2xl vertical-text tracking-[1.2em] pointer-events-none select-none">
+                ESTHETIQUE • LUXE • PURE
+              </div>
+            </div>
+          )}
+
+          {/* --- CREATIVE MODERN SPLIT --- */}
+          {customBrand.heroStyle === "creative_split" && (
+            <div className="relative lg:pt-0 lg:pb-0 overflow-hidden w-full h-full flex flex-col items-center bg-white">
+              <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full flex-1 flex items-center pt-24">
+                <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                  <div className="lg:col-span-6 relative">
+                    <div
+                      className={`absolute -top-32 -left-32 w-[600px] h-[600px] ${theme.lightBg} rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-blob`}
+                    ></div>
+
+                    <div className="relative">
+                      <div
+                        className={`inline-flex items-center gap-2 py-2 px-4 rounded-xl ${theme.lightBg} ${theme.text} text-[11px] font-black uppercase tracking-[0.3em] mb-8 border ${theme.lightBorder}`}
+                      >
+                        <Sparkles size={14} />
+                        {customBrand.tagline}
+                      </div>
+
+                      <h1
+                        className="text-5xl md:text-7xl lg:text-[5.5rem] font-black text-slate-900 mb-8 leading-[1] tracking-tight"
+                        style={{ fontFamily: "var(--font-heading)" }}
+                      >
+                        {customBrand.heroTitle} <br />
+                        <span
+                          className={`inline-block mt-4 ${theme.text} italic font-serif`}
+                        >
+                          {customBrand.heroSpan}
+                        </span>
+                      </h1>
+
+                      <p className="text-lg text-slate-500 leading-relaxed font-medium mb-12 max-w-lg">
+                        {customBrand.heroDesc}
+                      </p>
+
+                      <div className="flex flex-col sm:flex-row gap-6 items-center">
+                        <button
+                          className={`${theme.bg} text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-[0.2em] hover:shadow-2xl hover:-translate-y-1 transition-all shadow-xl ${theme.shadow}`}
+                        >
+                          {customBrand.heroCta || "Book Consultation"}
+                        </button>
+                        <button className="group flex items-center gap-4 text-slate-400 font-bold uppercase tracking-widest text-[10px] hover:text-slate-900 transition-colors">
+                          <span
+                            className={`w-14 h-14 border-2 border-slate-200 rounded-full flex items-center justify-center group-hover:${theme.bg} group-hover:text-white group-hover:border-transparent transition-all`}
+                          >
+                            <ArrowRight size={18} />
+                          </span>
+                          {customBrand.heroCta2 || "See Our Work"}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-6 relative hidden lg:block">
+                    <div className="flex gap-6 h-[550px] items-center">
+                      <div className="w-[60%] h-full">
+                        <div className="h-full rounded-[48px] overflow-hidden shadow-2xl border-[6px] border-white">
+                          <img
+                            src={customBrand.heroImage}
+                            className="w-full h-full object-cover"
+                            alt="Visual 1"
+                          />
+                        </div>
+                      </div>
+                      <div className="w-[40%] flex flex-col gap-6 h-[85%]">
+                        <div className="flex-1 rounded-[36px] overflow-hidden shadow-xl border-[6px] border-white">
+                          <img
+                            src={
+                              customBrand.gridImages?.[0] ||
+                              customBrand.heroImage
+                            }
+                            className="w-full h-full object-cover"
+                            alt="Visual 2"
+                          />
+                        </div>
+                        <div className="flex-1 rounded-[36px] overflow-hidden shadow-xl border-[6px] border-white relative group">
+                          <img
+                            src={
+                              customBrand.gridImages?.[1] ||
+                              customBrand.heroImage
+                            }
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Visual 3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Floating Stats Layer */}
+                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl px-12 py-6 rounded-[32px] shadow-2xl border border-slate-100 flex items-center gap-10 whitespace-nowrap">
+                      <div>
+                        <div className="text-2xl font-black text-slate-900 italic">
+                          4.9/5
+                        </div>
+                        <p className="text-[9px] font-black uppercase tracking-widest text-slate-400">
+                          Patient Satisfaction
+                        </p>
+                      </div>
+                      <div className="w-px h-10 bg-slate-100"></div>
+                      <div>
+                        <div className="text-2xl font-black text-slate-900 italic">
+                          25k+
+                        </div>
+                        <p className="text-[9px] font-black uppercase tracking-widest text-slate-400">
+                          Transformations
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* --- SPLIT / DEFAULT STYLE DUPLICATE HIDDEN --- */}
           {false && (
             <div className="grid lg:grid-cols-12 gap-8 items-center">
@@ -3627,6 +4044,34 @@ const LandingPage = () => {
             </div>
           )}
         </div>
+
+        {/* --- DYNAMIC MARQUEE (Pinned to bottom for 100vh styles) --- */}
+        {customBrand.marqueeItems &&
+          [
+            "aesthetic_fullscreen",
+            "aesthetic_fullscreen_form",
+            "creative_split",
+          ].includes(customBrand.heroStyle) && (
+            <div className="w-full bg-slate-950/40 backdrop-blur-md border-t border-white/5 py-4 relative z-30">
+              <div className="flex w-full whitespace-nowrap animate-marquee">
+                {[...Array(6)].map((_, i) => (
+                  <div key={i} className="flex gap-16 mx-8 items-center">
+                    {customBrand.marqueeItems.map((item, idx) => (
+                      <div
+                        key={`${i}-${idx}`}
+                        className="flex items-center gap-3 text-white/50 font-bold uppercase tracking-[0.4em] text-[10px]"
+                      >
+                        <div
+                          className={`w-1.5 h-1.5 rounded-full ${theme.bg} shadow-[0_0_12px_rgba(255,255,255,0.4)]`}
+                        ></div>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
       </div>
 
       {/* --- SMART IELTS TRUST BAR (Sits safely between Hero and Marquee without overlapping) --- */}
@@ -3689,29 +4134,35 @@ const LandingPage = () => {
         </div>
       )}
 
-      {/* --- MARQUEE SECTION --- */}
-      {customBrand.marqueeItems && (
-        <div className="bg-slate-900 border-y border-slate-800 overflow-hidden py-3 relative z-30">
-          <div className="flex w-full whitespace-nowrap animate-marquee hover:[animation-play-state:paused]">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="flex gap-16 mx-8 items-center">
-                {customBrand.marqueeItems.map((item, idx) => (
-                  <div
-                    key={`${i}-${idx}`}
-                    className="flex items-center gap-3 text-slate-300 font-bold uppercase tracking-[0.2em] text-xs"
-                  >
-                    <Star
-                      size={14}
-                      className={`${theme.text} drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]`}
-                    />
-                    {item}
-                  </div>
-                ))}
-              </div>
-            ))}
+      {/* --- MARQUEE SECTION (For Non-Fullscreen Styles) --- */}
+      {customBrand.marqueeItems &&
+        ![
+          "aesthetic_fullscreen",
+          "aesthetic_fullscreen_form",
+          "creative_split",
+        ].includes(customBrand.heroStyle) && (
+          <div
+            className={`bg-slate-900 border-y border-slate-800 overflow-hidden py-4 relative z-30`}
+          >
+            <div className="flex w-full whitespace-nowrap animate-marquee hover:[animation-play-state:paused]">
+              {[...Array(6)].map((_, i) => (
+                <div key={i} className="flex gap-16 mx-8 items-center">
+                  {customBrand.marqueeItems.map((item, idx) => (
+                    <div
+                      key={`${i}-${idx}`}
+                      className="flex items-center gap-3 text-slate-400 font-bold uppercase tracking-[0.3em] text-[10px]"
+                    >
+                      <div
+                        className={`w-1.5 h-1.5 rounded-full ${theme.bg} shadow-[0_0_8px_rgba(255,255,255,0.3)]`}
+                      ></div>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
       {(() => {
         const aboutVariant = sectionDesigns.about;
@@ -3721,6 +4172,7 @@ const LandingPage = () => {
         const founderName = customBrand.founderName || "Our Leader";
         const founderTitle = customBrand.founderTitle || "Founder & CEO";
         const aboutImage =
+          customBrand.aboutImage ||
           customBrand.heroImage ||
           "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80";
 
@@ -3999,6 +4451,111 @@ const LandingPage = () => {
                   </div>
                 </div>
               )}
+
+              {/* ── Variant: modern_split ── */}
+              {aboutVariant === "modern_split" && (
+                <div className="grid lg:grid-cols-12 gap-16 items-center">
+                  <div className="lg:col-span-7">
+                    <div className="relative group">
+                      <div
+                        className={`absolute -inset-4 bg-gradient-to-tr ${theme.gradientFrom} ${theme.gradientTo} rounded-[40px] opacity-20 blur-2xl group-hover:opacity-30 transition-shadow`}
+                      ></div>
+                      <div className="relative aspect-[16/10] rounded-[32px] overflow-hidden shadow-2xl">
+                        <img
+                          src={aboutImage}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          alt="About"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                      </div>
+                      {/* Floating Badge */}
+                      <div className="absolute -bottom-10 -right-10 bg-white p-6 rounded-[32px] shadow-2xl border border-slate-100 hidden md:block">
+                        <div className="flex items-center gap-4">
+                          <div
+                            className={`w-14 h-14 rounded-2xl ${theme.bg} flex items-center justify-center text-white`}
+                          >
+                            <Users size={28} />
+                          </div>
+                          <div>
+                            <div className="text-2xl font-black text-slate-900">
+                              {customBrand.stats?.[0]?.value || "12k+"}
+                            </div>
+                            <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                              Happy Patients
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lg:col-span-5 px-4">
+                    <div
+                      className={`inline-flex items-center gap-2 py-2 px-5 rounded-full ${theme.lightBg} ${theme.text} text-xs font-bold uppercase tracking-widest mb-8 border ${theme.lightBorder}`}
+                    >
+                      Our Legacy
+                    </div>
+                    <h2
+                      className="text-4xl md:text-5xl font-black text-slate-900 mb-8 leading-[1.15]"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      Defining the Future of{" "}
+                      <span className={theme.text}>Aesthetic Care</span>
+                    </h2>
+                    <p className="text-lg text-slate-500 leading-relaxed mb-10">
+                      {aboutDesc}
+                    </p>
+                    <div className="space-y-6 mb-10">
+                      {[
+                        {
+                          title: "Personalized Approach",
+                          desc: "Every skin is unique, so is our treatment.",
+                        },
+                        {
+                          title: "Latest Technology",
+                          desc: "FDA approved lasers and premium skincare.",
+                        },
+                      ].map((item, i) => (
+                        <div key={i} className="flex gap-4">
+                          <div
+                            className={`w-6 h-6 rounded-full ${theme.lightBg} flex items-center justify-center flex-shrink-0 mt-1`}
+                          >
+                            <div
+                              className={`w-2 h-2 rounded-full ${theme.bg}`}
+                            ></div>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-slate-900">
+                              {item.title}
+                            </h4>
+                            <p className="text-sm text-slate-400">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="pt-8 border-t border-slate-100 flex items-center gap-5">
+                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-slate-50 shadow-md">
+                        <div
+                          className={`w-full h-full ${theme.bg} flex items-center justify-center text-white font-black text-xl`}
+                        >
+                          {founderName?.[0]}
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-black text-slate-900 text-lg leading-tight">
+                          {founderName}
+                        </h4>
+                        <p
+                          className={`text-[11px] font-bold uppercase tracking-widest ${theme.text}`}
+                        >
+                          {founderTitle}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         );
@@ -4010,6 +4567,7 @@ const LandingPage = () => {
           customBrand.missionDescription ||
           "Our mission is to deliver excellence in everything we do. We strive to empower our clients and community with the tools, knowledge, and support they need to thrive.";
         const missionImage =
+          customBrand.missionImage ||
           customBrand.heroImage ||
           "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80";
 
@@ -4233,6 +4791,91 @@ const LandingPage = () => {
                   </p>
                 </div>
               </>
+            )}
+
+            {/* ── Variant: aesthetic_grid ── */}
+            {missionVariant === "aesthetic_grid" && (
+              <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div className="grid lg:grid-cols-12 gap-16 items-center">
+                  <div className="lg:col-span-5">
+                    <div className="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-white/5 text-white/80 text-xs font-bold uppercase tracking-widest mb-8 border border-white/10">
+                      Vision & Mission
+                    </div>
+                    <h2 className="text-5xl md:text-6xl font-black text-white mb-10 leading-[1.05] tracking-tighter">
+                      Excellence is not <br />
+                      <span className={theme.text}>Our Act, but Our Habit</span>
+                    </h2>
+                    <p className="text-xl text-slate-400 leading-relaxed mb-12 font-medium italic">
+                      " {missionDesc} "
+                    </p>
+                    <div className="grid grid-cols-2 gap-8">
+                      {[
+                        { label: "Core Values", val: "Integrity" },
+                        { label: "Our Focus", val: "Innovation" },
+                      ].map((v, i) => (
+                        <div
+                          key={i}
+                          className="border-l-2 border-white/10 pl-6"
+                        >
+                          <div className="text-[10px] text-white/40 font-bold uppercase tracking-widest mb-2">
+                            {v.label}
+                          </div>
+                          <div className="text-xl font-black text-white tracking-wide">
+                            {v.val}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-7">
+                    <div className="grid grid-cols-2 gap-6 items-start">
+                      <div className="space-y-6">
+                        <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group">
+                          <img
+                            src={missionImage}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="M1"
+                          />
+                          <div className="absolute inset-0 bg-slate-900/30"></div>
+                        </div>
+                        <div
+                          className={`aspect-square rounded-[40px] ${theme.bg} p-10 flex flex-col justify-end text-white shadow-2xl relative overflow-hidden`}
+                        >
+                          <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                          <Star size={40} className="mb-6 opacity-30" />
+                          <h3 className="text-3xl font-black leading-tight mb-2">
+                            Award Winning Service
+                          </h3>
+                          <p className="text-white/60 text-sm">
+                            Recognized globally for quality.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="space-y-6 pt-12">
+                        <div className="aspect-square rounded-[40px] bg-white/5 border border-white/10 p-10 backdrop-blur-md flex flex-col justify-center items-center shadow-2xl">
+                          <div
+                            className={`text-6xl font-black ${theme.text} mb-4`}
+                          >
+                            99%
+                          </div>
+                          <div className="text-white/40 text-[10px] font-bold uppercase tracking-[0.3em]">
+                            Success Rate
+                          </div>
+                        </div>
+                        <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative group">
+                          <img
+                            src={customBrand.gridImages?.[2] || missionImage}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="M2"
+                          />
+                          <div className="absolute inset-0 bg-slate-900/40"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             )}
           </div>
         );
