@@ -393,15 +393,15 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
   const progress = (currentStep / 4) * 100;
 
   return (
-    <div className="fixed inset-0 z-[200] bg-slate-950 flex flex-col overflow-hidden">
+    <div className="fixed inset-0 z-[200] bg-[#F8FAFC] flex flex-col overflow-hidden">
       {/* ─── Animated Background ─── */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
         <div
-          className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-indigo-600/8 rounded-full blur-[120px] animate-pulse"
+          className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-blue-100 rounded-full blur-[120px] animate-pulse"
           style={{ animationDuration: "8s" }}
         />
         <div
-          className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-purple-600/8 rounded-full blur-[120px] animate-pulse"
+          className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-indigo-50 rounded-full blur-[120px] animate-pulse"
           style={{ animationDuration: "12s" }}
         />
         <div
@@ -411,17 +411,28 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
       </div>
 
       {/* ─── Header ─── */}
-      <div className="relative z-10 border-b border-white/5">
+      <div className="relative z-10 border-b border-slate-200 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-              <Sparkles size={20} className="text-white" />
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Toolkit Logo matches AppNavbar */}
+            <div className="flex items-center gap-2">
+              <img
+                src="/toolkit-favicon.svg"
+                alt="Toolkit"
+                className="w-6 h-6 sm:w-7 sm:h-7"
+              />
+              <span className="font-extrabold text-xs sm:text-base tracking-tight text-slate-900">
+                Web<span className="text-blue-500">-Toolkit</span>
+              </span>
             </div>
+
+            <div className="h-6 w-px bg-slate-200 hidden sm:block" />
+
             <div>
-              <h1 className="text-white font-bold text-lg tracking-tight">
+              <h1 className="text-slate-900 font-extrabold text-sm sm:text-lg tracking-tight">
                 Demo Creator Studio
               </h1>
-              <p className="text-slate-500 text-xs">
+              <p className="text-slate-500 text-[10px] sm:text-xs font-medium">
                 Build your perfect website in minutes
               </p>
             </div>
@@ -429,7 +440,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
 
           <button
             onClick={onSkip}
-            className="text-slate-500 hover:text-slate-300 text-sm font-medium transition-colors flex items-center gap-2 group px-4 py-2 rounded-xl hover:bg-white/5"
+            className="text-slate-600 hover:text-slate-900 text-sm font-bold transition-all flex items-center gap-2 group px-4 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200"
           >
             Skip to Editor
             <ArrowRight
@@ -541,10 +552,10 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
           {currentStep === 1 && (
             <div className="space-y-8">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-black text-white tracking-tight mb-3">
+                <h2 className="text-3xl font-black text-slate-900 tracking-tight mb-3">
                   What's Your Business?
                 </h2>
-                <p className="text-slate-400 text-sm max-w-lg mx-auto leading-relaxed">
+                <p className="text-slate-500 text-sm max-w-lg mx-auto leading-relaxed">
                   Let's start with the basics. This info helps us tailor a
                   website design that perfectly fits your brand.
                 </p>
@@ -552,7 +563,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
 
               {/* Business Name */}
               <div className="space-y-2">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                   Business Name <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -560,13 +571,13 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                   value={formData.businessName}
                   onChange={(e) => updateField("businessName", e.target.value)}
                   placeholder="e.g. Apex Consulting, Iron Foundry Gym, Care Plus Clinic..."
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 text-white text-base placeholder:text-slate-600 focus:border-indigo-500/50 focus:bg-white/[0.05] outline-none transition-all duration-300 hover:border-white/20"
+                  className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl px-5 py-4 text-slate-900 text-base placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all duration-300"
                 />
               </div>
 
               {/* Business Type */}
               <div className="space-y-3">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                   Type of Business <span className="text-red-400">*</span>
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -577,7 +588,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                       className={`group px-4 py-3.5 rounded-2xl border text-left transition-all duration-300 ${
                         formData.businessType === type.id
                           ? "bg-indigo-500/15 border-indigo-500/40 shadow-lg shadow-indigo-500/5"
-                          : "bg-white/[0.02] border-white/8 hover:border-white/15 hover:bg-white/[0.04]"
+                          : "bg-white border-slate-200 hover:border-blue-300 hover:shadow-md hover:bg-slate-50"
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
@@ -586,7 +597,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                           className={`text-xs font-semibold ${
                             formData.businessType === type.id
                               ? "text-indigo-300"
-                              : "text-slate-400 group-hover:text-slate-300"
+                              : "text-slate-600 group-hover:text-slate-900"
                           }`}
                         >
                           {type.label}
@@ -599,7 +610,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
 
               {/* Tagline */}
               <div className="space-y-2">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                   Tagline / Slogan
                 </label>
                 <input
@@ -607,13 +618,13 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                   value={formData.tagline}
                   onChange={(e) => updateField("tagline", e.target.value)}
                   placeholder="e.g. 'Your Success, Our Mission' or 'Built for Excellence'"
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 text-white text-base placeholder:text-slate-600 focus:border-indigo-500/50 focus:bg-white/[0.05] outline-none transition-all duration-300 hover:border-white/20"
+                  className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl px-5 py-4 text-slate-900 text-base placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all duration-300"
                 />
               </div>
 
               {/* Description */}
               <div className="space-y-2">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                   Business Description
                 </label>
                 <textarea
@@ -621,7 +632,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                   onChange={(e) => updateField("description", e.target.value)}
                   placeholder="Briefly describe what your business does, your unique value proposition, and what makes you stand out..."
                   rows={4}
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 text-white text-sm placeholder:text-slate-600 focus:border-indigo-500/50 focus:bg-white/[0.05] outline-none transition-all duration-300 resize-none hover:border-white/20 leading-relaxed"
+                  className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl px-5 py-4 text-slate-900 text-sm placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all duration-300 resize-none leading-relaxed"
                 />
               </div>
             </div>
@@ -633,10 +644,10 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
           {currentStep === 2 && (
             <div className="space-y-8">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-black text-white tracking-tight mb-3">
+                <h2 className="text-3xl font-black text-slate-900 tracking-tight mb-3">
                   Content & Hero Section
                 </h2>
-                <p className="text-slate-400 text-sm max-w-lg mx-auto leading-relaxed">
+                <p className="text-slate-500 text-sm max-w-lg mx-auto leading-relaxed">
                   Craft your headline and add stunning images. This is what
                   visitors see first — make it count.
                 </p>
@@ -645,7 +656,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
               {/* Hero Title */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                  <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                     Hero Title (Main Line){" "}
                     <span className="text-red-400">*</span>
                   </label>
@@ -654,11 +665,11 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                     value={formData.heroTitle}
                     onChange={(e) => updateField("heroTitle", e.target.value)}
                     placeholder="e.g. Unlock Your"
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 text-white text-base placeholder:text-slate-600 focus:border-indigo-500/50 focus:bg-white/[0.05] outline-none transition-all duration-300 hover:border-white/20"
+                    className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl px-5 py-4 text-slate-900 text-base placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all duration-300"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                  <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                     Hero Highlight (Accent)
                   </label>
                   <input
@@ -668,14 +679,14 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                       updateField("heroHighlight", e.target.value)
                     }
                     placeholder="e.g. Full Potential"
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 text-white text-base placeholder:text-slate-600 focus:border-indigo-500/50 focus:bg-white/[0.05] outline-none transition-all duration-300 hover:border-white/20"
+                    className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl px-5 py-4 text-slate-900 text-base placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all duration-300"
                   />
                 </div>
               </div>
 
               {/* Hero Description */}
               <div className="space-y-2">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                   Hero Description
                 </label>
                 <textarea
@@ -685,26 +696,26 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                   }
                   placeholder="A compelling paragraph that appears below the hero headline. Describe your value proposition..."
                   rows={3}
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 text-white text-sm placeholder:text-slate-600 focus:border-indigo-500/50 focus:bg-white/[0.05] outline-none transition-all duration-300 resize-none hover:border-white/20 leading-relaxed"
+                  className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl px-5 py-4 text-slate-900 text-sm placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all duration-300 resize-none leading-relaxed"
                 />
               </div>
 
               {/* Live Preview Card */}
               {(formData.heroTitle || formData.heroHighlight) && (
-                <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 space-y-2">
+                <div className="bg-slate-50 border border-slate-200 lg:border-slate-100 rounded-3xl p-6 space-y-2 shadow-sm">
                   <div className="flex items-center gap-2 mb-4">
                     <Eye size={14} className="text-indigo-400" />
                     <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
                       Live Preview
                     </span>
                   </div>
-                  <h3 className="text-2xl font-black text-white">
+                  <h3 className="text-2xl font-black text-slate-900">
                     {formData.heroTitle || "Your Headline"}{" "}
                     <span className="text-indigo-400">
                       {formData.heroHighlight || "Here"}
                     </span>
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
+                  <p className="text-slate-500 text-sm leading-relaxed">
                     {formData.heroDescription ||
                       formData.description ||
                       "Your description will appear here..."}
@@ -715,7 +726,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
               {/* Hero Images */}
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                  <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                     Hero Images (URLs)
                   </label>
                   {formData.heroImages.length < 5 && (
@@ -776,10 +787,10 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
           {currentStep === 3 && (
             <div className="space-y-8">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-black text-white tracking-tight mb-3">
+                <h2 className="text-3xl font-black text-slate-900 tracking-tight mb-3">
                   Style & Purpose
                 </h2>
-                <p className="text-slate-400 text-sm max-w-lg mx-auto leading-relaxed">
+                <p className="text-slate-500 text-sm max-w-lg mx-auto leading-relaxed">
                   Choose the visual aesthetic and primary goal for your website.
                   We'll configure everything to match.
                 </p>
@@ -787,7 +798,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
 
               {/* Website Style */}
               <div className="space-y-3">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                   Website Style
                 </label>
                 <div className="grid grid-cols-2 gap-4">
@@ -797,7 +808,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                       onClick={() => updateField("websiteStyle", style.id)}
                       className={`group relative p-5 rounded-2xl border text-left transition-all duration-300 overflow-hidden ${
                         formData.websiteStyle === style.id
-                          ? "border-indigo-500/40 shadow-xl shadow-indigo-500/10 bg-indigo-500/10"
+                          ? "border-blue-500 border-2 shadow-md bg-blue-50"
                           : "border-white/8 hover:border-white/15 bg-white/[0.02] hover:bg-white/[0.04]"
                       }`}
                     >
@@ -811,8 +822,8 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                         <h4
                           className={`font-bold text-sm mb-1 ${
                             formData.websiteStyle === style.id
-                              ? "text-indigo-300"
-                              : "text-white"
+                              ? "text-blue-700"
+                              : "text-slate-900"
                           }`}
                         >
                           {style.label}
@@ -833,7 +844,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
 
               {/* Website Purpose */}
               <div className="space-y-3">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                   Primary Purpose
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -847,8 +858,8 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                         }
                         className={`group p-4 rounded-2xl border text-left transition-all duration-300 ${
                           formData.websitePurpose === purpose.id
-                            ? "bg-purple-500/15 border-purple-500/40 shadow-lg shadow-purple-500/5"
-                            : "bg-white/[0.02] border-white/8 hover:border-white/15 hover:bg-white/[0.04]"
+                            ? "border-blue-500/40 shadow-md bg-blue-50"
+                            : "bg-white border-slate-200 hover:border-blue-300 hover:shadow-md hover:bg-slate-50"
                         }`}
                       >
                         <Icon
@@ -879,7 +890,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
 
               {/* Theme Color */}
               <div className="space-y-3">
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                   Brand Color
                 </label>
                 <div className="flex gap-4 flex-wrap">
@@ -889,8 +900,8 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                       onClick={() => updateField("themeColor", color.id)}
                       className={`group flex items-center gap-3 px-4 py-3 rounded-2xl border transition-all duration-300 ${
                         formData.themeColor === color.id
-                          ? "border-white/20 bg-white/[0.06] shadow-lg"
-                          : "border-white/5 bg-white/[0.02] hover:border-white/15"
+                          ? "border-blue-500 bg-blue-50 shadow-md"
+                          : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
                       }`}
                     >
                       <div
@@ -924,10 +935,10 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
           {currentStep === 4 && (
             <div className="space-y-8">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-black text-white tracking-tight mb-3">
+                <h2 className="text-3xl font-black text-slate-900 tracking-tight mb-3">
                   Final Details & Launch 🚀
                 </h2>
-                <p className="text-slate-400 text-sm max-w-lg mx-auto leading-relaxed">
+                <p className="text-slate-500 text-sm max-w-lg mx-auto leading-relaxed">
                   Add your contact information. These details will be displayed
                   on your website's contact section and footer.
                 </p>
@@ -936,7 +947,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
               {/* Contact Fields */}
               <div className="space-y-5">
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                  <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                     Phone Number
                   </label>
                   <input
@@ -944,12 +955,12 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                     value={formData.phone}
                     onChange={(e) => updateField("phone", e.target.value)}
                     placeholder="+91 98765 43210"
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 text-white text-base placeholder:text-slate-600 focus:border-indigo-500/50 focus:bg-white/[0.05] outline-none transition-all duration-300 hover:border-white/20"
+                    className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl px-5 py-4 text-slate-900 text-base placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all duration-300"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                  <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                     Email Address
                   </label>
                   <input
@@ -957,12 +968,12 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                     value={formData.email}
                     onChange={(e) => updateField("email", e.target.value)}
                     placeholder="hello@yourbusiness.com"
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 text-white text-base placeholder:text-slate-600 focus:border-indigo-500/50 focus:bg-white/[0.05] outline-none transition-all duration-300 hover:border-white/20"
+                    className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl px-5 py-4 text-slate-900 text-base placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all duration-300"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                  <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-widest">
                     Business Address
                   </label>
                   <input
@@ -970,13 +981,12 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                     value={formData.address}
                     onChange={(e) => updateField("address", e.target.value)}
                     placeholder="123 Business Street, City, Country"
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-4 text-white text-base placeholder:text-slate-600 focus:border-indigo-500/50 focus:bg-white/[0.05] outline-none transition-all duration-300 hover:border-white/20"
+                    className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl px-5 py-4 text-slate-900 text-base placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all duration-300"
                   />
                 </div>
               </div>
 
-              {/* Review Summary Card */}
-              <div className="bg-gradient-to-br from-white/[0.04] to-white/[0.02] border border-white/10 rounded-3xl p-6 space-y-4">
+              <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 space-y-4 shadow-sm">
                 <div className="flex items-center gap-2 mb-2">
                   <CheckCircle size={16} className="text-emerald-400" />
                   <span className="text-sm font-bold text-white">
@@ -988,7 +998,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                     <p className="text-[10px] text-slate-600 uppercase tracking-widest font-bold">
                       Business
                     </p>
-                    <p className="text-sm text-white font-medium mt-0.5">
+                    <p className="text-sm text-slate-900 font-bold mt-0.5">
                       {formData.businessName || "—"}
                     </p>
                   </div>
@@ -996,7 +1006,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                     <p className="text-[10px] text-slate-600 uppercase tracking-widest font-bold">
                       Industry
                     </p>
-                    <p className="text-sm text-white font-medium mt-0.5">
+                    <p className="text-sm text-slate-900 font-bold mt-0.5">
                       {BUSINESS_TYPES.find(
                         (t) => t.id === formData.businessType,
                       )?.label || "—"}
@@ -1006,7 +1016,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                     <p className="text-[10px] text-slate-600 uppercase tracking-widest font-bold">
                       Style
                     </p>
-                    <p className="text-sm text-white font-medium mt-0.5">
+                    <p className="text-sm text-slate-900 font-bold mt-0.5">
                       {WEBSITE_STYLES.find(
                         (s) => s.id === formData.websiteStyle,
                       )?.label || "—"}
@@ -1016,7 +1026,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                     <p className="text-[10px] text-slate-600 uppercase tracking-widest font-bold">
                       Purpose
                     </p>
-                    <p className="text-sm text-white font-medium mt-0.5">
+                    <p className="text-sm text-slate-900 font-bold mt-0.5">
                       {WEBSITE_PURPOSES.find(
                         (p) => p.id === formData.websitePurpose,
                       )?.label || "—"}
@@ -1026,7 +1036,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                     <p className="text-[10px] text-slate-600 uppercase tracking-widest font-bold">
                       Headline
                     </p>
-                    <p className="text-sm text-white font-medium mt-0.5">
+                    <p className="text-sm text-slate-900 font-bold mt-0.5">
                       {formData.heroTitle}{" "}
                       <span className="text-indigo-400">
                         {formData.heroHighlight}
@@ -1047,7 +1057,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
                             )?.hex || "#dc2626",
                         }}
                       />
-                      <span className="text-sm text-white font-medium">
+                      <span className="text-sm text-slate-900 font-bold">
                         {THEME_COLORS.find((c) => c.id === formData.themeColor)
                           ?.label || "Red"}
                       </span>
@@ -1061,14 +1071,14 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
       </div>
 
       {/* ─── Bottom Navigation Bar ─── */}
-      <div className="relative z-10 border-t border-white/5 bg-slate-950/80 backdrop-blur-xl">
+      <div className="relative z-10 border-t border-slate-200 bg-white shadow-[0_-4px_20px_-10px_rgba(0,0,0,0.1)]">
         <div className="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
           {/* Back Button */}
           <div>
             {currentStep > 1 ? (
               <button
                 onClick={prevStep}
-                className="flex items-center gap-2 text-slate-400 hover:text-white font-semibold text-sm transition-colors group px-4 py-2.5 rounded-xl hover:bg-white/5"
+                className="flex items-center gap-2 text-slate-500 hover:text-slate-900 hover:bg-slate-50 font-bold text-sm transition-all group px-5 py-2.5 rounded-xl border border-transparent hover:border-slate-200"
               >
                 <ArrowLeft
                   size={16}
@@ -1087,7 +1097,7 @@ const BusinessOnboardingForm = ({ onComplete, onSkip }) => {
               <button
                 onClick={nextStep}
                 disabled={!isStepValid(currentStep)}
-                className="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-sm px-8 py-3 rounded-2xl shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-[1.02] transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-indigo-500/25 group"
+                className="flex items-center gap-2 bg-blue-600 text-white font-bold text-sm px-8 py-3.5 rounded-2xl shadow-lg shadow-blue-500/25 hover:bg-blue-700 hover:scale-[1.02] transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed group"
               >
                 Continue
                 <ArrowRight
