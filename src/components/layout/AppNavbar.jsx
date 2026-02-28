@@ -66,9 +66,11 @@ const AppNavbar = () => {
             href="/"
             className="flex items-center gap-2 transition-transform hover:scale-105"
           >
-            <div className="w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
-              <span className="text-white text-xs font-black">W</span>
-            </div>
+            <img
+              src="/toolkit-favicon.svg"
+              alt="Toolkit"
+              className="w-6 h-6 sm:w-7 sm:h-7"
+            />
             <span
               className={`font-extrabold text-xs sm:text-base tracking-tight transition-colors ${
                 isHero ? "text-white" : "text-slate-900"

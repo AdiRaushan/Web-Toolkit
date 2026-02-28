@@ -113,16 +113,10 @@ const AppNavbar = ()=>{
                             href: "/",
                             className: "flex items-center gap-2 transition-transform hover:scale-105",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-white text-xs font-black",
-                                        children: "W"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                                        lineNumber: 70,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                    src: "/toolkit-favicon.svg",
+                                    alt: "Toolkit",
+                                    className: "w-6 h-6 sm:w-7 sm:h-7"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/AppNavbar.jsx",
                                     lineNumber: 69,
@@ -137,13 +131,13 @@ const AppNavbar = ()=>{
                                             children: "-Toolkit"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                                            lineNumber: 78,
+                                            lineNumber: 80,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                                    lineNumber: 72,
+                                    lineNumber: 74,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
@@ -163,20 +157,20 @@ const AppNavbar = ()=>{
                                     children: label
                                 }, href, false, {
                                     fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                                    lineNumber: 89,
+                                    lineNumber: 91,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0));
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                            lineNumber: 85,
+                            lineNumber: 87,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "h-4 w-px bg-slate-200/50 hidden md:block mx-1"
                         }, void 0, false, {
                             fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                            lineNumber: 109,
+                            lineNumber: 111,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -186,7 +180,7 @@ const AppNavbar = ()=>{
                             children: "Get Started"
                         }, void 0, false, {
                             fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                            lineNumber: 112,
+                            lineNumber: 114,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -196,18 +190,18 @@ const AppNavbar = ()=>{
                                 size: 18
                             }, void 0, false, {
                                 fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                                lineNumber: 133,
+                                lineNumber: 135,
                                 columnNumber: 27
                             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                 size: 18
                             }, void 0, false, {
                                 fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                                lineNumber: 133,
+                                lineNumber: 135,
                                 columnNumber: 45
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                            lineNumber: 125,
+                            lineNumber: 127,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
@@ -229,7 +223,7 @@ const AppNavbar = ()=>{
                         onClick: ()=>setMobileOpen(false)
                     }, void 0, false, {
                         fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                        lineNumber: 144,
+                        lineNumber: 146,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -249,14 +243,14 @@ const AppNavbar = ()=>{
                                                 className: isActive ? "text-white" : "text-slate-400"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                                                lineNumber: 167,
+                                                lineNumber: 169,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             label
                                         ]
                                     }, href, true, {
                                         fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                                        lineNumber: 157,
+                                        lineNumber: 159,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0));
                                 }),
@@ -267,24 +261,24 @@ const AppNavbar = ()=>{
                                     children: "Start Free Audit"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                                    lineNumber: 175,
+                                    lineNumber: 177,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                            lineNumber: 153,
+                            lineNumber: 155,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                        lineNumber: 148,
+                        lineNumber: 150,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/layout/AppNavbar.jsx",
-                lineNumber: 139,
+                lineNumber: 141,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
