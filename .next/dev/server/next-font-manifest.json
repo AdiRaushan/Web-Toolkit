@@ -1,6 +1,6 @@
 {
   "app": {
-    "[project]/src/app/demo/page": [
+    "[project]/src/app/_not-found/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/a218039a3287bcfd-s.p.4a23d71b.woff2",
       "static/media/47fe1b7cd6e6ed85-s.p.855a563b.woff2",
@@ -18,7 +18,7 @@
       "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
       "static/media/cf514f5d0007dafa-s.p.417aa1a2.woff2"
     ],
-    "[project]/src/app/page": [
+    "[project]/src/app/demo/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
       "static/media/a218039a3287bcfd-s.p.4a23d71b.woff2",
       "static/media/47fe1b7cd6e6ed85-s.p.855a563b.woff2",

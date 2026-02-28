@@ -6999,6 +6999,10 @@
   }
 }
 
+[data-nextjs-toast="true"], #nextjs-dev-indicator, nextjs-portal [data-nextjs-dialog="toast"], [class*="nextjs-toast"], [data-nextjs-toast], nextjs-portal {
+  display: none !important;
+}
+
 h1, h2, h3, h4.section-heading {
   font-family: var(--font-heading, "Poppins", sans-serif);
 }

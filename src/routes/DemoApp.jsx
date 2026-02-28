@@ -2482,7 +2482,9 @@ const LandingPage = () => {
         id="customizer-toggle-btn"
         onClick={() => setShowCustomizer(!showCustomizer)}
         className={`fixed top-1/2 -translate-y-1/2 z-[99] transition-all duration-300 ${
-          showCustomizer ? "right-[380px]" : "right-0"
+          showCustomizer
+            ? "right-[380px] opacity-100"
+            : "right-0 opacity-0 hover:opacity-100"
         }`}
       >
         <div className="bg-slate-900 text-white px-2 py-4 rounded-l-xl shadow-2xl border border-r-0 border-slate-700 hover:bg-slate-800 transition-colors flex flex-col items-center gap-2 group">

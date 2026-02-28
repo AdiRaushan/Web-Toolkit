@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Hide Next.js Dev Indicator (turbopack/isr toast) immediately via CSS */
+[data-nextjs-toast="true"],
+#nextjs-dev-indicator,
+nextjs-portal [data-nextjs-dialog="toast"],
+[class*="nextjs-toast"],
+[data-nextjs-toast] {
+  display: none !important;
+}
+nextjs-portal {
+  display: none !important;
+}
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --color-primary: #6366f1;
